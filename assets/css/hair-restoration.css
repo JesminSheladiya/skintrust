@@ -1,0 +1,153 @@
+/* ============================================================
+   SKIN TRUST HOSPITAL — Hair Restoration page
+   Page-specific additions that extend the home design system
+   (relies on the shared tokens declared in ../css/style.css)
+   ============================================================ */
+
+/* Active nav highlight */
+.nav-links a.active {
+  border-color: var(--champagne);
+}
+
+/* FAQ in-page link styling */
+.faq a {
+  border-bottom: 1px solid var(--champagne);
+  color: var(--forest);
+}
+
+/* Smooth FAQ accordion.
+   Structure: .faq-item > button.faq-question + div.faq-answer > p
+   We animate the answer's `height` between 0 and a measured value
+   stored in --answer-h. Animating an explicit height (0 -> hpx)
+   is buttery in BOTH directions, unlike max-height:0->none.   */
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-question {
+  list-style: none;
+  width: 100%;
+  text-align: left;
+  padding: 22px 40px 22px 0;
+  margin: 0;
+  font-family: var(--body);
+  font-size: 1.04rem;
+  font-weight: 600;
+  color: var(--forest);
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question::after {
+  content: "+";
+  position: absolute;
+  top: 26px;
+  right: 6px;
+  font-size: 1.5rem;
+  color: var(--champagne);
+  transform-origin: center;
+  transition: transform .3s ease;
+}
+
+.faq-item.open .faq-question::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  overflow: hidden;
+  height: 0;
+  transition: height .45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq-item.open .faq-answer {
+  height: var(--answer-h, 0px);
+}
+
+.faq-answer p {
+  font-family: var(--body);
+  font-size: .92rem;
+  line-height: 1.6;
+  color: var(--muted);
+  padding: 0 40px 24px 0;
+  margin: 0;
+}
+
+.faq-answer a {
+  border-bottom: 1px solid var(--champagne);
+  color: var(--forest);
+}
+
+/* Before/after tab switcher — styled to match home tokens */
+.ba-tabs {
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+  margin-bottom: clamp(32px, 4vw, 48px);
+  border-bottom: 1px solid var(--line);
+}
+
+.ba-tab {
+  font-family: var(--body);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  padding: 14px 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color .25s, border-color .25s;
+}
+
+.ba-tab.active,
+.ba-tab:hover {
+  color: var(--forest);
+  border-bottom-color: var(--champagne);
+}
+
+.ba-panel {
+  display: none;
+}
+
+.ba-panel.active {
+  display: block;
+}
+
+/* Stats band inside the Why section */
+.stats-band {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(224, 203, 166, .1);
+}
+
+@media (max-width: 600px) {
+  .stats-band {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* Cross-link grid at the bottom of the page */
+.internal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(12px, 2vw, 20px);
+  margin-top: clamp(24px, 3vw, 36px);
+}
+
+@media (max-width: 760px) {
+  .internal-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .internal-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

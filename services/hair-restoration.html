@@ -30,88 +30,7 @@
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <style>
-    /* Page-specific additions that extend the home design system */
-    .nav-links a.active {
-      border-color: var(--champagne);
-    }
-
-    .faq details p a {
-      border-bottom: 1px solid var(--champagne);
-      color: var(--forest);
-    }
-
-    /* Before/after tab switcher - styled to match home tokens */
-    .ba-tabs {
-      display: flex;
-      gap: 0;
-      flex-wrap: wrap;
-      margin-bottom: clamp(32px, 4vw, 48px);
-      border-bottom: 1px solid rgba(224, 203, 166, .22);
-    }
-
-    .ba-tab {
-      font-family: var(--body);
-      font-size: .72rem;
-      font-weight: 500;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      padding: 14px 22px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      color: rgba(247, 243, 236, .6);
-      border-bottom: 2px solid transparent;
-      margin-bottom: -1px;
-      transition: color .25s, border-color .25s;
-    }
-
-    .ba-tab.active,
-    .ba-tab:hover {
-      color: var(--ivory);
-      border-bottom-color: var(--champagne);
-    }
-
-    .ba-panel {
-      display: none;
-    }
-
-    .ba-panel.active {
-      display: block;
-    }
-
-    .stats-band {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: rgba(224, 203, 166, .1);
-    }
-
-    @media (max-width: 600px) {
-      .stats-band {
-        grid-template-columns: 1fr 1fr !important;
-      }
-    }
-
-    .internal-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: clamp(12px, 2vw, 20px);
-      margin-top: clamp(24px, 3vw, 36px);
-    }
-
-    @media (max-width: 760px) {
-      .internal-grid {
-        grid-template-columns: 1fr 1fr !important;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .internal-grid {
-        grid-template-columns: 1fr !important;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/css/hair-restoration.css">
 </head>
 
 <body>
@@ -189,7 +108,7 @@
     </div>
   </section>
   <!-- ======================= BEFORE & AFTER (PER TREATMENT) ======================= -->
-  <section class="sec sec-dark" id="results">
+  <section class="sec sec-warm" id="results">
     <div class="shell">
       <div class="sec-head centred">
         <p class="eyebrow centred">Patient results</p>
@@ -550,9 +469,9 @@
         </div>
       </div>
 
-      <p class="disclaimer">Results vary from person to person and depend on the stage of hair loss, age, overall health
-        and treatment compliance. All photographs are of real Skin Trust patients, published with written consent, and
-        are not a guarantee of outcome.</p>
+      <p class="disclaimer" style="color:var(--muted)">Results vary from person to person and depend on the stage of
+        hair loss, age, overall health and treatment compliance. All photographs are of real Skin Trust patients,
+        published with written consent, and are not a guarantee of outcome.</p>
       <div style="text-align:center;margin-top:32px">
         <a class="btn btn-gold"
           href="https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20hair%20restoration%20consultation%20at%20Skin%20Trust.">Book
@@ -563,11 +482,19 @@
   <!-- ======================= TREATMENTS OVERVIEW ======================= -->
   <section class="sec sec-warm" id="treatments">
     <div class="shell">
-      <div class="sec-head centred">
-        <p class="eyebrow centred">Hair restoration treatments</p>
-        <h2>All treatments, one clinic</h2>
-        <p class="lede">Each treatment below is recommended based on what your scalp actually needs, not what is most
-          expensive or most popular.</p>
+      <div class="sec-head" style="text-align: left; max-width: 100%;">
+        <p class="eyebrow" style="text-align: left;">Hair restoration treatments</p>
+        <div
+          style="display: flex; gap: 40px; align-items: flex-start; justify-content: space-between; flex-wrap: wrap;">
+          <div style="flex: 1 1 400px;">
+            <h2 style="margin: 0;">All treatments,<br /> one clinic</h2>
+          </div>
+          <div style="flex: 1 1 400px;">
+            <p class="lede" style="text-align: left; margin: 0; padding-top: 8px;">Each treatment below is recommended
+              based on
+              what your scalp actually needs, not what is most expensive or most popular.</p>
+          </div>
+        </div>
       </div>
 
       <div class="cat-grid">
@@ -662,8 +589,8 @@
   <!-- ======================= WHY SKIN TRUST ======================= -->
   <section class="sec sec-dark" id="why-us">
     <div class="shell">
-      <div class="sec-head centred">
-        <p class="eyebrow centred">Why Karur Trusts Dr. Kavitha</p>
+      <div class="sec-head">
+        <p class="eyebrow">Why Karur Trusts Dr. Kavitha</p>
         <h2>Care that earns trust,<br>not just attention.</h2>
         <p class="lede">There are many clinics offering hair treatments in Tamil Nadu. Here is why patients from Karur,
           Trichy, Namakkal, Erode and beyond choose Skin Trust.</p>
@@ -789,4 +716,425 @@
         </div>
       </div>
     </div>
+  </section> <!-- ======================= TESTIMONIALS ======================= -->
+  <section class="sec sec-warm" id="reviews">
+    <div class="shell">
+      <p class="eyebrow">In patients' words</p>
+      <div class="review-wall">
+        <div class="review-score">
+          <span class="num">4.9</span>
+          <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="of">3,500+ reviews</div>
+        </div>
+        <div class="review-copy">
+          <p class="big"><strong>3,500+</strong> patients across Karur and nearby towns have shared their experience.
+          </p>
+          <p>That is more Google reviews than any other skin and hair clinic in the district. Not one of these was
+            incentivised. Patients are asked once, politely, at the conclusion of their treatment.</p>
+        </div>
+      </div>
+      <div class="quotes">
+        <figure class="quote" style="margin:0">
+          <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>She asked for my thyroid reports before recommending anything. That alone told me she was not
+            going to waste my time with something that would not work for my type of hair fall.</blockquote>
+          <footer><b>Meenakshi S.</b>Google review &middot; Karur</footer>
+        </figure>
+        <figure class="quote" style="margin:0">
+          <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>Three clinics in Trichy just told me to take a package. Here I got an actual examination, a reason
+            for my hair fall, and a plan that made sense. Five months in and my parting has filled noticeably.
+          </blockquote>
+          <footer><b>Ramachandran K.</b>Google review &middot; Musiri</footer>
+        </figure>
+        <figure class="quote" style="margin:0">
+          <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>Post-delivery hair fall was really affecting my confidence. The doctor was thorough, patient and
+            honest. The PRP sessions have helped and she explained what to expect at each stage.</blockquote>
+          <footer><b>Kavitha P.</b>Google review &middot; Kulithalai</footer>
+        </figure>
+      </div>
+      <div style="text-align:center;margin-top:36px">
+        <a class="btn btn-ghost"
+          href="https://www.google.com/maps/place/Skin+Trust+Hospital/@10.961598,78.0767411,15z/data=!4m5!3m4!1s0x0:0x62678fb45b2ac308!8m2!3d10.961598!4d78.0767411"
+          target="_blank" rel="noopener">Read all 3,500+ reviews on Google</a>
+      </div>
+    </div>
   </section>
+
+  <!-- ======================= FAQ ======================= -->
+  <section class="sec" id="faq">
+    <div class="shell">
+      <div class="sec-head centred">
+        <p class="eyebrow centred">Common questions</p>
+        <h2>Before you book</h2>
+      </div>
+      <div class="faq">
+
+        <div class="faq-item open">
+          <button type="button" class="faq-question" aria-expanded="true" aria-controls="ans-1">
+            Which hair treatment is right for me?
+          </button>
+          <div id="ans-1" class="faq-answer">
+            <p>This depends entirely on the cause and extent of your hair loss, which is why every patient at Skin Trust
+              begins with a scalp examination rather than a treatment. In general terms, early-stage genetic hair loss
+              responds well to PRP or GFC. Advanced thinning with resistant follicles may benefit from exosome therapy.
+              Permanent bald zones require FUE hair transplant. LLLT and mesotherapy are often used alongside other
+              treatments. Dr. Kavita will give you a clear recommendation after your first visit.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="ans-2">
+            How many sessions will I need and how far apart?
+          </button>
+          <div id="ans-2" class="faq-answer">
+            <p>This varies by treatment. A typical PRP or GFC course involves four to six sessions spaced three to four
+              weeks apart, followed by maintenance every four to six months. Exosome therapy schedules are decided case by
+              case. LLLT may involve more frequent, shorter sessions. Dr. Kavita outlines a realistic session plan at
+              consultation and does not overcommit on timelines.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="ans-3">
+            Is there any downtime after these treatments?
+          </button>
+          <div id="ans-3" class="faq-answer">
+            <p>Injection-based treatments like PRP, GFC and mesotherapy involve no downtime. You can return to work the
+              same day. Avoid washing your hair, swimming or heavy exercise for 24 hours after an injection session. FUE
+              hair transplant does require a recovery period of approximately seven to ten days before returning to normal
+              activity. LLLT and hair botox have no restrictions at all.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="ans-4">
+            Are these treatments painful?
+          </button>
+          <div id="ans-4" class="faq-answer">
+            <p>Topical anaesthetic cream is applied to the scalp before any injection-based treatment, so most patients
+              describe mild pressure rather than pain. The scalp may feel tender for a day afterwards. LLLT and hair botox
+              are completely painless. FUE transplant is performed under local anaesthesia so the procedure itself is
+              comfortable, though there is some soreness in the days following.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="ans-5">
+            When will I see results?
+          </button>
+          <div id="ans-5" class="faq-answer">
+            <p>Hair treatments take time because they work through biological processes. With PRP and GFC, patients often
+              notice a reduction in hair fall within the first four to six weeks. Visible density improvement typically
+              becomes apparent from the third to fourth month onwards. Exosome therapy results may emerge more gradually.
+              Trichoscopy photographs taken at each visit make the progress measurable even when it is subtle.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="ans-6">
+            What is the difference between PRP and GFC?
+          </button>
+          <div id="ans-6" class="faq-answer">
+            <p>Both use your own blood. PRP separates the platelet-rich layer from the red cells and uses the resulting
+              plasma. GFC goes further by isolating specific growth factors from that plasma at a higher concentration.
+              GFC is often recommended for patients with moderate to significant thinning or those who want a more
+              targeted approach. Dr. Kavita recommends one or the other based on your scalp findings, not on which costs
+              more. You can also read the full <a href="/prp-hair-treatment-karur">PRP treatment page</a> and <a
+                href="/gfc-hair-treatment-karur">GFC treatment page</a> for a detailed comparison.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="ans-7">
+            Do you offer hair transplants in Karur?
+          </button>
+          <div id="ans-7" class="faq-answer">
+            <p>Yes. FUE hair transplant is available at Skin Trust. A detailed consultation covering your donor density,
+              recipient area, expected graft count and realistic outcomes is conducted before any transplant is planned.
+              For patients travelling from outside Karur, procedures can be coordinated around your schedule. See the <a
+                href="/fue-hair-transplant-karur">FUE hair transplant page</a> for full details.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="ans-8">
+            Is hair restoration safe?
+          </button>
+          <div id="ans-8" class="faq-answer">
+            <p>All regenerative treatments at Skin Trust use autologous material, meaning drawn from your own blood or
+              body, which eliminates the risk of rejection or transmitted infection. CDSCO-approved single-use kits are
+              used for PRP and GFC. Dr. Kavita screens for contraindications at the first consultation, including active
+              scalp infection, blood disorders or pregnancy, and advises accordingly. The clinic follows standard clinical
+              protocols for every procedure.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ======================= VISIT / MAP ======================= -->
+  <section class="sec sec-warm" id="book">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="eyebrow">Visit us</p>
+        <h2>Find the clinic</h2>
+        <p class="lede">Skin Trust is located in Madavilagam, Karur, directly opposite the Kamaatchi Amman Temple.</p>
+      </div>
+      <div class="visit">
+        <div class="visit-info">
+          <h3>Skin Trust</h3>
+          <dl>
+            <dt>Address</dt>
+            <dd>No. 30, Chairman Ramanujam Street,<br>opp. Kamaatchi Amman Temple,<br>Madavilagam, Karur &ndash;
+              639001,<br>Tamil Nadu</dd>
+            <dt>Hours</dt>
+            <dd>Mon&ndash;Sat 10:00&ndash;20:00<br>Sunday by appointment</dd>
+            <dt>Phone</dt>
+            <dd><a href="tel:+910000000000" style="border-bottom:1px solid var(--champagne)">+91 00000 00000</a></dd>
+            <dt>WhatsApp</dt>
+            <dd><a
+                href="https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20hair%20restoration%20consultation%20at%20Skin%20Trust."
+                style="border-bottom:1px solid var(--champagne)">Send a message</a></dd>
+            <dt>Nearest landmark</dt>
+            <dd>Kamaatchi Amman Temple, Madavilagam</dd>
+          </dl>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-solid"
+              href="https://www.google.com/maps/place/Skin+Trust+Hospital/@10.961598,78.0767411,15z/data=!4m5!3m4!1s0x0:0x62678fb45b2ac308!8m2!3d10.961598!4d78.0767411"
+              target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-ghost"
+              href="https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20hair%20restoration%20consultation%20at%20Skin%20Trust.">WhatsApp
+              to book</a>
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe title="Skin Trust location on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=10.961598,78.0767411&z=16&output=embed"
+            aria-label="Map showing Skin Trust at Chairman Ramanujam Street, Karur"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CLOSING CTA ======================= -->
+  <section class="sec cta-close">
+    <div class="shell">
+      <p class="eyebrow centred">Next step</p>
+      <h2>Bring your reports.<br>Leave with a plan.</h2>
+      <p class="lede" style="margin:18px auto 0;text-align:center;color:rgba(247,243,236,.72)">A first consultation
+        includes a trichoscopy scalp examination, a review of your medical history and a straight recommendation on
+        which treatment, if any, suits your hair loss.</p>
+      <div class="btnrow">
+        <a class="btn btn-gold" href="tel:+910000000000">Call +91 00000 00000</a>
+        <a class="btn btn-ghost-light"
+          href="https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20hair%20restoration%20consultation%20at%20Skin%20Trust.">WhatsApp
+          to book</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= INTERNAL LINKS ======================= -->
+  <section class="sec"
+    style="padding-top:clamp(40px,5vw,64px);padding-bottom:clamp(40px,5vw,64px);border-top:1px solid var(--line)">
+    <div class="shell">
+      <div class="sec-head centred">
+        <p class="eyebrow centred">Explore the clinic</p>
+        <h2 style="font-size:clamp(1.4rem,2.5vw,2rem)">Other treatments at Skin Trust</h2>
+      </div>
+      <div class="internal-grid">
+        <a href="/acne-treatment-karur" class="internal-card"
+          style="padding:22px;border:1px solid var(--line);display:block;transition:border-color .3s"
+          onmouseover="this.style.borderColor='var(--champagne)'" onmouseout="this.style.borderColor='var(--line)'">
+          <div
+            style="font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--champagne);margin-bottom:8px">
+            Skin</div>
+          <div style="font-family:var(--display);font-size:1.15rem;color:var(--forest)">Acne Treatment</div>
+        </a>
+        <a href="/acne-scar-treatment-karur" class="internal-card"
+          style="padding:22px;border:1px solid var(--line);display:block;transition:border-color .3s"
+          onmouseover="this.style.borderColor='var(--champagne)'" onmouseout="this.style.borderColor='var(--line)'">
+          <div
+            style="font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--champagne);margin-bottom:8px">
+            Skin</div>
+          <div style="font-family:var(--display);font-size:1.15rem;color:var(--forest)">Acne Scar Treatment</div>
+        </a>
+        <a href="/anti-ageing-treatment-karur" class="internal-card"
+          style="padding:22px;border:1px solid var(--line);display:block;transition:border-color .3s"
+          onmouseover="this.style.borderColor='var(--champagne)'" onmouseout="this.style.borderColor='var(--line)'">
+          <div
+            style="font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--champagne);margin-bottom:8px">
+            Aesthetics</div>
+          <div style="font-family:var(--display);font-size:1.15rem;color:var(--forest)">Anti-Ageing</div>
+        </a>
+        <a href="/dermato-surgery-karur" class="internal-card"
+          style="padding:22px;border:1px solid var(--line);display:block;transition:border-color .3s"
+          onmouseover="this.style.borderColor='var(--champagne)'" onmouseout="this.style.borderColor='var(--line)'">
+          <div
+            style="font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--champagne);margin-bottom:8px">
+            Surgery</div>
+          <div style="font-family:var(--display);font-size:1.15rem;color:var(--forest)">Dermato Surgery</div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="foot">
+    <div class="shell">
+      <div class="foot-grid">
+        <div>
+          <a class="brand" href="/"><img src="../assets/images/logo-color.png" alt="Skin Trust Hospital"
+              style="max-height: 48px; width: auto; height: auto; object-fit: contain;"></a>
+          <p style="margin-top:20px;max-width:32ch">No. 30, Chairman Ramanujam Street,<br>Madavilagam, Karur &ndash;
+            639001, Tamil Nadu.</p>
+          <p style="margin:0"><a href="tel:+910000000000">+91 00000 00000</a></p>
+        </div>
+        <div>
+          <h4>Hair Treatments</h4>
+          <ul>
+            <li><a href="/prp-hair-treatment-karur">PRP Hair Treatment</a></li>
+            <li><a href="/gfc-hair-treatment-karur">GFC Therapy</a></li>
+            <li><a href="/fue-hair-transplant-karur">FUE Hair Transplant</a></li>
+            <li><a href="/lllt-hair-treatment-karur">LLLT Laser Therapy</a></li>
+            <li><a href="/exosome-hair-treatment-karur">Exosome Therapy</a></li>
+            <li><a href="/mesotherapy-hair-karur">Mesotherapy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Skin Treatments</h4>
+          <ul>
+            <li><a href="/acne-treatment-karur">Acne Treatment</a></li>
+            <li><a href="/acne-scar-treatment-karur">Acne Scar Treatment</a></li>
+            <li><a href="/anti-ageing-treatment-karur">Anti-Ageing</a></li>
+            <li><a href="/skin-tightening-karur">Skin Tightening</a></li>
+            <li><a href="/skin-rejuvenation-karur">Skin Rejuvenation</a></li>
+            <li><a href="/under-eye-treatment-karur">Under Eye Treatment</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Clinic</h4>
+          <ul>
+            <li><a href="/about">About Dr. Kavita</a></li>
+            <li><a href="/dermato-surgery-karur">Dermato Surgery</a></li>
+            <li><a href="/reviews">Patient Reviews</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contact &amp; Location</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-base">
+        <span>&copy; 2026 Skin Trust Hospital, Karur. All rights reserved.</span>
+        <span>Content on this page is educational and is not a substitute for a clinical consultation.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================= MOBILE ACTION BAR ======================= -->
+  <div class="mobile-bar">
+    <a href="tel:+910000000000">Call clinic</a>
+    <a
+      href="https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20hair%20restoration%20consultation%20at%20Skin%20Trust.">WhatsApp</a>
+  </div>
+
+  <!-- ======================= FLOATING WHATSAPP ======================= -->
+  <a class="wa-float"
+    href="https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20hair%20restoration%20treatment%20at%20Skin%20Trust."
+    aria-label="Chat on WhatsApp">Chat</a>
+
+  <script src="../assets/js/hair-restoration.js" defer></script>
+  <!-- ======================= STRUCTURED DATA: MedicalClinic + FAQPage ======================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://skintrustkarur.com/#clinic",
+        "name": "Skin Trust Hospital",
+        "url": "https://skintrustkarur.com/",
+        "telephone": "+91-00000-00000",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "No. 30, Chairman Ramanujam Street",
+          "addressLocality": "Karur",
+          "postalCode": "639001",
+          "addressRegion": "Tamil Nadu",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 10.961598,
+          "longitude": 78.0767411
+        },
+        "openingHours": "Mo-Sa 10:00-20:00",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "3500",
+          "bestRating": "5"
+        },
+        "medicalSpecialty": ["Dermatology", "Trichology"],
+        "founder": {
+          "@type": "Physician",
+          "name": "Dr. Kavita",
+          "medicalSpecialty": ["Dermatology", "Trichology", "Dermatosurgery"],
+          "hasCredential": ["MBBS", "MD Dermatology"]
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Hair Restoration Treatments",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "PRP Hair Treatment in Karur"}},
+            {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "GFC Hair Treatment in Karur"}},
+            {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "FUE Hair Transplant in Karur"}},
+            {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Exosome Therapy for Hair in Karur"}},
+            {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "LLLT Low Level Laser Therapy in Karur"}},
+            {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Mesotherapy for Hair in Karur"}},
+            {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Hair Botox in Karur"}}
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which hair treatment is right for me in Karur?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The right treatment depends on the cause and stage of your hair loss. Early-stage genetic hair loss typically responds to PRP or GFC. Advanced thinning may need exosome therapy. Permanent bald zones require FUE hair transplant. Dr. Kavita at Skin Trust, Karur, recommends the appropriate option after a trichoscopy scalp examination."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between PRP and GFC hair treatment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both PRP and GFC use your own blood. PRP uses platelet-rich plasma. GFC isolates specific growth factors from that plasma at a higher concentration. GFC is often recommended for moderate to significant thinning or for patients wanting fewer sessions. Dr. Kavita recommends one based on scalp findings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there downtime after hair restoration treatments?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PRP, GFC and mesotherapy have no downtime. Patients return to work the same day. Avoid washing hair, swimming or heavy exercise for 24 hours post-injection. FUE hair transplant requires 7 to 10 days recovery. LLLT and hair botox have no restrictions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Skin Trust in Karur offer FUE hair transplant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. FUE hair transplant is available at Skin Trust, Karur. A consultation covering donor density, recipient area, expected graft count and realistic outcomes is conducted before any procedure is planned."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</body>
+
+</html>
