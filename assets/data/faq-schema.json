@@ -1,0 +1,12 @@
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Do I need an appointment at Skin Trust Hospital Karur, or can I walk in?","acceptedAnswer":{"@type":"Answer","text":"An appointment is strongly recommended as procedure days fill up quickly. The fastest way to book is WhatsApp at +91 90922 32991; you will usually be confirmed the same day."}},
+    {"@type":"Question","name":"Will Dr. Kavitha perform the procedure herself?","acceptedAnswer":{"@type":"Answer","text":"Yes. Lasers, injectables, minor surgery and hair procedures are performed by Dr. Kavitha personally. Support staff assist with preparation and aftercare, not with the procedure itself."}},
+    {"@type":"Question","name":"Are these treatments safe for Indian skin?","acceptedAnswer":{"@type":"Answer","text":"Yes, provided the settings are correct. Deeper skin types are more prone to post-inflammatory pigmentation, so device parameters, peel strengths and session gaps at Skin Trust are calibrated specifically for Tamil Nadu skin types."}},
+    {"@type":"Question","name":"How many sessions will I need for treatment at Skin Trust Hospital?","acceptedAnswer":{"@type":"Answer","text":"It depends on the concern. Hair PRP is typically a course over several months, acne scars usually need multiple combined sessions, laser hair removal takes 6-8 sittings, and a mole removal is often one visit. The expected number is given in writing at the consultation."}},
+    {"@type":"Question","name":"Does Skin Trust Hospital offer laser hair removal?","acceptedAnswer":{"@type":"Answer","text":"Yes. We use a medical-grade Diode Laser safe for all Indian skin types. Treatment areas include face, upper lip, underarms, arms, legs, bikini line and full body. Each session is performed by Dr. Kavitha."}},
+    {"@type":"Question","name":"Where is Skin Trust Hospital located in Karur?","acceptedAnswer":{"@type":"Answer","text":"No. 28, Chairman Ramanujan Street, Karur 639001, opposite Kamaatchi Amman Temple, Tamil Nadu. Parking available directly outside."}}
+  ]
+}
