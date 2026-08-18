@@ -166,7 +166,7 @@ export default {
   },
   hero: {
     eyebrow: "Skin Rejuvenation & Glow · Karur",
-    h1: "Glow that holds up to<br><em>Tamil Nadu's sun and humidity.</em>",
+    h1: "Glow that holds up to <em>Tamil Nadu's sun and humidity.</em>",
     lede:
       "From HydraFacial maintenance and laser toning to regenerative skin boosters, Dr. Kavitha addresses concerns such as dullness, uneven skin tone and early textural changes through personalised treatment plans. Each protocol is selected after assessing your skin's condition, concerns and treatment needs.",
     ctaHref: "#book",
