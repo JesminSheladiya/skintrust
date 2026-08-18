@@ -51,15 +51,15 @@ const {
   mobileWhatsappLabel="WhatsApp"
 >
   <Fragment slot="head">
-    {service.headCss && (
-      <link rel="stylesheet" href={service.headCss} />
-    )}
-    {service.schema && (
-      <script
-        type="application/ld+json"
-        set:html={JSON.stringify(service.schema)}
-      />
-    )}
+    {service.headCss && <link rel="stylesheet" href={service.headCss} />}
+    {
+      service.schema && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(service.schema)}
+        />
+      )
+    }
   </Fragment>
 
   <!-- ======================= HERO ======================= -->
@@ -73,23 +73,27 @@ const {
           <a class="btn btn-solid" href={hero.ctaHref}>{hero.ctaLabel}</a>
           <a class="btn btn-ghost" href={waLink}>WhatsApp us</a>
         </div>
-        <div class="hero-meta">
-          {hero.meta.map((item) => (
-            <div>
-              <b>{item.b}</b>
-              {item.label}
+        {
+          hero.meta && (
+            <div class="hero-meta">
+              {hero.meta.map((item) => (
+                <div>
+                  <b>{item.b}</b>
+                  {item.label}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          )
+        }
       </div>
       <figure class="hero-figure" style="margin: 0">
         <div class="arch">
-          <span class="ph" set:html={hero.figureText}></span>
+          <span class="ph" set:html={hero.figureText} />
         </div>
         <div class="hero-badge">
           <div class="hb-stars" aria-hidden="true">{hero.badge.stars}</div>
           <b>{hero.badge.num}</b>
-          <span set:html={hero.badge.labelHtml}></span>
+          <span set:html={hero.badge.labelHtml} />
         </div>
       </figure>
     </div>
@@ -98,12 +102,14 @@ const {
   <!-- ======================= CREDENTIAL STRIP ======================= -->
   <section class="strip" aria-label="Clinic credentials">
     <div class="shell">
-      {strip.map((item) => (
-        <div>
-          <b>{item.b}</b>
-          <span>{item.label}</span>
-        </div>
-      ))}
+      {
+        strip.map((item) => (
+          <div>
+            <b>{item.b}</b>
+            <span>{item.label}</span>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -136,9 +142,9 @@ const {
           style="display: flex; gap: 40px; align-items: flex-start; justify-content: space-between; flex-wrap: wrap;"
         >
           <div style="flex: 1 1 400px;">
-            <h2 style="margin: 0;" set:html={treatments.h2}></h2>
+            <h2 style="margin: 0;" set:html={treatments.h2} />
           </div>
-          <div style="flex: 1 1 400px;">
+          <div style="flex: 1 1 450px;">
             <p
               class="lede"
               style="text-align: left; margin: 0; padding-top: 8px;"
@@ -150,18 +156,22 @@ const {
       </div>
 
       <div class="cat-grid">
-        {treatments.cards.map((card) => (
-          <article class="cat">
-            <div class="cat-top">
-              <span class="ph" set:html={card.placeholder}></span>
-            </div>
-            <div class="cat-body">
-              <h3>{card.title}</h3>
-              <p>{card.body}</p>
-              <a class="cat-cta" href={card.ctaHref}>{card.ctaLabel}</a>
-            </div>
-          </article>
-        ))}
+        {
+          treatments.cards.map((card) => (
+            <article class="cat">
+              <div class="cat-top">
+                <span class="ph" set:html={card.placeholder} />
+              </div>
+              <div class="cat-body">
+                <h3>{card.title}</h3>
+                <p>{card.body}</p>
+                <a class="cat-cta" href={card.ctaHref}>
+                  {card.ctaLabel}
+                </a>
+              </div>
+            </article>
+          ))
+        }
       </div>
     </div>
   </section>
@@ -171,35 +181,35 @@ const {
     <div class="shell">
       <div class="sec-head">
         <p class="eyebrow">{why.eyebrow}</p>
-        <h2 set:html={why.h2}></h2>
+        <h2 set:html={why.h2} />
         <p class="lede">{why.lede}</p>
       </div>
 
       <div class="why-grid">
-        {why.items.map((item) => (
-          <div class="why">
-            <b>{item.title}</b>
-            <p>{item.text}</p>
-          </div>
-        ))}
+        {
+          why.items.map((item) => (
+            <div class="why">
+              <b>{item.title}</b>
+              <p>{item.text}</p>
+            </div>
+          ))
+        }
       </div>
 
-      <div class="stats-band" style="margin-top: 52px">
-        {why.stats.map((stat) => (
-          <div
-            style="padding: 28px 22px; text-align: center; background: rgba(247,243,236,.04);"
-          >
-            <b
-              style="display: block; font-family: var(--display); font-size: 2.2rem; color: var(--champagne-light); line-height: 1;"
-              >{stat.value}</b
-            >
-            <span
-              style="font-size: .66rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(247,243,236,.55);"
-              >{stat.label}</span
-            >
-          </div>
-        ))}
-      </div>
+      <!-- <div class="stats-band" style="margin-top: 52px">
+        {
+          why.stats.map((stat) => (
+            <div style="padding: 28px 22px; text-align: center; background: rgba(247,243,236,.04);">
+              <b style="display: block; font-family: var(--display); font-size: 2.2rem; color: var(--champagne-light); line-height: 1;">
+                {stat.value}
+              </b>
+              <span style="font-size: .66rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(247,243,236,.55);">
+                {stat.label}
+              </span>
+            </div>
+          ))
+        }
+      </div> -->
 
       <div style="margin-top: 40px; text-align: center">
         <a class="btn btn-gold" href={why.ctaHref}>{why.ctaLabel}</a>
@@ -223,16 +233,18 @@ const {
           <p class="eyebrow">{doctor.eyebrow}</p>
           <h2>{doctor.name}</h2>
           <div class="doc-creds">
-            {doctor.creds.map((cred) => (
-              <span class="cred">{cred}</span>
-            ))}
+            {doctor.creds.map((cred) => <span class="cred">{cred}</span>)}
           </div>
-          {doctor.paragraphs.map((para, i) => (
-            <p style={i === 0 ? "margin-top: 4px" : undefined}>{para}</p>
-          ))}
+          {
+            doctor.paragraphs.map((para, i) => (
+              <p style={i === 0 ? "margin-top: 4px" : undefined}>{para}</p>
+            ))
+          }
           <p class="sig">{doctor.sig}</p>
-          <a class="btn btn-ghost" href={doctor.moreHref} style="margin-top: 14px"
-            >{doctor.moreLabel}</a
+          <a
+            class="btn btn-ghost"
+            href={doctor.moreHref}
+            style="margin-top: 14px">{doctor.moreLabel}</a
           >
         </div>
       </div>
@@ -250,29 +262,32 @@ const {
           <div class="of">{testimonials.score.of}</div>
         </div>
         <div class="review-copy">
-          <p class="big" set:html={testimonials.copyBig}></p>
+          <p class="big" set:html={testimonials.copyBig} />
           <p>{testimonials.copy}</p>
         </div>
       </div>
       <div class="quotes">
-        {testimonials.quotes.map((q) => (
-          <figure class="quote" style="margin: 0">
-            <div class="stars" aria-hidden="true">★★★★★</div>
-            <blockquote>{q.quote}</blockquote>
-            <footer>
-              <b>{q.name}</b>
-              {q.meta}
-            </footer>
-          </figure>
-        ))}
+        {
+          testimonials.quotes.map((q) => (
+            <figure class="quote" style="margin: 0">
+              <div class="stars" aria-hidden="true">
+                ★★★★★
+              </div>
+              <blockquote>{q.quote}</blockquote>
+              <footer>
+                <b>{q.name}</b>
+                {q.meta}
+              </footer>
+            </figure>
+          ))
+        }
       </div>
       <div style="text-align: center; margin-top: 36px">
         <a
           class="btn btn-ghost"
           href={testimonials.allHref}
           target="_blank"
-          rel="noopener"
-          >{testimonials.allLabel}</a
+          rel="noopener">{testimonials.allLabel}</a
         >
       </div>
     </div>
@@ -303,23 +318,28 @@ const {
         <div class="visit-info">
           <h3>{visit.clinicName}</h3>
           <dl>
-            {visit.rows.map((row) => (
-              <>
-                <dt>{row.dt}</dt>
-                <dd set:html={row.dd}></dd>
-              </>
-            ))}
+            {
+              visit.rows.map((row) => (
+                <>
+                  <dt>{row.dt}</dt>
+                  <dd set:html={row.dd} />
+                </>
+              ))
+            }
           </dl>
           <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            {visit.buttons.map((btn) => (
-              <a
-                class={btn.class}
-                href={btn.href}
-                target={btn.target ? "_blank" : undefined}
-                rel={btn.target ? "noopener" : undefined}
-                >{btn.label}</a
-              >
-            ))}
+            {
+              visit.buttons.map((btn) => (
+                <a
+                  class={btn.class}
+                  href={btn.href}
+                  target={btn.target ? "_blank" : undefined}
+                  rel={btn.target ? "noopener" : undefined}
+                >
+                  {btn.label}
+                </a>
+              ))
+            }
           </div>
         </div>
         <div class="map-frame">
@@ -328,8 +348,7 @@ const {
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             src={visit.map.src}
-            aria-label={visit.map.ariaLabel}
-          ></iframe>
+            aria-label={visit.map.ariaLabel}></iframe>
         </div>
       </div>
     </div>
@@ -339,7 +358,7 @@ const {
   <section class="sec cta-close">
     <div class="shell">
       <p class="eyebrow centred">{cta.eyebrow}</p>
-      <h2 set:html={cta.h2}></h2>
+      <h2 set:html={cta.h2} />
       <p
         class="lede"
         style="margin: 18px auto 0; text-align: center; color: rgba(247,243,236,.72);"
@@ -347,9 +366,13 @@ const {
         {cta.lede}
       </p>
       <div class="btnrow">
-        {cta.buttons.map((btn) => (
-          <a class={btn.class} href={btn.href}>{btn.label}</a>
-        ))}
+        {
+          cta.buttons.map((btn) => (
+            <a class={btn.class} href={btn.href}>
+              {btn.label}
+            </a>
+          ))
+        }
       </div>
     </div>
   </section>
@@ -365,24 +388,22 @@ const {
         <h2 style="font-size: clamp(1.4rem,2.5vw,2rem);">{internalLinks.h2}</h2>
       </div>
       <div class="internal-grid">
-        {internalLinks.cards.map((card) => (
-          <a
-            href={card.href}
-            class="internal-card"
-            style="padding: 22px; border: 1px solid var(--line); display: block; transition: border-color .3s;"
-          >
-            <div
-              style="font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--champagne); margin-bottom: 8px;"
+        {
+          internalLinks.cards.map((card) => (
+            <a
+              href={card.href}
+              class="internal-card"
+              style="padding: 22px; border: 1px solid var(--line); display: block; transition: border-color .3s;"
             >
-              {card.category}
-            </div>
-            <div
-              style="font-family: var(--display); font-size: 1.15rem; color: var(--forest);"
-            >
-              {card.label}
-            </div>
-          </a>
-        ))}
+              <div style="font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--champagne); margin-bottom: 8px;">
+                {card.category}
+              </div>
+              <div style="font-family: var(--display); font-size: 1.15rem; color: var(--forest);">
+                {card.label}
+              </div>
+            </a>
+          ))
+        }
       </div>
     </div>
   </section>

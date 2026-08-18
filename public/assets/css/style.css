@@ -55,13 +55,19 @@ p{margin:0 0 1.1em}
 
 /* ---------- buttons ---------- */
 .btn{
+  position:relative;overflow:hidden;isolation:isolate;
   display:inline-flex;align-items:center;justify-content:center;gap:10px;
   font-family:var(--body);font-size:.78rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
   padding:17px 32px;border:1px solid transparent;border-radius:2px;cursor:pointer;
   transition:background .3s,color .3s,border-color .3s,transform .3s;
 }
 .btn-solid{background:linear-gradient(150deg,var(--forest-mid),var(--forest-deep));color:var(--ivory)}
-.btn-solid:hover{background:var(--forest-deep);transform:translateY(-2px)}
+.btn-solid::before{
+  content:"";position:absolute;inset:0;background:var(--champagne);
+  opacity:0;transition:opacity .3s ease;z-index:-1;
+}
+.btn-solid:hover{color:var(--forest-deep);border-color:var(--forest-deep);transform:translateY(-2px)}
+.btn-solid:hover::before{opacity:1}
 .btn-gold{background:var(--champagne);color:var(--forest-deep)}
 .btn-gold:hover{background:var(--champagne-light);transform:translateY(-2px)}
 .btn-ghost{border-color:var(--forest);color:var(--forest)}
