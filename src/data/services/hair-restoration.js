@@ -1,6 +1,8 @@
 const waLink =
   "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20hair%20restoration%20consultation%20at%20Skin%20Trust.";
 
+import { SITE_BASE, BASE } from "../site.js";
+
 export default {
   slug: "hair-restoration",
   displayName: "Hair Restoration",
@@ -12,21 +14,21 @@ export default {
       "Hair restoration treatment in Karur by Dr. Kavitha, MD Dermatology. PRP, GFC, FUE transplant, LLLT, exosome therapy and more. CDSCO-approved kits. 3,500+ Google reviews. Book a consultation.",
     keywords:
       "hair restoration karur, hair loss treatment karur, hair regrowth treatment, PRP hair treatment karur, FUE hair transplant karur, hair fall treatment karur",
-    canonical: "https://skintrustkarur.com/services/hair-restoration",
+    canonical: `${SITE_BASE}/services/hair-restoration`,
     ogTitle: "Hair Restoration in Karur | Skin Trust - Dr. Kavitha",
     ogDescription:
       "Hair restoration treatment in Karur by Dr. Kavitha, MD Dermatology. PRP, GFC, FUE transplant, LLLT, exosome therapy and more. CDSCO-approved kits. Book a consultation.",
-    ogUrl: "https://skintrustkarur.com/services/hair-restoration",
+    ogUrl: `${SITE_BASE}/services/hair-restoration`,
   },
-  headCss: "/assets/css/hair-restoration.css",
+  headCss: `${BASE}/assets/css/hair-restoration.css`,
   schema: {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "MedicalClinic",
-        "@id": "https://skintrustkarur.com/#clinic",
+        "@id": `${SITE_BASE}/#clinic`,
         name: "Skin Trust Hospital",
-        url: "https://skintrustkarur.com/",
+        url: `${SITE_BASE}/`,
         telephone: "+91-00000-00000",
         address: {
           "@type": "PostalAddress",
@@ -111,11 +113,11 @@ export default {
     topbarPhoneHref: "tel:+910000000000",
     topbarHours: "Mon–Sat 10:00–20:00 · Sun by appointment",
     navLinks: [
-      { label: "Hair", href: "/services/hair-restoration", active: true },
-      { label: "Acne", href: "/acne-treatment-karur" },
-      { label: "Anti-Ageing", href: "/anti-ageing-treatment-karur" },
-      { label: "Rejuvenation", href: "/skin-rejuvenation-karur" },
-      { label: "Surgery", href: "/dermato-surgery-karur" },
+      { label: "Hair", href: `${BASE}/services/hair-restoration`, active: true },
+      { label: "Acne", href: `${BASE}/acne-treatment-karur` },
+      { label: "Anti-Ageing", href: `${BASE}/anti-ageing-treatment-karur` },
+      { label: "Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur` },
+      { label: "Surgery", href: `${BASE}/dermato-surgery-karur` },
     ],
     ctaLabel: "Book appointment",
     ctaHref: "#book",
@@ -129,33 +131,33 @@ export default {
       {
         heading: "Hair Treatments",
         links: [
-          { label: "PRP Hair Treatment", href: "/prp-hair-treatment-karur" },
-          { label: "GFC Therapy", href: "/gfc-hair-treatment-karur" },
-          { label: "FUE Hair Transplant", href: "/fue-hair-transplant-karur" },
-          { label: "LLLT Laser Therapy", href: "/lllt-hair-treatment-karur" },
-          { label: "Exosome Therapy", href: "/exosome-hair-treatment-karur" },
-          { label: "Mesotherapy", href: "/mesotherapy-hair-karur" },
+          { label: "PRP Hair Treatment", href: `${BASE}/prp-hair-treatment-karur` },
+          { label: "GFC Therapy", href: `${BASE}/gfc-hair-treatment-karur` },
+          { label: "FUE Hair Transplant", href: `${BASE}/fue-hair-transplant-karur` },
+          { label: "LLLT Laser Therapy", href: `${BASE}/lllt-hair-treatment-karur` },
+          { label: "Exosome Therapy", href: `${BASE}/exosome-hair-treatment-karur` },
+          { label: "Mesotherapy", href: `${BASE}/mesotherapy-hair-karur` },
         ],
       },
       {
         heading: "Skin Treatments",
         links: [
-          { label: "Acne Treatment", href: "/acne-treatment-karur" },
-          { label: "Acne Scar Treatment", href: "/acne-scar-treatment-karur" },
-          { label: "Anti-Ageing", href: "/anti-ageing-treatment-karur" },
-          { label: "Skin Tightening", href: "/skin-tightening-karur" },
-          { label: "Skin Rejuvenation", href: "/skin-rejuvenation-karur" },
-          { label: "Under Eye Treatment", href: "/under-eye-treatment-karur" },
+          { label: "Acne Treatment", href: `${BASE}/acne-treatment-karur` },
+          { label: "Acne Scar Treatment", href: `${BASE}/acne-scar-treatment-karur` },
+          { label: "Anti-Ageing", href: `${BASE}/anti-ageing-treatment-karur` },
+          { label: "Skin Tightening", href: `${BASE}/skin-tightening-karur` },
+          { label: "Skin Rejuvenation", href: `${BASE}/skin-rejuvenation-karur` },
+          { label: "Under Eye Treatment", href: `${BASE}/under-eye-treatment-karur` },
         ],
       },
       {
         heading: "Clinic",
         links: [
-          { label: "About Dr. Kavitha", href: "/about" },
-          { label: "Dermato Surgery", href: "/dermato-surgery-karur" },
-          { label: "Patient Reviews", href: "/reviews" },
-          { label: "Blog", href: "/blog" },
-          { label: "Contact & Location", href: "/contact" },
+          { label: "About Dr. Kavitha", href: `${BASE}/about` },
+          { label: "Dermato Surgery", href: `${BASE}/dermato-surgery-karur` },
+          { label: "Patient Reviews", href: `${BASE}/reviews` },
+          { label: "Blog", href: `${BASE}/blog` },
+          { label: "Contact & Location", href: `${BASE}/contact` },
         ],
       },
     ],
@@ -365,56 +367,56 @@ export default {
         placeholder: "PRP hair treatment<br>image 16:10",
         title: "PRP Hair Treatment",
         body: "Platelet Rich Plasma drawn from your own blood, concentrated and injected into thinning areas of the scalp using a CDSCO-approved kit. Stimulates dormant follicles and slows active hair fall.",
-        ctaHref: "/prp-hair-treatment-karur",
+        ctaHref: `${BASE}/prp-hair-treatment-karur`,
         ctaLabel: "View PRP treatment →",
       },
       {
         placeholder: "GFC therapy<br>image 16:10",
         title: "GFC Therapy",
         body: "Growth Factor Concentrate takes PRP a step further. Specific growth proteins are isolated and delivered at higher concentration, making it suitable for patients with more significant thinning or those who want faster results.",
-        ctaHref: "/gfc-hair-treatment-karur",
+        ctaHref: `${BASE}/gfc-hair-treatment-karur`,
         ctaLabel: "View GFC therapy →",
       },
       {
         placeholder: "Exosome therapy<br>image 16:10",
         title: "Exosome Therapy",
         body: "MCT autologous exosomes work at a cellular signalling level to reawaken follicles that have not yet been permanently lost. Used for advanced diffuse thinning when standard PRP shows limited response.",
-        ctaHref: "/exosome-hair-treatment-karur",
+        ctaHref: `${BASE}/exosome-hair-treatment-karur`,
         ctaLabel: "View exosome therapy →",
       },
       {
         placeholder: "FUE hair transplant<br>image 16:10",
         title: "FUE Hair Transplant",
         body: "Follicular Unit Extraction moves healthy grafts from the donor area to areas of permanent loss. For the right candidate, this is a long-term solution for receding hairlines and bald patches.",
-        ctaHref: "/fue-hair-transplant-karur",
+        ctaHref: `${BASE}/fue-hair-transplant-karur`,
         ctaLabel: "View FUE transplant →",
       },
       {
         placeholder: "LLLT laser therapy<br>image 16:10",
         title: "LLLT (Laser Therapy)",
         body: "Low Level Laser Therapy delivers specific wavelengths of light into the scalp to stimulate circulation and follicle activity. A painless, non-invasive option used alongside other treatments or as a standalone maintenance therapy.",
-        ctaHref: "/lllt-hair-treatment-karur",
+        ctaHref: `${BASE}/lllt-hair-treatment-karur`,
         ctaLabel: "View LLLT therapy →",
       },
       {
         placeholder: "Mesotherapy<br>image 16:10",
         title: "Mesotherapy",
         body: "A combination of vitamins, minerals and growth peptides is delivered directly into the scalp via micro-injections. Addresses nutritional deficiencies at the follicle level without systemic side effects.",
-        ctaHref: "/mesotherapy-hair-karur",
+        ctaHref: `${BASE}/mesotherapy-hair-karur`,
         ctaLabel: "View mesotherapy →",
       },
       {
         placeholder: "Hair botox<br>image 16:10",
         title: "Hair Botox",
         body: "A deep-conditioning scalp and shaft treatment that restores hair fibre integrity from the inside out. Reduces breakage and improves the overall texture and strength of existing hair, particularly after chemical or heat damage.",
-        ctaHref: "/hair-botox-karur",
+        ctaHref: `${BASE}/hair-botox-karur`,
         ctaLabel: "View hair botox →",
       },
       {
         placeholder: "Hair booster<br>image 16:10",
         title: "Hair Booster",
         body: "A targeted scalp booster with PDRN and peptide complexes to support scalp health and extend the effectiveness of other hair treatments. Often recommended as part of a longer treatment plan.",
-        ctaHref: "/hair-booster-karur",
+        ctaHref: `${BASE}/hair-booster-karur`,
         ctaLabel: "View hair booster →",
       },
     ],
@@ -474,7 +476,7 @@ export default {
   doctor: {
     eyebrow: "Your hair specialist",
     name: "Dr. Kavitha",
-    image: "/assets/images/dr-kavitha.jpg",
+    image: `${BASE}/assets/images/dr-kavitha.jpg`,
     alt: "Dr. Kavitha",
     creds: ["MBBS", "MD Dermatology", "Trichology", "Dermatosurgery"],
     paragraphs: [
@@ -484,7 +486,7 @@ export default {
       "Regenerative hair treatments at Skin Trust, including PRP, GFC and exosome therapy, are performed by Dr. Kavitha herself, ensuring continuity of care throughout the treatment process",
     ],
     sig: "— Dr. Kavitha",
-    moreHref: "/about",
+    moreHref: `${BASE}/about`,
     moreLabel: "More about Dr. Kavitha",
   },
   testimonials: {
@@ -549,12 +551,12 @@ export default {
       {
         question: "What is the difference between PRP and GFC?",
         answer:
-          'Both use your own blood. PRP separates the platelet-rich layer from the red cells and uses the resulting plasma. GFC goes further by isolating specific growth factors from that plasma at a higher concentration. GFC is often recommended for patients with moderate to significant thinning or those who want a more targeted approach. Dr. Kavitha recommends one or the other based on your scalp findings, not on which costs more. You can also read the full <a href="/prp-hair-treatment-karur">PRP treatment page</a> and <a href="/gfc-hair-treatment-karur">GFC treatment page</a> for a detailed comparison.',
+          `Both use your own blood. PRP separates the platelet-rich layer from the red cells and uses the resulting plasma. GFC goes further by isolating specific growth factors from that plasma at a higher concentration. GFC is often recommended for patients with moderate to significant thinning or those who want a more targeted approach. Dr. Kavitha recommends one or the other based on your scalp findings, not on which costs more. You can also read the full <a href="${BASE}/prp-hair-treatment-karur">PRP treatment page</a> and <a href="${BASE}/gfc-hair-treatment-karur">GFC treatment page</a> for a detailed comparison.`,
       },
       {
         question: "Do you offer hair transplants in Karur?",
         answer:
-          'Yes. FUE hair transplant is available at Skin Trust. A detailed consultation covering your donor density, recipient area, expected graft count and realistic outcomes is conducted before any transplant is planned. For patients travelling from outside Karur, procedures can be coordinated around your schedule. See the <a href="/fue-hair-transplant-karur">FUE hair transplant page</a> for full details.',
+          `Yes. FUE hair transplant is available at Skin Trust. A detailed consultation covering your donor density, recipient area, expected graft count and realistic outcomes is conducted before any transplant is planned. For patients travelling from outside Karur, procedures can be coordinated around your schedule. See the <a href="${BASE}/fue-hair-transplant-karur">FUE hair transplant page</a> for full details.`,
       },
       {
         question: "Is hair restoration safe?",
@@ -613,10 +615,10 @@ export default {
     eyebrow: "Explore the clinic",
     h2: "Other treatments at Skin Trust",
     cards: [
-      { category: "Skin", label: "Acne Treatment", href: "/acne-treatment-karur" },
-      { category: "Skin", label: "Acne Scar Treatment", href: "/acne-scar-treatment-karur" },
-      { category: "Aesthetics", label: "Anti-Ageing", href: "/anti-ageing-treatment-karur" },
-      { category: "Surgery", label: "Dermato Surgery", href: "/dermato-surgery-karur" },
+      { category: "Skin", label: "Acne Treatment", href: `${BASE}/acne-treatment-karur` },
+      { category: "Skin", label: "Acne Scar Treatment", href: `${BASE}/acne-scar-treatment-karur` },
+      { category: "Aesthetics", label: "Anti-Ageing", href: `${BASE}/anti-ageing-treatment-karur` },
+      { category: "Surgery", label: "Dermato Surgery", href: `${BASE}/dermato-surgery-karur` },
     ],
   },
 };

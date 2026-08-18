@@ -37,12 +37,14 @@ const {
   mobileWhatsappHref,
   mobileWhatsappLabel,
 } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" type="image/png" href="/assets/images/logo-color.png" />
+    <link rel="icon" type="image/png" href={`${base}assets/images/logo-color.png`} />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
@@ -57,7 +59,7 @@ const {
     <meta property="og:title" content={ogTitle || title} />
     <meta property="og:description" content={ogDescription || description || ""} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={ogUrl || canonical || "/"} />
+    <meta property="og:url" content={ogUrl || canonical || base} />
     <meta property="og:locale" content="en_IN" />
     <meta property="og:site_name" content="Skin Trust Hospital" />
     {canonical && <link rel="canonical" href={canonical} />}
@@ -67,7 +69,7 @@ const {
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href={`${base}assets/css/style.css`} />
     <slot name="head" />
   </head>
   <body>

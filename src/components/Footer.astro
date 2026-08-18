@@ -20,15 +20,17 @@ interface Props {
 
 const { address, phone, phoneHref, whatsapp, whatsappHref, columns } =
   Astro.props;
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <footer class="foot">
   <div class="shell">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="/">
+        <a class="brand" href={base}>
           <img
-            src="/assets/images/logo-color.png"
+            src={`${base}assets/images/logo-color.png`}
             alt="Skin Trust Hospital"
             style="max-height: 48px; width: auto; height: auto; object-fit: contain;"
           />

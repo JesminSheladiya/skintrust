@@ -1,5 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { SITE_BASE } from "../../data/site.js";
+
+const base = import.meta.env.BASE_URL;
 
 const serviceModules = import.meta.glob("../../data/services/*.js", {
   eager: true,
@@ -18,13 +21,13 @@ const header = {
   topbarPhoneHref: "tel:+919626923299",
   topbarHours: "Mon–Sat 9:30 AM–7:30 PM",
   navLinks: [
-    { label: "Home", href: "/" },
-    { label: "Services", href: "/services/", active: true },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
+    { label: "Home", href: base },
+    { label: "Services", href: `${base}services/`, active: true },
+    { label: "About", href: `${base}about` },
+    { label: "Contact", href: `${base}contact` },
   ],
   ctaLabel: "Book appointment",
-  ctaHref: "/contact",
+  ctaHref: `${base}contact`,
 };
 
 const footer = {
@@ -37,29 +40,29 @@ const footer = {
     {
       heading: "Hair & Skin",
       links: [
-        { label: "PRP Hair Treatment", href: "/prp-hair-treatment-karur" },
-        { label: "GFC Treatment", href: "/gfc-hair-treatment-karur" },
-        { label: "FUE Hair Transplant", href: "/fue-hair-transplant-karur" },
-        { label: "Acne Treatment", href: "/acne-treatment-karur" },
-        { label: "Acne Scar Treatment", href: "/acne-scar-treatment-karur" },
+        { label: "PRP Hair Treatment", href: `${base}prp-hair-treatment-karur` },
+        { label: "GFC Treatment", href: `${base}gfc-hair-treatment-karur` },
+        { label: "FUE Hair Transplant", href: `${base}fue-hair-transplant-karur` },
+        { label: "Acne Treatment", href: `${base}acne-treatment-karur` },
+        { label: "Acne Scar Treatment", href: `${base}acne-scar-treatment-karur` },
       ],
     },
     {
       heading: "Laser & Anti-Ageing",
       links: [
-        { label: "Laser Hair Removal", href: "/laser-hair-removal-karur" },
-        { label: "Anti-Ageing & Botox", href: "/anti-ageing-treatment-karur" },
-        { label: "HIFU Skin Tightening", href: "/skin-tightening-karur" },
-        { label: "HydraFacial & Rejuvenation", href: "/skin-rejuvenation-karur" },
-        { label: "Tattoo Removal", href: "/tattoo-removal-karur" },
+        { label: "Laser Hair Removal", href: `${base}laser-hair-removal-karur` },
+        { label: "Anti-Ageing & Botox", href: `${base}anti-ageing-treatment-karur` },
+        { label: "HIFU Skin Tightening", href: `${base}skin-tightening-karur` },
+        { label: "HydraFacial & Rejuvenation", href: `${base}skin-rejuvenation-karur` },
+        { label: "Tattoo Removal", href: `${base}tattoo-removal-karur` },
       ],
     },
     {
       heading: "Clinic",
       links: [
-        { label: "About Dr. Kavitha", href: "/about" },
-        { label: "Patient Reviews", href: "/reviews" },
-        { label: "Contact & Directions", href: "/contact" },
+        { label: "About Dr. Kavitha", href: `${base}about` },
+        { label: "Patient Reviews", href: `${base}reviews` },
+        { label: "Contact & Directions", href: `${base}contact` },
       ],
     },
   ],
@@ -69,10 +72,10 @@ const footer = {
 <BaseLayout
   title="Our Services | Skin Trust Hospital, Karur"
   description="Explore the full range of skin, hair and aesthetic treatments offered by Skin Trust Hospital, Karur — performed by Dr. Kavitha."
-  canonical="https://www.skintrustkarur.com/services/"
+  canonical={`${SITE_BASE}/services/`}
   ogTitle="Our Services | Skin Trust Hospital, Karur"
   ogDescription="Explore the full range of skin, hair and aesthetic treatments offered by Skin Trust Hospital, Karur."
-  ogUrl="https://www.skintrustkarur.com/services/"
+  ogUrl={`${SITE_BASE}/services/`}
   header={header}
   footer={footer}
   waFloatHref={waLink}
@@ -97,7 +100,7 @@ const footer = {
       <figure class="hero-figure" style="margin: 0">
         <div class="arch">
           <img
-            src="/assets/images/home-cover.jpg"
+            src={`${base}assets/images/home-cover.jpg`}
             alt="Skin Trust Hospital Karur"
             style="width: 100%; height: 100%; object-fit: cover; border-radius: 9999px 9999px 0 0;"
             loading="lazy"
@@ -136,7 +139,7 @@ const footer = {
         {services.map((service) => (
           <a
             class="cat"
-            href={`/services/${service.slug}`}
+            href={`${base}services/${service.slug}`}
             style="text-decoration: none; color: inherit;"
           >
             <div class="cat-top">
