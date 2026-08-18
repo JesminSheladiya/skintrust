@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const serviceModules = import.meta.glob("../../data/services/*.js", {
+  eager: true,
+});
+
+const services = Object.values(serviceModules)
+  .map((mod) => mod.default)
+  .sort((a, b) => a.slug.localeCompare(b.slug));
+
+const waLink = "https://wa.me/919092232991";
+
+const header = {
+  topbarAddress:
+    "No. 28, Chairman Ramanujan Street, Karur — opp. Kamaatchi Amman Temple",
+  topbarPhone: "+91 96269 23299",
+  topbarPhoneHref: "tel:+919626923299",
+  topbarHours: "Mon–Sat 9:30 AM–7:30 PM",
+  navLinks: [
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services/", active: true },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
+  ],
+  ctaLabel: "Book appointment",
+  ctaHref: "/contact",
+};
+
+const footer = {
+  address: "No. 28, Chairman Ramanujan Street, Karur — 639001, Tamil Nadu.",
+  phone: "+91 96269 23299",
+  phoneHref: "tel:+919626923299",
+  whatsapp: "WhatsApp: +91 90922 32991",
+  whatsappHref: "https://wa.me/919092232991",
+  columns: [
+    {
+      heading: "Hair & Skin",
+      links: [
+        { label: "PRP Hair Treatment", href: "/prp-hair-treatment-karur" },
+        { label: "GFC Treatment", href: "/gfc-hair-treatment-karur" },
+        { label: "FUE Hair Transplant", href: "/fue-hair-transplant-karur" },
+        { label: "Acne Treatment", href: "/acne-treatment-karur" },
+        { label: "Acne Scar Treatment", href: "/acne-scar-treatment-karur" },
+      ],
+    },
+    {
+      heading: "Laser & Anti-Ageing",
+      links: [
+        { label: "Laser Hair Removal", href: "/laser-hair-removal-karur" },
+        { label: "Anti-Ageing & Botox", href: "/anti-ageing-treatment-karur" },
+        { label: "HIFU Skin Tightening", href: "/skin-tightening-karur" },
+        { label: "HydraFacial & Rejuvenation", href: "/skin-rejuvenation-karur" },
+        { label: "Tattoo Removal", href: "/tattoo-removal-karur" },
+      ],
+    },
+    {
+      heading: "Clinic",
+      links: [
+        { label: "About Dr. Kavitha", href: "/about" },
+        { label: "Patient Reviews", href: "/reviews" },
+        { label: "Contact & Directions", href: "/contact" },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Our Services | Skin Trust Hospital, Karur"
+  description="Explore the full range of skin, hair and aesthetic treatments offered by Skin Trust Hospital, Karur — performed by Dr. Kavitha."
+  canonical="https://www.skintrustkarur.com/services/"
+  ogTitle="Our Services | Skin Trust Hospital, Karur"
+  ogDescription="Explore the full range of skin, hair and aesthetic treatments offered by Skin Trust Hospital, Karur."
+  ogUrl="https://www.skintrustkarur.com/services/"
+  header={header}
+  footer={footer}
+  waFloatHref={waLink}
+  waFloatLabel="Chat"
+  mobileCallHref="tel:+919626923299"
+  mobileCallLabel="Call clinic"
+  mobileWhatsappHref={waLink}
+  mobileWhatsappLabel="WhatsApp"
+>
+  <section class="hero">
+    <div class="shell">
+      <div>
+        <p class="eyebrow">Our services</p>
+        <h1>
+          Skin, hair &amp; aesthetic care,<br /><em>all under one roof.</em>
+        </h1>
+        <p class="lede">
+          Every treatment at Skin Trust is performed by Dr. Kavitha and starts
+          with a proper diagnosis, not a package sale.
+        </p>
+      </div>
+      <figure class="hero-figure" style="margin: 0">
+        <div class="arch">
+          <img
+            src="/assets/images/home-cover.jpg"
+            alt="Skin Trust Hospital Karur"
+            style="width: 100%; height: 100%; object-fit: cover; border-radius: 9999px 9999px 0 0;"
+            loading="lazy"
+          />
+        </div>
+        <div class="hero-badge">
+          <div class="hb-stars" aria-hidden="true">★★★★★</div>
+          <b>4.9</b>
+          <span><em>3,600+</em> Google reviews</span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="strip">
+    <div class="shell">
+      <div><b>{services.length}</b><span>Service pages</span></div>
+      <div><b>40+</b><span>Treatments offered</span></div>
+      <div><b>16+</b><span>Years of Expertise</span></div>
+      <div><b>3600+</b><span>Google Reviews</span></div>
+    </div>
+  </section>
+
+  <section class="sec sec-warm">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="eyebrow">Explore by treatment area</p>
+        <h2>Choose a service to learn more.</h2>
+        <p class="lede">
+          Each page covers the treatment, who it suits, before-and-after
+          results, and what to expect at your first consultation.
+        </p>
+      </div>
+
+      <div class="cat-grid">
+        {services.map((service) => (
+          <a
+            class="cat"
+            href={`/services/${service.slug}`}
+            style="text-decoration: none; color: inherit;"
+          >
+            <div class="cat-top">
+              <span class="ph">{service.displayName}<br />image 16:10</span>
+            </div>
+            <div class="cat-body">
+              <h3>{service.displayName}</h3>
+              <p>{service.summary}</p>
+              <span class="cat-cta">View service →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,91 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogUrl?: string;
+  header: Parameters<typeof Header>[0];
+  footer: Parameters<typeof Footer>[0];
+  waFloatHref: string;
+  waFloatLabel: string;
+  mobileCallHref: string;
+  mobileCallLabel: string;
+  mobileWhatsappHref: string;
+  mobileWhatsappLabel: string;
+}
+
+const {
+  title,
+  description,
+  keywords,
+  canonical,
+  ogTitle,
+  ogDescription,
+  ogUrl,
+  header,
+  footer,
+  waFloatHref,
+  waFloatLabel,
+  mobileCallHref,
+  mobileCallLabel,
+  mobileWhatsappHref,
+  mobileWhatsappLabel,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="/assets/images/logo-color.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {keywords && <meta name="keywords" content={keywords} />}
+    <meta name="author" content="Skin Trust Hospital, Karur" />
+    <meta name="theme-color" content="#095a72" />
+    <meta name="geo.region" content="IN-TN" />
+    <meta name="geo.placename" content="Karur, Tamil Nadu, India" />
+    <meta name="geo.position" content="10.961598;78.0767411" />
+    <meta name="ICBM" content="10.961598, 78.0767411" />
+    <meta property="og:title" content={ogTitle || title} />
+    <meta property="og:description" content={ogDescription || description || ""} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={ogUrl || canonical || "/"} />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Skin Trust Hospital" />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <slot name="head" />
+  </head>
+  <body>
+    <Header {...header} />
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer {...footer} />
+
+    <a class="wa-float" href={waFloatHref} aria-label="Chat on WhatsApp">
+      {waFloatLabel}
+    </a>
+
+    <div class="mobile-bar">
+      <a href={mobileCallHref}>{mobileCallLabel}</a>
+      <a href={mobileWhatsappHref}>{mobileWhatsappLabel}</a>
+    </div>
+  </body>
+</html>

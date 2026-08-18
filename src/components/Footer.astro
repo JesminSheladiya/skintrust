@@ -1,0 +1,70 @@
+---
+interface FooterLink {
+  label: string;
+  href: string;
+}
+
+interface FooterColumn {
+  heading: string;
+  links: FooterLink[];
+}
+
+interface Props {
+  address: string;
+  phone: string;
+  phoneHref: string;
+  whatsapp?: string;
+  whatsappHref?: string;
+  columns: FooterColumn[];
+}
+
+const { address, phone, phoneHref, whatsapp, whatsappHref, columns } =
+  Astro.props;
+---
+
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <img
+            src="/assets/images/logo-color.png"
+            alt="Skin Trust Hospital"
+            style="max-height: 48px; width: auto; height: auto; object-fit: contain;"
+          />
+        </a>
+        <p
+          style="margin-top: 20px; max-width: 32ch"
+          set:html={address}
+        ></p>
+        <p style="margin: 0">
+          <a href={phoneHref}>{phone}</a>
+        </p>
+        {whatsapp && (
+          <p style="margin: 4px 0 0">
+            <a href={whatsappHref}>{whatsapp}</a>
+          </p>
+        )}
+      </div>
+      {columns.map((col) => (
+        <div>
+          <h4>{col.heading}</h4>
+          <ul>
+            {col.links.map((link) => (
+              <li>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Skin Trust Hospital, Karur. All rights reserved.</span>
+      <span>
+        Information on this site is educational and does not substitute a
+        clinical consultation.
+      </span>
+    </div>
+  </div>
+</footer>

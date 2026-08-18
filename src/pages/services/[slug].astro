@@ -1,0 +1,389 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaTreatments from "../../components/BaTreatments.jsx";
+import FaqAccordion from "../../components/FaqAccordion.jsx";
+
+export function getStaticPaths() {
+  const serviceModules = import.meta.glob("../../data/services/*.js", {
+    eager: true,
+  });
+  return Object.values(serviceModules).map((mod) => {
+    const service = mod.default;
+    return { params: { slug: service.slug }, props: { service } };
+  });
+}
+
+const { service } = Astro.props;
+const {
+  meta,
+  header,
+  footer,
+  waLink,
+  hero,
+  strip,
+  results,
+  treatments,
+  why,
+  doctor,
+  testimonials,
+  faq,
+  visit,
+  cta,
+  internalLinks,
+} = service;
+---
+
+<BaseLayout
+  title={meta.title}
+  description={meta.description}
+  keywords={meta.keywords}
+  canonical={meta.canonical}
+  ogTitle={meta.ogTitle}
+  ogDescription={meta.ogDescription}
+  ogUrl={meta.ogUrl}
+  header={header}
+  footer={footer}
+  waFloatHref={waLink}
+  waFloatLabel="Chat"
+  mobileCallHref={header.topbarPhoneHref}
+  mobileCallLabel="Call clinic"
+  mobileWhatsappHref={waLink}
+  mobileWhatsappLabel="WhatsApp"
+>
+  <Fragment slot="head">
+    {service.headCss && (
+      <link rel="stylesheet" href={service.headCss} />
+    )}
+    {service.schema && (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify(service.schema)}
+      />
+    )}
+  </Fragment>
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero">
+    <div class="shell">
+      <div>
+        <p class="eyebrow">{hero.eyebrow}</p>
+        <h1 set:html={hero.h1} />
+        <p class="lede">{hero.lede}</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href={hero.ctaHref}>{hero.ctaLabel}</a>
+          <a class="btn btn-ghost" href={waLink}>WhatsApp us</a>
+        </div>
+        <div class="hero-meta">
+          {hero.meta.map((item) => (
+            <div>
+              <b>{item.b}</b>
+              {item.label}
+            </div>
+          ))}
+        </div>
+      </div>
+      <figure class="hero-figure" style="margin: 0">
+        <div class="arch">
+          <span class="ph" set:html={hero.figureText}></span>
+        </div>
+        <div class="hero-badge">
+          <div class="hb-stars" aria-hidden="true">{hero.badge.stars}</div>
+          <b>{hero.badge.num}</b>
+          <span set:html={hero.badge.labelHtml}></span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ======================= CREDENTIAL STRIP ======================= -->
+  <section class="strip" aria-label="Clinic credentials">
+    <div class="shell">
+      {strip.map((item) => (
+        <div>
+          <b>{item.b}</b>
+          <span>{item.label}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ======================= BEFORE & AFTER (PER TREATMENT) ======================= -->
+  <section class="sec sec-warm" id="results">
+    <div class="shell">
+      <div class="sec-head centred">
+        <p class="eyebrow centred">{results.eyebrow}</p>
+        <h2 set:html={results.h2} />
+        <p class="lede">{results.lede}</p>
+      </div>
+
+      <BaTreatments client:load tabs={results.tabs} />
+
+      <p class="disclaimer" style="color: var(--muted)">
+        {results.disclaimer}
+      </p>
+      <div style="text-align: center; margin-top: 32px">
+        <a class="btn btn-gold" href={waLink}>Book a consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= TREATMENTS OVERVIEW ======================= -->
+  <section class="sec sec-warm" id="treatments">
+    <div class="shell">
+      <div class="sec-head" style="text-align: left; max-width: 100%;">
+        <p class="eyebrow" style="text-align: left;">{treatments.eyebrow}</p>
+        <div
+          style="display: flex; gap: 40px; align-items: flex-start; justify-content: space-between; flex-wrap: wrap;"
+        >
+          <div style="flex: 1 1 400px;">
+            <h2 style="margin: 0;" set:html={treatments.h2}></h2>
+          </div>
+          <div style="flex: 1 1 400px;">
+            <p
+              class="lede"
+              style="text-align: left; margin: 0; padding-top: 8px;"
+            >
+              {treatments.lede}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-grid">
+        {treatments.cards.map((card) => (
+          <article class="cat">
+            <div class="cat-top">
+              <span class="ph" set:html={card.placeholder}></span>
+            </div>
+            <div class="cat-body">
+              <h3>{card.title}</h3>
+              <p>{card.body}</p>
+              <a class="cat-cta" href={card.ctaHref}>{card.ctaLabel}</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= WHY SKIN TRUST ======================= -->
+  <section class="sec sec-dark" id="why-us">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="eyebrow">{why.eyebrow}</p>
+        <h2 set:html={why.h2}></h2>
+        <p class="lede">{why.lede}</p>
+      </div>
+
+      <div class="why-grid">
+        {why.items.map((item) => (
+          <div class="why">
+            <b>{item.title}</b>
+            <p>{item.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="stats-band" style="margin-top: 52px">
+        {why.stats.map((stat) => (
+          <div
+            style="padding: 28px 22px; text-align: center; background: rgba(247,243,236,.04);"
+          >
+            <b
+              style="display: block; font-family: var(--display); font-size: 2.2rem; color: var(--champagne-light); line-height: 1;"
+              >{stat.value}</b
+            >
+            <span
+              style="font-size: .66rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(247,243,236,.55);"
+              >{stat.label}</span
+            >
+          </div>
+        ))}
+      </div>
+
+      <div style="margin-top: 40px; text-align: center">
+        <a class="btn btn-gold" href={why.ctaHref}>{why.ctaLabel}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= DOCTOR ======================= -->
+  <section class="sec" id="doctor">
+    <div class="shell">
+      <div class="doc">
+        <figure class="arch" style="margin: 0">
+          <img
+            src={doctor.image}
+            alt={doctor.alt}
+            style="width: 100%; height: 100%; object-fit: cover; border-radius: 9999px 9999px 0 0;"
+            loading="lazy"
+          />
+        </figure>
+        <div>
+          <p class="eyebrow">{doctor.eyebrow}</p>
+          <h2>{doctor.name}</h2>
+          <div class="doc-creds">
+            {doctor.creds.map((cred) => (
+              <span class="cred">{cred}</span>
+            ))}
+          </div>
+          {doctor.paragraphs.map((para, i) => (
+            <p style={i === 0 ? "margin-top: 4px" : undefined}>{para}</p>
+          ))}
+          <p class="sig">{doctor.sig}</p>
+          <a class="btn btn-ghost" href={doctor.moreHref} style="margin-top: 14px"
+            >{doctor.moreLabel}</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= TESTIMONIALS ======================= -->
+  <section class="sec sec-warm" id="reviews">
+    <div class="shell">
+      <p class="eyebrow">{testimonials.eyebrow}</p>
+      <div class="review-wall">
+        <div class="review-score">
+          <span class="num">{testimonials.score.num}</span>
+          <div class="stars" aria-hidden="true">{testimonials.score.stars}</div>
+          <div class="of">{testimonials.score.of}</div>
+        </div>
+        <div class="review-copy">
+          <p class="big" set:html={testimonials.copyBig}></p>
+          <p>{testimonials.copy}</p>
+        </div>
+      </div>
+      <div class="quotes">
+        {testimonials.quotes.map((q) => (
+          <figure class="quote" style="margin: 0">
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <blockquote>{q.quote}</blockquote>
+            <footer>
+              <b>{q.name}</b>
+              {q.meta}
+            </footer>
+          </figure>
+        ))}
+      </div>
+      <div style="text-align: center; margin-top: 36px">
+        <a
+          class="btn btn-ghost"
+          href={testimonials.allHref}
+          target="_blank"
+          rel="noopener"
+          >{testimonials.allLabel}</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FAQ ======================= -->
+  <section class="sec" id="faq">
+    <div class="shell">
+      <div class="sec-head centred">
+        <p class="eyebrow centred">{faq.eyebrow}</p>
+        <h2>{faq.h2}</h2>
+      </div>
+      <div class="faq">
+        <FaqAccordion client:load items={faq.items} />
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= VISIT / MAP ======================= -->
+  <section class="sec sec-warm" id="book">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="eyebrow">{visit.eyebrow}</p>
+        <h2>{visit.h2}</h2>
+        <p class="lede">{visit.lede}</p>
+      </div>
+      <div class="visit">
+        <div class="visit-info">
+          <h3>{visit.clinicName}</h3>
+          <dl>
+            {visit.rows.map((row) => (
+              <>
+                <dt>{row.dt}</dt>
+                <dd set:html={row.dd}></dd>
+              </>
+            ))}
+          </dl>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            {visit.buttons.map((btn) => (
+              <a
+                class={btn.class}
+                href={btn.href}
+                target={btn.target ? "_blank" : undefined}
+                rel={btn.target ? "noopener" : undefined}
+                >{btn.label}</a
+              >
+            ))}
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe
+            title={visit.map.title}
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src={visit.map.src}
+            aria-label={visit.map.ariaLabel}
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CLOSING CTA ======================= -->
+  <section class="sec cta-close">
+    <div class="shell">
+      <p class="eyebrow centred">{cta.eyebrow}</p>
+      <h2 set:html={cta.h2}></h2>
+      <p
+        class="lede"
+        style="margin: 18px auto 0; text-align: center; color: rgba(247,243,236,.72);"
+      >
+        {cta.lede}
+      </p>
+      <div class="btnrow">
+        {cta.buttons.map((btn) => (
+          <a class={btn.class} href={btn.href}>{btn.label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= INTERNAL LINKS ======================= -->
+  <section
+    class="sec"
+    style="padding-top: clamp(40px,5vw,64px); padding-bottom: clamp(40px,5vw,64px); border-top: 1px solid var(--line);"
+  >
+    <div class="shell">
+      <div class="sec-head centred">
+        <p class="eyebrow centred">{internalLinks.eyebrow}</p>
+        <h2 style="font-size: clamp(1.4rem,2.5vw,2rem);">{internalLinks.h2}</h2>
+      </div>
+      <div class="internal-grid">
+        {internalLinks.cards.map((card) => (
+          <a
+            href={card.href}
+            class="internal-card"
+            style="padding: 22px; border: 1px solid var(--line); display: block; transition: border-color .3s;"
+          >
+            <div
+              style="font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--champagne); margin-bottom: 8px;"
+            >
+              {card.category}
+            </div>
+            <div
+              style="font-family: var(--display); font-size: 1.15rem; color: var(--forest);"
+            >
+              {card.label}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
