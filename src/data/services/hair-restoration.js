@@ -1,32 +1,34 @@
 const waLink =
   "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20hair%20restoration%20consultation%20at%20Skin%20Trust.";
 
+import { SITE_BASE, BASE } from "../site.js";
+
 export default {
   slug: "hair-restoration",
   displayName: "Hair Restoration",
   summary:
-    "From early-stage thinning to advanced hair fall, Dr. Kavita offers a full range of clinically proven hair restoration treatments at Skin Trust, Karur.",
+    "From early-stage thinning to advanced hair fall, Dr. Kavitha offers a full range of clinically proven hair restoration treatments at Skin Trust, Karur.",
   meta: {
-    title: "Hair Restoration in Karur | Skin Trust - Dr. Kavita",
+    title: "Hair Restoration in Karur | Skin Trust - Dr. Kavitha",
     description:
-      "Hair restoration treatment in Karur by Dr. Kavita, MD Dermatology. PRP, GFC, FUE transplant, LLLT, exosome therapy and more. CDSCO-approved kits. 3,500+ Google reviews. Book a consultation.",
+      "Hair restoration treatment in Karur by Dr. Kavitha, MD Dermatology. PRP, GFC, FUE transplant, LLLT, exosome therapy and more. CDSCO-approved kits. 3,500+ Google reviews. Book a consultation.",
     keywords:
       "hair restoration karur, hair loss treatment karur, hair regrowth treatment, PRP hair treatment karur, FUE hair transplant karur, hair fall treatment karur",
-    canonical: "https://skintrustkarur.com/services/hair-restoration",
-    ogTitle: "Hair Restoration in Karur | Skin Trust - Dr. Kavita",
+    canonical: `${SITE_BASE}/services/hair-restoration`,
+    ogTitle: "Hair Restoration in Karur | Skin Trust - Dr. Kavitha",
     ogDescription:
-      "Hair restoration treatment in Karur by Dr. Kavita, MD Dermatology. PRP, GFC, FUE transplant, LLLT, exosome therapy and more. CDSCO-approved kits. Book a consultation.",
-    ogUrl: "https://skintrustkarur.com/services/hair-restoration",
+      "Hair restoration treatment in Karur by Dr. Kavitha, MD Dermatology. PRP, GFC, FUE transplant, LLLT, exosome therapy and more. CDSCO-approved kits. Book a consultation.",
+    ogUrl: `${SITE_BASE}/services/hair-restoration`,
   },
-  headCss: "/assets/css/hair-restoration.css",
+  headCss: `${BASE}/assets/css/hair-restoration.css`,
   schema: {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "MedicalClinic",
-        "@id": "https://skintrustkarur.com/#clinic",
+        "@id": `${SITE_BASE}/#clinic`,
         name: "Skin Trust Hospital",
-        url: "https://skintrustkarur.com/",
+        url: `${SITE_BASE}/`,
         telephone: "+91-00000-00000",
         address: {
           "@type": "PostalAddress",
@@ -47,7 +49,7 @@ export default {
         medicalSpecialty: ["Dermatology", "Trichology"],
         founder: {
           "@type": "Physician",
-          name: "Dr. Kavita",
+          name: "Dr. Kavitha",
           medicalSpecialty: ["Dermatology", "Trichology", "Dermatosurgery"],
           hasCredential: ["MBBS", "MD Dermatology"],
         },
@@ -73,7 +75,7 @@ export default {
             name: "Which hair treatment is right for me in Karur?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "The right treatment depends on the cause and stage of your hair loss. Early-stage genetic hair loss typically responds to PRP or GFC. Advanced thinning may need exosome therapy. Permanent bald zones require FUE hair transplant. Dr. Kavita at Skin Trust, Karur, recommends the appropriate option after a trichoscopy scalp examination.",
+              text: "The right treatment depends on the cause and stage of your hair loss. Early-stage genetic hair loss typically responds to PRP or GFC. Advanced thinning may need exosome therapy. Permanent bald zones require FUE hair transplant. Dr. Kavitha at Skin Trust, Karur, recommends the appropriate option after a trichoscopy scalp examination.",
             },
           },
           {
@@ -81,7 +83,7 @@ export default {
             name: "What is the difference between PRP and GFC hair treatment?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Both PRP and GFC use your own blood. PRP uses platelet-rich plasma. GFC isolates specific growth factors from that plasma at a higher concentration. GFC is often recommended for moderate to significant thinning or for patients wanting fewer sessions. Dr. Kavita recommends one based on scalp findings.",
+              text: "Both PRP and GFC use your own blood. PRP uses platelet-rich plasma. GFC isolates specific growth factors from that plasma at a higher concentration. GFC is often recommended for moderate to significant thinning or for patients wanting fewer sessions. Dr. Kavitha recommends one based on scalp findings.",
             },
           },
           {
@@ -111,11 +113,11 @@ export default {
     topbarPhoneHref: "tel:+910000000000",
     topbarHours: "Mon–Sat 10:00–20:00 · Sun by appointment",
     navLinks: [
-      { label: "Hair", href: "/services/hair-restoration", active: true },
-      { label: "Acne", href: "/acne-treatment-karur" },
-      { label: "Anti-Ageing", href: "/anti-ageing-treatment-karur" },
-      { label: "Rejuvenation", href: "/skin-rejuvenation-karur" },
-      { label: "Surgery", href: "/dermato-surgery-karur" },
+      { label: "Hair", href: `${BASE}/services/hair-restoration`, active: true },
+      { label: "Acne", href: `${BASE}/services/acne-treatment-karur` },
+      { label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur` },
+      { label: "Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur` },
+      { label: "Surgery", href: `${BASE}/services/dermato-surgery-karur` },
     ],
     ctaLabel: "Book appointment",
     ctaHref: "#book",
@@ -129,33 +131,33 @@ export default {
       {
         heading: "Hair Treatments",
         links: [
-          { label: "PRP Hair Treatment", href: "/prp-hair-treatment-karur" },
-          { label: "GFC Therapy", href: "/gfc-hair-treatment-karur" },
-          { label: "FUE Hair Transplant", href: "/fue-hair-transplant-karur" },
-          { label: "LLLT Laser Therapy", href: "/lllt-hair-treatment-karur" },
-          { label: "Exosome Therapy", href: "/exosome-hair-treatment-karur" },
-          { label: "Mesotherapy", href: "/mesotherapy-hair-karur" },
+          { label: "PRP Hair Treatment", href: `${BASE}/services/prp-hair-treatment-karur` },
+          { label: "GFC Therapy", href: `${BASE}/services/gfc-hair-treatment-karur` },
+          { label: "FUE Hair Transplant", href: `${BASE}/services/fue-hair-transplant-karur` },
+          { label: "LLLT Laser Therapy", href: `${BASE}/services/lllt-hair-treatment-karur` },
+          { label: "Exosome Therapy", href: `${BASE}/services/exosome-hair-treatment-karur` },
+          { label: "Mesotherapy", href: `${BASE}/services/mesotherapy-hair-karur` },
         ],
       },
       {
         heading: "Skin Treatments",
         links: [
-          { label: "Acne Treatment", href: "/acne-treatment-karur" },
-          { label: "Acne Scar Treatment", href: "/acne-scar-treatment-karur" },
-          { label: "Anti-Ageing", href: "/anti-ageing-treatment-karur" },
-          { label: "Skin Tightening", href: "/skin-tightening-karur" },
-          { label: "Skin Rejuvenation", href: "/skin-rejuvenation-karur" },
-          { label: "Under Eye Treatment", href: "/under-eye-treatment-karur" },
+          { label: "Acne Treatment", href: `${BASE}/services/acne-treatment-karur` },
+          { label: "Acne Scar Treatment", href: `${BASE}/services/acne-scar-treatment-karur` },
+          { label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur` },
+          { label: "Skin Tightening", href: `${BASE}/services/skin-tightening-karur` },
+          { label: "Skin Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur` },
+          { label: "Under Eye Treatment", href: `${BASE}/services/under-eye-treatment-karur` },
         ],
       },
       {
         heading: "Clinic",
         links: [
-          { label: "About Dr. Kavita", href: "/about" },
-          { label: "Dermato Surgery", href: "/dermato-surgery-karur" },
-          { label: "Patient Reviews", href: "/reviews" },
-          { label: "Blog", href: "/blog" },
-          { label: "Contact & Location", href: "/contact" },
+          { label: "About Dr. Kavitha", href: `${BASE}/about` },
+          { label: "Dermato Surgery", href: `${BASE}/services/dermato-surgery-karur` },
+          { label: "Patient Reviews", href: `${BASE}/reviews` },
+          { label: "Blog", href: `${BASE}/blog` },
+          { label: "Contact & Location", href: `${BASE}/contact` },
         ],
       },
     ],
@@ -164,14 +166,9 @@ export default {
     eyebrow: "Hair Restoration · Karur",
     h1: "Hair loss, <em>addressed<br>at the root.</em>",
     lede:
-      "From early-stage thinning to advanced hair fall, Dr. Kavita offers a full range of clinically proven hair restoration treatments at Skin Trust, Karur. Every plan starts with a proper scalp diagnosis, not a package sale.",
+      "From early-stage thinning to advanced hair fall, Dr. Kavitha offers a full range of clinically proven hair restoration treatments at Skin Trust, Karur. Every plan starts with a proper scalp diagnosis, not a package sale.",
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
-    meta: [
-      { b: "8+", label: "Treatments available" },
-      { b: "CDSCO", label: "Approved kits" },
-      { b: "3,500+", label: "Google reviews" },
-    ],
     figureText: "Scalp exam / trichoscopy<br>at Skin Trust<br>(3:4 portrait)",
     badge: {
       stars: "★★★★★",
@@ -364,79 +361,79 @@ export default {
     eyebrow: "Hair restoration treatments",
     h2: "All treatments,<br>one clinic",
     lede:
-      "Each treatment below is recommended based on what your scalp actually needs, not what is most expensive or most popular.",
+      "Every treatment is selected based on your scalp condition, concerns and individual needs, with a focus on the right clinical approach for you.",
     cards: [
       {
         placeholder: "PRP hair treatment<br>image 16:10",
         title: "PRP Hair Treatment",
         body: "Platelet Rich Plasma drawn from your own blood, concentrated and injected into thinning areas of the scalp using a CDSCO-approved kit. Stimulates dormant follicles and slows active hair fall.",
-        ctaHref: "/prp-hair-treatment-karur",
+        ctaHref: `${BASE}/services/prp-hair-treatment-karur`,
         ctaLabel: "View PRP treatment →",
       },
       {
         placeholder: "GFC therapy<br>image 16:10",
         title: "GFC Therapy",
         body: "Growth Factor Concentrate takes PRP a step further. Specific growth proteins are isolated and delivered at higher concentration, making it suitable for patients with more significant thinning or those who want faster results.",
-        ctaHref: "/gfc-hair-treatment-karur",
+        ctaHref: `${BASE}/services/gfc-hair-treatment-karur`,
         ctaLabel: "View GFC therapy →",
       },
       {
         placeholder: "Exosome therapy<br>image 16:10",
         title: "Exosome Therapy",
         body: "MCT autologous exosomes work at a cellular signalling level to reawaken follicles that have not yet been permanently lost. Used for advanced diffuse thinning when standard PRP shows limited response.",
-        ctaHref: "/exosome-hair-treatment-karur",
+        ctaHref: `${BASE}/services/exosome-hair-treatment-karur`,
         ctaLabel: "View exosome therapy →",
       },
       {
         placeholder: "FUE hair transplant<br>image 16:10",
         title: "FUE Hair Transplant",
         body: "Follicular Unit Extraction moves healthy grafts from the donor area to areas of permanent loss. For the right candidate, this is a long-term solution for receding hairlines and bald patches.",
-        ctaHref: "/fue-hair-transplant-karur",
+        ctaHref: `${BASE}/services/fue-hair-transplant-karur`,
         ctaLabel: "View FUE transplant →",
       },
       {
         placeholder: "LLLT laser therapy<br>image 16:10",
         title: "LLLT (Laser Therapy)",
         body: "Low Level Laser Therapy delivers specific wavelengths of light into the scalp to stimulate circulation and follicle activity. A painless, non-invasive option used alongside other treatments or as a standalone maintenance therapy.",
-        ctaHref: "/lllt-hair-treatment-karur",
+        ctaHref: `${BASE}/services/lllt-hair-treatment-karur`,
         ctaLabel: "View LLLT therapy →",
       },
       {
         placeholder: "Mesotherapy<br>image 16:10",
         title: "Mesotherapy",
         body: "A combination of vitamins, minerals and growth peptides is delivered directly into the scalp via micro-injections. Addresses nutritional deficiencies at the follicle level without systemic side effects.",
-        ctaHref: "/mesotherapy-hair-karur",
+        ctaHref: `${BASE}/services/mesotherapy-hair-karur`,
         ctaLabel: "View mesotherapy →",
       },
       {
         placeholder: "Hair botox<br>image 16:10",
         title: "Hair Botox",
         body: "A deep-conditioning scalp and shaft treatment that restores hair fibre integrity from the inside out. Reduces breakage and improves the overall texture and strength of existing hair, particularly after chemical or heat damage.",
-        ctaHref: "/hair-botox-karur",
+        ctaHref: `${BASE}/services/hair-botox-karur`,
         ctaLabel: "View hair botox →",
       },
       {
         placeholder: "Hair booster<br>image 16:10",
         title: "Hair Booster",
         body: "A targeted scalp booster with PDRN and peptide complexes to support scalp health and extend the effectiveness of other hair treatments. Often recommended as part of a longer treatment plan.",
-        ctaHref: "/hair-booster-karur",
+        ctaHref: `${BASE}/services/hair-booster-karur`,
         ctaLabel: "View hair booster →",
       },
     ],
   },
   why: {
     eyebrow: "Why Karur Trusts Dr. Kavitha",
-    h2: "Care that earns trust,<br>not just attention.",
+    h2: "Care built on trust and clinical expertise.",
     lede:
       "There are many clinics offering hair treatments in Tamil Nadu. Here is why patients from Karur, Trichy, Namakkal, Erode and beyond choose Skin Trust.",
     items: [
       {
         title: "Diagnosis before treatment",
-        text: "Every patient starts with a trichoscopy scalp examination. No treatment is recommended until the cause of hair loss is understood. This is not standard practice at most clinics, but it is how good outcomes happen.",
+        text: "Every patient begins with a detailed trichoscopy scalp examination to assess the hair and scalp. Treatment recommendations are made only after understanding the underlying cause and pattern of hair loss, allowing treatment to be tailored to individual needs.",
       },
       {
         title: "Doctor-performed procedures",
-        text: "All PRP, GFC and exosome sessions are performed by Dr. Kavita personally. No technician or assistant performs any medical procedure at this clinic. When you book a treatment, the doctor is in the room for all of it.",
+        text: "All PRP, GFC and exosome sessions are performed by Dr. Kavitha personally. No technician or assistant performs any medical procedure at this clinic. When you book a treatment, the doctor is in the room for all of it.",
       },
       {
         title: "CDSCO-approved kits only",
@@ -444,23 +441,23 @@ export default {
       },
       {
         title: "Trichoscopy tracking at every visit",
-        text: "Scalp photographs are taken under controlled lighting at every follow-up visit using the same equipment and angle. Progress is measurable, not anecdotal. You see the difference on a screen, not just in the mirror.",
+        text: "Scalp photographs are captured under controlled lighting, using the same equipment and angles at every follow-up visit. This consistent documentation allows your hair growth and treatment progress to be monitored over time.",
       },
       {
-        title: "Honest recommendations, no packages",
-        text: "Dr. Kavita recommends the treatment best suited to your scalp condition, not the one with the highest margin. If PRP is not right for you, she will say so. If no treatment is appropriate yet, she will explain why and what to do instead.",
+        title: "Honest recommendations, guided by your needs",
+        text: "Dr. Kavitha recommends treatment based on your scalp condition, diagnosis and individual needs. If a treatment is not appropriate for you, she will explain why. And when treatment is not needed yet, you’ll know what to expect and how to care for your hair and scalp in the meantime.",
       },
       {
         title: "Full spectrum under one roof",
-        text: "PRP, GFC, exosome therapy, LLLT, mesotherapy, hair botox and FUE transplant are all available at this clinic. You are not referred out for different treatments. The entire hair restoration journey is managed by one doctor in one clinic.",
+        text: "From PRP, GFC and LLLT to mesotherapy, hair botox and FUE transplant, a range of hair restoration treatments is available at Skin Trust. Your treatment plan is coordinated under the guidance of Dr. Kavitha, based on your diagnosis, hair loss pattern and individual needs.",
       },
       {
         title: "3,500+ verified Google reviews",
-        text: "More Google reviews than any other skin and hair clinic in Karur district, with a 4.9 average. None were incentivised. Patients leave reviews because they chose to, at the end of treatment, when asked once.",
+        text: "A 4.9-star Google rating reflects the experiences of patients who have chosen to share their feedback with us. Every review is voluntarily shared, offering an honest perspective on their experience at Skin Trust.",
       },
       {
         title: "Serving Karur and the region",
-        text: "Patients travel from Trichy, Namakkal, Erode, Dindigul and Coimbatore to this clinic. For patients unable to access specialist hair care locally, Skin Trust exists precisely so that travel to Chennai is not necessary.",
+        text: "Skin Trust welcomes patients from across Karur and neighbouring districts, including Trichy, Namakkal, Erode, Dindigul and Coimbatore. Patients visit the clinic for specialised dermatology, hair and skin care tailored to their individual needs.",
       },
       {
         title: "No downtime for most treatments",
@@ -478,18 +475,19 @@ export default {
   },
   doctor: {
     eyebrow: "Your hair specialist",
-    name: "Dr. Kavita",
-    image: "/assets/images/dr-kavitha.jpg",
-    alt: "Dr. Kavita",
+    name: "Dr. Kavitha",
+    image: `${BASE}/assets/images/dr-kavitha.jpg`,
+    alt: "Dr. Kavitha",
     creds: ["MBBS", "MD Dermatology", "Trichology", "Dermatosurgery"],
     paragraphs: [
-      "Dr. Kavita established Skin Trust in Karur so that patients across the district would not have to travel to Coimbatore or Chennai for specialised skin and hair care. She treats hair loss as a medical condition with a root cause, not as a cosmetic concern to be packaged and sold.",
-      "Her approach is straightforward. She assesses the scalp, identifies the most likely cause of hair fall, discusses the realistic options and recommends the one most appropriate for your specific situation. She does not have a single treatment to push to every patient.",
-      "All regenerative hair treatments at the clinic, including PRP, GFC and exosome sessions, are performed by Dr. Kavita herself. There are no technicians or assistants performing medical procedures at this clinic.",
+      "Dr. Kavitha established Skin Trust in Karur with a focus on making specialised skin and hair care more accessible to patients in the region.",
+      "Her approach to hair loss begins with understanding the underlying cause. Every patient is assessed individually, with the scalp, pattern of hair loss and overall clinical picture considered before treatment is recommended.",
+      "Based on this assessment, Dr. Kavitha discusses the appropriate treatment options and helps patients understand what is realistic for their condition. The focus is on choosing the treatment that best suits the individual, rather than following a one-size-fits-all approach.",
+      "Regenerative hair treatments at Skin Trust, including PRP, GFC and exosome therapy, are performed by Dr. Kavitha herself, ensuring continuity of care throughout the treatment process",
     ],
-    sig: "— Dr. Kavita",
-    moreHref: "/about",
-    moreLabel: "More about Dr. Kavita",
+    sig: "— Dr. Kavitha",
+    moreHref: `${BASE}/about`,
+    moreLabel: "More about Dr. Kavitha",
   },
   testimonials: {
     eyebrow: "In patients' words",
@@ -513,7 +511,7 @@ export default {
       {
         quote:
           "Post-delivery hair fall was really affecting my confidence. The doctor was thorough, patient and honest. The PRP sessions have helped and she explained what to expect at each stage.",
-        name: "Kavitha P.",
+        name: "Kavita P.",
         meta: "Google review · Kulithalai",
       },
     ],
@@ -528,12 +526,12 @@ export default {
       {
         question: "Which hair treatment is right for me?",
         answer:
-          "This depends entirely on the cause and extent of your hair loss, which is why every patient at Skin Trust begins with a scalp examination rather than a treatment. In general terms, early-stage genetic hair loss responds well to PRP or GFC. Advanced thinning with resistant follicles may benefit from exosome therapy. Permanent bald zones require FUE hair transplant. LLLT and mesotherapy are often used alongside other treatments. Dr. Kavita will give you a clear recommendation after your first visit.",
+          "This depends entirely on the cause and extent of your hair loss, which is why every patient at Skin Trust begins with a scalp examination rather than a treatment. In general terms, early-stage genetic hair loss responds well to PRP or GFC. Advanced thinning with resistant follicles may benefit from exosome therapy. Permanent bald zones require FUE hair transplant. LLLT and mesotherapy are often used alongside other treatments. Dr. Kavitha will give you a clear recommendation after your first visit.",
       },
       {
         question: "How many sessions will I need and how far apart?",
         answer:
-          "This varies by treatment. A typical PRP or GFC course involves four to six sessions spaced three to four weeks apart, followed by maintenance every four to six months. Exosome therapy schedules are decided case by case. LLLT may involve more frequent, shorter sessions. Dr. Kavita outlines a realistic session plan at consultation and does not overcommit on timelines.",
+          "This varies by treatment. A typical PRP or GFC course involves four to six sessions spaced three to four weeks apart, followed by maintenance every four to six months. Exosome therapy schedules are decided case by case. LLLT may involve more frequent, shorter sessions. Dr. Kavitha outlines a realistic session plan at consultation and does not overcommit on timelines.",
       },
       {
         question: "Is there any downtime after these treatments?",
@@ -553,17 +551,17 @@ export default {
       {
         question: "What is the difference between PRP and GFC?",
         answer:
-          'Both use your own blood. PRP separates the platelet-rich layer from the red cells and uses the resulting plasma. GFC goes further by isolating specific growth factors from that plasma at a higher concentration. GFC is often recommended for patients with moderate to significant thinning or those who want a more targeted approach. Dr. Kavita recommends one or the other based on your scalp findings, not on which costs more. You can also read the full <a href="/prp-hair-treatment-karur">PRP treatment page</a> and <a href="/gfc-hair-treatment-karur">GFC treatment page</a> for a detailed comparison.',
+          `Both use your own blood. PRP separates the platelet-rich layer from the red cells and uses the resulting plasma. GFC goes further by isolating specific growth factors from that plasma at a higher concentration. GFC is often recommended for patients with moderate to significant thinning or those who want a more targeted approach. Dr. Kavitha recommends one or the other based on your scalp findings, not on which costs more. You can also read the full <a href="${BASE}/services/prp-hair-treatment-karur">PRP treatment page</a> and <a href="${BASE}/services/gfc-hair-treatment-karur">GFC treatment page</a> for a detailed comparison.`,
       },
       {
         question: "Do you offer hair transplants in Karur?",
         answer:
-          'Yes. FUE hair transplant is available at Skin Trust. A detailed consultation covering your donor density, recipient area, expected graft count and realistic outcomes is conducted before any transplant is planned. For patients travelling from outside Karur, procedures can be coordinated around your schedule. See the <a href="/fue-hair-transplant-karur">FUE hair transplant page</a> for full details.',
+          `Yes. FUE hair transplant is available at Skin Trust. A detailed consultation covering your donor density, recipient area, expected graft count and realistic outcomes is conducted before any transplant is planned. For patients travelling from outside Karur, procedures can be coordinated around your schedule. See the <a href="${BASE}/services/fue-hair-transplant-karur">FUE hair transplant page</a> for full details.`,
       },
       {
         question: "Is hair restoration safe?",
         answer:
-          "All regenerative treatments at Skin Trust use autologous material, meaning drawn from your own blood or body, which eliminates the risk of rejection or transmitted infection. CDSCO-approved single-use kits are used for PRP and GFC. Dr. Kavita screens for contraindications at the first consultation, including active scalp infection, blood disorders or pregnancy, and advises accordingly. The clinic follows standard clinical protocols for every procedure.",
+          "All regenerative treatments at Skin Trust use autologous material, meaning drawn from your own blood or body, which eliminates the risk of rejection or transmitted infection. CDSCO-approved single-use kits are used for PRP and GFC. Dr. Kavitha screens for contraindications at the first consultation, including active scalp infection, blood disorders or pregnancy, and advises accordingly. The clinic follows standard clinical protocols for every procedure.",
       },
     ],
   },
@@ -617,10 +615,10 @@ export default {
     eyebrow: "Explore the clinic",
     h2: "Other treatments at Skin Trust",
     cards: [
-      { category: "Skin", label: "Acne Treatment", href: "/acne-treatment-karur" },
-      { category: "Skin", label: "Acne Scar Treatment", href: "/acne-scar-treatment-karur" },
-      { category: "Aesthetics", label: "Anti-Ageing", href: "/anti-ageing-treatment-karur" },
-      { category: "Surgery", label: "Dermato Surgery", href: "/dermato-surgery-karur" },
+      { category: "Skin", label: "Acne Treatment", href: `${BASE}/services/acne-treatment-karur` },
+      { category: "Skin", label: "Acne Scar Treatment", href: `${BASE}/services/acne-scar-treatment-karur` },
+      { category: "Aesthetics", label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur` },
+      { category: "Surgery", label: "Dermato Surgery", href: `${BASE}/services/dermato-surgery-karur` },
     ],
   },
 };

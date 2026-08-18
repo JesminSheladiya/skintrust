@@ -1,11 +1,13 @@
-{
+import { SITE_BASE } from "./site.js";
+
+export default {
   "@context":"https://schema.org",
   "@type":"MedicalClinic",
   "name":"Skin Trust Hospital",
   "alternateName":"SkinTrust Karur",
-  "url":"https://www.skintrustkarur.com/",
+  url: `${SITE_BASE}/`,
   "telephone":"+91-96269-23299",
-  "image":"https://www.skintrustkarur.com/clinic.jpg",
+  image: `${SITE_BASE}/assets/images/home-cover.jpg`,
   "address":{"@type":"PostalAddress","streetAddress":"No. 28, Chairman Ramanujan Street","addressLocality":"Karur","postalCode":"639001","addressRegion":"Tamil Nadu","addressCountry":"IN"},
   "geo":{"@type":"GeoCoordinates","latitude":10.961598,"longitude":78.0767411},
   "hasMap":"https://g.page/skintrusthospital",

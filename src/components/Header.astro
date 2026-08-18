@@ -24,6 +24,8 @@ const {
   ctaLabel,
   ctaHref,
 } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <div class="topbar">
@@ -38,9 +40,9 @@ const {
 
 <header class="nav">
   <div class="shell">
-    <a class="brand" href="/">
+    <a class="brand" href={base}>
       <img
-        src="/assets/images/logo-color.png"
+        src={`${base}assets/images/logo-color.png`}
         alt="Skin Trust Hospital"
         style="max-height: 44px; width: auto; height: auto; object-fit: contain;"
       />

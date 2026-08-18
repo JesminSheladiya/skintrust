@@ -2,8 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BeforeAfterCard from "../components/BeforeAfterCard.jsx";
 import VideoGallery from "../components/VideoGallery.jsx";
-import clinicSchema from "../data/clinic-schema.json";
+import clinicSchema from "../data/clinic-schema.js";
 import faqSchema from "../data/faq-schema.json";
+import { SITE_BASE } from "../data/site.js";
+
+const base = import.meta.env.BASE_URL;
 
 const waLink =
   "https://wa.me/919092232991?text=Hi%2C%20I%27d%20like%20to%20book%20a%20consultation%20at%20Skin%20Trust%20Hospital";
@@ -34,32 +37,32 @@ const footer = {
     {
       heading: "Hair & Skin",
       links: [
-        { label: "PRP Hair Treatment", href: "/prp-hair-treatment-karur" },
-        { label: "GFC Treatment", href: "/gfc-hair-treatment-karur" },
-        { label: "FUE Hair Transplant", href: "/fue-hair-transplant-karur" },
-        { label: "Acne Treatment", href: "/acne-treatment-karur" },
-        { label: "Acne Scar Treatment", href: "/acne-scar-treatment-karur" },
+        { label: "PRP Hair Treatment", href: `${base}services/prp-hair-treatment-karur` },
+        { label: "GFC Treatment", href: `${base}services/gfc-hair-treatment-karur` },
+        { label: "FUE Hair Transplant", href: `${base}services/fue-hair-transplant-karur` },
+        { label: "Acne Treatment", href: `${base}services/acne-treatment-karur` },
+        { label: "Acne Scar Treatment", href: `${base}services/acne-scar-treatment-karur` },
       ],
     },
     {
       heading: "Laser & Anti-Ageing",
       links: [
-        { label: "Laser Hair Removal", href: "/laser-hair-removal-karur" },
-        { label: "Anti-Ageing & Botox", href: "/anti-ageing-treatment-karur" },
-        { label: "HIFU Skin Tightening", href: "/skin-tightening-karur" },
+        { label: "Laser Hair Removal", href: `${base}services/laser-hair-removal-karur` },
+        { label: "Anti-Ageing & Botox", href: `${base}services/anti-ageing-treatment-karur` },
+        { label: "HIFU Skin Tightening", href: `${base}services/skin-tightening-karur` },
         {
           label: "HydraFacial & Rejuvenation",
-          href: "/skin-rejuvenation-karur",
+          href: `${base}services/skin-rejuvenation-karur`,
         },
-        { label: "Tattoo Removal", href: "/tattoo-removal-karur" },
+        { label: "Tattoo Removal", href: `${base}services/tattoo-removal-karur` },
       ],
     },
     {
       heading: "Clinic",
       links: [
-        { label: "About Dr. Kavitha", href: "/about" },
-        { label: "Patient Reviews", href: "/reviews" },
-        { label: "Contact & Directions", href: "/contact" },
+        { label: "About Dr. Kavitha", href: `${base}about` },
+        { label: "Patient Reviews", href: `${base}reviews` },
+        { label: "Contact & Directions", href: `${base}contact` },
       ],
     },
   ],
@@ -70,10 +73,10 @@ const footer = {
   title="Skin Trust Hospital, Karur | Dr. Kavitha — Best Dermatologist & Skin Clinic in Karur"
   description="Skin Trust Hospital — Karur's most trusted dermatology clinic by Dr. Kavitha (MBBS, MD). Doctor-performed hair restoration, acne & scar correction, anti-ageing, laser hair removal, and skin surgery. 4.9★ from 3,600+ Google reviews. Book a consultation today."
   keywords="dermatologist in Karur, skin clinic Karur, hair treatment Karur, acne treatment Karur, laser hair removal Karur, PRP hair treatment Karur, best skin doctor Karur, Dr Kavitha Karur, skin trust hospital, hair transplant Karur, HIFU Karur, HydraFacial Karur, acne scar treatment Karur, Botox Karur, dermal fillers Karur"
-  canonical="https://www.skintrustkarur.com/"
+  canonical={`${SITE_BASE}/`}
   ogTitle="Skin Trust Hospital, Karur | Dr. Kavitha — Best Dermatologist in Karur"
   ogDescription="Karur's highest-rated dermatology clinic. Doctor-performed hair, acne, laser, anti-ageing & skin surgery treatments by Dr. Kavitha. 4.9★ · 3,600+ Google reviews."
-  ogUrl="https://www.skintrustkarur.com/"
+  ogUrl={`${SITE_BASE}/`}
   header={header}
   footer={footer}
   waFloatHref={waLink}
@@ -111,7 +114,7 @@ const footer = {
       <figure class="hero-figure" style="margin: 0">
         <div class="arch">
           <img
-            src="/assets/images/home-cover.jpg"
+            src={`${base}assets/images/home-cover.jpg`}
             alt="Skin Trust Hospital Karur"
             style="width: 100%; height: 100%; object-fit: cover; border-radius: 9999px 9999px 0 0;"
             loading="lazy"
@@ -188,7 +191,7 @@ const footer = {
               <li>Mesotherapy</li>
               <li>Hair Botox</li>
             </ul>
-            <a class="cat-cta" href="/services/hair-restoration"
+            <a class="cat-cta" href={`${base}services/hair-restoration`}
               >Explore hair treatments →</a
             >
           </div>
@@ -216,8 +219,8 @@ const footer = {
               <li>Skin Boosters · PDRN · Exosomes</li>
               <li>LED Phototherapy</li>
             </ul>
-            <a class="cat-cta" href="/acne-scar-treatment-karur"
-              >Explore acne &amp; scar treatments →</a
+<a class="cat-cta" href={`${base}services/acne-scar-treatment-karur`}
+              >Explore acne & scar treatments →</a
             >
           </div>
         </article>
@@ -244,7 +247,7 @@ const footer = {
               <li>Skin Boosters, PDRN, Exosomes</li>
               <li>Dr. Platon</li>
             </ul>
-            <a class="cat-cta" href="/skin-rejuvenation-karur"
+            <a class="cat-cta" href={`${base}services/skin-rejuvenation-karur`}
               >Explore rejuvenation →</a
             >
           </div>
@@ -273,7 +276,7 @@ const footer = {
               <li>Skin Boosters</li>
               <li>Under-Eye Rejuvenation (PDRN, peels, Dermapen)</li>
             </ul>
-            <a class="cat-cta" href="/anti-ageing-treatment-karur"
+            <a class="cat-cta" href={`${base}services/anti-ageing-treatment-karur`}
               >Explore anti-ageing →</a
             >
           </div>
@@ -298,7 +301,7 @@ const footer = {
               <li>Tattoo Removal (Q-Switched Nd:YAG)</li>
               <li>Fractional CO₂ Resurfacing</li>
             </ul>
-            <a class="cat-cta" href="/laser-treatment-karur"
+            <a class="cat-cta" href={`${base}services/laser-treatment-karur`}
               >Explore laser treatments →</a
             >
           </div>
@@ -323,8 +326,8 @@ const footer = {
               <li>Cryotherapy · Electrocautery</li>
               <li>Microblading · Dermoscopy</li>
             </ul>
-            <a class="cat-cta" href="/dermato-surgery-karur"
-              >Explore dermatology &amp; surgery →</a
+<a class="cat-cta" href={`${base}services/dermato-surgery-karur`}
+              >Explore dermatology & surgery →</a
             >
           </div>
         </article>
@@ -405,7 +408,7 @@ const footer = {
       <div class="doc">
         <figure class="arch" style="margin: 0">
           <img
-            src="/assets/images/dr-kavitha.jpg"
+            src={`${base}assets/images/dr-kavitha.jpg`}
             alt="Dr. Kavitha"
             style="width: 100%; height: 100%; object-fit: cover; border-radius: 9999px 9999px 0 0;"
             loading="lazy"
@@ -434,7 +437,7 @@ const footer = {
           </div>
           <p class="sig">Dr. Kavitha</p>
           <div style="margin-top: 26px">
-            <a class="btn btn-ghost" href="/about">Read her full profile</a>
+            <a class="btn btn-ghost" href={`${base}about`}>Read her full profile</a>
           </div>
         </div>
       </div>
@@ -694,7 +697,7 @@ const footer = {
         <b>4.9</b>
         <span>from 3,600+ verified Google reviews</span>
         <a
-          href="/reviews"
+          href={`${base}reviews`}
           style="border-bottom: 1px solid var(--champagne); text-transform: uppercase; letter-spacing: .14em; font-size: .72rem;"
           >Read all reviews</a
         >
@@ -731,7 +734,7 @@ const footer = {
         <article class="post">
           <p class="kicker">Hair</p>
           <h3>
-            <a href="/blog/prp-vs-gfc-hair-karur"
+            <a href={`${base}blog/prp-vs-gfc-hair-karur`}
               >PRP vs GFC for hair loss — which one should you choose?</a
             >
           </h3>
@@ -739,12 +742,12 @@ const footer = {
             Both use your own blood. They are not the same procedure, and one is
             measurably more concentrated than the other. Here is how to decide.
           </p>
-          <a class="more" href="/blog/prp-vs-gfc-hair-karur">Read →</a>
+          <a class="more" href={`${base}blog/prp-vs-gfc-hair-karur`}>Read →</a>
         </article>
         <article class="post">
           <p class="kicker">Acne</p>
           <h3>
-            <a href="/blog/acne-treatment-tamil-nadu"
+            <a href={`${base}blog/acne-treatment-tamil-nadu`}
               >Best acne treatments for Tamil Nadu weather and skin types</a
             >
           </h3>
@@ -752,12 +755,12 @@ const footer = {
             Humidity, sweat and higher Fitzpatrick types change what works. A
             protocol designed for dry European skin is not going to work here.
           </p>
-          <a class="more" href="/blog/acne-treatment-tamil-nadu">Read →</a>
+          <a class="more" href={`${base}blog/acne-treatment-tamil-nadu`}>Read →</a>
         </article>
         <article class="post">
           <p class="kicker">Laser</p>
           <h3>
-            <a href="/blog/laser-hair-removal-karur-guide"
+            <a href={`${base}blog/laser-hair-removal-karur-guide`}
               >Laser hair removal in Karur — what to know before your first
               session</a
             >
@@ -767,11 +770,11 @@ const footer = {
             takes, and what to avoid before and after — a straight guide from
             Dr. Kavitha.
           </p>
-          <a class="more" href="/blog/laser-hair-removal-karur-guide">Read →</a>
+          <a class="more" href={`${base}blog/laser-hair-removal-karur-guide`}>Read →</a>
         </article>
       </div>
       <div style="margin-top: 44px">
-        <a class="btn btn-ghost" href="/blog">Read the full journal</a>
+        <a class="btn btn-ghost" href={`${base}blog`}>Read the full journal</a>
       </div>
     </div>
   </section>
