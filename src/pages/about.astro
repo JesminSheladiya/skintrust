@@ -1,0 +1,324 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE_BASE, BASE } from "../data/site.js";
+
+const base = import.meta.env.BASE_URL;
+
+const waLink =
+  "https://wa.me/919092232991?text=Hi%2C%20I%27d%20like%20to%20book%20a%20consultation%20at%20Skin%20Trust%20Hospital";
+
+const header = {
+  topbarAddress:
+    "No. 28, Chairman Ramanujan Street, Karur — opp. Kamaatchi Amman Temple",
+  topbarPhone: "+91 96269 23299",
+  topbarPhoneHref: "tel:+919626923299",
+  topbarHours: "Mon–Sat 9:30 AM–7:30 PM",
+  navLinks: [
+    { label: "Home", href: base },
+    { label: "Services", href: `${base}services/` },
+    { label: "About", href: `${base}about`, active: true },
+    { label: "Contact", href: `${base}contact` },
+  ],
+  ctaLabel: "Book appointment",
+  ctaHref: `${base}contact`,
+};
+
+const footer = {
+  address: "No. 28, Chairman Ramanujan Street, Karur — 639001, Tamil Nadu.",
+  phone: "+91 96269 23299",
+  phoneHref: "tel:+919626923299",
+  whatsapp: "WhatsApp: +91 90922 32991",
+  whatsappHref: "https://wa.me/919092232991",
+  columns: [
+    {
+      heading: "Hair & Skin",
+      links: [
+        { label: "PRP Hair Treatment", href: `${base}services/prp-hair-treatment-karur` },
+        { label: "GFC Treatment", href: `${base}services/gfc-hair-treatment-karur` },
+        { label: "FUE Hair Transplant", href: `${base}services/fue-hair-transplant-karur` },
+        { label: "Acne Treatment", href: `${base}services/acne-treatment-karur` },
+        { label: "Acne Scar Treatment", href: `${base}services/acne-scar-treatment-karur` },
+      ],
+    },
+    {
+      heading: "Laser & Anti-Ageing",
+      links: [
+        { label: "Laser Hair Removal", href: `${base}services/laser-hair-removal-karur` },
+        { label: "Anti-Ageing & Botox", href: `${base}services/anti-ageing-treatment-karur` },
+        { label: "HIFU Skin Tightening", href: `${base}services/skin-tightening-karur` },
+        { label: "HydraFacial & Rejuvenation", href: `${base}services/skin-rejuvenation-karur` },
+        { label: "Tattoo Removal", href: `${base}services/tattoo-removal-karur` },
+      ],
+    },
+    {
+      heading: "Clinic",
+      links: [
+        { label: "About Dr. Kavitha", href: `${base}about` },
+        { label: "Patient Reviews", href: `${base}reviews` },
+        { label: "Contact & Directions", href: `${base}contact` },
+      ],
+    },
+  ],
+};
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  name: "Dr. Kavitha K. B.",
+  description:
+    "Dr. Kavitha K. B., MD Dermatology — Karur's first female dermatologist, founder of Skin Trust, national and international speaker, and mentor to the next generation of dermatologists.",
+  url: `${SITE_BASE}/about`,
+  image: `${SITE_BASE}/assets/images/dr-kavitha.jpg`,
+  medicalSpecialty: "Dermatology",
+  qualifications: [
+    { "@type": "EducationalOccupationalCredential", credentialCategory: "MBBS", name: "MBBS — Madras Medical College" },
+    { "@type": "EducationalOccupationalCredential", credentialCategory: "MD", name: "MD Dermatology — Sri Ramachandra Medical College & Research Institute" },
+  ],
+  worksFor: {
+    "@type": "MedicalClinic",
+    name: "Skin Trust Hospital",
+    url: `${SITE_BASE}/`,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "No. 28, Chairman Ramanujan Street",
+      addressLocality: "Karur",
+      postalCode: "639001",
+      addressRegion: "Tamil Nadu",
+      addressCountry: "IN",
+    },
+  },
+  founderOf: {
+    "@type": "MedicalClinic",
+    name: "Skin Trust Hospital",
+    url: `${SITE_BASE}/`,
+  },
+};
+---
+
+<BaseLayout
+  title="About Dr. Kavitha K. B. | Skin Trust, Karur"
+  description="Dr. Kavitha K. B., MD Dermatology — Karur's first female dermatologist, founder of Skin Trust, national and international speaker, and mentor to the next generation of dermatologists."
+  keywords="dr kavitha karur, dermatologist karur, skin trust founder, aesthetic dermatologist karur, MD dermatology karur"
+  canonical={`${SITE_BASE}/about`}
+  ogTitle="About Dr. Kavitha K. B. | Skin Trust, Karur"
+  ogDescription="Karur's first female dermatologist, founder of Skin Trust, national and international speaker, and mentor to the next generation of dermatologists."
+  ogUrl={`${SITE_BASE}/about`}
+  header={header}
+  footer={footer}
+  waFloatHref={waLink}
+  waFloatLabel="Chat"
+  mobileCallHref="tel:+919626923299"
+  mobileCallLabel="Call clinic"
+  mobileWhatsappHref={waLink}
+  mobileWhatsappLabel="WhatsApp"
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href={`${BASE}/assets/css/about.css`} />
+    <script type="application/ld+json" set:html={JSON.stringify(aboutSchema)} />
+  </Fragment>
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero">
+    <div class="shell">
+      <div>
+        <p class="eyebrow">The Story Behind Skin Trust</p>
+        <h1>Dreams don't belong only to metropolitan cities.</h1>
+        <p class="pullquote">
+          &ldquo;They belong to every patient who deserves the best care.&rdquo;
+        </p>
+        <p class="pullquote-src">— Dr. Kavitha K. B.</p>
+        <p class="lede">
+          In 2005, when aesthetic dermatology was still finding its footing in
+          much of India, Dr. Kavitha K. B. began a journey that would go on to
+          shape skin care in Karur. As the city's first female dermatologist,
+          she set out to bring world-class dermatology and aesthetic medicine to
+          a small town in Tamil Nadu, built on the belief that excellent
+          healthcare should never be limited by geography.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="tel:+919626923299"
+            >Book a consultation</a
+          >
+          <a class="btn btn-ghost" href={waLink} target="_blank" rel="noopener"
+            >WhatsApp us</a
+          >
+        </div>
+      </div>
+      <figure class="hero-figure" style="margin: 0">
+        <div class="arch">
+          <img
+            src={`${base}assets/images/dr-kavitha.jpg`}
+            alt="Dr. Kavitha K. B. — dermatologist and founder of Skin Trust, Karur"
+            style="width: 100%; height: 100%; object-fit: cover; border-radius: 9999px 9999px 0 0;"
+            loading="lazy"
+          />
+        </div>
+        <div class="hero-badge">
+          <div class="hb-stars" aria-hidden="true">★★★★★</div>
+          <b>20+</b>
+          <span><em>Years</em> of clinical practice</span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ======================= CREDENTIAL STRIP ======================= -->
+  <section class="strip" aria-label="Dr. Kavitha's credentials">
+    <div class="shell">
+      <div><b>MBBS</b><span>Madras Medical College</span></div>
+      <div>
+        <b>MD</b><span>Dermatology — Sri Ramachandra Medical College &amp;
+          Research Institute</span>
+      </div>
+      <div><b>20+</b><span>Years of clinical practice</span></div>
+      <div><b>First</b><span>Female dermatologist in Karur</span></div>
+    </div>
+  </section>
+
+  <!-- ======================= HER STORY · CHAPTER 1 ======================= -->
+  <section class="sec sec-warm" id="story">
+    <div class="shell">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Her story · Chapter one</p>
+          <h2>A foundation in medicine, a commitment to learning.</h2>
+        </div>
+        <div>
+          <p>
+            Dr. Kavitha is a graduate of the prestigious Madras Medical College
+            (MBBS) and Sri Ramachandra Medical College &amp; Research Institute
+            (MD Dermatology). She has always treated learning as a lifelong
+            pursuit, training with pioneers in dermatology and aesthetic
+            medicine across India and internationally, and continually
+            incorporating the latest evidence-based innovations into her
+            practice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= HER STORY · CHAPTER 2 ======================= -->
+  <section class="sec">
+    <div class="shell">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Her story · Chapter two</p>
+          <h2>From a dream to a centre of excellence.</h2>
+        </div>
+        <div>
+          <p>
+            What began as a dream has grown into a centre of excellence, where
+            advanced lasers, injectables, regenerative medicine and modern
+            aesthetic procedures are delivered with precision, ethics and
+            compassion. Dr. Kavitha has introduced many of these advanced
+            treatments to Karur for the first time, bringing global standards of
+            care closer to home for her patients.
+          </p>
+          <p>
+            Her interest in skin health has also grown beyond clinical
+            treatment. Over the years, her experience with patients and
+            understanding of diverse skin concerns led her to extend her
+            dermatological expertise into everyday skincare. She went on to
+            co-found <strong>MySkinn</strong> with fellow aesthetic
+            dermatologists Dr. Aarthi Senthil Ganesh and Dr. Rasya Dixit.
+            Together, the three doctors bring more than 45 years of collective
+            dermatology experience to creating scientifically backed skincare
+            solutions informed by their clinical knowledge and continued
+            engagement with developments in dermatology.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= HER STORY · CHAPTER 3 & 4 ======================= -->
+  <section class="sec sec-warm">
+    <div class="shell">
+      <div class="split">
+        <div>
+          <p class="eyebrow">A voice in the field</p>
+          <h2>Invited to share, on national and international stages.</h2>
+          <p>
+            Dr. Kavitha is a recognised national and international speaker,
+            invited to conferences to share her expertise on aesthetic
+            dermatology, regenerative medicine and emerging technologies in the
+            field.
+          </p>
+        </div>
+        <div>
+          <p class="eyebrow">A mentor to the next generation</p>
+          <h2>Her greatest passion lies in mentoring.</h2>
+          <p>
+            Beyond conferences and accolades, her greatest passion lies in
+            mentoring. Through workshops, live demonstrations and hands-on
+            training programs, she works to nurture the next generation of
+            dermatologists, equipping young doctors with confidence, skill and a
+            firm commitment to ethical practice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= SPEAKING & MENTORSHIP ======================= -->
+  <section class="sec sec-dark" id="speaking">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="eyebrow">Speaking &amp; Mentorship</p>
+        <h2>Sharing knowledge, training the next generation.</h2>
+        <p class="lede">
+          From conference halls to the procedure room, Dr. Kavitha's work
+          extends beyond her own patients — into educating the dermatologists of
+          tomorrow.
+        </p>
+      </div>
+      <div class="tech-grid tech-grid--3">
+        <div class="tech">
+          <b>National &amp; International Conferences</b>
+          <span
+            >Invited speaker on aesthetic dermatology, regenerative medicine and
+            emerging technologies.</span
+          >
+        </div>
+        <div class="tech">
+          <b>Workshops &amp; Live Demonstrations</b>
+          <span
+            >Hands-on training for practicing dermatologists.</span
+          >
+        </div>
+        <div class="tech">
+          <b>Mentorship Programs</b>
+          <span
+            >Guiding young doctors in skill, confidence and ethical
+            practice.</span
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CLOSING CTA ======================= -->
+  <section class="sec cta-close">
+    <div class="shell">
+      <p class="eyebrow centred">Your consultation</p>
+      <h2>Meet the doctor behind Skin Trust.</h2>
+      <p
+        class="lede"
+        style="margin: 18px auto 0; text-align: center; color: rgba(247,243,236,.72);"
+      >
+        Every consultation at Skin Trust begins with Dr. Kavitha's own
+        assessment — the same standard of care she has built her practice on
+        since 2005.
+      </p>
+      <div class="btnrow">
+        <a class="btn btn-gold" href="tel:+919626923299"
+          >Book a consultation</a
+        >
+        <a class="btn btn-ghost-light" href={waLink} target="_blank" rel="noopener"
+            >WhatsApp us</a
+          >
+      </div>
+    </div>
+  </section>
+</BaseLayout>

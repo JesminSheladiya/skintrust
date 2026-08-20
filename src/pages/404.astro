@@ -1,0 +1,134 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL;
+
+const waLink =
+  "https://wa.me/919092232991?text=Hi%2C%20I%27d%20like%20help%20finding%20a%20page%20on%20the%20Skin%20Trust%20website.";
+
+const header = {
+  topbarAddress:
+    "No. 28, Chairman Ramanujan Street, Karur — opp. Kamaatchi Amman Temple",
+  topbarPhone: "+91 96269 23299",
+  topbarPhoneHref: "tel:+919626923299",
+  topbarHours: "Mon–Sat 9:30 AM–7:30 PM",
+  navLinks: [
+    { label: "Home", href: base },
+    { label: "Services", href: `${base}services/` },
+    { label: "About", href: `${base}about` },
+  ],
+  ctaLabel: "Book appointment",
+  ctaHref: "#book",
+};
+
+const footer = {
+  address: "No. 28, Chairman Ramanujan Street, Karur — 639001, Tamil Nadu.",
+  phone: "+91 96269 23299",
+  phoneHref: "tel:+919626923299",
+  whatsapp: "WhatsApp: +91 90922 32991",
+  whatsappHref: "https://wa.me/919092232991",
+  columns: [
+    {
+      heading: "Treatments",
+      links: [
+        { label: "Hair Restoration", href: `${base}services/hair-restoration` },
+        {
+          label: "Laser Treatments",
+          href: `${base}services/laser-treatments-karur`,
+        },
+        {
+          label: "Anti-Ageing & Lifting",
+          href: `${base}services/anti-ageing-treatment-karur`,
+        },
+        {
+          label: "Skin Rejuvenation & Glow",
+          href: `${base}services/skin-rejuvenation-karur`,
+        },
+        {
+          label: "Dermato Surgery",
+          href: `${base}services/dermato-surgery-karur`,
+        },
+      ],
+    },
+    {
+      heading: "Clinic",
+      links: [
+        { label: "About Dr. Kavitha", href: `${base}about` },
+        { label: "All Treatments", href: `${base}services/` },
+        { label: "Home", href: base },
+      ],
+    },
+  ],
+};
+
+const serviceLinks = [
+  { label: "Hair Restoration", href: `${base}services/hair-restoration` },
+  { label: "Laser Treatments", href: `${base}services/laser-treatments-karur` },
+  {
+    label: "Anti-Ageing & Lifting",
+    href: `${base}services/anti-ageing-treatment-karur`,
+  },
+  {
+    label: "Skin Rejuvenation & Glow",
+    href: `${base}services/skin-rejuvenation-karur`,
+  },
+  { label: "Dermato Surgery", href: `${base}services/dermato-surgery-karur` },
+];
+---
+
+<BaseLayout
+  title="Page Not Found | Skin Trust Hospital, Karur"
+  description="The page you are looking for could not be found. Explore Skin Trust Hospital's treatments in Karur — hair, laser, anti-ageing, rejuvenation and dermatology surgery."
+  canonical={`${base}404`}
+  ogTitle="Page Not Found | Skin Trust Hospital, Karur"
+  ogDescription="The page you are looking for could not be found. Explore Skin Trust Hospital's treatments in Karur."
+  ogUrl={`${base}404`}
+  header={header}
+  footer={footer}
+  waFloatHref={waLink}
+  waFloatLabel="Chat"
+  mobileCallHref="tel:+919626923299"
+  mobileCallLabel="Call clinic"
+  mobileWhatsappHref={waLink}
+  mobileWhatsappLabel="WhatsApp"
+>
+  <section
+    class="sec sec-warm"
+    style="padding-top: clamp(64px, 10vw, 120px); padding-bottom: clamp(64px, 10vw, 120px);"
+  >
+    <div class="shell">
+      <div class="sec-head centred" style="max-width: 100%;">
+        <p
+          class="eyebrow centred"
+          style="font-size: .72rem; letter-spacing: .3em;"
+        >
+          Error 404
+        </p>
+        <div
+          style="font-family: var(--display); font-size: clamp(4.5rem, 12vw, 8rem); line-height: 1; color: var(--champagne);"
+          aria-hidden="true"
+        >
+          404
+        </div>
+        <h2 style="margin-top: 4px;">Page not found</h2>
+        <p
+          class="lede"
+          style="margin: 14px auto 0; max-width: 56ch; text-align: center; color: var(--muted);"
+        >
+          The page you&rsquo;re looking for doesn&rsquo;t exist or may have
+          moved. It happens — here are the treatments patients search for most:
+        </p>
+      </div>
+
+      <div
+        class="btnrow"
+        style="margin-top: clamp(32px, 5vw, 48px); text-align: center;"
+      >
+        <a class="btn btn-gold" href={base}>Back to homepage</a>
+        <a class="btn btn-ghost" href={waLink} target="_blank" rel="noopener">
+          WhatsApp us for help
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

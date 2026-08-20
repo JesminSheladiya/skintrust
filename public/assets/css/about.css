@@ -1,0 +1,25 @@
+/* ---------- about page: pull quote ---------- */
+.pullquote {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+  line-height: 1.4;
+  color: var(--forest);
+  margin: 28px 0 0;
+  padding-left: 22px;
+  border-left: 2px solid var(--champagne);
+}
+
+.pullquote-src {
+  margin: 10px 0 0;
+  padding-left: 22px;
+  font-size: .72rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pullquote-src b {
+  color: var(--champagne);
+  font-weight: 500;
+}

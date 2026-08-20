@@ -170,7 +170,7 @@ p {
 
 .btn-solid:hover {
   color: var(--forest-deep);
-  border-color: var(--forest-deep);
+  border-color: var(--champagne);
   transform: translateY(-2px)
 }
 
@@ -1070,6 +1070,16 @@ p {
 @media(max-width:860px) {
   .tech-grid {
     grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+.tech-grid--3 {
+  grid-template-columns: repeat(3, 1fr)
+}
+
+@media(max-width:860px) {
+  .tech-grid--3 {
+    grid-template-columns: repeat(3, 1fr)
   }
 }
 
