@@ -20,7 +20,6 @@ const header = {
   navLinks: [
     { label: "TREATMENTS", href: "#treatments" },
     { label: "ABOUT", href: "#doctor" },
-    { label: "BLOG", href: "#blog" },
     { label: "CONTACT", href: "#book" },
   ],
   ctaLabel: "BOOK APPOINTMENT",
@@ -37,21 +36,51 @@ const footer = {
     {
       heading: "Hair & Skin",
       links: [
-        { label: "PRP Hair Treatment", href: `${base}services/prp-hair-treatment-karur` },
-        { label: "GFC Treatment", href: `${base}services/gfc-hair-treatment-karur` },
-        { label: "FUE Hair Transplant", href: `${base}services/fue-hair-transplant-karur` },
-        { label: "Acne Treatment", href: `${base}services/acne-treatment-karur` },
-        { label: "Acne Scar Treatment", href: `${base}services/acne-scar-treatment-karur` },
+        {
+          label: "PRP Hair Treatment",
+          href: `${base}services/prp-hair-treatment-karur`,
+        },
+        {
+          label: "GFC Treatment",
+          href: `${base}services/gfc-hair-treatment-karur`,
+        },
+        {
+          label: "FUE Hair Transplant",
+          href: `${base}services/fue-hair-transplant-karur`,
+        },
+        {
+          label: "Acne Treatment",
+          href: `${base}services/acne-treatment-karur`,
+        },
+        {
+          label: "Acne Scar Treatment",
+          href: `${base}services/acne-scar-treatment-karur`,
+        },
       ],
     },
     {
       heading: "Laser & Anti-Ageing",
       links: [
-        { label: "Laser Hair Removal", href: `${base}services/laser-hair-removal-karur` },
-        { label: "Anti-Ageing & Botox", href: `${base}services/anti-ageing-treatment-karur` },
-        { label: "HIFU Skin Tightening", href: `${base}services/skin-tightening-karur` },
-        { label: "HydraFacial & Rejuvenation", href: `${base}services/skin-rejuvenation-karur` },
-        { label: "Tattoo Removal", href: `${base}services/tattoo-removal-karur` },
+        {
+          label: "Laser Hair Removal",
+          href: `${base}services/laser-hair-removal-karur`,
+        },
+        {
+          label: "Anti-Ageing & Botox",
+          href: `${base}services/anti-ageing-treatment-karur`,
+        },
+        {
+          label: "HIFU Skin Tightening",
+          href: `${base}services/skin-tightening-karur`,
+        },
+        {
+          label: "HydraFacial & Rejuvenation",
+          href: `${base}services/skin-rejuvenation-karur`,
+        },
+        {
+          label: "Tattoo Removal",
+          href: `${base}services/tattoo-removal-karur`,
+        },
       ],
     },
     {
@@ -105,7 +134,9 @@ const footer = {
         </p>
         <div class="hero-cta">
           <a class="btn btn-solid" href="#book">Book a consultation</a>
-          <a class="btn btn-ghost" href={waLink} target="_blank" rel="noopener">WhatsApp us</a>
+          <a class="btn btn-ghost" href={waLink} target="_blank" rel="noopener"
+            >WhatsApp us</a
+          >
         </div>
       </div>
       <figure class="hero-figure" style="margin: 0">
@@ -216,7 +247,9 @@ const footer = {
               <li>Skin Boosters · PDRN · Exosomes</li>
               <li>LED Phototherapy</li>
             </ul>
-<a class="cat-cta" href={`${base}services/acne-scar-treatment-karur`}
+            <a
+              class="cat-cta"
+              href={`${base}services/acne-scar-treatment-karur`}
               >Explore acne & scar treatments →</a
             >
           </div>
@@ -273,7 +306,9 @@ const footer = {
               <li>Skin Boosters</li>
               <li>Under-Eye Rejuvenation (PDRN, peels, Dermapen)</li>
             </ul>
-            <a class="cat-cta" href={`${base}services/anti-ageing-treatment-karur`}
+            <a
+              class="cat-cta"
+              href={`${base}services/anti-ageing-treatment-karur`}
               >Explore anti-ageing →</a
             >
           </div>
@@ -323,11 +358,129 @@ const footer = {
               <li>Cryotherapy · Electrocautery</li>
               <li>Microblading · Dermoscopy</li>
             </ul>
-<a class="cat-cta" href={`${base}services/dermato-surgery-karur`}
+            <a class="cat-cta" href={`${base}services/dermato-surgery-karur`}
               >Explore dermatology & surgery →</a
             >
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= PATIENT RESULTS (BEFORE & AFTER) ======================= -->
+  <section class="sec sec-warm" id="results" style="padding-top: 0;">
+    <div class="shell">
+      <div class="sec-head centred">
+        <p class="eyebrow centred">Patient results</p>
+        <h2 style="white-space: nowrap; max-width: 100%;">
+          Before and after. Drag to compare.
+        </h2>
+        <p class="lede">
+          Photographs taken in the same room, same light, same distance. No
+          filters, no retouching, no borrowed stock images — only real outcomes
+          from real patients at Skin Trust Hospital.
+        </p>
+      </div>
+
+      <div class="ba-grid">
+        <BeforeAfterCard
+          client:load
+          afterNote="Month 6"
+          beforeNote="Day 0"
+          ariaLabel="Reveal before and after — hair"
+          title="Hair density restored"
+          body="Male, 29 — diffuse thinning at the crown. Six PRP sessions combined with medical management over six months."
+          tags={["PRP", "6 sessions"]}
+          mutedTags
+        />
+        <BeforeAfterCard
+          client:load
+          afterNote="Month 4"
+          beforeNote="Day 0"
+          ariaLabel="Reveal before and after — acne scars"
+          title="Acne scars smoothened"
+          body="Female, 24 — rolling and boxcar scars across both cheeks. MNRF combined with subcision over five sessions."
+          tags={["MNRF + Subcision", "5 sessions"]}
+          mutedTags
+        />
+        <BeforeAfterCard
+          client:load
+          afterNote="Month 3"
+          beforeNote="Day 0"
+          ariaLabel="Reveal before and after — pigmentation"
+          title="Pigmentation cleared"
+          body="Female, 36 — melasma across cheekbones. Chemical peels, laser toning and strict sun protection over eight sessions."
+          tags={["Peels + Laser toning", "8 sessions"]}
+          mutedTags
+        />
+      </div>
+
+      <p class="disclaimer" style="color: var(--muted)">
+        Photographs shared with written patient consent. Individual results vary
+        with age, skin type, severity and adherence to the treatment plan — no
+        outcome is guaranteed.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================= REVIEWS TESTIMONIAL ======================= -->
+  <section class="sec sec-warm" id="reviews" style="padding-top: 0;">
+    <div class="shell">
+      <div class="review-wall" style="display: block; text-align: center;">
+        <div
+          class="review-copy"
+          style="text-align: center; max-width: 100%; margin: 0 auto;"
+        >
+          <p class="big">
+            Most Trusted Dermatology and<br />Skin Aesthetic Clinic in
+            <strong>Karur, Tamilnadu</strong>
+          </p>
+          <p style="margin: 0 auto;">
+            Patients drive in from Karur town, Kulithalai, Aravakurichi,
+            Krishnarayapuram, Manmangalam — and increasingly from Trichy and
+            Namakkal. Below is what a few of them wrote, unedited.
+          </p>
+        </div>
+      </div>
+
+      <div class="quotes">
+        <article class="quote">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <blockquote>
+            She explained exactly why my hair was falling before suggesting a
+            single treatment. Three other places just handed me a package
+            without any diagnosis.
+          </blockquote>
+          <footer><b>R. Senthil</b>Hair treatment · Karur</footer>
+        </article>
+        <article class="quote">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <blockquote>
+            I had acne for six years. Dr. Kavitha was the first doctor to
+            actually check my hormones. Six months later my skin is genuinely
+            calm for the first time.
+          </blockquote>
+          <footer><b>Priya M.</b>Acne treatment · Kulithalai</footer>
+        </article>
+        <article class="quote">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <blockquote>
+            Mole removal took fifteen minutes and the scar is barely visible.
+            Clean set-up, everything sterile, no drama. Very experienced and
+            skilled doctor.
+          </blockquote>
+          <footer><b>K. Anand</b>Dermato surgery · Aravakurichi</footer>
+        </article>
+      </div>
+
+      <div class="rating-bar">
+        <b>4.9</b>
+        <span>from 3,600+ verified Google reviews</span>
+        <a
+          href={`${base}reviews`}
+          style="border-bottom: 1px solid var(--champagne); text-transform: uppercase; letter-spacing: .14em; font-size: .72rem;"
+          >Read all reviews</a
+        >
       </div>
     </div>
   </section>
@@ -434,7 +587,9 @@ const footer = {
           </div>
           <p class="sig">Dr. Kavitha</p>
           <div style="margin-top: 26px">
-            <a class="btn btn-ghost" href={`${base}about`}>Read her full profile</a>
+            <a class="btn btn-ghost" href={`${base}about`}
+              >Read her full profile</a
+            >
           </div>
         </div>
       </div>
@@ -520,64 +675,8 @@ const footer = {
     </div>
   </section>
 
-  <!-- ======================= BEFORE & AFTER ======================= -->
-  <section class="sec sec-warm" id="results">
-    <div class="shell">
-      <div class="sec-head centred">
-        <p class="eyebrow centred">Patient results</p>
-        <h2 style="white-space: nowrap; max-width: 100%;">
-          Before and after. Drag to compare.
-        </h2>
-        <p class="lede">
-          Photographs taken in the same room, same light, same distance. No
-          filters, no retouching, no borrowed stock images — only real outcomes
-          from real patients at Skin Trust Hospital.
-        </p>
-      </div>
-
-      <div class="ba-grid">
-        <BeforeAfterCard
-          client:load
-          afterNote="Month 6"
-          beforeNote="Day 0"
-          ariaLabel="Reveal before and after — hair"
-          title="Hair density restored"
-          body="Male, 29 — diffuse thinning at the crown. Six PRP sessions combined with medical management over six months."
-          tags={["PRP", "6 sessions"]}
-          mutedTags
-        />
-        <BeforeAfterCard
-          client:load
-          afterNote="Month 4"
-          beforeNote="Day 0"
-          ariaLabel="Reveal before and after — acne scars"
-          title="Acne scars smoothened"
-          body="Female, 24 — rolling and boxcar scars across both cheeks. MNRF combined with subcision over five sessions."
-          tags={["MNRF + Subcision", "5 sessions"]}
-          mutedTags
-        />
-        <BeforeAfterCard
-          client:load
-          afterNote="Month 3"
-          beforeNote="Day 0"
-          ariaLabel="Reveal before and after — pigmentation"
-          title="Pigmentation cleared"
-          body="Female, 36 — melasma across cheekbones. Chemical peels, laser toning and strict sun protection over eight sessions."
-          tags={["Peels + Laser toning", "8 sessions"]}
-          mutedTags
-        />
-      </div>
-
-      <p class="disclaimer" style="color: var(--muted)">
-        Photographs shared with written patient consent. Individual results vary
-        with age, skin type, severity and adherence to the treatment plan — no
-        outcome is guaranteed.
-      </p>
-    </div>
-  </section>
-
   <!-- ======================= ASSURANCE SPLIT ======================= -->
-  <section class="sec sec-warm" style="padding-top: 0;">
+  <section class="sec sec-warm">
     <div class="shell">
       <div class="split">
         <div>
@@ -633,71 +732,11 @@ const footer = {
             </dd>
           </dl>
           <div style="margin-top: 28px">
-            <a class="btn btn-gold" href={waLink} target="_blank" rel="noopener">WhatsApp to book</a>
+            <a class="btn btn-gold" href={waLink} target="_blank" rel="noopener"
+              >WhatsApp to book</a
+            >
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================= REVIEWS ======================= -->
-  <section class="sec sec-warm" id="reviews" style="padding-top: 0;">
-    <div class="shell">
-      <div class="review-wall" style="display: block; text-align: center;">
-        <div
-          class="review-copy"
-          style="text-align: center; max-width: 100%; margin: 0 auto;"
-        >
-          <p class="big">
-            Most Trusted Dermatology and<br />Skin Aesthetic Clinic in
-            <strong>Karur, Tamilnadu</strong>
-          </p>
-          <p style="margin: 0 auto;">
-            Patients drive in from Karur town, Kulithalai, Aravakurichi,
-            Krishnarayapuram, Manmangalam — and increasingly from Trichy and
-            Namakkal. Below is what a few of them wrote, unedited.
-          </p>
-        </div>
-      </div>
-
-      <div class="quotes">
-        <article class="quote">
-          <div class="stars" aria-hidden="true">★★★★★</div>
-          <blockquote>
-            She explained exactly why my hair was falling before suggesting a
-            single treatment. Three other places just handed me a package
-            without any diagnosis.
-          </blockquote>
-          <footer><b>R. Senthil</b>Hair treatment · Karur</footer>
-        </article>
-        <article class="quote">
-          <div class="stars" aria-hidden="true">★★★★★</div>
-          <blockquote>
-            I had acne for six years. Dr. Kavitha was the first doctor to
-            actually check my hormones. Six months later my skin is genuinely
-            calm for the first time.
-          </blockquote>
-          <footer><b>Priya M.</b>Acne treatment · Kulithalai</footer>
-        </article>
-        <article class="quote">
-          <div class="stars" aria-hidden="true">★★★★★</div>
-          <blockquote>
-            Mole removal took fifteen minutes and the scar is barely visible.
-            Clean set-up, everything sterile, no drama. Very experienced and
-            skilled doctor.
-          </blockquote>
-          <footer><b>K. Anand</b>Dermato surgery · Aravakurichi</footer>
-        </article>
-      </div>
-
-      <div class="rating-bar">
-        <b>4.9</b>
-        <span>from 3,600+ verified Google reviews</span>
-        <a
-          href={`${base}reviews`}
-          style="border-bottom: 1px solid var(--champagne); text-transform: uppercase; letter-spacing: .14em; font-size: .72rem;"
-          >Read all reviews</a
-        >
       </div>
     </div>
   </section>
@@ -752,7 +791,9 @@ const footer = {
             Humidity, sweat and higher Fitzpatrick types change what works. A
             protocol designed for dry European skin is not going to work here.
           </p>
-          <a class="more" href={`${base}blog/acne-treatment-tamil-nadu`}>Read →</a>
+          <a class="more" href={`${base}blog/acne-treatment-tamil-nadu`}
+            >Read →</a
+          >
         </article>
         <article class="post">
           <p class="kicker">Laser</p>
@@ -767,7 +808,9 @@ const footer = {
             takes, and what to avoid before and after — a straight guide from
             Dr. Kavitha.
           </p>
-          <a class="more" href={`${base}blog/laser-hair-removal-karur-guide`}>Read →</a>
+          <a class="more" href={`${base}blog/laser-hair-removal-karur-guide`}
+            >Read →</a
+          >
         </article>
       </div>
       <div style="margin-top: 44px">
