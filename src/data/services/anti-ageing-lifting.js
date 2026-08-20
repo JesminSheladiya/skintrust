@@ -149,6 +149,7 @@ export default {
     navLinks: [
       { label: "Hair", href: `${BASE}/services/hair-restoration` },
       { label: "Acne", href: `${BASE}/services/acne-treatment-karur` },
+      { label: "Laser Treatments", href: `${BASE}/services/laser-treatments-karur` },
       { label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur`, active: true },
       { label: "Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur` },
       { label: "Surgery", href: `${BASE}/services/dermato-surgery-karur` },
@@ -339,7 +340,7 @@ export default {
   },
   why: {
     eyebrow: "Why Karur Trusts Dr. Kavitha",
-    h2: "Designed to soften signs of ageing<br>while preserving natural expression.",
+    h2: "Designed to soften signs of ageing while preserving natural expression.",
     lede:
       "Anti-ageing treatment works best when it is planned around your face specifically. Here is how that assessment and planning happens at Skin Trust.",
     items: [
@@ -497,7 +498,7 @@ export default {
       },
       {
         dt: "WhatsApp",
-        dd: `<a href="${waLink}" style="border-bottom:1px solid var(--champagne)">Send a message</a>`,
+        dd: `<a href="${waLink}" target="_blank" rel="noopener" style="border-bottom:1px solid var(--champagne)">Send a message</a>`,
       },
       { dt: "Nearest landmark", dd: "Kamaatchi Amman Temple, Madavilagam" },
     ],
@@ -508,7 +509,7 @@ export default {
         target: "_blank",
         class: "btn btn-solid",
       },
-      { label: "WhatsApp to book", href: waLink, class: "btn btn-ghost" },
+      { label: "WhatsApp to book", href: waLink, target: "_blank", class: "btn btn-ghost" },
     ],
     map: {
       title: "Skin Trust location on Google Maps",
@@ -523,7 +524,7 @@ export default {
       "A first consultation covers your areas of concern, how your face moves and ages, and a sequenced plan matched to that. No packages are sold at this visit.",
     buttons: [
       { label: "Call +91 00000 00000", href: "tel:+910000000000", class: "btn btn-gold" },
-      { label: "WhatsApp to book", href: waLink, class: "btn btn-ghost-light" },
+      { label: "WhatsApp to book", href: waLink, target: "_blank", class: "btn btn-ghost-light" },
     ],
   },
   internalLinks: {

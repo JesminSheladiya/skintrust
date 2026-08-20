@@ -69,7 +69,7 @@ const base = import.meta.env.BASE_URL;
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href={`${base}assets/css/style.css`} />
+    <link rel="stylesheet" href={`${base}assets/css/style.css?v=20260820`} />
     <slot name="head" />
   </head>
   <body>
@@ -81,13 +81,21 @@ const base = import.meta.env.BASE_URL;
 
     <Footer {...footer} />
 
-    <a class="wa-float" href={waFloatHref} aria-label="Chat on WhatsApp">
+    <a
+      class="wa-float"
+      href={waFloatHref}
+      aria-label="Chat on WhatsApp"
+      target="_blank"
+      rel="noopener"
+    >
       {waFloatLabel}
     </a>
 
     <div class="mobile-bar">
       <a href={mobileCallHref}>{mobileCallLabel}</a>
-      <a href={mobileWhatsappHref}>{mobileWhatsappLabel}</a>
+      <a href={mobileWhatsappHref} target="_blank" rel="noopener"
+        >{mobileWhatsappLabel}</a
+      >
     </div>
   </body>
 </html>

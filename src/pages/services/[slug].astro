@@ -71,7 +71,7 @@ const {
         <p class="lede">{hero.lede}</p>
         <div class="hero-cta">
           <a class="btn btn-solid" href={hero.ctaHref}>{hero.ctaLabel}</a>
-          <a class="btn btn-ghost" href={waLink}>WhatsApp us</a>
+          <a class="btn btn-ghost" href={waLink} target="_blank" rel="noopener">WhatsApp us</a>
         </div>
         {
           hero.meta && (
@@ -128,7 +128,9 @@ const {
         {results.disclaimer}
       </p>
       <div style="text-align: center; margin-top: 32px">
-        <a class="btn btn-gold" href={waLink}>Book a consultation</a>
+        <a class="btn btn-gold" href={waLink} target="_blank" rel="noopener"
+          >Book a consultation</a
+        >
       </div>
     </div>
   </section>
@@ -368,7 +370,12 @@ const {
       <div class="btnrow">
         {
           cta.buttons.map((btn) => (
-            <a class={btn.class} href={btn.href}>
+            <a
+              class={btn.class}
+              href={btn.href}
+              target={btn.target ? "_blank" : undefined}
+              rel={btn.target ? "noopener" : undefined}
+            >
               {btn.label}
             </a>
           ))

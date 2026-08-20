@@ -50,10 +50,7 @@ const footer = {
         { label: "Laser Hair Removal", href: `${base}services/laser-hair-removal-karur` },
         { label: "Anti-Ageing & Botox", href: `${base}services/anti-ageing-treatment-karur` },
         { label: "HIFU Skin Tightening", href: `${base}services/skin-tightening-karur` },
-        {
-          label: "HydraFacial & Rejuvenation",
-          href: `${base}services/skin-rejuvenation-karur`,
-        },
+        { label: "HydraFacial & Rejuvenation", href: `${base}services/skin-rejuvenation-karur` },
         { label: "Tattoo Removal", href: `${base}services/tattoo-removal-karur` },
       ],
     },
@@ -108,7 +105,7 @@ const footer = {
         </p>
         <div class="hero-cta">
           <a class="btn btn-solid" href="#book">Book a consultation</a>
-          <a class="btn btn-ghost" href={waLink}>WhatsApp us</a>
+          <a class="btn btn-ghost" href={waLink} target="_blank" rel="noopener">WhatsApp us</a>
         </div>
       </div>
       <figure class="hero-figure" style="margin: 0">
@@ -301,7 +298,7 @@ const footer = {
               <li>Tattoo Removal (Q-Switched Nd:YAG)</li>
               <li>Fractional CO₂ Resurfacing</li>
             </ul>
-            <a class="cat-cta" href={`${base}services/laser-treatment-karur`}
+            <a class="cat-cta" href={`${base}services/laser-treatments-karur`}
               >Explore laser treatments →</a
             >
           </div>
@@ -636,7 +633,7 @@ const footer = {
             </dd>
           </dl>
           <div style="margin-top: 28px">
-            <a class="btn btn-gold" href={waLink}>WhatsApp to book</a>
+            <a class="btn btn-gold" href={waLink} target="_blank" rel="noopener">WhatsApp to book</a>
           </div>
         </div>
       </div>
@@ -890,6 +887,8 @@ const footer = {
             <dd>
               <a
                 href="https://wa.me/919092232991"
+                target="_blank"
+                rel="noopener"
                 style="border-bottom: 1px solid var(--champagne);"
                 >+91 90922 32991</a
               >
@@ -938,7 +937,9 @@ const footer = {
       <p class="eyebrow centred">Book an appointment</p>
       <h2>Your skin deserves a diagnosis, not a guess.</h2>
       <div class="btnrow">
-        <a class="btn btn-gold" href={waLink}>WhatsApp to book</a>
+        <a class="btn btn-gold" href={waLink} target="_blank" rel="noopener"
+          >WhatsApp to book</a
+        >
         <a class="btn btn-ghost-light" href="tel:+919626923299"
           >Call +91 96269 23299</a
         >
