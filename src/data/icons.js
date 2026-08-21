@@ -1,3 +1,135 @@
+// Category icon mappings - used for category cards on services index page
+export const CATEGORY_ICONS = {
+  "hair-restoration": "hair",
+  "acne-scar-correction": "face",
+  "skin-rejuvenation": "hydra",
+  "anti-ageing-lifting": "thread",
+  "laser-treatments": "laser",
+  "dermato-surgery": "patch",
+};
+
+export function categoryIcon(slug) {
+  return CATEGORY_ICONS[slug] || "sparkle";
+}
+
+// Treatment icon mappings - maps exact treatment titles to icon keys
+// These keys correspond to react-icons in TreatmentIcon.jsx
+const TREATMENT_ICONS = {
+  // Hair restoration
+  "PRP Hair Treatment": "prp",
+  "GFC Therapy": "gfc",
+  "Exosome Therapy": "exosome",
+  "FUE Hair Transplant": "fue",
+  "LLLT (Laser Therapy)": "lllt",
+  "Mesotherapy": "mesotherapy",
+  "Hair Botox": "hair-botox",
+  "Hair Booster": "hair-booster",
+  // Acne & scar
+  "Medical Acne Management": "acne-management",
+  "Chemical Peels": "chemical-peels",
+  "Pico & Carbon Toning": "pico-carbon",
+  "MNRF": "mnrf",
+  "Fractional CO2 & Q-YAG": "fractional-co2-qyag",
+  "Dermapen International": "dermapen-intl",
+  "Subcision": "subcision",
+  "Skin Boosters, PDRN & Exosomes": "skin-boosters-pdrn-exosomes",
+  "LED Phototherapy": "led-phototherapy",
+  // Anti-ageing
+  "Botox (Wrinkle Relaxation)": "botox-wrinkle",
+  "Dermal Fillers (Volume Restoration)": "dermal-fillers",
+  "Thread Lifts (Non-Surgical Face Lift)": "thread-lifts",
+  "HIFU (Focused Ultrasound Lifting)": "hifu-lifting",
+  "Apollo Quattro": "apollo-quattro",
+  "MNRF Tightening": "mnrf-tightening-anti",
+  "PDRN Therapy": "pdrn-therapy",
+  "Skin Boosters": "skin-boosters-anti",
+  "Under-Eye Rejuvenation (PDRN, Peels, Dermapen)": "under-eye-rejuvenation",
+  // Dermatology & surgery
+  "Mole, Skin Tag & Cyst Removal": "mole-skin-tag-cyst",
+  "Ear Lobe Repair": "ear-lobe-repair",
+  "Vitiligo Surgery & Skin Grafting": "vitiligo-grafting",
+  "Phototherapy (NB-UVB, PUVA, Excimer)": "phototherapy-nb-uvb",
+  "Cryotherapy & Electrocautery": "cryo-electrocautery",
+  "Microblading & Dermoscopy": "microblading-dermoscopy",
+  // Laser
+  "Laser Hair Removal (Diode — All Body Areas)": "laser-hair-removal-diode",
+  "Laser Toning for Pigmentation": "laser-toning-pigmentation",
+  "Carbon Laser Peel": "carbon-laser-peel",
+  "Tattoo Removal (Q-Switched Nd:YAG)": "tattoo-removal-q",
+  "Fractional CO2 Resurfacing": "fractional-co2-resurfacing",
+  // Skin rejuvenation
+  "HydraFacial": "hydrafacial",
+  "Hydra Touch": "hydra-touch",
+  "Laser Toning (Q-Switched Nd:YAG)": "laser-toning-pigmentation",
+  "Chemical Peels Brightening & Maintenance": "chemical-peels",
+  "Microdermabrasion & Microneedling": "microdermabrasion",
+  "IV Glutathione Therapy": "iv-glutathione",
+  "Skin Boosters, PDRN & Exosomes": "skin-boosters-pdrn-exosomes",
+  "Dr. Platon Cold Plasma Therapy": "cold-plasma",
+};
+
+export function treatmentIcon(title = "") {
+  // First try exact match
+  if (TREATMENT_ICONS[title]) return TREATMENT_ICONS[title];
+
+  // Fallback: fuzzy match based on keywords in title
+  const t = title.toLowerCase();
+  if (/(prp|platelet)/.test(t)) return "prp";
+  if (/(gfc|growth factor)/.test(t)) return "gfc";
+  if (/(exosome|vesicle)/.test(t)) return "exosome";
+  if (/(fue|transplant|follicular)/.test(t)) return "fue";
+  if (/(lllt|low level|laser therapy)/.test(t)) return "lllt";
+  if (/(mesotherapy|meso)/.test(t)) return "mesotherapy";
+  if (/(hair botox|botox hair)/.test(t)) return "hair-botox";
+  if (/(hair booster|booster)/.test(t)) return "hair-booster";
+  if (/(acne|pimple|breakout)/.test(t) && !/(scar|mark)/.test(t)) return "acne-management";
+  if (/(chemical peel|peeling)/.test(t)) return "chemical-peels";
+  if (/(pico|picosecond)/.test(t) && /(carbon|toning)/.test(t)) return "pico-carbon";
+  if (/(mnrf|microneedling radio)/.test(t) && !/(tight|anti)/.test(t)) return "mnrf";
+  if (/(fractional co2|co2 laser)/.test(t) && /(q-?yag|qswitched)/.test(t)) return "fractional-co2-qyag";
+  if (/(dermapen|microneedling pen)/.test(t)) return "dermapen-intl";
+  if (/(subcision|subcission)/.test(t)) return "subcision";
+  if (/(skin booster|pdrn|exosome)/.test(t) && /(acne|scar)/.test(t)) return "skin-boosters-pdrn-exosomes";
+  if (/(led|light therapy|phototherapy)/.test(t) && /(acne|scar)/.test(t)) return "led-phototherapy";
+  if (/(botox|wrinkle)/.test(t) && /(anti|age)/.test(t)) return "botox-wrinkle";
+  if (/(filler|volume|dermal)/.test(t)) return "dermal-fillers";
+  if (/(thread|lift)/.test(t) && /(anti|age|face)/.test(t)) return "thread-lifts";
+  if (/(hifu|ultrasound)/.test(t)) return "hifu-lifting";
+  if (/(apollo|quattro)/.test(t)) return "apollo-quattro";
+  if (/(mnrf|radio).*tight/.test(t)) return "mnrf-tightening-anti";
+  if (/(pdrn|polynucleotide)/.test(t) && !/(hair|booster)/.test(t)) return "pdrn-therapy";
+  if (/(skin booster)/.test(t) && /(anti|age)/.test(t)) return "skin-boosters-anti";
+  if (/(under.?eye|eye rejuven)/.test(t)) return "under-eye-rejuvenation";
+  if (/(mole|skin tag|cyst)/.test(t)) return "mole-skin-tag-cyst";
+  if (/(ear|lobe)/.test(t)) return "ear-lobe-repair";
+  if (/(vitiligo|graft)/.test(t)) return "vitiligo-grafting";
+  if (/(phototherapy|uvb|puva|excimer)/.test(t)) return "phototherapy-nb-uvb";
+  if (/(cryo|electrocautery|electro)/.test(t)) return "cryo-electrocautery";
+  if (/(microblad|dermoscop)/.test(t)) return "microblading-dermoscopy";
+  if (/(hair removal|diode)/.test(t)) return "laser-hair-removal-diode";
+  if (/(laser toning|pigment)/.test(t) && !/(carbon|acne)/.test(t)) return "laser-toning-pigmentation";
+  if (/(carbon.*peel|carbon laser)/.test(t)) return "carbon-laser-peel";
+  if (/(tattoo|ink)/.test(t)) return "tattoo-removal-q";
+  if (/(fractional.*resurfac|co2.*resurfac)/.test(t)) return "fractional-co2-resurfacing";
+  if (/(hydrafacial|hydra facial)/.test(t)) return "hydrafacial";
+  if (/(hydra touch|hydratouch)/.test(t)) return "hydra-touch";
+  if (/(microderm|microneedl)/.test(t) && !/(pen|dermapen)/.test(t)) return "microdermabrasion";
+  if (/(iv|glutathione)/.test(t)) return "iv-glutathione";
+  if (/(platon|cold plasma)/.test(t)) return "cold-plasma";
+
+  // General category fallbacks
+  if (/(hair|transplant|fue|follicle|scalp|tricholog)/.test(t)) return "hair";
+  if (/(mole|tag|cyst|ear|vitiligo|graft|surgery|cryo|electrocautery|subcision|microblad|dermoscop|excis)/.test(t)) return "patch";
+  if (/(hifu|thread|lift|tighten|mnrf|apollo)/.test(t)) return "wave";
+  if (/(laser|lllt|toning|photother|phototherap|resurfacing|carbon|q-switched|excimer|tattoo)/.test(t)) return "laser";
+  if (/(prp|gfc|exosome|mesotherap|booster|filler|botox|peptide|pdrn|glutathione|iv |hydra|microderm|microneedl|dermapen|skin booster|hair botox|hair booster)/.test(t)) return "drop";
+  if (/(peel|hydra|microderm|microneedl|dermapen|acne|scar|pigment|rejuvenat|glow|radiance|texture|platon)/.test(t)) return "sparkle";
+
+  return "sparkle";
+}
+
+// Legacy ICONS object for backward compatibility with CatIcon.astro
+// Maps icon keys to SVG path strings
 export const ICONS = {
   hair: '<path d="M7 21c0-5 1-9 5-14 4 5 5 9 5 14"/><path d="M10 21c-.4-3 0-6 2-9"/><path d="M14 21c.4-3 0-6-2-9"/>',
   vial: '<path d="M9 2v13a3 3 0 0 0 6 0V2"/><path d="M9 2h6"/><path d="M10.5 11h3"/>',
@@ -22,82 +154,3 @@ export const ICONS = {
   hydra: '<path d="M12 3c3 4 5 6 5 9a5 5 0 0 1-10 0c0-3 2-5 5-9Z"/><path d="M9 14c1-1 2-1 3 0s2 1 3 0"/>',
   syringe: '<path d="M4 20l4-4"/><path d="M8 16l4-4 3 3-4 4-3-3z"/><path d="M15 9l5-5"/><path d="M13 11l2 2"/>',
 };
-
-export const CATEGORY_ICONS = {
-  "hair-restoration": "hair",
-  "acne-scar-correction": "face",
-  "skin-rejuvenation": "hydra",
-  "anti-ageing-lifting": "thread",
-  "laser-treatments": "laser",
-  "dermato-surgery": "patch",
-};
-
-export function categoryIcon(slug) {
-  return CATEGORY_ICONS[slug] || "sparkle";
-}
-
-const TREATMENT_ICONS = {
-  // Hair restoration
-  "PRP Hair Treatment": "syringe",
-  "GFC Therapy": "vial",
-  "Exosome Therapy": "cell",
-  "FUE Hair Transplant": "hair",
-  "LLLT (Laser Therapy)": "laser",
-  "Mesotherapy": "needle",
-  "Hair Botox": "hydra",
-  "Hair Booster": "drop",
-  // Acne & scar
-  "Medical Acne Management": "face",
-  "Chemical Peels": "layers",
-  "Pico & Carbon Toning": "sparkle",
-  "MNRF": "wave",
-  "Fractional CO2 & Q-YAG": "laser",
-  "Dermapen International": "pen",
-  "Subcision": "needle",
-  "Skin Boosters, PDRN & Exosomes": "drop",
-  "LED Phototherapy": "sun",
-  // Anti-ageing
-  "Botox (Wrinkle Relaxation)": "syringe",
-  "Dermal Fillers (Volume Restoration)": "drop",
-  "Thread Lifts (Non-Surgical Face Lift)": "thread",
-  "HIFU (Focused Ultrasound Lifting)": "wave",
-  "Apollo Quattro": "device",
-  "MNRF Tightening": "wave",
-  "PDRN Therapy": "drop",
-  "Skin Boosters": "drop",
-  "Under-Eye Rejuvenation (PDRN, Peels, Dermapen)": "eye",
-  // Dermatology & surgery
-  "Mole, Skin Tag & Cyst Removal": "spot",
-  "Ear Lobe Repair": "ear",
-  "Vitiligo Surgery & Skin Grafting": "patch",
-  "Phototherapy (NB-UVB, PUVA, Excimer)": "sun",
-  "Cryotherapy & Electrocautery": "snow",
-  "Microblading & Dermoscopy": "pen",
-  // Laser
-  "Laser Hair Removal (Diode — All Body Areas)": "laser",
-  "Laser Toning for Pigmentation": "laser",
-  "Carbon Laser Peel": "sparkle",
-  "Tattoo Removal (Q-Switched Nd:YAG)": "laser",
-  "Fractional CO2 Resurfacing": "laser",
-  // Skin rejuvenation
-  "HydraFacial": "hydra",
-  "Hydra Touch": "hydra",
-  "Laser Toning (Q-Switched Nd:YAG)": "laser",
-  "Chemical Peels Brightening & Maintenance": "layers",
-  "Microdermabrasion & Microneedling": "pen",
-  "IV Glutathione Therapy": "iv",
-  "Skin Boosters, PDRN & Exosomes": "drop",
-  "Dr. Platon Cold Plasma Therapy": "sparkle",
-};
-
-export function treatmentIcon(title = "") {
-  if (TREATMENT_ICONS[title]) return TREATMENT_ICONS[title];
-  const t = title.toLowerCase();
-  if (/(hair|transplant|fue|follicle|scalp|tricholog)/.test(t)) return "hair";
-  if (/(mole|tag|cyst|ear|vitiligo|graft|surgery|cryo|electrocautery|subcision|microblad|dermoscop|excis)/.test(t)) return "patch";
-  if (/(hifu|thread|lift|tighten|mnrf|apollo)/.test(t)) return "wave";
-  if (/(laser|lllt|toning|photother|phototherap|resurfacing|carbon|q-switched|excimer|tattoo)/.test(t)) return "laser";
-  if (/(prp|gfc|exosome|mesotherap|booster|filler|botox|peptide|pdrn|glutathione|iv |hydra|microderm|microneedl|dermapen|skin booster|hair botox|hair booster)/.test(t)) return "drop";
-  if (/(peel|hydra|microderm|microneedl|dermapen|acne|scar|pigment|rejuvenat|glow|radiance|texture|platon)/.test(t)) return "sparkle";
-  return "sparkle";
-}
