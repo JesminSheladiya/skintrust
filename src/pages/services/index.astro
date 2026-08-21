@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import CatIcon from "../../components/CatIcon.astro";
+import { categoryIcon } from "../../data/icons.js";
 import { SITE_BASE } from "../../data/site.js";
 
 const base = import.meta.env.BASE_URL;
@@ -40,21 +42,51 @@ const footer = {
     {
       heading: "Hair & Skin",
       links: [
-        { label: "PRP Hair Treatment", href: `${base}services/prp-hair-treatment-karur` },
-        { label: "GFC Treatment", href: `${base}services/gfc-hair-treatment-karur` },
-        { label: "FUE Hair Transplant", href: `${base}services/fue-hair-transplant-karur` },
-        { label: "Acne Treatment", href: `${base}services/acne-treatment-karur` },
-        { label: "Acne Scar Treatment", href: `${base}services/acne-scar-treatment-karur` },
+        {
+          label: "PRP Hair Treatment",
+          href: `${base}services/prp-hair-treatment-karur`,
+        },
+        {
+          label: "GFC Treatment",
+          href: `${base}services/gfc-hair-treatment-karur`,
+        },
+        {
+          label: "FUE Hair Transplant",
+          href: `${base}services/fue-hair-transplant-karur`,
+        },
+        {
+          label: "Acne Treatment",
+          href: `${base}services/acne-treatment-karur`,
+        },
+        {
+          label: "Acne Scar Treatment",
+          href: `${base}services/acne-scar-treatment-karur`,
+        },
       ],
     },
     {
       heading: "Laser & Anti-Ageing",
       links: [
-        { label: "Laser Hair Removal", href: `${base}services/laser-hair-removal-karur` },
-        { label: "Anti-Ageing & Botox", href: `${base}services/anti-ageing-treatment-karur` },
-        { label: "HIFU Skin Tightening", href: `${base}services/skin-tightening-karur` },
-        { label: "HydraFacial & Rejuvenation", href: `${base}services/skin-rejuvenation-karur` },
-        { label: "Tattoo Removal", href: `${base}services/tattoo-removal-karur` },
+        {
+          label: "Laser Hair Removal",
+          href: `${base}services/laser-hair-removal-karur`,
+        },
+        {
+          label: "Anti-Ageing & Botox",
+          href: `${base}services/anti-ageing-treatment-karur`,
+        },
+        {
+          label: "HIFU Skin Tightening",
+          href: `${base}services/skin-tightening-karur`,
+        },
+        {
+          label: "HydraFacial & Rejuvenation",
+          href: `${base}services/skin-rejuvenation-karur`,
+        },
+        {
+          label: "Tattoo Removal",
+          href: `${base}services/tattoo-removal-karur`,
+        },
       ],
     },
     {
@@ -136,22 +168,24 @@ const footer = {
       </div>
 
       <div class="cat-grid">
-        {services.map((service) => (
-          <a
-            class="cat"
-            href={`${base}services/${service.slug}`}
-            style="text-decoration: none; color: inherit;"
-          >
-            <div class="cat-top">
-              <span class="ph">{service.displayName}<br />image 16:10</span>
-            </div>
-            <div class="cat-body">
-              <h3>{service.displayName}</h3>
-              <p>{service.summary}</p>
-              <span class="cat-cta">View service →</span>
-            </div>
-          </a>
-        ))}
+        {
+          services.map((service) => (
+            <a
+              class="cat"
+              href={`${base}services/${service.slug}`}
+              style="text-decoration: none; color: inherit;"
+            >
+              <div class="cat-top">
+                <CatIcon name={categoryIcon(service.slug)} size={56} />
+              </div>
+              <div class="cat-body">
+                <h3>{service.displayName}</h3>
+                <p>{service.summary}</p>
+                <span class="cat-cta">View service →</span>
+              </div>
+            </a>
+          ))
+        }
       </div>
     </div>
   </section>

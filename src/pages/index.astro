@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BeforeAfterCard from "../components/BeforeAfterCard.jsx";
 import VideoGallery from "../components/VideoGallery.jsx";
+import VideoOverlay from "../components/VideoOverlay.astro";
 import clinicSchema from "../data/clinic-schema.js";
 import faqSchema from "../data/faq-schema.json";
 import { SITE_BASE } from "../data/site.js";
@@ -424,7 +425,11 @@ const footer = {
   </section>
 
   <!-- ======================= REVIEWS TESTIMONIAL ======================= -->
-  <section class="sec sec-warm" id="reviews" style="padding-top: 0;">
+  <section
+    class="sec sec-warm"
+    id="reviews"
+    style="position: relative; padding-top: 0; padding-bottom: clamp(180px, 25vw, 250px);"
+  >
     <div class="shell">
       <div class="review-wall" style="display: block; text-align: center;">
         <div
@@ -483,10 +488,15 @@ const footer = {
         >
       </div>
     </div>
+
+    <!-- Floating Video Overlay -->
+    <VideoOverlay
+      url="https://www.youtube.com/shorts/IaWEJcArMBQ?feature=share"
+    />
   </section>
 
   <!-- ======================= WHY SKIN TRUST ======================= -->
-  <section class="sec sec-dark">
+  <section class="sec sec-dark" style="padding-top: 250px;">
     <div class="shell">
       <div class="sec-head">
         <p class="eyebrow">Why Karur trusts Dr. Kavitha</p>

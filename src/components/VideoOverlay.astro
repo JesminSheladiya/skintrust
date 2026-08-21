@@ -1,0 +1,155 @@
+---
+interface Props {
+  /** Full YouTube URL - supports watch, embed, shorts, playlist, channel */
+  url?: string;
+  /** Or pass video/playlist ID directly */
+  videoId?: string;
+  playlistId?: string;
+  title?: string;
+}
+
+const {
+  url,
+  videoId,
+  playlistId,
+  title = "Skin Trust Hospital - Dr. Kavitha",
+} = Astro.props;
+
+function getEmbedUrl(
+  inputUrl: string,
+  inputVideoId?: string,
+  inputPlaylistId?: string,
+): string {
+  if (inputVideoId) {
+    return `https://www.youtube.com/embed/${inputVideoId}`;
+  }
+  if (inputPlaylistId) {
+    return `https://www.youtube.com/embed/videoseries?list=${inputPlaylistId}`;
+  }
+  if (!inputUrl) {
+    return "https://www.youtube.com/embed/videoseries?list=UU-SKIN_TRUST_CHANNEL_ID";
+  }
+
+  try {
+    const u = new URL(inputUrl);
+    const host = u.hostname.replace("www.", "");
+
+    if (host === "youtu.be") {
+      const id = u.pathname.slice(1).split("/")[0];
+      return `https://www.youtube.com/embed/${id}`;
+    }
+
+    if (host.includes("youtube.com")) {
+      if (u.pathname === "/watch") {
+        const id = u.searchParams.get("v");
+        if (id) return `https://www.youtube.com/embed/${id}`;
+        const list = u.searchParams.get("list");
+        if (list)
+          return `https://www.youtube.com/embed/videoseries?list=${list}`;
+      }
+      if (u.pathname.startsWith("/embed/")) {
+        return inputUrl;
+      }
+      if (u.pathname.startsWith("/shorts/")) {
+        const id = u.pathname.split("/")[2];
+        return `https://www.youtube.com/embed/${id}`;
+      }
+      if (u.pathname.startsWith("/playlist")) {
+        const list = u.searchParams.get("list");
+        if (list)
+          return `https://www.youtube.com/embed/videoseries?list=${list}`;
+      }
+      if (
+        u.pathname.startsWith("/channel/") ||
+        u.pathname.startsWith("/c/") ||
+        u.pathname.startsWith("/user/") ||
+        u.pathname.startsWith("/@")
+      ) {
+        const list = u.searchParams.get("list") || "UU-SKIN_TRUST_CHANNEL_ID";
+        return `https://www.youtube.com/embed/videoseries?list=${list}`;
+      }
+    }
+  } catch {}
+
+  return "https://www.youtube.com/embed/videoseries?list=UU-SKIN_TRUST_CHANNEL_ID";
+}
+
+const embedSrc = getEmbedUrl(url, videoId, playlistId);
+---
+
+<style>
+  .video-overlay {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -195px;
+    z-index: 20;
+    pointer-events: none;
+    width: 100%;
+    max-width: var(--shell);
+    padding: 0 var(--gutter);
+    box-sizing: border-box;
+  }
+
+  .video-wrapper {
+    position: relative;
+    width: 700px;
+    max-width: 100%;
+    height: 390px;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+      0 25px 80px rgba(0, 0, 0, 0.35),
+      0 0 0 1px rgba(255, 255, 255, 0.08);
+    background: #000;
+    pointer-events: auto;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .video-wrapper:hover {
+    box-shadow:
+      0 30px 100px rgba(0, 0, 0, 0.45),
+      0 0 0 1px rgba(255, 255, 255, 0.12);
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 16px;
+  }
+
+  @media (max-width: 900px) {
+    .video-wrapper {
+      height: auto;
+      aspect-ratio: 700 / 390;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .video-overlay {
+      bottom: -150px;
+    }
+    .video-wrapper {
+      border-radius: 12px;
+    }
+    .video-wrapper iframe {
+      border-radius: 12px;
+    }
+  }
+</style>
+
+<div class="video-overlay" aria-hidden="true">
+  <div class="video-wrapper" title={title}>
+    <iframe
+      src={embedSrc}
+      title={title}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      loading="lazy"></iframe>
+  </div>
+</div>
