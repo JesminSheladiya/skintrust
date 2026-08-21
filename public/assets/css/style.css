@@ -753,7 +753,7 @@ p {
 }
 
 .cat {
-  background: var(--ivory);
+  background: var(--ivory-warm);
   border: 1px solid var(--line);
   display: flex;
   flex-direction: column;
@@ -792,6 +792,20 @@ p {
   padding: 16px
 }
 
+.cat-icon {
+  display: block
+}
+
+.cat-body .cat-icon {
+  color: var(--ivory);
+  width: 58px;
+  height: 58px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 50% 50% 0 0;
+  background: linear-gradient(150deg, var(--forest-mid), var(--forest-deep));
+}
+
 .cat-top::after {
   content: "";
   position: absolute;
@@ -802,6 +816,7 @@ p {
 
 .cat-body {
   padding: 24px 24px 26px;
+  border-top: 2px solid var(--champagne);
   display: flex;
   flex-direction: column;
   flex: 1

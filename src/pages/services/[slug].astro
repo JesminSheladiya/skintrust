@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BaTreatments from "../../components/BaTreatments.jsx";
+import CatIcon from "../../components/CatIcon.astro";
+import { treatmentIcon } from "../../data/icons.js";
 import FaqAccordion from "../../components/FaqAccordion.jsx";
 
 export function getStaticPaths() {
@@ -71,7 +73,9 @@ const {
         <p class="lede">{hero.lede}</p>
         <div class="hero-cta">
           <a class="btn btn-solid" href={hero.ctaHref}>{hero.ctaLabel}</a>
-          <a class="btn btn-ghost" href={waLink} target="_blank" rel="noopener">WhatsApp us</a>
+          <a class="btn btn-ghost" href={waLink} target="_blank" rel="noopener"
+            >WhatsApp us</a
+          >
         </div>
         {
           hero.meta && (
@@ -136,7 +140,7 @@ const {
   </section>
 
   <!-- ======================= TREATMENTS OVERVIEW ======================= -->
-  <section class="sec sec-warm" id="treatments">
+  <section class="sec" id="treatments">
     <div class="shell">
       <div class="sec-head" style="text-align: left; max-width: 100%;">
         <p class="eyebrow" style="text-align: left;">{treatments.eyebrow}</p>
@@ -161,15 +165,16 @@ const {
         {
           treatments.cards.map((card) => (
             <article class="cat">
-              <div class="cat-top">
-                <span class="ph" set:html={card.placeholder} />
-              </div>
+              {/* <div class="cat-top">
+                <CatIcon name={treatmentIcon(card.title)} size={56} />
+              </div> */}
               <div class="cat-body">
+                <CatIcon name={treatmentIcon(card.title)} size={56} />
                 <h3>{card.title}</h3>
                 <p>{card.body}</p>
-                <a class="cat-cta" href={card.ctaHref}>
+                {/* <a class="cat-cta" href={card.ctaHref}>
                   {card.ctaLabel}
-                </a>
+                </a> */}
               </div>
             </article>
           ))
