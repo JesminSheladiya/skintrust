@@ -33,21 +33,51 @@ const footer = {
     {
       heading: "Hair & Skin",
       links: [
-        { label: "PRP Hair Treatment", href: `${base}services/prp-hair-treatment-karur` },
-        { label: "GFC Treatment", href: `${base}services/gfc-hair-treatment-karur` },
-        { label: "FUE Hair Transplant", href: `${base}services/fue-hair-transplant-karur` },
-        { label: "Acne Treatment", href: `${base}services/acne-treatment-karur` },
-        { label: "Acne Scar Treatment", href: `${base}services/acne-scar-treatment-karur` },
+        {
+          label: "PRP Hair Treatment",
+          href: `${base}services/prp-hair-treatment-karur`,
+        },
+        {
+          label: "GFC Treatment",
+          href: `${base}services/gfc-hair-treatment-karur`,
+        },
+        {
+          label: "FUE Hair Transplant",
+          href: `${base}services/fue-hair-transplant-karur`,
+        },
+        {
+          label: "Acne Treatment",
+          href: `${base}services/acne-treatment-karur`,
+        },
+        {
+          label: "Acne Scar Treatment",
+          href: `${base}services/acne-scar-treatment-karur`,
+        },
       ],
     },
     {
       heading: "Laser & Anti-Ageing",
       links: [
-        { label: "Laser Hair Removal", href: `${base}services/laser-hair-removal-karur` },
-        { label: "Anti-Ageing & Botox", href: `${base}services/anti-ageing-treatment-karur` },
-        { label: "HIFU Skin Tightening", href: `${base}services/skin-tightening-karur` },
-        { label: "HydraFacial & Rejuvenation", href: `${base}services/skin-rejuvenation-karur` },
-        { label: "Tattoo Removal", href: `${base}services/tattoo-removal-karur` },
+        {
+          label: "Laser Hair Removal",
+          href: `${base}services/laser-hair-removal-karur`,
+        },
+        {
+          label: "Anti-Ageing & Botox",
+          href: `${base}services/anti-ageing-treatment-karur`,
+        },
+        {
+          label: "HIFU Skin Tightening",
+          href: `${base}services/skin-tightening-karur`,
+        },
+        {
+          label: "HydraFacial & Rejuvenation",
+          href: `${base}services/skin-rejuvenation-karur`,
+        },
+        {
+          label: "Tattoo Removal",
+          href: `${base}services/tattoo-removal-karur`,
+        },
       ],
     },
     {
@@ -71,8 +101,16 @@ const aboutSchema = {
   image: `${SITE_BASE}/assets/images/dr-kavitha.jpg`,
   medicalSpecialty: "Dermatology",
   qualifications: [
-    { "@type": "EducationalOccupationalCredential", credentialCategory: "MBBS", name: "MBBS — Madras Medical College" },
-    { "@type": "EducationalOccupationalCredential", credentialCategory: "MD", name: "MD Dermatology — Sri Ramachandra Medical College & Research Institute" },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "MBBS",
+      name: "MBBS — Madras Medical College",
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "MD",
+      name: "MD Dermatology — Sri Ramachandra Medical College & Research Institute",
+    },
   ],
   worksFor: {
     "@type": "MedicalClinic",
@@ -167,34 +205,35 @@ const aboutSchema = {
     <div class="shell">
       <div><b>MBBS</b><span>Madras Medical College</span></div>
       <div>
-        <b>MD</b><span>Dermatology — Sri Ramachandra Medical College &amp;
-          Research Institute</span>
+        <b>MD</b><span
+          >Dermatology — Sri Ramachandra Medical College &amp; Research
+          Institute</span
+        >
       </div>
       <div><b>20+</b><span>Years of clinical practice</span></div>
       <div><b>First</b><span>Female dermatologist in Karur</span></div>
     </div>
   </section>
 
-  <!-- ======================= HER STORY · CHAPTER 1 ======================= -->
-  <section class="sec sec-warm" id="story">
+  <!-- ======================= HER STORY · CHAPTER (video-led) ======================= -->
+  <section class="sec sec-warm">
     <div class="shell">
       <div class="split">
-        <div>
+        <div class="video-ph" aria-hidden="true">Video placeholder</div>
+        <div class="her-story-head">
           <p class="eyebrow">Her story · Chapter one</p>
           <h2>A foundation in medicine, a commitment to learning.</h2>
         </div>
-        <div>
-          <p>
-            Dr. Kavitha is a graduate of the prestigious Madras Medical College
-            (MBBS) and Sri Ramachandra Medical College &amp; Research Institute
-            (MD Dermatology). She has always treated learning as a lifelong
-            pursuit, training with pioneers in dermatology and aesthetic
-            medicine across India and internationally, and continually
-            incorporating the latest evidence-based innovations into her
-            practice.
-          </p>
-        </div>
       </div>
+      <p>
+        Dr. Kavitha is a graduate of the prestigious Madras Medical College
+        (MBBS) and Sri Ramachandra Medical College &amp; Research Institute
+        (MD Dermatology). She has always treated learning as a lifelong
+        pursuit, training with pioneers in dermatology and aesthetic
+        medicine across India and internationally, and continually
+        incorporating the latest evidence-based innovations into her
+        practice.
+      </p>
     </div>
   </section>
 
@@ -220,12 +259,11 @@ const aboutSchema = {
             treatment. Over the years, her experience with patients and
             understanding of diverse skin concerns led her to extend her
             dermatological expertise into everyday skincare. She went on to
-            co-found <strong>MySkinn</strong> with fellow aesthetic
-            dermatologists Dr. Aarthi Senthil Ganesh and Dr. Rasya Dixit.
-            Together, the three doctors bring more than 45 years of collective
-            dermatology experience to creating scientifically backed skincare
-            solutions informed by their clinical knowledge and continued
-            engagement with developments in dermatology.
+            co-found <strong>MySkinn</strong> with fellow aesthetic dermatologists
+            Dr. Aarthi Senthil Ganesh and Dr. Rasya Dixit. Together, the three doctors
+            bring more than 45 years of collective dermatology experience to creating
+            scientifically backed skincare solutions informed by their clinical knowledge
+            and continued engagement with developments in dermatology.
           </p>
         </div>
       </div>
@@ -283,15 +321,12 @@ const aboutSchema = {
         </div>
         <div class="tech">
           <b>Workshops &amp; Live Demonstrations</b>
-          <span
-            >Hands-on training for practicing dermatologists.</span
-          >
+          <span>Hands-on training for practicing dermatologists.</span>
         </div>
         <div class="tech">
           <b>Mentorship Programs</b>
           <span
-            >Guiding young doctors in skill, confidence and ethical
-            practice.</span
+            >Guiding young doctors in skill, confidence and ethical practice.</span
           >
         </div>
       </div>
@@ -312,12 +347,13 @@ const aboutSchema = {
         since 2005.
       </p>
       <div class="btnrow">
-        <a class="btn btn-gold" href="tel:+919626923299"
-          >Book a consultation</a
+        <a class="btn btn-gold" href="tel:+919626923299">Book a consultation</a>
+        <a
+          class="btn btn-ghost-light"
+          href={waLink}
+          target="_blank"
+          rel="noopener">WhatsApp us</a
         >
-        <a class="btn btn-ghost-light" href={waLink} target="_blank" rel="noopener"
-            >WhatsApp us</a
-          >
       </div>
     </div>
   </section>

@@ -20,7 +20,7 @@ const header = {
   topbarHours: "Mon–Sat 9:30 AM–7:30 PM",
   navLinks: [
     { label: "TREATMENTS", href: "#treatments" },
-    { label: "ABOUT", href: "#doctor" },
+    { label: "ABOUT", href: `${base}about` },
     { label: "CONTACT", href: "#book" },
   ],
   ctaLabel: "BOOK APPOINTMENT",
@@ -201,7 +201,7 @@ const footer = {
         <!-- 1. HAIR RESTORATION -->
         <article class="cat">
           <div class="cat-top">
-            <span class="ph">Hair restoration<br />image 16:10</span>
+            <img src={`${base}assets/images/treatments/hair-restoration.png`} alt="Hair restoration treatments" loading="lazy" />
           </div>
           <div class="cat-body">
             <h3>Hair Restoration</h3>
@@ -229,7 +229,7 @@ const footer = {
         <!-- 2. ACNE & SCAR CORRECTION -->
         <article class="cat">
           <div class="cat-top">
-            <span class="ph">Acne &amp; scars<br />image 16:10</span>
+            <img src={`${base}assets/images/treatments/acne-scare-correction.png`} alt="Acne & scar correction treatments" loading="lazy" />
           </div>
           <div class="cat-body">
             <h3>Acne &amp; Scar Correction</h3>
@@ -259,7 +259,7 @@ const footer = {
         <!-- 3. SKIN REJUVENATION -->
         <article class="cat">
           <div class="cat-top">
-            <span class="ph">Skin rejuvenation<br />image 16:10</span>
+            <img src={`${base}assets/images/treatments/skin-rejuventation.png`} alt="Skin rejuvenation & glow treatments" loading="lazy" />
           </div>
           <div class="cat-body">
             <h3>Skin Rejuvenation &amp; Glow</h3>
