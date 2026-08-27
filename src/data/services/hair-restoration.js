@@ -171,6 +171,8 @@ export default {
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
     figureText: "Scalp exam / trichoscopy<br>at Skin Trust<br>(3:4 portrait)",
+    image: `${BASE}/assets/images/treatments/treatment-banner/hair-restoration.png`,
+    imageAlt: "Hair Restoration treatment banner at Skin Trust Karur",
     badge: {
       stars: "★★★★★",
       num: "4.9",

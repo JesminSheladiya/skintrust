@@ -196,6 +196,8 @@ export default {
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
     figureText: "Laser session<br>at Skin Trust<br>(3:4 portrait)",
+    image: `${BASE}/assets/images/treatments/treatment-banner/laser-treatment.png`,
+    imageAlt: "Laser Treatments banner at Skin Trust Karur",
     badge: {
       stars: "★★★★★",
       num: "4.9",

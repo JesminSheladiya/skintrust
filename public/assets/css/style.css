@@ -798,7 +798,12 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block
+  display: block;
+  transition: transform .45s ease
+}
+
+.cat:hover .cat-top img {
+  transform: scale(1.07)
 }
 
 .cat-icon {
@@ -1180,11 +1185,13 @@ p {
   display: grid;
   place-content: center;
   gap: 6px;
-  text-align: center
+  text-align: center;
+  z-index: -1;
 }
 
 .ba-after {
-  background: linear-gradient(150deg, var(--champagne-light), var(--champagne))
+  background: linear-gradient(150deg, var(--champagne-light), var(--champagne));
+
 }
 
 .ba-before {
@@ -1203,6 +1210,11 @@ p {
   font-size: .62rem;
   letter-spacing: .1em;
   color: rgba(247, 243, 236, .4)
+}
+
+.ba-after .lbl,
+.ba-after .note {
+  color: var(--forest-deep);
 }
 
 .ba-line {

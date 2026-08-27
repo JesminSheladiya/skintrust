@@ -206,6 +206,8 @@ export default {
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
     figureText: "Facial assessment<br>at Skin Trust<br>(3:4 portrait)",
+    image: `${BASE}/assets/images/treatments/treatment-banner/anti-ageing-treatment-karur.png`,
+    imageAlt: "Anti-Ageing & Lifting treatment banner at Skin Trust Karur",
     badge: {
       stars: "★★★★★",
       num: "4.9",

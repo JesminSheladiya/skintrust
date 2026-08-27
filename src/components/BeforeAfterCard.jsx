@@ -8,6 +8,10 @@ export default function BeforeAfterCard({
   body,
   tags = [],
   mutedTags = false,
+  beforeSrc,
+  afterSrc,
+  beforeAlt,
+  afterAlt,
 }) {
   return (
     <article className="ba-card">
@@ -15,6 +19,10 @@ export default function BeforeAfterCard({
         afterNote={afterNote}
         beforeNote={beforeNote}
         ariaLabel={ariaLabel}
+        beforeSrc={beforeSrc}
+        afterSrc={afterSrc}
+        beforeAlt={beforeAlt}
+        afterAlt={afterAlt}
       />
       <div className="ba-body">
         <h3>{title}</h3>

@@ -167,6 +167,8 @@ export default {
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
     figureText: "Acne skin consultation<br>at Skin Trust<br>(3:4 portrait)",
+    image: `${BASE}/assets/images/treatments/treatment-banner/acne-scare-correction.png`,
+    imageAlt: "Acne & Scar Correction treatment banner at Skin Trust Karur",
     badge: {
       stars: "★★★★★",
       num: "4.9",

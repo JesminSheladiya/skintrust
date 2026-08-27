@@ -170,6 +170,8 @@ export default {
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
     figureText: "Skin assessment<br>at Skin Trust<br>(3:4 portrait)",
+    image: `${BASE}/assets/images/treatments/treatment-banner/skin-rejuventation.png`,
+    imageAlt: "Skin Rejuvenation & Glow treatment banner at Skin Trust Karur",
     badge: {
       stars: "★★★★★",
       num: "4.9",

@@ -198,6 +198,8 @@ export default {
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
     figureText: "Clinical assessment<br>at Skin Trust<br>(3:4 portrait)",
+    image: `${BASE}/assets/images/treatments/treatment-banner/dermato-surgery.png`,
+    imageAlt: "Dermatology & Skin Surgery banner at Skin Trust Karur",
     badge: {
       stars: "★★★★★",
       num: "4.9",
