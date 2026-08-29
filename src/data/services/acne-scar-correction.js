@@ -186,23 +186,11 @@ export default {
     h2: "Before & after, by treatment",
     lede:
       "Real patient skin progress from three key treatments at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
+    // Only 2 cards active as requested — MNRF (Chitra P.,48) + Pico/Carbon (Indhumathi P.,38). Chemical Peels removed (content mismatch -> skip) and drafted below.
     tabs: [
       {
-        id: "carbon-pico",
-        label: "Carbon & Pico Toning",
-        cards: [
-          {
-            afterNote: "Session 6",
-            ariaLabel: "Carbon and Pico Toning acne pigmentation before after Skin Trust Karur",
-            title: "Carbon & Pico Toning",
-            body: "Male, 25. Active acne, enlarged pores and surface PIH addressed with combined carbon laser and picosecond toning. Oil control and even tone visible over six sessions.",
-            tags: ["Carbon Toning", "Pico Toning", "Acne & PIH"],
-          },
-        ],
-      },
-      {
-        id: "mnrf-scar",
-        label: "Acne Scar Remodelling with MNRF",
+        id: "results",
+        label: "Results",
         cards: [
           {
             afterNote: "Month 4",
@@ -210,22 +198,76 @@ export default {
             title: "Acne Scar Remodelling with MNRF",
             body: "Female, 29. Microneedling radiofrequency for mixed boxcar and rolling scar morphology. Collagen remodelling visible from Month 2, assessed at Month 4.",
             tags: ["MNRF", "Boxcar Scars", "Rolling Scars"],
+            beforeSrc: `${BASE}/assets/images/acne-scar-correction/results/chitra-p-before.jpg`,
+            afterSrc: `${BASE}/assets/images/acne-scar-correction/results/chitra-p-after.jpg`,
+            beforeAlt: "Acne Scar Remodelling with MNRF — Before — Chitra P., 48 (Virtue Aesthetic Clinic)",
+            afterAlt: "Acne Scar Remodelling with MNRF — After — Chitra P., 48 (Virtue Aesthetic Clinic)",
           },
-        ],
-      },
-      {
-        id: "fractional-qyag",
-        label: "Fractional Q-YAG",
-        cards: [
           {
-            afterNote: "Month 3",
-            ariaLabel: "Fractional Q-YAG acne scar pigmentation treatment before after Skin Trust Karur",
-            title: "Fractional Q-YAG",
-            body: "Female, 27. Fractional Q-switched Nd:YAG laser for post-acne hyperpigmentation and superficial scarring. Texture improvement and pigmentation clearance at Month 3.",
-            tags: ["Fractional Q-YAG", "Pigmentation", "Texture"],
+            afterNote: "Session 6",
+            ariaLabel: "Carbon and Pico Toning acne pigmentation before after Skin Trust Karur",
+            title: "Carbon & Pico Toning",
+            body: "Male, 25. Active acne, enlarged pores and surface PIH addressed with combined carbon laser and picosecond toning. Oil control and even tone visible over six sessions.",
+            tags: ["Carbon Toning", "Pico Toning", "Acne & PIH"],
+            beforeSrc: `${BASE}/assets/images/acne-scar-correction/results/indhumathi-p-before.jpg`,
+            afterSrc: `${BASE}/assets/images/acne-scar-correction/results/indhumathi-p-after.jpg`,
+            beforeAlt: "Carbon & Pico Toning — Before — Indhumathi P., 38 (Virtue Aesthetic Clinic)",
+            afterAlt: "Carbon & Pico Toning — After — Indhumathi P., 38 (Virtue Aesthetic Clinic)",
           },
+          // DRAFT (hidden) — Chemical Peels (Lakshmi V., 32) skipped for now due to content mismatch (body would need change) as requested
+          // {
+          //   afterNote: "Month 3",
+          //   ariaLabel: "Chemical Peels acne scar pigmentation treatment before after Skin Trust Karur",
+          //   title: "Chemical Peels",
+          //   body: "Female, 27. Fractional Q-switched Nd:YAG laser for post-acne hyperpigmentation and superficial scarring. Texture improvement and pigmentation clearance at Month 3.",
+          //   tags: ["Chemical Peels", "Pigmentation", "Texture"],
+          //   beforeSrc: `${BASE}/assets/images/acne-scar-correction/results/lakshmi-v-before.jpg`,
+          //   afterSrc: `${BASE}/assets/images/acne-scar-correction/results/lakshmi-v-after.jpg`,
+          //   beforeAlt: "Chemical Peels — Before — Lakshmi V., 32 (Virtue Aesthetic Clinic)",
+          //   afterAlt: "Chemical Peels — After — Lakshmi V., 32 (Virtue Aesthetic Clinic)",
+          // },
+          // DRAFT (hidden) — original Carbon & Pico Toning (Male, 25)
+          // {
+          //   afterNote: "Session 6",
+          //   ariaLabel: "Carbon and Pico Toning acne pigmentation before after Skin Trust Karur",
+          //   title: "Carbon & Pico Toning",
+          //   body: "Male, 25. Active acne, enlarged pores and surface PIH addressed with combined carbon laser and picosecond toning. Oil control and even tone visible over six sessions.",
+          //   tags: ["Carbon Toning", "Pico Toning", "Acne & PIH"],
+          // },
+          // DRAFT (hidden) — original MNRF Scar (Female, 29)
+          // {
+          //   afterNote: "Month 4",
+          //   ariaLabel: "Acne scar remodelling MNRF before after Skin Trust Karur",
+          //   title: "Acne Scar Remodelling with MNRF",
+          //   body: "Female, 29. Microneedling radiofrequency for mixed boxcar and rolling scar morphology. Collagen remodelling visible from Month 2, assessed at Month 4.",
+          //   tags: ["MNRF", "Boxcar Scars", "Rolling Scars"],
+          // },
+          // DRAFT (hidden) — original Fractional Q-YAG (Female, 27)
+          // {
+          //   afterNote: "Month 3",
+          //   ariaLabel: "Fractional Q-YAG acne scar pigmentation treatment before after Skin Trust Karur",
+          //   title: "Fractional Q-YAG",
+          //   body: "Female, 27. Fractional Q-switched Nd:YAG laser for post-acne hyperpigmentation and superficial scarring. Texture improvement and pigmentation clearance at Month 3.",
+          //   tags: ["Fractional Q-YAG", "Pigmentation", "Texture"],
+          // },
         ],
       },
+      // DRAFT (hidden) — previous tab structure kept for reference (now consolidated into single tab above)
+      // {
+      //   id: "carbon-pico",
+      //   label: "Carbon & Pico Toning",
+      //   cards: [{ afterNote: "Session 6", title: "Carbon & Pico Toning", body: "Male, 25. ..." }],
+      // },
+      // {
+      //   id: "mnrf-scar",
+      //   label: "Acne Scar Remodelling with MNRF",
+      //   cards: [{ afterNote: "Month 4", title: "Acne Scar Remodelling with MNRF", body: "Female, 29. ..." }],
+      // },
+      // {
+      //   id: "fractional-qyag",
+      //   label: "Fractional Q-YAG",
+      //   cards: [{ afterNote: "Month 3", title: "Fractional Q-YAG", body: "Female, 27. ..." }],
+      // },
     ],
     disclaimer:
       "Results vary by individual and depend on scar type, depth, skin type and treatment compliance. All photographs are of real Skin Trust patients, published with written consent. These are not a guarantee of outcome.",

@@ -1163,7 +1163,8 @@ p {
 
 .ba-card {
   background: var(--ivory);
-  border: 1px solid rgba(224, 203, 166, .28)
+  border: 1px solid rgba(224, 203, 166, .28);
+  border-radius: 200px 200px 0 0;
 }
 
 .sec-dark .ba-card {

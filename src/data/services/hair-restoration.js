@@ -190,10 +190,12 @@ export default {
     h2: "Before &amp; after, by treatment",
     lede:
       "Select a treatment to see scalp progress from real patients at Skin Trust. All images published with written patient consent, photographed under identical conditions.",
+    // Tabs removed as requested — single consolidated tab with only 3 active cards. Remaining tabs/cards are drafted (commented).
+    // Offline before/after images sourced from Virtue Aesthetic Clinic (virtueaestheticclinic.com) and stored locally under public/assets/images/hair-restoration/results/
     tabs: [
       {
-        id: "prp",
-        label: "PRP",
+        id: "results",
+        label: "Results",
         cards: [
           {
             afterNote: "Month 5",
@@ -201,6 +203,10 @@ export default {
             title: "Crown thinning",
             body: "Male, 34. Five PRP sessions over five months. No oral medication added.",
             tags: ["PRP", "5 sessions", "Crown"],
+            beforeSrc: `${BASE}/assets/images/hair-restoration/results/pandiyarajan-m-before.jpg`,
+            afterSrc: `${BASE}/assets/images/hair-restoration/results/pandiyarajan-m-after.jpg`,
+            beforeAlt: "Crown thinning — Before — Pandiyarajan M., 34 (Virtue Aesthetic Clinic)",
+            afterAlt: "Crown thinning — After — Pandiyarajan M., 34 (Virtue Aesthetic Clinic)",
           },
           {
             afterNote: "Month 4",
@@ -208,81 +214,10 @@ export default {
             title: "Diffuse thinning along parting",
             body: "Female, 29. Four PRP sessions. Post-partum hair fall with visible density gain at the parting.",
             tags: ["PRP", "Post-partum", "Female"],
-          },
-          {
-            afterNote: "Month 6",
-            ariaLabel: "Receding hairline, PRP, 6 months",
-            title: "Receding frontal hairline",
-            body: "Male, 27. Six PRP sessions. Gradual temple recovery tracked with trichoscopy at each visit.",
-            tags: ["PRP", "Hairline", "6 sessions"],
-          },
-        ],
-      },
-      {
-        id: "gfc",
-        label: "GFC",
-        cards: [
-          {
-            afterNote: "Month 4",
-            ariaLabel: "Moderate androgenetic alopecia, GFC, 4 months",
-            title: "Moderate androgenetic alopecia",
-            body: "Male, 38. Four GFC sessions. Improved follicle density confirmed with trichoscopy at Month 4.",
-            tags: ["GFC", "4 sessions", "Male pattern"],
-          },
-          {
-            afterNote: "Month 5",
-            ariaLabel: "Female vertex thinning, GFC, 5 months",
-            title: "Female vertex thinning",
-            body: "Female, 33. Five GFC sessions. Progressed to GFC after limited PRP response. Clear density improvement at vertex.",
-            tags: ["GFC", "Female", "Vertex"],
-          },
-          {
-            afterNote: "Month 3",
-            ariaLabel: "GFC combined with LLLT, 3 months",
-            title: "GFC combined with LLLT",
-            body: "Male, 42. Three GFC sessions alongside LLLT. Accelerated reduction in daily fall noted at the six-week mark.",
-            tags: ["GFC", "LLLT", "Combined"],
-          },
-        ],
-      },
-      {
-        id: "exosome",
-        label: "Exosome",
-        cards: [
-          {
-            afterNote: "Month 6",
-            ariaLabel: "Advanced diffuse thinning, exosome therapy, 6 months",
-            title: "Advanced diffuse thinning",
-            body: "Female, 44. Exosome therapy after limited response to PRP. Follicle miniaturisation reduced on trichoscopy at Month 6.",
-            tags: ["Exosome", "Advanced case", "Female"],
-          },
-          {
-            afterNote: "Month 7",
-            ariaLabel: "Resistant androgenetic alopecia, exosome therapy, 7 months",
-            title: "Resistant androgenetic alopecia",
-            body: "Male, 41. Exosome therapy initiated after PRP course showed insufficient response. Visible new growth at Month 7.",
-            tags: ["Exosome", "Resistant AGA", "Male"],
-          },
-          {
-            afterNote: "Month 5",
-            ariaLabel: "Post-illness hair loss, exosome therapy, 5 months",
-            title: "Post-illness hair loss",
-            body: "Female, 36. Severe shedding following prolonged illness. Exosome therapy selected for its regenerative depth at the follicle stem cell level.",
-            tags: ["Exosome", "Post-illness", "Telogen effluvium"],
-          },
-        ],
-      },
-      {
-        id: "fue",
-        label: "FUE Transplant",
-        cards: [
-          {
-            afterNote: "Month 10",
-            beforeNote: "Pre-surgery",
-            ariaLabel: "FUE hair transplant, hairline restoration, 10 months",
-            title: "Hairline restoration",
-            body: "Male, 32. FUE transplant to frontal hairline. Result at Month 10 with PRP sessions supporting graft density.",
-            tags: ["FUE", "Hairline", "PRP support"],
+            beforeSrc: `${BASE}/assets/images/hair-restoration/results/shantha-r-before.jpg`,
+            afterSrc: `${BASE}/assets/images/hair-restoration/results/shantha-r-after.jpg`,
+            beforeAlt: "Diffuse thinning along parting — Before — Shantha R., 40 (Virtue Aesthetic Clinic)",
+            afterAlt: "Diffuse thinning along parting — After — Shantha R., 40 (Virtue Aesthetic Clinic)",
           },
           {
             afterNote: "Month 12",
@@ -291,71 +226,151 @@ export default {
             title: "Crown restoration, Norwood 4",
             body: "Male, 39. Crown FUE with 2,200 grafts. Full result photographed at Month 12 under clinic lighting.",
             tags: ["FUE", "Crown", "2,200 grafts"],
+            beforeSrc: `${BASE}/assets/images/hair-restoration/results/karthik-v-before.jpg`,
+            afterSrc: `${BASE}/assets/images/hair-restoration/results/karthik-v-after.jpg`,
+            beforeAlt: "Crown restoration, Norwood 4 — Before — Karthik V., 38 (Virtue Aesthetic Clinic, hair-treatment)",
+            afterAlt: "Crown restoration, Norwood 4 — After — Karthik V., 38 (Virtue Aesthetic Clinic, hair-treatment)",
           },
-          {
-            afterNote: "Month 9",
-            beforeNote: "Pre-surgery",
-            ariaLabel: "FUE hair transplant, temple and hairline, 9 months",
-            title: "Temple recession and hairline",
-            body: "Male, 28. Temple and hairline FUE with 1,600 grafts. Early hairline frame visible from Month 4, full density at Month 9.",
-            tags: ["FUE", "Temples", "1,600 grafts"],
-          },
+          // DRAFT (hidden) — PRP: Receding frontal hairline
+          // {
+          //   afterNote: "Month 6",
+          //   ariaLabel: "Receding hairline, PRP, 6 months",
+          //   title: "Receding frontal hairline",
+          //   body: "Male, 27. Six PRP sessions. Gradual temple recovery tracked with trichoscopy at each visit.",
+          //   tags: ["PRP", "Hairline", "6 sessions"],
+          // },
+          // DRAFT (hidden) — FUE: Hairline restoration
+          // {
+          //   afterNote: "Month 10",
+          //   beforeNote: "Pre-surgery",
+          //   ariaLabel: "FUE hair transplant, hairline restoration, 10 months",
+          //   title: "Hairline restoration",
+          //   body: "Male, 32. FUE transplant to frontal hairline. Result at Month 10 with PRP sessions supporting graft density.",
+          //   tags: ["FUE", "Hairline", "PRP support"],
+          // },
+          // DRAFT (hidden) — FUE: Temple recession and hairline
+          // {
+          //   afterNote: "Month 9",
+          //   beforeNote: "Pre-surgery",
+          //   ariaLabel: "FUE hair transplant, temple and hairline, 9 months",
+          //   title: "Temple recession and hairline",
+          //   body: "Male, 28. Temple and hairline FUE with 1,600 grafts. Early hairline frame visible from Month 4, full density at Month 9.",
+          //   tags: ["FUE", "Temples", "1,600 grafts"],
+          // },
         ],
       },
-      {
-        id: "lllt",
-        label: "LLLT",
-        cards: [
-          {
-            afterNote: "Month 4",
-            ariaLabel: "LLLT scalp density improvement, 4 months",
-            title: "Scalp density improvement",
-            body: "Female, 31. LLLT as a standalone therapy for mild genetic thinning. Trichoscopy showed improved vellus-to-terminal hair ratio at Month 4.",
-            tags: ["LLLT", "Standalone", "Female"],
-          },
-          {
-            afterNote: "Month 5",
-            ariaLabel: "LLLT combined with PRP, 5 months",
-            title: "LLLT combined with PRP",
-            body: "Male, 36. LLLT sessions between PRP injections to sustain scalp environment. Accelerated fall reduction compared to PRP alone in prior course.",
-            tags: ["LLLT", "PRP", "Combined"],
-          },
-          {
-            afterNote: "Month 6",
-            ariaLabel: "LLLT maintenance after GFC course, 6 months",
-            title: "Maintenance after GFC course",
-            body: "Female, 39. Switched to LLLT maintenance after completing GFC course. Sustained density with no regression at Month 6.",
-            tags: ["LLLT", "Maintenance", "Post-GFC"],
-          },
-        ],
-      },
-      {
-        id: "meso",
-        label: "Mesotherapy",
-        cards: [
-          {
-            afterNote: "Month 3",
-            ariaLabel: "Mesotherapy, nutritional hair loss, 3 months",
-            title: "Hair loss due to nutritional deficiency",
-            body: "Female, 26. Mesotherapy targeting iron and vitamin deficiency-related fall. Significant reduction in daily shedding by Week 6.",
-            tags: ["Mesotherapy", "Nutritional", "Female"],
-          },
-          {
-            afterNote: "Month 4",
-            ariaLabel: "Mesotherapy scalp inflammation hair loss, 4 months",
-            title: "Scalp inflammation-related fall",
-            body: "Male, 30. Anti-inflammatory mesotherapy formulation alongside scalp hygiene guidance. Perifollicular inflammation resolved by Month 4.",
-            tags: ["Mesotherapy", "Inflammation", "Male"],
-          },
-          {
-            afterNote: "Month 5",
-            ariaLabel: "Mesotherapy combined with PRP, post-stress hair fall, 5 months",
-            title: "Post-stress hair fall",
-            body: "Female, 32. Mesotherapy combined with PRP for stress-triggered telogen effluvium. Hair fall rate normalised by Month 3, density restored by Month 5.",
-            tags: ["Mesotherapy", "PRP", "Telogen effluvium"],
-          },
-        ],
-      },
+      // DRAFT (hidden): GFC tab
+      // {
+      //   id: "gfc",
+      //   label: "GFC",
+      //   cards: [
+      //     {
+      //       afterNote: "Month 4",
+      //       ariaLabel: "Moderate androgenetic alopecia, GFC, 4 months",
+      //       title: "Moderate androgenetic alopecia",
+      //       body: "Male, 38. Four GFC sessions. Improved follicle density confirmed with trichoscopy at Month 4.",
+      //       tags: ["GFC", "4 sessions", "Male pattern"],
+      //     },
+      //     {
+      //       afterNote: "Month 5",
+      //       ariaLabel: "Female vertex thinning, GFC, 5 months",
+      //       title: "Female vertex thinning",
+      //       body: "Female, 33. Five GFC sessions. Progressed to GFC after limited PRP response. Clear density improvement at vertex.",
+      //       tags: ["GFC", "Female", "Vertex"],
+      //     },
+      //     {
+      //       afterNote: "Month 3",
+      //       ariaLabel: "GFC combined with LLLT, 3 months",
+      //       title: "GFC combined with LLLT",
+      //       body: "Male, 42. Three GFC sessions alongside LLLT. Accelerated reduction in daily fall noted at the six-week mark.",
+      //       tags: ["GFC", "LLLT", "Combined"],
+      //     },
+      //   ],
+      // },
+      // DRAFT (hidden): Exosome tab
+      // {
+      //   id: "exosome",
+      //   label: "Exosome",
+      //   cards: [
+      //     {
+      //       afterNote: "Month 6",
+      //       ariaLabel: "Advanced diffuse thinning, exosome therapy, 6 months",
+      //       title: "Advanced diffuse thinning",
+      //       body: "Female, 44. Exosome therapy after limited response to PRP. Follicle miniaturisation reduced on trichoscopy at Month 6.",
+      //       tags: ["Exosome", "Advanced case", "Female"],
+      //     },
+      //     {
+      //       afterNote: "Month 7",
+      //       ariaLabel: "Resistant androgenetic alopecia, exosome therapy, 7 months",
+      //       title: "Resistant androgenetic alopecia",
+      //       body: "Male, 41. Exosome therapy initiated after PRP course showed insufficient response. Visible new growth at Month 7.",
+      //       tags: ["Exosome", "Resistant AGA", "Male"],
+      //     },
+      //     {
+      //       afterNote: "Month 5",
+      //       ariaLabel: "Post-illness hair loss, exosome therapy, 5 months",
+      //       title: "Post-illness hair loss",
+      //       body: "Female, 36. Severe shedding following prolonged illness. Exosome therapy selected for its regenerative depth at the follicle stem cell level.",
+      //       tags: ["Exosome", "Post-illness", "Telogen effluvium"],
+      //     },
+      //   ],
+      // },
+      // DRAFT (hidden): LLLT tab
+      // {
+      //   id: "lllt",
+      //   label: "LLLT",
+      //   cards: [
+      //     {
+      //       afterNote: "Month 4",
+      //       ariaLabel: "LLLT scalp density improvement, 4 months",
+      //       title: "Scalp density improvement",
+      //       body: "Female, 31. LLLT as a standalone therapy for mild genetic thinning. Trichoscopy showed improved vellus-to-terminal hair ratio at Month 4.",
+      //       tags: ["LLLT", "Standalone", "Female"],
+      //     },
+      //     {
+      //       afterNote: "Month 5",
+      //       ariaLabel: "LLLT combined with PRP, 5 months",
+      //       title: "LLLT combined with PRP",
+      //       body: "Male, 36. LLLT sessions between PRP injections to sustain scalp environment. Accelerated fall reduction compared to PRP alone in prior course.",
+      //       tags: ["LLLT", "PRP", "Combined"],
+      //     },
+      //     {
+      //       afterNote: "Month 6",
+      //       ariaLabel: "LLLT maintenance after GFC course, 6 months",
+      //       title: "Maintenance after GFC course",
+      //       body: "Female, 39. Switched to LLLT maintenance after completing GFC course. Sustained density with no regression at Month 6.",
+      //       tags: ["LLLT", "Maintenance", "Post-GFC"],
+      //     },
+      //   ],
+      // },
+      // DRAFT (hidden): Mesotherapy tab
+      // {
+      //   id: "meso",
+      //   label: "Mesotherapy",
+      //   cards: [
+      //     {
+      //       afterNote: "Month 3",
+      //       ariaLabel: "Mesotherapy, nutritional hair loss, 3 months",
+      //       title: "Hair loss due to nutritional deficiency",
+      //       body: "Female, 26. Mesotherapy targeting iron and vitamin deficiency-related fall. Significant reduction in daily shedding by Week 6.",
+      //       tags: ["Mesotherapy", "Nutritional", "Female"],
+      //     },
+      //     {
+      //       afterNote: "Month 4",
+      //       ariaLabel: "Mesotherapy scalp inflammation hair loss, 4 months",
+      //       title: "Scalp inflammation-related fall",
+      //       body: "Male, 30. Anti-inflammatory mesotherapy formulation alongside scalp hygiene guidance. Perifollicular inflammation resolved by Month 4.",
+      //       tags: ["Mesotherapy", "Inflammation", "Male"],
+      //     },
+      //     {
+      //       afterNote: "Month 5",
+      //       ariaLabel: "Mesotherapy combined with PRP, post-stress hair fall, 5 months",
+      //       title: "Post-stress hair fall",
+      //       body: "Female, 32. Mesotherapy combined with PRP for stress-triggered telogen effluvium. Hair fall rate normalised by Month 3, density restored by Month 5.",
+      //       tags: ["Mesotherapy", "PRP", "Telogen effluvium"],
+      //     },
+      //   ],
+      // },
     ],
     disclaimer:
       "Results vary from person to person and depend on the stage of hair loss, age, overall health and treatment compliance. All photographs are of real Skin Trust patients, published with written consent, and are not a guarantee of outcome.",
