@@ -2,6 +2,7 @@ const waLink =
   "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20hair%20restoration%20consultation%20at%20Skin%20Trust.";
 
 import { SITE_BASE, BASE } from "../site.js";
+import { getHeader, getFooter } from "../layout.js";
 
 export default {
   slug: "hair-restoration",
@@ -107,62 +108,8 @@ export default {
     ],
   },
   waLink,
-  header: {
-    topbarAddress: "Karur, Tamil Nadu — opp. Kamaatchi Amman Temple, Madavilagam",
-    topbarPhone: "+91 00000 00000",
-    topbarPhoneHref: "tel:+910000000000",
-    topbarHours: "Mon–Sat 10:00–20:00 · Sun by appointment",
-    navLinks: [
-      { label: "Hair", href: `${BASE}/services/hair-restoration`, active: true },
-      { label: "Acne", href: `${BASE}/services/acne-treatment-karur` },
-      { label: "Laser Treatments", href: `${BASE}/services/laser-treatments-karur` },
-      { label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur` },
-      { label: "Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur` },
-      { label: "Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-    ],
-    ctaLabel: "Book appointment",
-    ctaHref: "#book",
-  },
-  footer: {
-    address:
-      "No. 30, Chairman Ramanujam Street,<br/>Madavilagam, Karur — 639001, Tamil Nadu.",
-    phone: "+91 00000 00000",
-    phoneHref: "tel:+910000000000",
-    columns: [
-      {
-        heading: "Hair Treatments",
-        links: [
-          { label: "PRP Hair Treatment", href: `${BASE}/services/prp-hair-treatment-karur` },
-          { label: "GFC Therapy", href: `${BASE}/services/gfc-hair-treatment-karur` },
-          { label: "FUE Hair Transplant", href: `${BASE}/services/fue-hair-transplant-karur` },
-          { label: "LLLT Laser Therapy", href: `${BASE}/services/lllt-hair-treatment-karur` },
-          { label: "Exosome Therapy", href: `${BASE}/services/exosome-hair-treatment-karur` },
-          { label: "Mesotherapy", href: `${BASE}/services/mesotherapy-hair-karur` },
-        ],
-      },
-      {
-        heading: "Skin Treatments",
-        links: [
-          { label: "Acne Treatment", href: `${BASE}/services/acne-treatment-karur` },
-          { label: "Acne Scar Treatment", href: `${BASE}/services/acne-scar-treatment-karur` },
-          { label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur` },
-          { label: "Skin Tightening", href: `${BASE}/services/skin-tightening-karur` },
-          { label: "Skin Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Under Eye Treatment", href: `${BASE}/services/under-eye-treatment-karur` },
-        ],
-      },
-      {
-        heading: "Clinic",
-        links: [
-          { label: "About Dr. Kavitha", href: `${BASE}/about` },
-          { label: "Dermato Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-          { label: "Patient Reviews", href: `${BASE}/reviews` },
-          { label: "Blog", href: `${BASE}/blog` },
-          { label: "Contact & Location", href: `${BASE}/contact` },
-        ],
-      },
-    ],
-  },
+  header: getHeader(BASE),
+  footer: getFooter(BASE),
   hero: {
     eyebrow: "Hair Restoration · Karur",
     h1: "Hair loss, <em>addressed<br>at the root.</em>",

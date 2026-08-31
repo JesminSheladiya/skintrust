@@ -2,6 +2,7 @@ const waLink =
   "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20an%20acne%20or%20scar%20correction%20consultation%20at%20Skin%20Trust.";
 
 import { SITE_BASE, BASE } from "../site.js";
+import { getHeader, getFooter } from "../layout.js";
 
 export default {
   slug: "acne-scar-treatment-karur",
@@ -110,55 +111,8 @@ export default {
     ],
   },
   waLink,
-  header: {
-    topbarAddress: "Karur, Tamil Nadu — opp. Kamaatchi Amman Temple, Madavilagam",
-    topbarPhone: "+91 00000 00000",
-    topbarPhoneHref: "tel:+910000000000",
-    topbarHours: "Mon–Sat 10:00–20:00 · Sun by appointment",
-    navLinks: [
-      { label: "Hair", href: `${BASE}/services/hair-restoration` },
-      { label: "Acne & Scars", href: `${BASE}/services/acne-scar-treatment-karur`, active: true },
-      { label: "Laser", href: `${BASE}/services/laser-treatments-karur` },
-      { label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur` },
-      { label: "Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur` },
-      { label: "Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-    ],
-    ctaLabel: "Book appointment",
-    ctaHref: "#book",
-  },
-  footer: {
-    address:
-      "No. 30, Chairman Ramanujam Street,<br/>Madavilagam, Karur — 639001, Tamil Nadu.",
-    phone: "+91 00000 00000",
-    phoneHref: "tel:+910000000000",
-    columns: [
-      {
-        heading: "Acne & Scar Treatments",
-        links: [
-          { label: "Acne & Scar Correction", href: `${BASE}/services/acne-scar-treatment-karur` },
-        ],
-      },
-      {
-        heading: "Other Treatments",
-        links: [
-          { label: "Hair Restoration", href: `${BASE}/services/hair-restoration` },
-          { label: "Laser Treatments", href: `${BASE}/services/laser-treatments-karur` },
-          { label: "Anti-Ageing & Lifting", href: `${BASE}/services/anti-ageing-treatment-karur` },
-          { label: "Skin Rejuvenation & Glow", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Dermato Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-        ],
-      },
-      {
-        heading: "Clinic",
-        links: [
-          { label: "About Dr. Kavitha", href: `${BASE}/about` },
-          { label: "Patient Reviews", href: `${BASE}/reviews` },
-          { label: "Blog", href: `${BASE}/blog` },
-          { label: "Contact & Location", href: `${BASE}/contact` },
-        ],
-      },
-    ],
-  },
+  header: getHeader(BASE),
+  footer: getFooter(BASE),
   hero: {
     eyebrow: "Acne & Scar Correction · Karur",
     h1: "Clear skin starts <em>with the<br>right diagnosis.</em>",

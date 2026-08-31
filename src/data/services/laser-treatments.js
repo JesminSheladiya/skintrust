@@ -2,6 +2,7 @@ const waLink =
   "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20laser%20treatment%20consultation%20at%20Skin%20Trust.";
 
 import { SITE_BASE, BASE } from "../site.js";
+import { getHeader, getFooter } from "../layout.js";
 
 export default {
   slug: "laser-treatments-karur",
@@ -137,57 +138,8 @@ export default {
     ],
   },
   waLink,
-  header: {
-    topbarAddress: "Karur, Tamil Nadu — opp. Kamaatchi Amman Temple, Madavilagam",
-    topbarPhone: "+91 00000 00000",
-    topbarPhoneHref: "tel:+910000000000",
-    topbarHours: "Mon–Sat 10:00–20:00 · Sun by appointment",
-    navLinks: [
-      { label: "Hair", href: `${BASE}/services/hair-restoration` },
-      { label: "Laser Treatments", href: `${BASE}/services/laser-treatments-karur`, active: true },
-      { label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur` },
-      { label: "Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur` },
-      { label: "Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-    ],
-    ctaLabel: "Book appointment",
-    ctaHref: "#book",
-  },
-  footer: {
-    address:
-      "No. 30, Chairman Ramanujam Street,<br/>Madavilagam, Karur — 639001, Tamil Nadu.",
-    phone: "+91 00000 00000",
-    phoneHref: "tel:+910000000000",
-    columns: [
-      {
-        heading: "Laser Treatments",
-        links: [
-          { label: "Laser Hair Removal", href: `${BASE}/services/laser-treatments-karur` },
-          { label: "Laser Toning for Pigmentation", href: `${BASE}/services/laser-treatments-karur` },
-          { label: "Carbon Laser Peel", href: `${BASE}/services/laser-treatments-karur` },
-          { label: "Tattoo Removal", href: `${BASE}/services/laser-treatments-karur` },
-          { label: "Fractional CO2 Resurfacing", href: `${BASE}/services/laser-treatments-karur` },
-        ],
-      },
-      {
-        heading: "Other Treatments",
-        links: [
-          { label: "Hair Restoration", href: `${BASE}/services/hair-restoration` },
-          { label: "Anti-Ageing & Lifting", href: `${BASE}/services/anti-ageing-treatment-karur` },
-          { label: "Skin Rejuvenation & Glow", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Dermato Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-          { label: "All Treatments", href: `${BASE}/services/` },
-        ],
-      },
-      {
-        heading: "Clinic",
-        links: [
-          { label: "About Dr. Kavitha", href: `${BASE}/about` },
-          { label: "All Treatments", href: `${BASE}/services/` },
-          { label: "Home", href: `${BASE}/` },
-        ],
-      },
-    ],
-  },
+  header: getHeader(BASE),
+  footer: getFooter(BASE),
   hero: {
     eyebrow: "Laser Treatments · Karur",
     h1: "Laser treatment, <em>calibrated to your skin.</em>",

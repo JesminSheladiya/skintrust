@@ -2,6 +2,7 @@ const waLink =
   "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20skin%20rejuvenation%20consultation%20at%20Skin%20Trust.";
 
 import { SITE_BASE, BASE } from "../site.js";
+import { getHeader, getFooter } from "../layout.js";
 
 export default {
   slug: "skin-rejuvenation-karur",
@@ -108,60 +109,8 @@ export default {
     ],
   },
   waLink,
-  header: {
-    topbarAddress: "Karur, Tamil Nadu — opp. Kamaatchi Amman Temple, Madavilagam",
-    topbarPhone: "+91 00000 00000",
-    topbarPhoneHref: "tel:+910000000000",
-    topbarHours: "Mon–Sat 10:00–20:00 · Sun by appointment",
-    navLinks: [
-      { label: "Hair", href: `${BASE}/services/hair-restoration` },
-      { label: "Laser Treatments", href: `${BASE}/services/laser-treatments-karur` },
-      { label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur` },
-      { label: "Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur`, active: true },
-      { label: "Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-    ],
-    ctaLabel: "Book appointment",
-    ctaHref: "#book",
-  },
-  footer: {
-    address:
-      "No. 30, Chairman Ramanujam Street,<br/>Madavilagam, Karur — 639001, Tamil Nadu.",
-    phone: "+91 00000 00000",
-    phoneHref: "tel:+910000000000",
-    columns: [
-      {
-        heading: "Rejuvenation & Glow",
-        links: [
-          { label: "HydraFacial", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Hydra Touch", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Laser Toning", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Chemical Peels", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Microdermabrasion & Microneedling", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "IV Glutathione Therapy", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Skin Boosters, PDRN & Exosomes", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Dr. Platon Cold Plasma", href: `${BASE}/services/skin-rejuvenation-karur` },
-        ],
-      },
-      {
-        heading: "Other Treatments",
-        links: [
-          { label: "Hair Restoration", href: `${BASE}/services/hair-restoration` },
-          { label: "Laser Treatments", href: `${BASE}/services/laser-treatments-karur` },
-          { label: "Anti-Ageing & Lifting", href: `${BASE}/services/anti-ageing-treatment-karur` },
-          { label: "Dermato Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-          { label: "All Treatments", href: `${BASE}/services/` },
-        ],
-      },
-      {
-        heading: "Clinic",
-        links: [
-          { label: "About Dr. Kavitha", href: `${BASE}/about` },
-          { label: "All Treatments", href: `${BASE}/services/` },
-          { label: "Home", href: `${BASE}/` },
-        ],
-      },
-    ],
-  },
+  header: getHeader(BASE),
+  footer: getFooter(BASE),
   hero: {
     eyebrow: "Skin Rejuvenation & Glow · Karur",
     h1: "Glow that holds up to <em>Tamil Nadu's sun and humidity.</em>",

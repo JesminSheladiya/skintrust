@@ -2,6 +2,7 @@ const waLink =
   "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20dermatology%20%26%20skin%20surgery%20consultation%20at%20Skin%20Trust.";
 
 import { SITE_BASE, BASE } from "../site.js";
+import { getHeader, getFooter } from "../layout.js";
 
 export default {
   slug: "dermato-surgery-karur",
@@ -138,58 +139,8 @@ export default {
     ],
   },
   waLink,
-  header: {
-    topbarAddress: "Karur, Tamil Nadu — opp. Kamaatchi Amman Temple, Madavilagam",
-    topbarPhone: "+91 00000 00000",
-    topbarPhoneHref: "tel:+910000000000",
-    topbarHours: "Mon–Sat 10:00–20:00 · Sun by appointment",
-    navLinks: [
-      { label: "Hair", href: `${BASE}/services/hair-restoration` },
-      { label: "Laser Treatments", href: `${BASE}/services/laser-treatments-karur` },
-      { label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur` },
-      { label: "Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur` },
-      { label: "Surgery", href: `${BASE}/services/dermato-surgery-karur`, active: true },
-    ],
-    ctaLabel: "Book appointment",
-    ctaHref: "#book",
-  },
-  footer: {
-    address:
-      "No. 30, Chairman Ramanujam Street,<br/>Madavilagam, Karur — 639001, Tamil Nadu.",
-    phone: "+91 00000 00000",
-    phoneHref: "tel:+910000000000",
-    columns: [
-      {
-        heading: "Dermatology & Skin Surgery",
-        links: [
-          { label: "Mole, Skin Tag & Cyst Removal", href: `${BASE}/services/dermato-surgery-karur` },
-          { label: "Ear Lobe Repair", href: `${BASE}/services/dermato-surgery-karur` },
-          { label: "Vitiligo Surgery & Skin Grafting", href: `${BASE}/services/dermato-surgery-karur` },
-          { label: "Phototherapy (NB-UVB, PUVA, Excimer)", href: `${BASE}/services/dermato-surgery-karur` },
-          { label: "Cryotherapy & Electrocautery", href: `${BASE}/services/dermato-surgery-karur` },
-          { label: "Microblading & Dermoscopy", href: `${BASE}/services/dermato-surgery-karur` },
-        ],
-      },
-      {
-        heading: "Other Treatments",
-        links: [
-          { label: "Hair Restoration", href: `${BASE}/services/hair-restoration` },
-          { label: "Laser Treatments", href: `${BASE}/services/laser-treatments-karur` },
-          { label: "Anti-Ageing & Lifting", href: `${BASE}/services/anti-ageing-treatment-karur` },
-          { label: "Skin Rejuvenation & Glow", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "All Treatments", href: `${BASE}/services/` },
-        ],
-      },
-      {
-        heading: "Clinic",
-        links: [
-          { label: "About Dr. Kavitha", href: `${BASE}/about` },
-          { label: "All Treatments", href: `${BASE}/services/` },
-          { label: "Home", href: `${BASE}/` },
-        ],
-      },
-    ],
-  },
+  header: getHeader(BASE),
+  footer: getFooter(BASE),
   hero: {
     eyebrow: "Dermatology & Skin Surgery · Karur",
     h1: "Clinical dermatology, <em>approached with clinical precision.</em>",

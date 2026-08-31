@@ -1,95 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE_BASE, BASE } from "../data/site.js";
+import { getHeader, getFooter } from "../data/layout.js";
 
 const base = import.meta.env.BASE_URL;
 
 const waLink =
   "https://wa.me/919092232991?text=Hi%2C%20I%27d%20like%20to%20book%20a%20consultation%20at%20Skin%20Trust%20Hospital";
 
-const header = {
-  topbarAddress:
-    "No. 28, Chairman Ramanujan Street, Karur — opp. Kamaatchi Amman Temple",
-  topbarPhone: "+91 96269 23299",
-  topbarPhoneHref: "tel:+919626923299",
-  topbarHours: "Mon–Sat 9:30 AM–7:30 PM",
-  navLinks: [
-    { label: "Home", href: base },
-    { label: "Services", href: `${base}services/` },
-    { label: "About", href: `${base}about`, active: true },
-    { label: "Contact", href: `${base}contact` },
-  ],
-  ctaLabel: "Book appointment",
-  ctaHref: `${base}contact`,
-};
-
-const footer = {
-  address: "No. 28, Chairman Ramanujan Street, Karur — 639001, Tamil Nadu.",
-  phone: "+91 96269 23299",
-  phoneHref: "tel:+919626923299",
-  whatsapp: "WhatsApp: +91 90922 32991",
-  whatsappHref: "https://wa.me/919092232991",
-  columns: [
-    {
-      heading: "Hair & Skin",
-      links: [
-        {
-          label: "PRP Hair Treatment",
-          href: `${base}services/prp-hair-treatment-karur`,
-        },
-        {
-          label: "GFC Treatment",
-          href: `${base}services/gfc-hair-treatment-karur`,
-        },
-        {
-          label: "FUE Hair Transplant",
-          href: `${base}services/fue-hair-transplant-karur`,
-        },
-        {
-          label: "Acne Treatment",
-          href: `${base}services/acne-treatment-karur`,
-        },
-        {
-          label: "Acne Scar Treatment",
-          href: `${base}services/acne-scar-treatment-karur`,
-        },
-      ],
-    },
-    {
-      heading: "Laser & Anti-Ageing",
-      links: [
-        {
-          label: "Laser Hair Removal",
-          href: `${base}services/laser-hair-removal-karur`,
-        },
-        {
-          label: "Anti-Ageing & Botox",
-          href: `${base}services/anti-ageing-treatment-karur`,
-        },
-        {
-          label: "HIFU Skin Tightening",
-          href: `${base}services/skin-tightening-karur`,
-        },
-        {
-          label: "HydraFacial & Rejuvenation",
-          href: `${base}services/skin-rejuvenation-karur`,
-        },
-        {
-          label: "Tattoo Removal",
-          href: `${base}services/tattoo-removal-karur`,
-        },
-      ],
-    },
-    {
-      heading: "Clinic",
-      links: [
-        { label: "About Dr. Kavitha", href: `${base}about` },
-        { label: "Patient Reviews", href: `${base}reviews` },
-        { label: "Contact & Directions", href: `${base}contact` },
-      ],
-    },
-  ],
-};
+const header = getHeader(BASE);
+const footer = getFooter(BASE);
 
 const aboutSchema = {
   "@context": "https://schema.org",

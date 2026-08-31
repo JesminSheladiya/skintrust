@@ -31,6 +31,7 @@ export default function BeforeAfterSlider({
             <span className="note" style={{ position: "relative", zIndex: 1 }}>{afterNote}</span>
           </>
         )}
+        <span className="ba-label ba-label-after">{afterLabel}</span>
       </div>
       <div
         className="ba-pane ba-before"
@@ -50,6 +51,7 @@ export default function BeforeAfterSlider({
             <span className="note" style={{ position: "relative", zIndex: 1 }}>{beforeNote}</span>
           </>
         )}
+        <span className="ba-label ba-label-before">{beforeLabel}</span>
       </div>
       <div className="ba-line" style={{ left: `${value}%` }} />
       <div className="ba-knob" aria-hidden="true" style={{ left: `${value}%` }}>

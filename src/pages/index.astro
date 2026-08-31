@@ -5,95 +5,16 @@ import VideoGallery from "../components/VideoGallery.jsx";
 import VideoOverlay from "../components/VideoOverlay.astro";
 import clinicSchema from "../data/clinic-schema.js";
 import faqSchema from "../data/faq-schema.json";
-import { SITE_BASE } from "../data/site.js";
+import { SITE_BASE, BASE } from "../data/site.js";
+import { getHeader, getFooter } from "../data/layout.js";
 
 const base = import.meta.env.BASE_URL;
 
 const waLink =
   "https://wa.me/919092232991?text=Hi%2C%20I%27d%20like%20to%20book%20a%20consultation%20at%20Skin%20Trust%20Hospital";
 
-const header = {
-  topbarAddress:
-    "No. 28, Chairman Ramanujan Street, Karur — opp. Kamaatchi Amman Temple",
-  topbarPhone: "+91 96269 23299",
-  topbarPhoneHref: "tel:+919626923299",
-  topbarHours: "Mon–Sat 9:30 AM–7:30 PM",
-  navLinks: [
-    { label: "TREATMENTS", href: "#treatments" },
-    { label: "ABOUT", href: `${base}about` },
-    { label: "CONTACT", href: "#book" },
-  ],
-  ctaLabel: "BOOK APPOINTMENT",
-  ctaHref: "#book",
-};
-
-const footer = {
-  address: "No. 28, Chairman Ramanujan Street, Karur — 639001, Tamil Nadu.",
-  phone: "+91 96269 23299",
-  phoneHref: "tel:+919626923299",
-  whatsapp: "WhatsApp: +91 90922 32991",
-  whatsappHref: "https://wa.me/919092232991",
-  columns: [
-    {
-      heading: "Hair & Skin",
-      links: [
-        {
-          label: "PRP Hair Treatment",
-          href: `${base}services/prp-hair-treatment-karur`,
-        },
-        {
-          label: "GFC Treatment",
-          href: `${base}services/gfc-hair-treatment-karur`,
-        },
-        {
-          label: "FUE Hair Transplant",
-          href: `${base}services/fue-hair-transplant-karur`,
-        },
-        {
-          label: "Acne Treatment",
-          href: `${base}services/acne-treatment-karur`,
-        },
-        {
-          label: "Acne Scar Treatment",
-          href: `${base}services/acne-scar-treatment-karur`,
-        },
-      ],
-    },
-    {
-      heading: "Laser & Anti-Ageing",
-      links: [
-        {
-          label: "Laser Hair Removal",
-          href: `${base}services/laser-hair-removal-karur`,
-        },
-        {
-          label: "Anti-Ageing & Botox",
-          href: `${base}services/anti-ageing-treatment-karur`,
-        },
-        {
-          label: "HIFU Skin Tightening",
-          href: `${base}services/skin-tightening-karur`,
-        },
-        {
-          label: "HydraFacial & Rejuvenation",
-          href: `${base}services/skin-rejuvenation-karur`,
-        },
-        {
-          label: "Tattoo Removal",
-          href: `${base}services/tattoo-removal-karur`,
-        },
-      ],
-    },
-    {
-      heading: "Clinic",
-      links: [
-        { label: "About Dr. Kavitha", href: `${base}about` },
-        { label: "Patient Reviews", href: `${base}reviews` },
-        { label: "Contact & Directions", href: `${base}contact` },
-      ],
-    },
-  ],
-};
+const header = getHeader(BASE);
+const footer = getFooter(BASE);
 ---
 
 <BaseLayout
@@ -334,7 +255,11 @@ const footer = {
         <!-- 5. LASER TREATMENTS -->
         <article class="cat">
           <div class="cat-top">
-            <img src={`${base}assets/images/treatments/laser-treatment.png`} alt="Laser Treatments" loading="lazy" />
+            <img
+              src={`${base}assets/images/treatments/laser-treatment.png`}
+              alt="Laser Treatments"
+              loading="lazy"
+            />
           </div>
           <div class="cat-body">
             <h3>Laser Treatments</h3>
@@ -359,7 +284,11 @@ const footer = {
         <!-- 6. DERMATOLOGY & SKIN SURGERY -->
         <article class="cat">
           <div class="cat-top">
-            <img src={`${base}assets/images/treatments/dermato-surgery.png`} alt="Dermatology & Skin Surgery" loading="lazy" />
+            <img
+              src={`${base}assets/images/treatments/dermato-surgery.png`}
+              alt="Dermatology & Skin Surgery"
+              loading="lazy"
+            />
           </div>
           <div class="cat-body">
             <h3>Dermatology &amp; Skin Surgery</h3>
@@ -768,7 +697,7 @@ const footer = {
   </section>
 
   <!-- ======================= PATIENT STORIES (VIDEO GALLERY) ======================= -->
-  <section class="sec" id="video-gallery">
+  <section class="sec" id="video-gallery" style="display: none;">
     <div class="shell">
       <div class="sec-head centred">
         <p class="eyebrow centred">Patient stories</p>
@@ -929,7 +858,7 @@ const footer = {
   </section>
 
   <!-- ======================= VISIT / MAP ======================= -->
-  <section class="sec" id="book" style="padding-top: 0;">
+  <section class="sec" id="book">
     <div class="shell">
       <div class="sec-head" style="max-width: 100%;">
         <p class="eyebrow">Visit us</p>

@@ -5,6 +5,8 @@ import CatIcon from "../../components/CatIcon.astro";
 import { treatmentIcon } from "../../data/icons.js";
 import TreatmentIcon from "../../components/TreatmentIcon.jsx";
 import FaqAccordion from "../../components/FaqAccordion.jsx";
+import { getHeader, getFooter } from "../../data/layout.js";
+import { BASE } from "../../data/site.js";
 
 export function getStaticPaths() {
   const serviceModules = import.meta.glob("../../data/services/*.js", {
@@ -19,8 +21,6 @@ export function getStaticPaths() {
 const { service } = Astro.props;
 const {
   meta,
-  header,
-  footer,
   waLink,
   hero,
   strip,
@@ -34,6 +34,10 @@ const {
   cta,
   internalLinks,
 } = service;
+
+// Unified header/footer from home page — keeps topbar, header & footer identical on every page
+const header = getHeader(BASE);
+const footer = getFooter(BASE);
 ---
 
 <BaseLayout

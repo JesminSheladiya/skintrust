@@ -2,6 +2,7 @@ const waLink =
   "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20an%20anti-ageing%20consultation%20at%20Skin%20Trust.";
 
 import { SITE_BASE, BASE } from "../site.js";
+import { getHeader, getFooter } from "../layout.js";
 
 export default {
   slug: "anti-ageing-treatment-karur",
@@ -141,63 +142,8 @@ export default {
     ],
   },
   waLink,
-  header: {
-    topbarAddress: "Karur, Tamil Nadu — opp. Kamaatchi Amman Temple, Madavilagam",
-    topbarPhone: "+91 00000 00000",
-    topbarPhoneHref: "tel:+910000000000",
-    topbarHours: "Mon–Sat 10:00–20:00 · Sun by appointment",
-    navLinks: [
-      { label: "Hair", href: `${BASE}/services/hair-restoration` },
-      { label: "Acne", href: `${BASE}/services/acne-treatment-karur` },
-      { label: "Laser Treatments", href: `${BASE}/services/laser-treatments-karur` },
-      { label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur`, active: true },
-      { label: "Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur` },
-      { label: "Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-    ],
-    ctaLabel: "Book appointment",
-    ctaHref: "#book",
-  },
-  footer: {
-    address:
-      "No. 30, Chairman Ramanujam Street,<br/>Madavilagam, Karur — 639001, Tamil Nadu.",
-    phone: "+91 00000 00000",
-    phoneHref: "tel:+910000000000",
-    columns: [
-      {
-        heading: "Anti-Ageing & Lifting",
-        links: [
-          { label: "Botox", href: `${BASE}/services/botox-karur` },
-          { label: "Dermal Fillers", href: `${BASE}/services/dermal-fillers-karur` },
-          { label: "Thread Lifts", href: `${BASE}/services/thread-lift-karur` },
-          { label: "HIFU", href: `${BASE}/services/hifu-karur` },
-          { label: "Apollo Quattro", href: `${BASE}/services/apollo-quattro-karur` },
-          { label: "MNRF Tightening", href: `${BASE}/services/mnrf-tightening-karur` },
-          { label: "PDRN Therapy", href: `${BASE}/services/pdrn-therapy-karur` },
-          { label: "Skin Boosters", href: `${BASE}/services/skin-boosters-karur` },
-          { label: "Under-Eye Rejuvenation", href: `${BASE}/services/under-eye-treatment-karur` },
-        ],
-      },
-      {
-        heading: "Other Treatments",
-        links: [
-          { label: "Acne & Scar Correction", href: `${BASE}/services/acne-treatment-karur` },
-          { label: "Hair Restoration", href: `${BASE}/services/hair-restoration` },
-          { label: "Skin Rejuvenation & Glow", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Skin Tightening", href: `${BASE}/services/skin-tightening-karur` },
-          { label: "Dermato Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-        ],
-      },
-      {
-        heading: "Clinic",
-        links: [
-          { label: "About Dr. Kavitha", href: `${BASE}/about` },
-          { label: "Patient Reviews", href: `${BASE}/reviews` },
-          { label: "Blog", href: `${BASE}/blog` },
-          { label: "Contact & Location", href: `${BASE}/contact` },
-        ],
-      },
-    ],
-  },
+  header: getHeader(BASE),
+  footer: getFooter(BASE),
   hero: {
     eyebrow: "Anti-Ageing & Lifting · Karur",
     h1: "Look rested, <em>not visibly treated.</em>",

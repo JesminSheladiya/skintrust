@@ -298,6 +298,21 @@ p {
   border-color: var(--champagne)
 }
 
+.nav-links a.active {
+  border-color: var(--champagne);
+  color: var(--forest);
+}
+
+.nav-links a.active .dropdown-icon {
+  color: var(--forest);
+}
+
+.drop a.active {
+  background: var(--forest-deep);
+  color: var(--ivory);
+  font-weight: 500;
+}
+
 .nav .btn {
   padding: 13px 24px
 }
@@ -305,12 +320,12 @@ p {
 /* dropdown */
 .drop {
   position: absolute;
-  top: calc(100% + 18px);
-  left: -24px;
-  min-width: 250px;
+  top: calc(100% + 28px);
+  left: -16px;
+  min-width: 280px;
   background: var(--ivory);
   border: 1px solid var(--line);
-  border-top: 2px solid var(--champagne);
+  border-top: 0;
   padding: 14px 0;
   box-shadow: 0 24px 54px rgba(23, 45, 43, .16);
   opacity: 0;
@@ -322,8 +337,37 @@ p {
   font-size: .85rem
 }
 
-.nav-links li:hover .drop,
-.nav-links li:focus-within .drop {
+/* Invisible bridge to prevent hover gap between link and dropdown */
+.drop::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -28px;
+  height: 28px;
+  background: transparent;
+  display: none;
+}
+
+@media (min-width: 1041px) and (hover: hover) and (pointer: fine) {
+  .drop::before {
+    display: block;
+  }
+}
+
+/* Desktop hover only – tablet/mobile uses click (is-open) handled in Header.astro */
+@media (min-width: 1041px) and (hover: hover) and (pointer: fine) {
+
+  .nav-links li:hover .drop,
+  .nav-links li:focus-within .drop {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0)
+  }
+}
+
+/* Tablet/mobile click */
+.nav-links li.is-open .drop {
   opacity: 1;
   visibility: visible;
   transform: translateY(0)
@@ -333,12 +377,13 @@ p {
   display: block;
   padding: 9px 24px;
   border: 0;
-  color: var(--forest)
+  color: var(--forest);
+  transition: all .3s;
 }
 
 .drop a:hover {
-  background: var(--ivory-warm);
-  color: var(--forest-deep)
+  background: var(--forest-deep);
+  color: var(--ivory);
 }
 
 .nav-links ul {
@@ -351,9 +396,17 @@ p {
 
 @media(max-width:1040px) {
 
-  .nav-links,
   .topbar .t-right {
     display: none
+  }
+
+  /* nav-links becomes a drawer – hidden until hamburger opens it */
+  .nav-links {
+    display: none
+  }
+
+  .nav-links.open {
+    display: flex
   }
 }
 
@@ -1245,6 +1298,29 @@ p {
   color: var(--forest);
   pointer-events: none;
   box-shadow: 0 4px 18px rgba(0, 0, 0, .28)
+}
+
+/* Before/After labels */
+.ba-label {
+  position: absolute;
+  bottom: 10px;
+  z-index: 9;
+  padding: 0 8px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .28)
+}
+
+.ba-label-before {
+  left: 10px;
+  background: var(--champagne);
+  color: var(--forest-deep);
+}
+
+.ba-label-after {
+  right: 10px;
+  background: var(--forest-mid);
+  color: var(--ivory);
 }
 
 .ba-range {
