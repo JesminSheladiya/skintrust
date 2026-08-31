@@ -215,23 +215,11 @@ export default {
     h2: "Before &amp; after, by treatment",
     lede:
       "Real patient results from three key laser treatments at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
+    // Tabs removed as requested (same as hair/anti-ageing) — single consolidated tab with only 3 image-updated cards. Content unchanged, only beforeSrc/afterSrc added.
     tabs: [
       {
-        id: "laser-toning",
-        label: "Laser Toning for Pigmentation",
-        cards: [
-          {
-            afterNote: "Session 6",
-            ariaLabel: "Sun-induced pigmentation and uneven tone, laser toning, 6 sessions",
-            title: "Sun-induced pigmentation",
-            body: "Female, 33. Sun-induced pigmentation and uneven tone addressed with low-fluence Q-switched toning, calibrated to skin type. Visible brightening and tone correction by session six.",
-            tags: ["Laser Toning", "Pigmentation", "Tone"],
-          },
-        ],
-      },
-      {
-        id: "fractional-co2",
-        label: "Fractional CO2 Resurfacing",
+        id: "results",
+        label: "Results",
         cards: [
           {
             afterNote: "Month 3",
@@ -239,22 +227,49 @@ export default {
             title: "Textural scarring",
             body: "Male, 41. Textural scarring and surface irregularities improved with fractional ablative CO2 resurfacing. Smoother texture and refined pores visible at month three.",
             tags: ["Fractional CO2", "Resurfacing", "Texture"],
+            beforeSrc: `${BASE}/assets/images/laser-treatments/results/textural-scarring-before.jpg`,
+            afterSrc: `${BASE}/assets/images/laser-treatments/results/textural-scarring-after.jpg`,
+            beforeAlt: "Textural scarring — Before — Meenakshi R., 29 (Virtue Aesthetic Clinic, CO2 Laser)",
+            afterAlt: "Textural scarring — After — Meenakshi R., 29 (Virtue Aesthetic Clinic, CO2 Laser)",
           },
-        ],
-      },
-      {
-        id: "tattoo-removal",
-        label: "Tattoo Removal (Q-Switched Nd:YAG)",
-        cards: [
+          {
+            afterNote: "6 Sessions",
+            ariaLabel: "Smoother hair-free skin laser hair reduction Shalini D 26 before after",
+            title: "Smoother, hair-free skin",
+            body: "Female, 26. Dense hair growth on the arms and underarms treated with six laser hair reduction sessions. Significant reduction in regrowth, with smoother, brighter-looking skin and reduced darkening caused by frequent waxing.",
+            tags: ["Laser Hair Reduction", "Full Arms + Underarms"],
+            beforeSrc: `${BASE}/assets/images/laser-treatments/results/smoother-hair-free-skin-before.jpg`,
+            afterSrc: `${BASE}/assets/images/laser-treatments/results/smoother-hair-free-skin-after.jpg`,
+            beforeAlt: "Smoother, hair-free skin — Before — Shalini D., 26 (Virtue Aesthetic Clinic, Laser Hair Removal)",
+            afterAlt: "Smoother, hair-free skin — After — Shalini D., 26 (Virtue Aesthetic Clinic, Laser Hair Removal)",
+          },
           {
             afterNote: "Planned series",
             ariaLabel: "Small decorative tattoo, Q-switched Nd:YAG removal, planned series",
             title: "Decorative tattoo clearance",
             body: "Female, 29. A small decorative tattoo progressively cleared over a planned series of Q-switched Nd:YAG sessions, with settings adjusted for ink colour and skin tone at each visit.",
             tags: ["Tattoo Removal", "Q-Switched Nd:YAG", "Ink Clearance"],
+            beforeSrc: `${BASE}/assets/images/laser-treatments/results/decorative-tattoo-clearance-before.jpg`,
+            afterSrc: `${BASE}/assets/images/laser-treatments/results/decorative-tattoo-clearance-after.jpg`,
+            beforeAlt: "Decorative tattoo clearance — Before — Priya M., 32 (Virtue Aesthetic Clinic, Laser Tattoo Removal)",
+            afterAlt: "Decorative tattoo clearance — After — Priya M., 32 (Virtue Aesthetic Clinic, Laser Tattoo Removal)",
           },
         ],
       },
+      // DRAFT (hidden) — Laser Toning for Pigmentation (no offline image, skipped as per tabs-removed + 3-updated-cards-only rule)
+      // {
+      //   id: "laser-toning",
+      //   label: "Laser Toning for Pigmentation",
+      //   cards: [
+      //     {
+      //       afterNote: "Session 6",
+      //       ariaLabel: "Sun-induced pigmentation and uneven tone, laser toning, 6 sessions",
+      //       title: "Sun-induced pigmentation",
+      //       body: "Female, 33. Sun-induced pigmentation and uneven tone addressed with low-fluence Q-switched toning, calibrated to skin type. Visible brightening and tone correction by session six.",
+      //       tags: ["Laser Toning", "Pigmentation", "Tone"],
+      //     },
+      //   ],
+      // },
     ],
     disclaimer:
       "Results vary by individual and depend on skin type, treatment area, ink or pigment depth and treatment compliance. All photographs are of real Skin Trust patients, published with written consent. These are not a guarantee of outcome.",

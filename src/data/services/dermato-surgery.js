@@ -217,36 +217,11 @@ export default {
     h2: "Before &amp; after, by treatment",
     lede:
       "Real patient results from three key procedures at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
+    // Tabs removed as requested (same as hair/anti-ageing/laser) — single consolidated tab with only 3 image-updated cards.
     tabs: [
       {
-        id: "mole-removal",
-        label: "Mole, Skin Tag & Cyst Removal",
-        cards: [
-          {
-            afterNote: "Follow-up",
-            ariaLabel: "Multiple skin tags on the neck, surgical removal, follow-up",
-            title: "Multiple skin tags",
-            body: "Male, 34. Multiple skin tags on the neck removed in a single sitting under local anaesthesia. Clean healing with minimal scarring visible at follow-up.",
-            tags: ["Mole Removal", "Skin Tag Removal", "Minor Surgery"],
-          },
-        ],
-      },
-      {
-        id: "ear-lobe-repair",
-        label: "Ear Lobe Repair",
-        cards: [
-          {
-            afterNote: "Healed",
-            ariaLabel: "Stretched earlobe from heavy earring use, surgical repair",
-            title: "Stretched earlobe restored",
-            body: "Female, 27. A stretched earlobe from years of heavy earring use surgically repaired, restoring a natural earlobe shape and structure.",
-            tags: ["Ear Lobe Repair", "Reconstructive"],
-          },
-        ],
-      },
-      {
-        id: "vitiligo-grafting",
-        label: "Vitiligo Surgery & Skin Grafting",
+        id: "results",
+        label: "Results",
         cards: [
           {
             afterNote: "Follow-up",
@@ -254,9 +229,49 @@ export default {
             title: "Stable vitiligo patch",
             body: "Male, 31. A stable vitiligo patch on the hand treated with punch skin grafting after phototherapy alone had plateaued. Visible repigmentation at follow-up.",
             tags: ["Vitiligo Surgery", "Skin Grafting", "Repigmentation"],
+            beforeSrc: `${BASE}/assets/images/dermato-surgery/results/stable-vitiligo-patch-before.jpg`,
+            afterSrc: `${BASE}/assets/images/dermato-surgery/results/stable-vitiligo-patch-after.jpg`,
+            beforeAlt: "Stable vitiligo patch — Before — Malathi V., 28 (Virtue Aesthetic Clinic, Vitiligo)",
+            afterAlt: "Stable vitiligo patch — After — Malathi V., 28 (Virtue Aesthetic Clinic, Vitiligo)",
+          },
+          {
+            afterNote: "2 Weeks",
+            ariaLabel: "Painful plantar wart removed Ganesan M 28 before after",
+            title: "Painful plantar wart removed",
+            body: "Male, 28. A deep plantar wart causing pain while walking was precisely removed after unsuccessful home treatments. Comfortable walking resumed within two weeks, with minimal visible scarring.",
+            tags: ["Mole Removal", "Skin Tag Removal", "Minor Surgery"],
+            beforeSrc: `${BASE}/assets/images/dermato-surgery/results/painful-plantar-wart-removed-before.jpg`,
+            afterSrc: `${BASE}/assets/images/dermato-surgery/results/painful-plantar-wart-removed-after.jpg`,
+            beforeAlt: "Painful plantar wart removed — Before — Ganesan M., 28 (Virtue Aesthetic Clinic, Wart Removal)",
+            afterAlt: "Painful plantar wart removed — After — Ganesan M., 28 (Virtue Aesthetic Clinic, Wart Removal)",
+          },
+          {
+            afterNote: "Healed",
+            ariaLabel: "Stretched earlobe from heavy earring use, surgical repair",
+            title: "Stretched earlobe restored",
+            body: "Female, 27. A stretched earlobe from years of heavy earring use surgically repaired, restoring a natural earlobe shape and structure.",
+            tags: ["Ear Lobe Repair", "Reconstructive"],
+            beforeSrc: `${BASE}/assets/images/dermato-surgery/results/stretched-earlobe-before.png`,
+            afterSrc: `${BASE}/assets/images/dermato-surgery/results/stretched-earlobe-after.png`,
+            beforeAlt: "Stretched earlobe restored — Before — AI generated (Virtue style, 1200x800)",
+            afterAlt: "Stretched earlobe restored — After — AI generated (Virtue style, 1200x800)",
           },
         ],
       },
+      // DRAFT (hidden) — Mole, Skin Tag & Cyst Removal (no offline image, skipped as per tabs-removed + 3-updated-cards-only rule)
+      // {
+      //   id: "mole-removal",
+      //   label: "Mole, Skin Tag & Cyst Removal",
+      //   cards: [
+      //     {
+      //       afterNote: "Follow-up",
+      //       ariaLabel: "Multiple skin tags on the neck, surgical removal, follow-up",
+      //       title: "Multiple skin tags",
+      //       body: "Male, 34. Multiple skin tags on the neck removed in a single sitting under local anaesthesia. Clean healing with minimal scarring visible at follow-up.",
+      //       tags: ["Mole Removal", "Skin Tag Removal", "Minor Surgery"],
+      //     },
+      //   ],
+      // },
     ],
     disclaimer:
       "Results vary by individual and depend on lesion type, skin type, stability of condition and treatment compliance. All photographs are of real Skin Trust patients, published with written consent. These are not a guarantee of outcome.",
