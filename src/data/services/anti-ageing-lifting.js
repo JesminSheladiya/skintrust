@@ -224,24 +224,12 @@ export default {
     eyebrow: "Patient results",
     h2: "Before &amp; after, by treatment",
     lede:
-      "Real patient results from three key treatments at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
+      "Real patient skin progress from two key treatments at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
+    // Tabs removed as requested (same as hair-restoration) — single consolidated tab with only 3 image-updated cards. Content as provided (RF card as given), only beforeSrc/afterSrc added.
     tabs: [
       {
-        id: "botox",
-        label: "Botox (Wrinkle Relaxation)",
-        cards: [
-          {
-            afterNote: "Week 2",
-            ariaLabel: "Dynamic forehead lines and crow's feet, Botox, 2 weeks",
-            title: "Dynamic lines softened",
-            body: "Female, 38. Dynamic forehead lines and crow's feet softened with conservative-dose botulinum toxin. Natural expression preserved, with visible smoothing by week two.",
-            tags: ["Botox", "Wrinkle Relaxation", "Natural Movement"],
-          },
-        ],
-      },
-      {
-        id: "thread-lift-hifu",
-        label: "Thread Lift & HIFU",
+        id: "results",
+        label: "Results",
         cards: [
           {
             afterNote: "Month 2",
@@ -249,22 +237,59 @@ export default {
             title: "Early jawline laxity",
             body: "Female, 44. Early jawline laxity and mid-face volume loss addressed with a non-surgical thread lift and focused ultrasound lifting. Visible contour lift by month two.",
             tags: ["Thread Lift", "HIFU", "Jawline Contour"],
+            beforeSrc: `${BASE}/assets/images/anti-ageing-lifting/results/early-jawline-laxity-before.jpg`,
+            afterSrc: `${BASE}/assets/images/anti-ageing-lifting/results/early-jawline-laxity-after.jpg`,
+            beforeAlt: "Early jawline laxity — Before — Rajasekar N., 52 (Virtue Aesthetic Clinic, Anti-Aging)",
+            afterAlt: "Early jawline laxity — After — Rajasekar N., 52 (Virtue Aesthetic Clinic, Anti-Aging)",
           },
-        ],
-      },
-      {
-        id: "mnrf-pdrn",
-        label: "MNRF Tightening & PDRN",
-        cards: [
           {
             afterNote: "Month 3",
             ariaLabel: "Skin laxity and textural ageing, MNRF tightening and PDRN therapy, 3 months",
             title: "Skin laxity and textural ageing",
             body: "Male, 47. Skin laxity and textural ageing improved with microneedling radiofrequency tightening combined with PDRN regenerative therapy. Firmer, more even skin quality by month three.",
             tags: ["MNRF Tightening", "PDRN Therapy", "Skin Quality"],
+            beforeSrc: `${BASE}/assets/images/anti-ageing-lifting/results/skin-laxity-textural-ageing-before.jpg`,
+            afterSrc: `${BASE}/assets/images/anti-ageing-lifting/results/skin-laxity-textural-ageing-after.jpg`,
+            beforeAlt: "Skin laxity and textural ageing — Before — Chitra P., 48 (Virtue Aesthetic Clinic, HIFU RF MNRF)",
+            afterAlt: "Skin laxity and textural ageing — After — Chitra P., 48 (Virtue Aesthetic Clinic, HIFU RF MNRF)",
           },
+          {
+            afterNote: "4 Sessions",
+            ariaLabel: "RF Skin Tightening Face Neck Umamaheswari T 46 before after",
+            title: "RF Skin Tightening",
+            body: "Female, 46. Moderate skin laxity across the cheeks and neck improved after four RF skin-tightening sessions. Firmer skin and better jawline definition achieved while maintaining a natural appearance.",
+            tags: ["RF Skin Tightening", "Face + Neck"],
+            beforeSrc: `${BASE}/assets/images/anti-ageing-lifting/results/rf-skin-tightening-before.jpg`,
+            afterSrc: `${BASE}/assets/images/anti-ageing-lifting/results/rf-skin-tightening-after.jpg`,
+            beforeAlt: "RF Skin Tightening — Before — Umamaheswari T., 46 (Virtue Aesthetic Clinic, Skin Tightening)",
+            afterAlt: "RF Skin Tightening — After — Umamaheswari T., 46 (Virtue Aesthetic Clinic, Skin Tightening)",
+          },
+          // DRAFT (hidden) — Botox (no offline image, skipped as per tabs-removed rule)
+          // {
+          //   afterNote: "Week 2",
+          //   ariaLabel: "Dynamic forehead lines and crow's feet, Botox, 2 weeks",
+          //   title: "Dynamic lines softened",
+          //   body: "Female, 38. Dynamic forehead lines and crow's feet softened with conservative-dose botulinum toxin. Natural expression preserved, with visible smoothing by week two.",
+          //   tags: ["Botox", "Wrinkle Relaxation", "Natural Movement"],
+          // },
         ],
       },
+      // DRAFT (hidden) — previous tab structure (now consolidated into single tab above)
+      // {
+      //   id: "botox",
+      //   label: "Botox (Wrinkle Relaxation)",
+      //   cards: [{ afterNote: "Week 2", title: "Dynamic lines softened", body: "Female, 38..." }],
+      // },
+      // {
+      //   id: "thread-lift-hifu",
+      //   label: "Thread Lift & HIFU",
+      //   cards: [{ afterNote: "Month 2", title: "Early jawline laxity", body: "Female, 44..." }],
+      // },
+      // {
+      //   id: "mnrf-pdrn",
+      //   label: "MNRF Tightening & PDRN",
+      //   cards: [{ afterNote: "Month 3", title: "Skin laxity and textural ageing", body: "Male, 47..." }],
+      // },
     ],
     disclaimer:
       "Results vary by individual and depend on skin type, baseline laxity, volume loss and treatment compliance. All photographs are of real Skin Trust patients, published with written consent. These are not a guarantee of outcome.",
