@@ -61,16 +61,29 @@ const base = import.meta.env.BASE_URL;
           navLinks.map((link) => (
             link.dropdown && link.dropdown.length > 0 ? (
               <li class="has-dropdown" data-dropdown>
-                <a
-                  href={link.href}
-                  class:list={[link.active && "active", "dropdown-toggle"]}
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  aria-current={link.active ? "page" : undefined}
-                >
-                  {link.label}
-                  <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-                </a>
+                {link.href ? (
+                  <a
+                    href={link.href}
+                    class:list={[link.active && "active", "dropdown-toggle"]}
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-current={link.active ? "page" : undefined}
+                  >
+                    {link.label}
+                    <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    class:list={[link.active && "active", "dropdown-toggle"]}
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-current={link.active ? "page" : undefined}
+                  >
+                    {link.label}
+                    <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                  </button>
+                )}
                 <div class="drop" role="menu">
                   {link.dropdown.map((item) => (
                     <a
@@ -234,6 +247,22 @@ const base = import.meta.env.BASE_URL;
     align-items: center;
     gap: 6px;
   }
+  /* Dropdown-only toggle (no href) styled like the nav links */
+  .nav-links button.dropdown-toggle {
+    padding: 0 0 3px;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    cursor: pointer;
+  }
+  .nav-links button.dropdown-toggle:hover,
+  .nav-links button.dropdown-toggle.active {
+    border-color: var(--champagne);
+  }
   .dropdown-icon {
     flex: none;
     transition: transform 0.25s;
@@ -337,6 +366,15 @@ const base = import.meta.env.BASE_URL;
       border-bottom: 0;
     }
     .nav-links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border: 0;
+      width: 100%;
+      line-height: 1.35;
+    }
+    .nav-links button.dropdown-toggle {
       display: flex;
       align-items: center;
       justify-content: space-between;

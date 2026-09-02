@@ -16,8 +16,6 @@ export function getHeader(base = BASE, pathname = "") {
     if (!h || h === "/") return current === "/" || current === b || current === `${b}/`;
     return current === h || current === `${h}/`;
   };
-  const isServicesActive = current === `${b}/services` || current.startsWith(`${b}/services/`);
-
   const dropdown = [
     { label: "Hair Restoration", href: `${b}/services/hair-restoration` },
     {
@@ -45,7 +43,7 @@ export function getHeader(base = BASE, pathname = "") {
     active: isActive(item.href),
   }));
 
-  const treatmentsActive = isServicesActive || dropdown.some((d) => d.active);
+  const treatmentsActive = dropdown.some((d) => d.active);
 
   return {
     topbarAddress:
@@ -56,7 +54,8 @@ export function getHeader(base = BASE, pathname = "") {
     navLinks: [
       {
         label: "TREATMENTS",
-        href: `${b}/services/`,
+        // No services index page — dropdown only, so no href
+        href: "",
         active: treatmentsActive,
         dropdown,
       },
@@ -115,7 +114,7 @@ export function getFooter(base = BASE) {
         heading: "Clinic",
         links: [
           { label: "About Dr. Kavitha", href: `${b}/about` },
-          { label: "All Services", href: `${b}/services/` },
+          { label: "All Services", href: `${b}/#treatments` },
           { label: "Book Appointment", href: `${b}/#book` },
         ],
       },
