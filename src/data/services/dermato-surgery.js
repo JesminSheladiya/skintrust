@@ -165,7 +165,7 @@ export default {
   ],
   results: {
     eyebrow: "Patient results",
-    h2: "Before &amp; after, by treatment",
+    h2: "Before & After, By Treatment",
     lede:
       "Real patient results from three key procedures at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
     // Tabs removed as requested (same as hair/anti-ageing/laser) — single consolidated tab with only 3 image-updated cards.
@@ -176,9 +176,9 @@ export default {
         cards: [
           {
             afterNote: "Follow-up",
-            ariaLabel: "Stable vitiligo patch on the hand, punch skin grafting",
+            ariaLabel: "Stable vitiligo patch on the face, punch skin grafting",
             title: "Stable vitiligo patch",
-            body: "Male, 31. A stable vitiligo patch on the hand treated with punch skin grafting after phototherapy alone had plateaued. Visible repigmentation at follow-up.",
+            body: "Female, 31. A stable vitiligo patch on the face treated with punch skin grafting after phototherapy alone had plateaued. Visible repigmentation at follow-up.",
             tags: ["Vitiligo Surgery", "Skin Grafting", "Repigmentation"],
             beforeSrc: `${BASE}/assets/images/dermato-surgery/results/stable-vitiligo-patch-before.jpg`,
             afterSrc: `${BASE}/assets/images/dermato-surgery/results/stable-vitiligo-patch-after.jpg`,
@@ -243,7 +243,7 @@ export default {
       {
         placeholder: "Ear lobe repair<br>image 16:10",
         title: "Ear Lobe Repair",
-        body: "Surgical repair of torn, stretched or split earlobes — whether from injury, heavy earrings or gauging — restoring a natural shape and structure.",
+        body: "Surgical repair of torn, stretched or split earlobes (whether from injury, heavy earrings or gauging) restoring a natural shape and structure.",
         ctaHref: `${BASE}/services/dermato-surgery-karur`,
         ctaLabel: "View ear lobe repair →",
       },
@@ -257,7 +257,7 @@ export default {
       {
         placeholder: "Phototherapy<br>image 16:10",
         title: "Phototherapy (NB-UVB, PUVA, Excimer)",
-        body: "Targeted light therapy — narrowband UVB, PUVA and excimer — used to manage vitiligo, psoriasis and other chronic skin conditions, with wavelength and exposure calibrated to the specific condition and skin type.",
+        body: "Targeted light therapy (narrowband UVB, PUVA and excimer) used to manage vitiligo, psoriasis and other chronic skin conditions, with wavelength and exposure calibrated to the specific condition and skin type. ",
         ctaHref: `${BASE}/services/dermato-surgery-karur`,
         ctaLabel: "View phototherapy →",
       },

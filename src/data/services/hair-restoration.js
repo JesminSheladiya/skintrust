@@ -134,7 +134,7 @@ export default {
   ],
   results: {
     eyebrow: "Patient results",
-    h2: "Before &amp; after, by treatment",
+    h2: "Before & After, By Treatment",
     lede:
       "Select a treatment to see scalp progress from real patients at Skin Trust. All images published with written patient consent, photographed under identical conditions.",
     // Tabs removed as requested — single consolidated tab with only 3 active cards. Remaining tabs/cards are drafted (commented).

@@ -168,7 +168,7 @@ export default {
   ],
   results: {
     eyebrow: "Patient results",
-    h2: "Before &amp; after, by treatment",
+    h2: "Before & After, By Treatment",
     lede:
       "Real patient skin progress from two key treatments at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
     // Tabs removed as requested (same as hair-restoration) — single consolidated tab with only 3 image-updated cards. Content as provided (RF card as given), only beforeSrc/afterSrc added.
@@ -181,7 +181,7 @@ export default {
             afterNote: "Month 2",
             ariaLabel: "Early jawline laxity, thread lift and HIFU, 2 months",
             title: "Early jawline laxity",
-            body: "Female, 44. Early jawline laxity and mid-face volume loss addressed with a non-surgical thread lift and focused ultrasound lifting. Visible contour lift by month two.",
+            body: "Male, 44. Early jawline laxity and mid-face volume loss addressed with a non-surgical thread lift and focused ultrasound lifting. Visible contour lift by month two.",
             tags: ["Thread Lift", "HIFU", "Jawline Contour"],
             beforeSrc: `${BASE}/assets/images/anti-ageing-lifting/results/early-jawline-laxity-before.jpg`,
             afterSrc: `${BASE}/assets/images/anti-ageing-lifting/results/early-jawline-laxity-after.jpg`,
@@ -192,7 +192,7 @@ export default {
             afterNote: "Month 3",
             ariaLabel: "Skin laxity and textural ageing, MNRF tightening and PDRN therapy, 3 months",
             title: "Skin laxity and textural ageing",
-            body: "Male, 47. Skin laxity and textural ageing improved with microneedling radiofrequency tightening combined with PDRN regenerative therapy. Firmer, more even skin quality by month three.",
+            body: "Female, 47. Skin laxity and textural ageing improved with microneedling radiofrequency tightening combined with PDRN regenerative therapy. Firmer, more even skin quality by month three.",
             tags: ["MNRF Tightening", "PDRN Therapy", "Skin Quality"],
             beforeSrc: `${BASE}/assets/images/anti-ageing-lifting/results/skin-laxity-textural-ageing-before.jpg`,
             afterSrc: `${BASE}/assets/images/anti-ageing-lifting/results/skin-laxity-textural-ageing-after.jpg`,

@@ -137,7 +137,7 @@ export default {
   ],
   results: {
     eyebrow: "Patient results",
-    h2: "Before & after, by treatment",
+    h2: "Before & After, By Treatment",
     lede:
       "Real patient skin progress from three key treatments at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
     // Only 2 cards active as requested — MNRF (Chitra P.,48) + Pico/Carbon (Indhumathi P.,38). Chemical Peels removed (content mismatch -> skip) and drafted below.
@@ -150,7 +150,7 @@ export default {
             afterNote: "Month 4",
             ariaLabel: "Acne scar remodelling MNRF before after Skin Trust Karur",
             title: "Acne Scar Remodelling with MNRF",
-            body: "Female, 29. Microneedling radiofrequency for mixed boxcar and rolling scar morphology. Collagen remodelling visible from Month 2, assessed at Month 4.",
+            body: "Female, 47. Microneedling radiofrequency for mixed boxcar and rolling scar morphology. Collagen remodelling visible from Month 2, assessed at Month 4.",
             tags: ["MNRF", "Boxcar Scars", "Rolling Scars"],
             beforeSrc: `${BASE}/assets/images/acne-scar-correction/results/mnrf-before.jpg`,
             afterSrc: `${BASE}/assets/images/acne-scar-correction/results/mnrf-after.jpg`,
@@ -161,7 +161,7 @@ export default {
             afterNote: "Session 6",
             ariaLabel: "Carbon and Pico Toning acne pigmentation before after Skin Trust Karur",
             title: "Carbon & Pico Toning",
-            body: "Male, 25. Active acne, enlarged pores and surface PIH addressed with combined carbon laser and picosecond toning. Oil control and even tone visible over six sessions.",
+            body: "Female, 25. Active acne, enlarged pores and surface PIH addressed with combined carbon laser and picosecond toning. Oil control and even tone visible over six sessions.",
             tags: ["Carbon Toning", "Pico Toning", "Acne & PIH"],
             beforeSrc: `${BASE}/assets/images/acne-scar-correction/results/carbon-pico-toning-before.jpg`,
             afterSrc: `${BASE}/assets/images/acne-scar-correction/results/carbon-pico-toning-after.jpg`,

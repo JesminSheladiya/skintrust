@@ -164,7 +164,7 @@ export default {
   ],
   results: {
     eyebrow: "Patient results",
-    h2: "Before &amp; after, by treatment",
+    h2: "Before & After, By Treatment",
     lede:
       "Real patient results from three key laser treatments at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
     // Tabs removed as requested (same as hair/anti-ageing) — single consolidated tab with only 3 image-updated cards. Content unchanged, only beforeSrc/afterSrc added.
@@ -177,7 +177,7 @@ export default {
             afterNote: "Month 3",
             ariaLabel: "Textural scarring and surface irregularities, fractional CO2 resurfacing, 3 months",
             title: "Textural scarring",
-            body: "Male, 41. Textural scarring and surface irregularities improved with fractional ablative CO2 resurfacing. Smoother texture and refined pores visible at month three.",
+            body: "Female, 35. Textural scarring and surface irregularities improved with fractional ablative CO2 resurfacing. Smoother texture and refined pores visible at month three.",
             tags: ["Fractional CO2", "Resurfacing", "Texture"],
             beforeSrc: `${BASE}/assets/images/laser-treatments/results/textural-scarring-before.jpg`,
             afterSrc: `${BASE}/assets/images/laser-treatments/results/textural-scarring-after.jpg`,

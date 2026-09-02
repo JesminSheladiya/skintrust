@@ -135,13 +135,14 @@ export default {
   ],
   results: {
     eyebrow: "Patient results",
-    h2: "Before &amp; after, by treatment",
+    h2: "Before & After, By Treatment",
     lede:
       "Real patient skin progress from three key treatments at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
+    // Tabs removed as requested (same as hair/anti-ageing/laser/dermato) — single consolidated tab with all 3 cards.
     tabs: [
       {
-        id: "hydrafacial",
-        label: "HydraFacial & Boosters",
+        id: "results",
+        label: "Results",
         cards: [
           {
             afterNote: "Session 4",
@@ -149,35 +150,51 @@ export default {
             title: "Dull, dehydrated skin",
             body: "Female, 32. Dull, dehydrated skin with uneven surface texture treated with combined HydraFacial and skin booster sessions. Even luminosity and hydration visible by session four.",
             tags: ["HydraFacial", "Skin Boosters", "Hydration"],
+            beforeSrc: `${BASE}/assets/images/skin-rejuvenation/results/dehydrated-skin-before.jpg`,
+            afterSrc: `${BASE}/assets/images/skin-rejuvenation/results/dehydrated-skin-after.jpg`,
+            beforeAlt: "Dull, dehydrated skin — Before",
+            afterAlt: "Dull, dehydrated skin — After",
           },
-        ],
-      },
-      {
-        id: "laser-toning",
-        label: "Laser Toning",
-        cards: [
-          {
-            afterNote: "Session 6",
-            ariaLabel: "Sun-induced pigmentation, laser toning, 6 sessions",
-            title: "Sun-induced pigmentation",
-            body: "Female, 35. Sun-induced pigmentation and uneven tone addressed with low-fluence Q-switched Nd:YAG laser toning. Visible brightening and tone correction by session six.",
-            tags: ["Laser Toning", "Pigmentation", "Tone"],
-          },
-        ],
-      },
-      {
-        id: "glutathione",
-        label: "IV Glutathione & PDRN",
-        cards: [
           {
             afterNote: "Month 2",
             ariaLabel: "General dullness, IV glutathione and PDRN, 2 months",
             title: "General dullness and early skin fatigue",
             body: "Male, 30. General dullness and early skin fatigue treated with a monitored IV glutathione course alongside PDRN skin boosters. Noticeable radiance and skin quality improvement at month two.",
             tags: ["IV Glutathione", "PDRN", "Radiance"],
+            beforeSrc: `${BASE}/assets/images/skin-rejuvenation/results/general-dullness-before.jpg`,
+            afterSrc: `${BASE}/assets/images/skin-rejuvenation/results/general-dullness-after.jpg`,
+            beforeAlt: "General dullness and early skin fatigue — Before",
+            afterAlt: "General dullness and early skin fatigue — After",
+          },
+          {
+            afterNote: "Session 6",
+            ariaLabel: "Sun-induced pigmentation, laser toning, 6 sessions",
+            title: "Sun-induced pigmentation",
+            body: "Female, 35. Sun-induced pigmentation and uneven tone addressed with low-fluence Q-switched Nd:YAG laser toning. Visible brightening and tone correction by session six.",
+            tags: ["Laser Toning", "Pigmentation", "Tone"],
+            beforeSrc: `${BASE}/assets/images/skin-rejuvenation/results/sun-induced-before.jpg`,
+            afterSrc: `${BASE}/assets/images/skin-rejuvenation/results/sun-induced-after.jpg`,
+            beforeAlt: "Sun-induced pigmentation — Before",
+            afterAlt: "Sun-induced pigmentation — After",
           },
         ],
       },
+      // DRAFT (hidden) — previous tab structure (now consolidated into single tab above)
+      // {
+      //   id: "hydrafacial",
+      //   label: "HydraFacial & Boosters",
+      //   cards: [{ afterNote: "Session 4", title: "Dull, dehydrated skin", body: "Female, 32..." }],
+      // },
+      // {
+      //   id: "laser-toning",
+      //   label: "Laser Toning",
+      //   cards: [{ afterNote: "Session 6", title: "Sun-induced pigmentation", body: "Female, 35..." }],
+      // },
+      // {
+      //   id: "glutathione",
+      //   label: "IV Glutathione & PDRN",
+      //   cards: [{ afterNote: "Month 2", title: "General dullness and early skin fatigue", body: "Male, 30..." }],
+      // },
     ],
     disclaimer:
       "Results vary by individual and depend on skin type, sun exposure, baseline condition and treatment compliance. All photographs are of real Skin Trust patients, published with written consent. These are not a guarantee of outcome.",

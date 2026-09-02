@@ -50,9 +50,9 @@ const footer = getFooter(BASE);
         <h1>
           Your skin deserves a diagnosis,<br /><em>not a guess.</em>
         </h1>
-        <p class="lede">
+        <p class="lede" style="max-width: 520px;">
           Founded in 2010 by Dr. Kavitha, Skin Trust Hospital has treated over 2
-          lac patients and is across its 40+ offerings.
+          lakh patients across its 40+ offerings.
         </p>
         <div class="hero-cta">
           <a class="btn btn-solid" href="#book">Book a consultation</a>
@@ -101,8 +101,7 @@ const footer = getFooter(BASE);
         >
           <div style="flex: 1 1 400px;">
             <h2 style="margin: 0;">
-              Six Service Categories,<br />Forty plus Services,<br />One trusted
-              roof.
+              6 Service Categories,<br />40+ Services,<br />1 trusted roof.
             </h2>
           </div>
           <div style="flex: 1 1 400px;">
@@ -110,8 +109,8 @@ const footer = getFooter(BASE);
               class="lede"
               style="text-align: left; margin: 0; padding-top: 8px;"
             >
-              Redefining aesthetic excellence. Delivering bespoke
-              transformations for skin, hair, and body, backed by the trust of
+              Redefining aesthetic excellence by delivering bespoke
+              transformations for hair, skin, and body, backed by the trust of
               thousands.
             </p>
           </div>
@@ -132,13 +131,13 @@ const footer = getFooter(BASE);
             <h3>Hair Restoration</h3>
             <p>
               From diagnosing why your hair is falling to regrowing what you
-              have lost — every protocol starts with trichoscopy and blood work,
-              not a sales pitch.
+              have lost, every protocol starts with a trichoscopy and blood
+              work.
             </p>
             <ul class="cat-list">
               <li>Trichoscopy (scalp diagnosis)</li>
               <li>PRP Hair Treatment (CDSCO-approved kit)</li>
-              <li>GFC — Growth Factor Concentrate</li>
+              <li>GFC: Growth Factor Concentrate</li>
               <li>FUE Hair Transplant</li>
               <li>Exosome Therapy for Hair</li>
               <li>Low-Level Laser Therapy</li>
@@ -197,7 +196,7 @@ const footer = getFooter(BASE);
           <div class="cat-body">
             <h3>Skin Rejuvenation &amp; Glow</h3>
             <p>
-              Maintenance treatments for radiance, texture and even tone —
+              Maintenance treatments for radiance, texture and even tone,
               formulated for Indian skin that battles Tamil Nadu's sun, humidity
               and pigmentation year-round.
             </p>
@@ -316,14 +315,12 @@ const footer = getFooter(BASE);
   <!-- ======================= PATIENT RESULTS (BEFORE & AFTER) ======================= -->
   <section class="sec sec-warm" id="results" style="padding-top: 0;">
     <div class="shell">
-      <div class="sec-head centred">
+      <div class="sec-head centred" style="max-width: 750px;">
         <p class="eyebrow centred">Patient results</p>
-        <h2 style="white-space: nowrap; max-width: 100%;">
-          Before and after. Drag to compare.
-        </h2>
+        <h2>Before & After. Drag to Compare.</h2>
         <p class="lede">
           Photographs taken in the same room, same light, same distance. No
-          filters, no retouching, no borrowed stock images — only real outcomes
+          filters, no retouching, no borrowed stock images. Only real outcomes
           from real patients at Skin Trust Hospital.
         </p>
       </div>
@@ -331,32 +328,44 @@ const footer = getFooter(BASE);
       <div class="ba-grid">
         <BeforeAfterCard
           client:load
-          afterNote="Month 6"
-          beforeNote="Day 0"
-          ariaLabel="Reveal before and after — hair"
-          title="Hair density restored"
-          body="Male, 29 — diffuse thinning at the crown. Six PRP sessions combined with medical management over six months."
-          tags={["PRP", "6 sessions"]}
-          mutedTags
-        />
-        <BeforeAfterCard
-          client:load
           afterNote="Month 4"
-          beforeNote="Day 0"
-          ariaLabel="Reveal before and after — acne scars"
-          title="Acne scars smoothened"
-          body="Female, 24 — rolling and boxcar scars across both cheeks. MNRF combined with subcision over five sessions."
-          tags={["MNRF + Subcision", "5 sessions"]}
+          beforeNote="Session 1"
+          ariaLabel="Female diffuse hair fall, PRP, 4 months"
+          title="Diffuse thinning along parting"
+          body="Female, 29. Four PRP sessions. Post-partum hair fall with visible density gain at the parting."
+          tags={["PRP", "Post-partum", "Female"]}
+          beforeSrc={`${base}assets/images/hair-restoration/results/diffuse-thinning-before.jpg`}
+          afterSrc={`${base}assets/images/hair-restoration/results/diffuse-thinning-after.jpg`}
+          beforeAlt="Diffuse thinning along parting — Before — Shantha R., 40 (Virtue Aesthetic Clinic)"
+          afterAlt="Diffuse thinning along parting — After — Shantha R., 40 (Virtue Aesthetic Clinic)"
           mutedTags
         />
         <BeforeAfterCard
           client:load
-          afterNote="Month 3"
+          afterNote="Month 2"
           beforeNote="Day 0"
-          ariaLabel="Reveal before and after — pigmentation"
-          title="Pigmentation cleared"
-          body="Female, 36 — melasma across cheekbones. Chemical peels, laser toning and strict sun protection over eight sessions."
-          tags={["Peels + Laser toning", "8 sessions"]}
+          ariaLabel="General dullness, IV glutathione and PDRN, 2 months"
+          title="General dullness and early skin fatigue"
+          body="Male, 30. General dullness and early skin fatigue treated with a monitored IV glutathione course alongside PDRN skin boosters. Noticeable radiance and skin quality improvement at month two."
+          tags={["IV Glutathione", "PDRN", "Radiance"]}
+          beforeSrc={`${base}assets/images/skin-rejuvenation/results/general-dullness-before.jpg`}
+          afterSrc={`${base}assets/images/skin-rejuvenation/results/general-dullness-after.jpg`}
+          beforeAlt="General dullness and early skin fatigue — Before"
+          afterAlt="General dullness and early skin fatigue — After"
+          mutedTags
+        />
+        <BeforeAfterCard
+          client:load
+          afterNote="Follow-up"
+          beforeNote="Day 0"
+          ariaLabel="Stable vitiligo patch on the hand, punch skin grafting"
+          title="Stable vitiligo patch"
+          body="Female, 31. A stable vitiligo patch on the face treated with punch skin grafting after phototherapy alone had plateaued. Visible repigmentation at follow-up."
+          tags={["Vitiligo Surgery", "Skin Grafting", "Repigmentation"]}
+          beforeSrc={`${base}assets/images/dermato-surgery/results/stable-vitiligo-patch-before.jpg`}
+          afterSrc={`${base}assets/images/dermato-surgery/results/stable-vitiligo-patch-after.jpg`}
+          beforeAlt="Stable vitiligo patch — Before — Malathi V., 28 (Virtue Aesthetic Clinic, Vitiligo)"
+          afterAlt="Stable vitiligo patch — After — Malathi V., 28 (Virtue Aesthetic Clinic, Vitiligo)"
           mutedTags
         />
       </div>
@@ -387,7 +396,7 @@ const footer = getFooter(BASE);
           </p>
           <p style="margin: 0 auto;">
             Patients drive in from Karur town, Kulithalai, Aravakurichi,
-            Krishnarayapuram, Manmangalam — and increasingly from Trichy and
+            Krishnarayapuram, Manmangalam, and increasingly from Trichy and
             Namakkal. Below is what a few of them wrote, unedited.
           </p>
         </div>
@@ -454,7 +463,7 @@ const footer = getFooter(BASE);
       </div>
       <div class="why-grid">
         <div class="why">
-          <b>Your Procedure, Performed by <br />Dr. Kavitha</b>
+          <b>Your procedure, performed by <br />Dr. Kavitha</b>
           <p>
             Dr. Kavitha personally performs all advanced procedures, including
             laser treatments, injectable procedures, and surgical excisions,
@@ -490,8 +499,8 @@ const footer = getFooter(BASE);
           <b>Calibrated for Indian skin</b>
           <p>
             Higher Fitzpatrick types pigment easily after aggressive laser
-            settings. Protocols at Skin Trust are tuned for Tamil Nadu skin —
-            not copied from Western manufacturer defaults.
+            settings. Protocols at Skin Trust are tuned for Indian skin — not
+            copied from Western manufacturer defaults.
           </p>
         </div>
         <div class="why">
