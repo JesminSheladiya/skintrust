@@ -458,7 +458,7 @@ export default {
   },
   cta: {
     eyebrow: "Next step",
-    h2: "Start with a clinical assessment,<br>not a guess.",
+    h2: "Start with a clinical assessment.",
     lede:
       "A first consultation covers your specific concern, a proper diagnosis and a clear procedure plan. No packages are sold at this visit.",
     buttons: [

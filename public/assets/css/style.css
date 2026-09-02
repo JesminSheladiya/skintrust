@@ -1155,7 +1155,7 @@ p {
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
+  gap: 2px;
   background: rgba(224, 203, 166, .22);
   border: 1px solid rgba(224, 203, 166, .22)
 }
