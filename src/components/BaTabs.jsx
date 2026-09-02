@@ -5,20 +5,22 @@ export default function BaTabs({ label = "Before and after by treatment", tabs }
 
   return (
     <>
-      <div className="ba-tabs" role="tablist" aria-label={label}>
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            className={tab.id === active ? "ba-tab active" : "ba-tab"}
-            role="tab"
-            aria-selected={tab.id === active}
-            aria-controls={`panel-${tab.id}`}
-            onClick={() => setActive(tab.id)}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
+      {tabs.length > 1 && (
+        <div className="ba-tabs" role="tablist" aria-label={label}>
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              className={tab.id === active ? "ba-tab active" : "ba-tab"}
+              role="tab"
+              aria-selected={tab.id === active}
+              aria-controls={`panel-${tab.id}`}
+              onClick={() => setActive(tab.id)}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      )}
       {tabs.map((tab) => (
         <div
           key={tab.id}

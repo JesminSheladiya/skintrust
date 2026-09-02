@@ -2,6 +2,7 @@ const waLink =
   "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20an%20acne%20or%20scar%20correction%20consultation%20at%20Skin%20Trust.";
 
 import { SITE_BASE, BASE } from "../site.js";
+import { getHeader, getFooter } from "../layout.js";
 
 export default {
   slug: "acne-scar-treatment-karur",
@@ -110,55 +111,8 @@ export default {
     ],
   },
   waLink,
-  header: {
-    topbarAddress: "Karur, Tamil Nadu — opp. Kamaatchi Amman Temple, Madavilagam",
-    topbarPhone: "+91 00000 00000",
-    topbarPhoneHref: "tel:+910000000000",
-    topbarHours: "Mon–Sat 10:00–20:00 · Sun by appointment",
-    navLinks: [
-      { label: "Hair", href: `${BASE}/services/hair-restoration` },
-      { label: "Acne & Scars", href: `${BASE}/services/acne-scar-treatment-karur`, active: true },
-      { label: "Laser", href: `${BASE}/services/laser-treatments-karur` },
-      { label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur` },
-      { label: "Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur` },
-      { label: "Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-    ],
-    ctaLabel: "Book appointment",
-    ctaHref: "#book",
-  },
-  footer: {
-    address:
-      "No. 30, Chairman Ramanujam Street,<br/>Madavilagam, Karur — 639001, Tamil Nadu.",
-    phone: "+91 00000 00000",
-    phoneHref: "tel:+910000000000",
-    columns: [
-      {
-        heading: "Acne & Scar Treatments",
-        links: [
-          { label: "Acne & Scar Correction", href: `${BASE}/services/acne-scar-treatment-karur` },
-        ],
-      },
-      {
-        heading: "Other Treatments",
-        links: [
-          { label: "Hair Restoration", href: `${BASE}/services/hair-restoration` },
-          { label: "Laser Treatments", href: `${BASE}/services/laser-treatments-karur` },
-          { label: "Anti-Ageing & Lifting", href: `${BASE}/services/anti-ageing-treatment-karur` },
-          { label: "Skin Rejuvenation & Glow", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Dermato Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-        ],
-      },
-      {
-        heading: "Clinic",
-        links: [
-          { label: "About Dr. Kavitha", href: `${BASE}/about` },
-          { label: "Patient Reviews", href: `${BASE}/reviews` },
-          { label: "Blog", href: `${BASE}/blog` },
-          { label: "Contact & Location", href: `${BASE}/contact` },
-        ],
-      },
-    ],
-  },
+  header: getHeader(BASE),
+  footer: getFooter(BASE),
   hero: {
     eyebrow: "Acne & Scar Correction · Karur",
     h1: "Clear skin starts <em>with the<br>right diagnosis.</em>",
@@ -167,6 +121,8 @@ export default {
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
     figureText: "Acne skin consultation<br>at Skin Trust<br>(3:4 portrait)",
+    image: `${BASE}/assets/images/treatments/treatment-banner/acne-scare-correction.png`,
+    imageAlt: "Acne & Scar Correction treatment banner at Skin Trust Karur",
     badge: {
       stars: "★★★★★",
       num: "4.9",
@@ -181,49 +137,90 @@ export default {
   ],
   results: {
     eyebrow: "Patient results",
-    h2: "Before & after, by treatment",
+    h2: "Before & After, By Treatment",
     lede:
       "Real patient skin progress from three key treatments at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
+    // Only 2 cards active as requested — MNRF (Chitra P.,48) + Pico/Carbon (Indhumathi P.,38). Chemical Peels removed (content mismatch -> skip) and drafted below.
     tabs: [
       {
-        id: "carbon-pico",
-        label: "Carbon & Pico Toning",
-        cards: [
-          {
-            afterNote: "Session 6",
-            ariaLabel: "Carbon and Pico Toning acne pigmentation before after Skin Trust Karur",
-            title: "Carbon & Pico Toning",
-            body: "Male, 25. Active acne, enlarged pores and surface PIH addressed with combined carbon laser and picosecond toning. Oil control and even tone visible over six sessions.",
-            tags: ["Carbon Toning", "Pico Toning", "Acne & PIH"],
-          },
-        ],
-      },
-      {
-        id: "mnrf-scar",
-        label: "Acne Scar Remodelling with MNRF",
+        id: "results",
+        label: "Results",
         cards: [
           {
             afterNote: "Month 4",
             ariaLabel: "Acne scar remodelling MNRF before after Skin Trust Karur",
             title: "Acne Scar Remodelling with MNRF",
-            body: "Female, 29. Microneedling radiofrequency for mixed boxcar and rolling scar morphology. Collagen remodelling visible from Month 2, assessed at Month 4.",
+            body: "Female, 47. Microneedling radiofrequency for mixed boxcar and rolling scar morphology. Collagen remodelling visible from Month 2, assessed at Month 4.",
             tags: ["MNRF", "Boxcar Scars", "Rolling Scars"],
+            beforeSrc: `${BASE}/assets/images/acne-scar-correction/results/mnrf-before.jpg`,
+            afterSrc: `${BASE}/assets/images/acne-scar-correction/results/mnrf-after.jpg`,
+            beforeAlt: "Acne Scar Remodelling with MNRF — Before — Chitra P., 48 (Virtue Aesthetic Clinic)",
+            afterAlt: "Acne Scar Remodelling with MNRF — After — Chitra P., 48 (Virtue Aesthetic Clinic)",
           },
-        ],
-      },
-      {
-        id: "fractional-qyag",
-        label: "Fractional Q-YAG",
-        cards: [
           {
-            afterNote: "Month 3",
-            ariaLabel: "Fractional Q-YAG acne scar pigmentation treatment before after Skin Trust Karur",
-            title: "Fractional Q-YAG",
-            body: "Female, 27. Fractional Q-switched Nd:YAG laser for post-acne hyperpigmentation and superficial scarring. Texture improvement and pigmentation clearance at Month 3.",
-            tags: ["Fractional Q-YAG", "Pigmentation", "Texture"],
+            afterNote: "Session 6",
+            ariaLabel: "Carbon and Pico Toning acne pigmentation before after Skin Trust Karur",
+            title: "Carbon & Pico Toning",
+            body: "Female, 25. Active acne, enlarged pores and surface PIH addressed with combined carbon laser and picosecond toning. Oil control and even tone visible over six sessions.",
+            tags: ["Carbon Toning", "Pico Toning", "Acne & PIH"],
+            beforeSrc: `${BASE}/assets/images/acne-scar-correction/results/carbon-pico-toning-before.jpg`,
+            afterSrc: `${BASE}/assets/images/acne-scar-correction/results/carbon-pico-toning-after.jpg`,
+            beforeAlt: "Carbon & Pico Toning — Before — Indhumathi P., 38 (Virtue Aesthetic Clinic)",
+            afterAlt: "Carbon & Pico Toning — After — Indhumathi P., 38 (Virtue Aesthetic Clinic)",
           },
+          {
+            afterNote: "4 Sessions",
+            ariaLabel: "Chemical Peels oily congested skin Lakshmi V 32 before after",
+            title: "Chemical Peels",
+            body: "Female, 32. Oily skin, blackheads and uneven texture improved after four chemical peel sessions. Congestion visibly reduced, leaving the skin smoother, clearer and more balanced with monthly maintenance.",
+            tags: ["Chemical Peel", "Oily + Congested Skin"],
+            beforeSrc: `${BASE}/assets/images/acne-scar-correction/results/chemical-peels-before.jpg`,
+            afterSrc: `${BASE}/assets/images/acne-scar-correction/results/chemical-peels-after.jpg`,
+            beforeAlt: "Chemical Peels — Before — Lakshmi V., 32 (Virtue Aesthetic Clinic)",
+            afterAlt: "Chemical Peels — After — Lakshmi V., 32 (Virtue Aesthetic Clinic)",
+          },
+          // DRAFT (hidden) — original Carbon & Pico Toning (Male, 25)
+          // {
+          //   afterNote: "Session 6",
+          //   ariaLabel: "Carbon and Pico Toning acne pigmentation before after Skin Trust Karur",
+          //   title: "Carbon & Pico Toning",
+          //   body: "Male, 25. Active acne, enlarged pores and surface PIH addressed with combined carbon laser and picosecond toning. Oil control and even tone visible over six sessions.",
+          //   tags: ["Carbon Toning", "Pico Toning", "Acne & PIH"],
+          // },
+          // DRAFT (hidden) — original MNRF Scar (Female, 29)
+          // {
+          //   afterNote: "Month 4",
+          //   ariaLabel: "Acne scar remodelling MNRF before after Skin Trust Karur",
+          //   title: "Acne Scar Remodelling with MNRF",
+          //   body: "Female, 29. Microneedling radiofrequency for mixed boxcar and rolling scar morphology. Collagen remodelling visible from Month 2, assessed at Month 4.",
+          //   tags: ["MNRF", "Boxcar Scars", "Rolling Scars"],
+          // },
+          // DRAFT (hidden) — original Fractional Q-YAG (Female, 27)
+          // {
+          //   afterNote: "Month 3",
+          //   ariaLabel: "Fractional Q-YAG acne scar pigmentation treatment before after Skin Trust Karur",
+          //   title: "Fractional Q-YAG",
+          //   body: "Female, 27. Fractional Q-switched Nd:YAG laser for post-acne hyperpigmentation and superficial scarring. Texture improvement and pigmentation clearance at Month 3.",
+          //   tags: ["Fractional Q-YAG", "Pigmentation", "Texture"],
+          // },
         ],
       },
+      // DRAFT (hidden) — previous tab structure kept for reference (now consolidated into single tab above)
+      // {
+      //   id: "carbon-pico",
+      //   label: "Carbon & Pico Toning",
+      //   cards: [{ afterNote: "Session 6", title: "Carbon & Pico Toning", body: "Male, 25. ..." }],
+      // },
+      // {
+      //   id: "mnrf-scar",
+      //   label: "Acne Scar Remodelling with MNRF",
+      //   cards: [{ afterNote: "Month 4", title: "Acne Scar Remodelling with MNRF", body: "Female, 29. ..." }],
+      // },
+      // {
+      //   id: "fractional-qyag",
+      //   label: "Fractional Q-YAG",
+      //   cards: [{ afterNote: "Month 3", title: "Fractional Q-YAG", body: "Female, 27. ..." }],
+      // },
     ],
     disclaimer:
       "Results vary by individual and depend on scar type, depth, skin type and treatment compliance. All photographs are of real Skin Trust patients, published with written consent. These are not a guarantee of outcome.",

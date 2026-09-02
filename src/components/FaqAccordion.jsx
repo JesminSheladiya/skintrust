@@ -7,8 +7,20 @@ export default function FaqAccordion({ items = [] }) {
     const el = itemRefs.current.get(index);
     if (!el) return;
     const q = el.querySelector(".faq-question");
-    const isOpen = el.classList.toggle("open");
-    q.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    const isOpening = !el.classList.contains("open");
+
+    // Close all other items first (one open at a time)
+    itemRefs.current.forEach((node, i) => {
+      if (i === index) return;
+      if (node.classList.contains("open")) {
+        node.classList.remove("open");
+        const otherQ = node.querySelector(".faq-question");
+        if (otherQ) otherQ.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    el.classList.toggle("open", isOpening);
+    q.setAttribute("aria-expanded", isOpening ? "true" : "false");
   };
 
   const setItemRef = (index) => (node) => {

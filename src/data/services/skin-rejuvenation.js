@@ -2,6 +2,7 @@ const waLink =
   "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20skin%20rejuvenation%20consultation%20at%20Skin%20Trust.";
 
 import { SITE_BASE, BASE } from "../site.js";
+import { getHeader, getFooter } from "../layout.js";
 
 export default {
   slug: "skin-rejuvenation-karur",
@@ -108,60 +109,8 @@ export default {
     ],
   },
   waLink,
-  header: {
-    topbarAddress: "Karur, Tamil Nadu — opp. Kamaatchi Amman Temple, Madavilagam",
-    topbarPhone: "+91 00000 00000",
-    topbarPhoneHref: "tel:+910000000000",
-    topbarHours: "Mon–Sat 10:00–20:00 · Sun by appointment",
-    navLinks: [
-      { label: "Hair", href: `${BASE}/services/hair-restoration` },
-      { label: "Laser Treatments", href: `${BASE}/services/laser-treatments-karur` },
-      { label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur` },
-      { label: "Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur`, active: true },
-      { label: "Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-    ],
-    ctaLabel: "Book appointment",
-    ctaHref: "#book",
-  },
-  footer: {
-    address:
-      "No. 30, Chairman Ramanujam Street,<br/>Madavilagam, Karur — 639001, Tamil Nadu.",
-    phone: "+91 00000 00000",
-    phoneHref: "tel:+910000000000",
-    columns: [
-      {
-        heading: "Rejuvenation & Glow",
-        links: [
-          { label: "HydraFacial", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Hydra Touch", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Laser Toning", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Chemical Peels", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Microdermabrasion & Microneedling", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "IV Glutathione Therapy", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Skin Boosters, PDRN & Exosomes", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Dr. Platon Cold Plasma", href: `${BASE}/services/skin-rejuvenation-karur` },
-        ],
-      },
-      {
-        heading: "Other Treatments",
-        links: [
-          { label: "Hair Restoration", href: `${BASE}/services/hair-restoration` },
-          { label: "Laser Treatments", href: `${BASE}/services/laser-treatments-karur` },
-          { label: "Anti-Ageing & Lifting", href: `${BASE}/services/anti-ageing-treatment-karur` },
-          { label: "Dermato Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-          { label: "All Treatments", href: `${BASE}/services/` },
-        ],
-      },
-      {
-        heading: "Clinic",
-        links: [
-          { label: "About Dr. Kavitha", href: `${BASE}/about` },
-          { label: "All Treatments", href: `${BASE}/services/` },
-          { label: "Home", href: `${BASE}/` },
-        ],
-      },
-    ],
-  },
+  header: getHeader(BASE),
+  footer: getFooter(BASE),
   hero: {
     eyebrow: "Skin Rejuvenation & Glow · Karur",
     h1: "Glow that holds up to <em>Tamil Nadu's sun and humidity.</em>",
@@ -170,6 +119,8 @@ export default {
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
     figureText: "Skin assessment<br>at Skin Trust<br>(3:4 portrait)",
+    image: `${BASE}/assets/images/treatments/treatment-banner/skin-rejuventation.png`,
+    imageAlt: "Skin Rejuvenation & Glow treatment banner at Skin Trust Karur",
     badge: {
       stars: "★★★★★",
       num: "4.9",
@@ -184,13 +135,14 @@ export default {
   ],
   results: {
     eyebrow: "Patient results",
-    h2: "Before &amp; after, by treatment",
+    h2: "Before & After, By Treatment",
     lede:
       "Real patient skin progress from three key treatments at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
+    // Tabs removed as requested (same as hair/anti-ageing/laser/dermato) — single consolidated tab with all 3 cards.
     tabs: [
       {
-        id: "hydrafacial",
-        label: "HydraFacial & Boosters",
+        id: "results",
+        label: "Results",
         cards: [
           {
             afterNote: "Session 4",
@@ -198,35 +150,51 @@ export default {
             title: "Dull, dehydrated skin",
             body: "Female, 32. Dull, dehydrated skin with uneven surface texture treated with combined HydraFacial and skin booster sessions. Even luminosity and hydration visible by session four.",
             tags: ["HydraFacial", "Skin Boosters", "Hydration"],
+            beforeSrc: `${BASE}/assets/images/skin-rejuvenation/results/dehydrated-skin-before.jpg`,
+            afterSrc: `${BASE}/assets/images/skin-rejuvenation/results/dehydrated-skin-after.jpg`,
+            beforeAlt: "Dull, dehydrated skin — Before",
+            afterAlt: "Dull, dehydrated skin — After",
           },
-        ],
-      },
-      {
-        id: "laser-toning",
-        label: "Laser Toning",
-        cards: [
-          {
-            afterNote: "Session 6",
-            ariaLabel: "Sun-induced pigmentation, laser toning, 6 sessions",
-            title: "Sun-induced pigmentation",
-            body: "Female, 35. Sun-induced pigmentation and uneven tone addressed with low-fluence Q-switched Nd:YAG laser toning. Visible brightening and tone correction by session six.",
-            tags: ["Laser Toning", "Pigmentation", "Tone"],
-          },
-        ],
-      },
-      {
-        id: "glutathione",
-        label: "IV Glutathione & PDRN",
-        cards: [
           {
             afterNote: "Month 2",
             ariaLabel: "General dullness, IV glutathione and PDRN, 2 months",
             title: "General dullness and early skin fatigue",
             body: "Male, 30. General dullness and early skin fatigue treated with a monitored IV glutathione course alongside PDRN skin boosters. Noticeable radiance and skin quality improvement at month two.",
             tags: ["IV Glutathione", "PDRN", "Radiance"],
+            beforeSrc: `${BASE}/assets/images/skin-rejuvenation/results/general-dullness-before.jpg`,
+            afterSrc: `${BASE}/assets/images/skin-rejuvenation/results/general-dullness-after.jpg`,
+            beforeAlt: "General dullness and early skin fatigue — Before",
+            afterAlt: "General dullness and early skin fatigue — After",
+          },
+          {
+            afterNote: "Session 6",
+            ariaLabel: "Sun-induced pigmentation, laser toning, 6 sessions",
+            title: "Sun-induced pigmentation",
+            body: "Female, 35. Sun-induced pigmentation and uneven tone addressed with low-fluence Q-switched Nd:YAG laser toning. Visible brightening and tone correction by session six.",
+            tags: ["Laser Toning", "Pigmentation", "Tone"],
+            beforeSrc: `${BASE}/assets/images/skin-rejuvenation/results/sun-induced-before.jpg`,
+            afterSrc: `${BASE}/assets/images/skin-rejuvenation/results/sun-induced-after.jpg`,
+            beforeAlt: "Sun-induced pigmentation — Before",
+            afterAlt: "Sun-induced pigmentation — After",
           },
         ],
       },
+      // DRAFT (hidden) — previous tab structure (now consolidated into single tab above)
+      // {
+      //   id: "hydrafacial",
+      //   label: "HydraFacial & Boosters",
+      //   cards: [{ afterNote: "Session 4", title: "Dull, dehydrated skin", body: "Female, 32..." }],
+      // },
+      // {
+      //   id: "laser-toning",
+      //   label: "Laser Toning",
+      //   cards: [{ afterNote: "Session 6", title: "Sun-induced pigmentation", body: "Female, 35..." }],
+      // },
+      // {
+      //   id: "glutathione",
+      //   label: "IV Glutathione & PDRN",
+      //   cards: [{ afterNote: "Month 2", title: "General dullness and early skin fatigue", body: "Male, 30..." }],
+      // },
     ],
     disclaimer:
       "Results vary by individual and depend on skin type, sun exposure, baseline condition and treatment compliance. All photographs are of real Skin Trust patients, published with written consent. These are not a guarantee of outcome.",

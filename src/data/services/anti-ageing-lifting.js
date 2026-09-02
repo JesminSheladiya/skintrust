@@ -2,6 +2,7 @@ const waLink =
   "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20an%20anti-ageing%20consultation%20at%20Skin%20Trust.";
 
 import { SITE_BASE, BASE } from "../site.js";
+import { getHeader, getFooter } from "../layout.js";
 
 export default {
   slug: "anti-ageing-treatment-karur",
@@ -141,63 +142,8 @@ export default {
     ],
   },
   waLink,
-  header: {
-    topbarAddress: "Karur, Tamil Nadu — opp. Kamaatchi Amman Temple, Madavilagam",
-    topbarPhone: "+91 00000 00000",
-    topbarPhoneHref: "tel:+910000000000",
-    topbarHours: "Mon–Sat 10:00–20:00 · Sun by appointment",
-    navLinks: [
-      { label: "Hair", href: `${BASE}/services/hair-restoration` },
-      { label: "Acne", href: `${BASE}/services/acne-treatment-karur` },
-      { label: "Laser Treatments", href: `${BASE}/services/laser-treatments-karur` },
-      { label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur`, active: true },
-      { label: "Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur` },
-      { label: "Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-    ],
-    ctaLabel: "Book appointment",
-    ctaHref: "#book",
-  },
-  footer: {
-    address:
-      "No. 30, Chairman Ramanujam Street,<br/>Madavilagam, Karur — 639001, Tamil Nadu.",
-    phone: "+91 00000 00000",
-    phoneHref: "tel:+910000000000",
-    columns: [
-      {
-        heading: "Anti-Ageing & Lifting",
-        links: [
-          { label: "Botox", href: `${BASE}/services/botox-karur` },
-          { label: "Dermal Fillers", href: `${BASE}/services/dermal-fillers-karur` },
-          { label: "Thread Lifts", href: `${BASE}/services/thread-lift-karur` },
-          { label: "HIFU", href: `${BASE}/services/hifu-karur` },
-          { label: "Apollo Quattro", href: `${BASE}/services/apollo-quattro-karur` },
-          { label: "MNRF Tightening", href: `${BASE}/services/mnrf-tightening-karur` },
-          { label: "PDRN Therapy", href: `${BASE}/services/pdrn-therapy-karur` },
-          { label: "Skin Boosters", href: `${BASE}/services/skin-boosters-karur` },
-          { label: "Under-Eye Rejuvenation", href: `${BASE}/services/under-eye-treatment-karur` },
-        ],
-      },
-      {
-        heading: "Other Treatments",
-        links: [
-          { label: "Acne & Scar Correction", href: `${BASE}/services/acne-treatment-karur` },
-          { label: "Hair Restoration", href: `${BASE}/services/hair-restoration` },
-          { label: "Skin Rejuvenation & Glow", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Skin Tightening", href: `${BASE}/services/skin-tightening-karur` },
-          { label: "Dermato Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-        ],
-      },
-      {
-        heading: "Clinic",
-        links: [
-          { label: "About Dr. Kavitha", href: `${BASE}/about` },
-          { label: "Patient Reviews", href: `${BASE}/reviews` },
-          { label: "Blog", href: `${BASE}/blog` },
-          { label: "Contact & Location", href: `${BASE}/contact` },
-        ],
-      },
-    ],
-  },
+  header: getHeader(BASE),
+  footer: getFooter(BASE),
   hero: {
     eyebrow: "Anti-Ageing & Lifting · Karur",
     h1: "Look rested, <em>not visibly treated.</em>",
@@ -206,6 +152,8 @@ export default {
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
     figureText: "Facial assessment<br>at Skin Trust<br>(3:4 portrait)",
+    image: `${BASE}/assets/images/treatments/treatment-banner/anti-ageing-treatment-karur.png`,
+    imageAlt: "Anti-Ageing & Lifting treatment banner at Skin Trust Karur",
     badge: {
       stars: "★★★★★",
       num: "4.9",
@@ -220,49 +168,74 @@ export default {
   ],
   results: {
     eyebrow: "Patient results",
-    h2: "Before &amp; after, by treatment",
+    h2: "Before & After, By Treatment",
     lede:
-      "Real patient results from three key treatments at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
+      "Real patient skin progress from two key treatments at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
+    // Tabs removed as requested (same as hair-restoration) — single consolidated tab with only 3 image-updated cards. Content as provided (RF card as given), only beforeSrc/afterSrc added.
     tabs: [
       {
-        id: "botox",
-        label: "Botox (Wrinkle Relaxation)",
-        cards: [
-          {
-            afterNote: "Week 2",
-            ariaLabel: "Dynamic forehead lines and crow's feet, Botox, 2 weeks",
-            title: "Dynamic lines softened",
-            body: "Female, 38. Dynamic forehead lines and crow's feet softened with conservative-dose botulinum toxin. Natural expression preserved, with visible smoothing by week two.",
-            tags: ["Botox", "Wrinkle Relaxation", "Natural Movement"],
-          },
-        ],
-      },
-      {
-        id: "thread-lift-hifu",
-        label: "Thread Lift & HIFU",
+        id: "results",
+        label: "Results",
         cards: [
           {
             afterNote: "Month 2",
             ariaLabel: "Early jawline laxity, thread lift and HIFU, 2 months",
             title: "Early jawline laxity",
-            body: "Female, 44. Early jawline laxity and mid-face volume loss addressed with a non-surgical thread lift and focused ultrasound lifting. Visible contour lift by month two.",
+            body: "Male, 44. Early jawline laxity and mid-face volume loss addressed with a non-surgical thread lift and focused ultrasound lifting. Visible contour lift by month two.",
             tags: ["Thread Lift", "HIFU", "Jawline Contour"],
+            beforeSrc: `${BASE}/assets/images/anti-ageing-lifting/results/early-jawline-laxity-before.jpg`,
+            afterSrc: `${BASE}/assets/images/anti-ageing-lifting/results/early-jawline-laxity-after.jpg`,
+            beforeAlt: "Early jawline laxity — Before — Rajasekar N., 52 (Virtue Aesthetic Clinic, Anti-Aging)",
+            afterAlt: "Early jawline laxity — After — Rajasekar N., 52 (Virtue Aesthetic Clinic, Anti-Aging)",
           },
-        ],
-      },
-      {
-        id: "mnrf-pdrn",
-        label: "MNRF Tightening & PDRN",
-        cards: [
           {
             afterNote: "Month 3",
             ariaLabel: "Skin laxity and textural ageing, MNRF tightening and PDRN therapy, 3 months",
             title: "Skin laxity and textural ageing",
-            body: "Male, 47. Skin laxity and textural ageing improved with microneedling radiofrequency tightening combined with PDRN regenerative therapy. Firmer, more even skin quality by month three.",
+            body: "Female, 47. Skin laxity and textural ageing improved with microneedling radiofrequency tightening combined with PDRN regenerative therapy. Firmer, more even skin quality by month three.",
             tags: ["MNRF Tightening", "PDRN Therapy", "Skin Quality"],
+            beforeSrc: `${BASE}/assets/images/anti-ageing-lifting/results/skin-laxity-textural-ageing-before.jpg`,
+            afterSrc: `${BASE}/assets/images/anti-ageing-lifting/results/skin-laxity-textural-ageing-after.jpg`,
+            beforeAlt: "Skin laxity and textural ageing — Before — Chitra P., 48 (Virtue Aesthetic Clinic, HIFU RF MNRF)",
+            afterAlt: "Skin laxity and textural ageing — After — Chitra P., 48 (Virtue Aesthetic Clinic, HIFU RF MNRF)",
           },
+          {
+            afterNote: "4 Sessions",
+            ariaLabel: "RF Skin Tightening Face Neck Umamaheswari T 46 before after",
+            title: "RF Skin Tightening",
+            body: "Female, 46. Moderate skin laxity across the cheeks and neck improved after four RF skin-tightening sessions. Firmer skin and better jawline definition achieved while maintaining a natural appearance.",
+            tags: ["RF Skin Tightening", "Face + Neck"],
+            beforeSrc: `${BASE}/assets/images/anti-ageing-lifting/results/rf-skin-tightening-before.jpg`,
+            afterSrc: `${BASE}/assets/images/anti-ageing-lifting/results/rf-skin-tightening-after.jpg`,
+            beforeAlt: "RF Skin Tightening — Before — Umamaheswari T., 46 (Virtue Aesthetic Clinic, Skin Tightening)",
+            afterAlt: "RF Skin Tightening — After — Umamaheswari T., 46 (Virtue Aesthetic Clinic, Skin Tightening)",
+          },
+          // DRAFT (hidden) — Botox (no offline image, skipped as per tabs-removed rule)
+          // {
+          //   afterNote: "Week 2",
+          //   ariaLabel: "Dynamic forehead lines and crow's feet, Botox, 2 weeks",
+          //   title: "Dynamic lines softened",
+          //   body: "Female, 38. Dynamic forehead lines and crow's feet softened with conservative-dose botulinum toxin. Natural expression preserved, with visible smoothing by week two.",
+          //   tags: ["Botox", "Wrinkle Relaxation", "Natural Movement"],
+          // },
         ],
       },
+      // DRAFT (hidden) — previous tab structure (now consolidated into single tab above)
+      // {
+      //   id: "botox",
+      //   label: "Botox (Wrinkle Relaxation)",
+      //   cards: [{ afterNote: "Week 2", title: "Dynamic lines softened", body: "Female, 38..." }],
+      // },
+      // {
+      //   id: "thread-lift-hifu",
+      //   label: "Thread Lift & HIFU",
+      //   cards: [{ afterNote: "Month 2", title: "Early jawline laxity", body: "Female, 44..." }],
+      // },
+      // {
+      //   id: "mnrf-pdrn",
+      //   label: "MNRF Tightening & PDRN",
+      //   cards: [{ afterNote: "Month 3", title: "Skin laxity and textural ageing", body: "Male, 47..." }],
+      // },
     ],
     disclaimer:
       "Results vary by individual and depend on skin type, baseline laxity, volume loss and treatment compliance. All photographs are of real Skin Trust patients, published with written consent. These are not a guarantee of outcome.",

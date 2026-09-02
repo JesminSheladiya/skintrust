@@ -129,7 +129,7 @@ p {
 .lede {
   font-size: 1.1rem;
   color: var(--muted);
-  max-width: 60ch
+  max-width: 660px
 }
 
 /* ---------- buttons ---------- */
@@ -298,6 +298,21 @@ p {
   border-color: var(--champagne)
 }
 
+.nav-links a.active {
+  border-color: var(--champagne);
+  color: var(--forest);
+}
+
+.nav-links a.active .dropdown-icon {
+  color: var(--forest);
+}
+
+.drop a.active {
+  background: var(--forest-deep);
+  color: var(--ivory);
+  font-weight: 500;
+}
+
 .nav .btn {
   padding: 13px 24px
 }
@@ -305,12 +320,12 @@ p {
 /* dropdown */
 .drop {
   position: absolute;
-  top: calc(100% + 18px);
-  left: -24px;
-  min-width: 250px;
+  top: calc(100% + 28px);
+  left: -16px;
+  min-width: 280px;
   background: var(--ivory);
   border: 1px solid var(--line);
-  border-top: 2px solid var(--champagne);
+  border-top: 0;
   padding: 14px 0;
   box-shadow: 0 24px 54px rgba(23, 45, 43, .16);
   opacity: 0;
@@ -322,8 +337,37 @@ p {
   font-size: .85rem
 }
 
-.nav-links li:hover .drop,
-.nav-links li:focus-within .drop {
+/* Invisible bridge to prevent hover gap between link and dropdown */
+.drop::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -28px;
+  height: 28px;
+  background: transparent;
+  display: none;
+}
+
+@media (min-width: 1041px) and (hover: hover) and (pointer: fine) {
+  .drop::before {
+    display: block;
+  }
+}
+
+/* Desktop hover only – tablet/mobile uses click (is-open) handled in Header.astro */
+@media (min-width: 1041px) and (hover: hover) and (pointer: fine) {
+
+  .nav-links li:hover .drop,
+  .nav-links li:focus-within .drop {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0)
+  }
+}
+
+/* Tablet/mobile click */
+.nav-links li.is-open .drop {
   opacity: 1;
   visibility: visible;
   transform: translateY(0)
@@ -333,12 +377,13 @@ p {
   display: block;
   padding: 9px 24px;
   border: 0;
-  color: var(--forest)
+  color: var(--forest);
+  transition: all .3s;
 }
 
 .drop a:hover {
-  background: var(--ivory-warm);
-  color: var(--forest-deep)
+  background: var(--forest-deep);
+  color: var(--ivory);
 }
 
 .nav-links ul {
@@ -351,9 +396,17 @@ p {
 
 @media(max-width:1040px) {
 
-  .nav-links,
   .topbar .t-right {
     display: none
+  }
+
+  /* nav-links becomes a drawer – hidden until hamburger opens it */
+  .nav-links {
+    display: none
+  }
+
+  .nav-links.open {
+    display: flex
   }
 }
 
@@ -649,7 +702,7 @@ p {
 }
 
 .sec-head {
-  max-width: 64ch;
+  max-width: 700px;
   margin-bottom: clamp(36px, 4vw, 56px)
 }
 
@@ -790,6 +843,20 @@ p {
   letter-spacing: .24em;
   text-transform: uppercase;
   padding: 16px
+}
+
+.cat-top img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .45s ease
+}
+
+.cat:hover .cat-top img {
+  transform: scale(1.07)
 }
 
 .cat-icon {
@@ -1088,7 +1155,7 @@ p {
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
+  gap: 2px;
   background: rgba(224, 203, 166, .22);
   border: 1px solid rgba(224, 203, 166, .22)
 }
@@ -1149,7 +1216,8 @@ p {
 
 .ba-card {
   background: var(--ivory);
-  border: 1px solid rgba(224, 203, 166, .28)
+  border: 1px solid rgba(224, 203, 166, .28);
+  border-radius: 200px 200px 0 0;
 }
 
 .sec-dark .ba-card {
@@ -1171,11 +1239,13 @@ p {
   display: grid;
   place-content: center;
   gap: 6px;
-  text-align: center
+  text-align: center;
+  z-index: -1;
 }
 
 .ba-after {
-  background: linear-gradient(150deg, var(--champagne-light), var(--champagne))
+  background: linear-gradient(150deg, var(--champagne-light), var(--champagne));
+
 }
 
 .ba-before {
@@ -1194,6 +1264,11 @@ p {
   font-size: .62rem;
   letter-spacing: .1em;
   color: rgba(247, 243, 236, .4)
+}
+
+.ba-after .lbl,
+.ba-after .note {
+  color: var(--forest-deep);
 }
 
 .ba-line {
@@ -1223,6 +1298,29 @@ p {
   color: var(--forest);
   pointer-events: none;
   box-shadow: 0 4px 18px rgba(0, 0, 0, .28)
+}
+
+/* Before/After labels */
+.ba-label {
+  position: absolute;
+  bottom: 10px;
+  z-index: 9;
+  padding: 0 8px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .28)
+}
+
+.ba-label-before {
+  left: 10px;
+  background: var(--champagne);
+  color: var(--forest-deep);
+}
+
+.ba-label-after {
+  right: 10px;
+  background: var(--forest-mid);
+  color: var(--ivory);
 }
 
 .ba-range {
@@ -1347,7 +1445,8 @@ p {
   padding: 15px 0 15px 34px;
   border-bottom: 1px solid var(--line);
   position: relative;
-  font-size: .95rem
+  font-size: .95rem;
+  font-weight: 400;
 }
 
 .ticks li::before {
@@ -1381,7 +1480,8 @@ p {
 
 .panel dt {
   color: var(--champagne-light);
-  letter-spacing: .06em
+  letter-spacing: .06em;
+  font-weight: 400;
 }
 
 .panel dd {
@@ -1664,6 +1764,7 @@ p {
 
 .visit-info dt {
   font-size: .66rem;
+  font-weight: 500;
   letter-spacing: .2em;
   text-transform: uppercase;
   color: var(--champagne);

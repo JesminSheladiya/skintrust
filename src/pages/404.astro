@@ -1,65 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { BASE } from "../data/site.js";
+import { getHeader, getFooter } from "../data/layout.js";
 
 const base = import.meta.env.BASE_URL;
 
 const waLink =
   "https://wa.me/919092232991?text=Hi%2C%20I%27d%20like%20help%20finding%20a%20page%20on%20the%20Skin%20Trust%20website.";
 
-const header = {
-  topbarAddress:
-    "No. 28, Chairman Ramanujan Street, Karur — opp. Kamaatchi Amman Temple",
-  topbarPhone: "+91 96269 23299",
-  topbarPhoneHref: "tel:+919626923299",
-  topbarHours: "Mon–Sat 9:30 AM–7:30 PM",
-  navLinks: [
-    { label: "Home", href: base },
-    { label: "Services", href: `${base}services/` },
-    { label: "About", href: `${base}about` },
-  ],
-  ctaLabel: "Book appointment",
-  ctaHref: "#book",
-};
-
-const footer = {
-  address: "No. 28, Chairman Ramanujan Street, Karur — 639001, Tamil Nadu.",
-  phone: "+91 96269 23299",
-  phoneHref: "tel:+919626923299",
-  whatsapp: "WhatsApp: +91 90922 32991",
-  whatsappHref: "https://wa.me/919092232991",
-  columns: [
-    {
-      heading: "Treatments",
-      links: [
-        { label: "Hair Restoration", href: `${base}services/hair-restoration` },
-        {
-          label: "Laser Treatments",
-          href: `${base}services/laser-treatments-karur`,
-        },
-        {
-          label: "Anti-Ageing & Lifting",
-          href: `${base}services/anti-ageing-treatment-karur`,
-        },
-        {
-          label: "Skin Rejuvenation & Glow",
-          href: `${base}services/skin-rejuvenation-karur`,
-        },
-        {
-          label: "Dermato Surgery",
-          href: `${base}services/dermato-surgery-karur`,
-        },
-      ],
-    },
-    {
-      heading: "Clinic",
-      links: [
-        { label: "About Dr. Kavitha", href: `${base}about` },
-        { label: "All Treatments", href: `${base}services/` },
-        { label: "Home", href: base },
-      ],
-    },
-  ],
-};
+const header = getHeader(BASE);
+const footer = getFooter(BASE);
 
 const serviceLinks = [
   { label: "Hair Restoration", href: `${base}services/hair-restoration` },

@@ -23,3 +23,36 @@
   color: var(--champagne);
   font-weight: 500;
 }
+
+.her-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 70px);
+  align-items: center;
+
+}
+
+@media (max-width: 991px) {
+  .her-story {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- about page: video placeholder ---------- */
+.video-ph {
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(150deg, var(--forest-mid), var(--forest-deep));
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--champagne);
+  font-size: .8rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+/* ---------- about page: chapter head (full width) ---------- */
+.her-story-head {
+  margin-bottom: clamp(24px, 4vw, 40px);
+}

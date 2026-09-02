@@ -2,6 +2,7 @@ const waLink =
   "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20laser%20treatment%20consultation%20at%20Skin%20Trust.";
 
 import { SITE_BASE, BASE } from "../site.js";
+import { getHeader, getFooter } from "../layout.js";
 
 export default {
   slug: "laser-treatments-karur",
@@ -137,57 +138,8 @@ export default {
     ],
   },
   waLink,
-  header: {
-    topbarAddress: "Karur, Tamil Nadu — opp. Kamaatchi Amman Temple, Madavilagam",
-    topbarPhone: "+91 00000 00000",
-    topbarPhoneHref: "tel:+910000000000",
-    topbarHours: "Mon–Sat 10:00–20:00 · Sun by appointment",
-    navLinks: [
-      { label: "Hair", href: `${BASE}/services/hair-restoration` },
-      { label: "Laser Treatments", href: `${BASE}/services/laser-treatments-karur`, active: true },
-      { label: "Anti-Ageing", href: `${BASE}/services/anti-ageing-treatment-karur` },
-      { label: "Rejuvenation", href: `${BASE}/services/skin-rejuvenation-karur` },
-      { label: "Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-    ],
-    ctaLabel: "Book appointment",
-    ctaHref: "#book",
-  },
-  footer: {
-    address:
-      "No. 30, Chairman Ramanujam Street,<br/>Madavilagam, Karur — 639001, Tamil Nadu.",
-    phone: "+91 00000 00000",
-    phoneHref: "tel:+910000000000",
-    columns: [
-      {
-        heading: "Laser Treatments",
-        links: [
-          { label: "Laser Hair Removal", href: `${BASE}/services/laser-treatments-karur` },
-          { label: "Laser Toning for Pigmentation", href: `${BASE}/services/laser-treatments-karur` },
-          { label: "Carbon Laser Peel", href: `${BASE}/services/laser-treatments-karur` },
-          { label: "Tattoo Removal", href: `${BASE}/services/laser-treatments-karur` },
-          { label: "Fractional CO2 Resurfacing", href: `${BASE}/services/laser-treatments-karur` },
-        ],
-      },
-      {
-        heading: "Other Treatments",
-        links: [
-          { label: "Hair Restoration", href: `${BASE}/services/hair-restoration` },
-          { label: "Anti-Ageing & Lifting", href: `${BASE}/services/anti-ageing-treatment-karur` },
-          { label: "Skin Rejuvenation & Glow", href: `${BASE}/services/skin-rejuvenation-karur` },
-          { label: "Dermato Surgery", href: `${BASE}/services/dermato-surgery-karur` },
-          { label: "All Treatments", href: `${BASE}/services/` },
-        ],
-      },
-      {
-        heading: "Clinic",
-        links: [
-          { label: "About Dr. Kavitha", href: `${BASE}/about` },
-          { label: "All Treatments", href: `${BASE}/services/` },
-          { label: "Home", href: `${BASE}/` },
-        ],
-      },
-    ],
-  },
+  header: getHeader(BASE),
+  footer: getFooter(BASE),
   hero: {
     eyebrow: "Laser Treatments · Karur",
     h1: "Laser treatment, <em>calibrated to your skin.</em>",
@@ -196,6 +148,8 @@ export default {
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
     figureText: "Laser session<br>at Skin Trust<br>(3:4 portrait)",
+    image: `${BASE}/assets/images/treatments/treatment-banner/laser-treatment.png`,
+    imageAlt: "Laser Treatments banner at Skin Trust Karur",
     badge: {
       stars: "★★★★★",
       num: "4.9",
@@ -210,49 +164,64 @@ export default {
   ],
   results: {
     eyebrow: "Patient results",
-    h2: "Before &amp; after, by treatment",
+    h2: "Before & After, By Treatment",
     lede:
       "Real patient results from three key laser treatments at Skin Trust. All images published with written patient consent, photographed under identical clinic lighting.",
+    // Tabs removed as requested (same as hair/anti-ageing) — single consolidated tab with only 3 image-updated cards. Content unchanged, only beforeSrc/afterSrc added.
     tabs: [
       {
-        id: "laser-toning",
-        label: "Laser Toning for Pigmentation",
-        cards: [
-          {
-            afterNote: "Session 6",
-            ariaLabel: "Sun-induced pigmentation and uneven tone, laser toning, 6 sessions",
-            title: "Sun-induced pigmentation",
-            body: "Female, 33. Sun-induced pigmentation and uneven tone addressed with low-fluence Q-switched toning, calibrated to skin type. Visible brightening and tone correction by session six.",
-            tags: ["Laser Toning", "Pigmentation", "Tone"],
-          },
-        ],
-      },
-      {
-        id: "fractional-co2",
-        label: "Fractional CO2 Resurfacing",
+        id: "results",
+        label: "Results",
         cards: [
           {
             afterNote: "Month 3",
             ariaLabel: "Textural scarring and surface irregularities, fractional CO2 resurfacing, 3 months",
             title: "Textural scarring",
-            body: "Male, 41. Textural scarring and surface irregularities improved with fractional ablative CO2 resurfacing. Smoother texture and refined pores visible at month three.",
+            body: "Female, 35. Textural scarring and surface irregularities improved with fractional ablative CO2 resurfacing. Smoother texture and refined pores visible at month three.",
             tags: ["Fractional CO2", "Resurfacing", "Texture"],
+            beforeSrc: `${BASE}/assets/images/laser-treatments/results/textural-scarring-before.jpg`,
+            afterSrc: `${BASE}/assets/images/laser-treatments/results/textural-scarring-after.jpg`,
+            beforeAlt: "Textural scarring — Before — Meenakshi R., 29 (Virtue Aesthetic Clinic, CO2 Laser)",
+            afterAlt: "Textural scarring — After — Meenakshi R., 29 (Virtue Aesthetic Clinic, CO2 Laser)",
           },
-        ],
-      },
-      {
-        id: "tattoo-removal",
-        label: "Tattoo Removal (Q-Switched Nd:YAG)",
-        cards: [
+          {
+            afterNote: "6 Sessions",
+            ariaLabel: "Smoother hair-free skin laser hair reduction Shalini D 26 before after",
+            title: "Smoother, hair-free skin",
+            body: "Female, 26. Dense hair growth on the arms and underarms treated with six laser hair reduction sessions. Significant reduction in regrowth, with smoother, brighter-looking skin and reduced darkening caused by frequent waxing.",
+            tags: ["Laser Hair Reduction", "Full Arms + Underarms"],
+            beforeSrc: `${BASE}/assets/images/laser-treatments/results/smoother-hair-free-skin-before.jpg`,
+            afterSrc: `${BASE}/assets/images/laser-treatments/results/smoother-hair-free-skin-after.jpg`,
+            beforeAlt: "Smoother, hair-free skin — Before — Shalini D., 26 (Virtue Aesthetic Clinic, Laser Hair Removal)",
+            afterAlt: "Smoother, hair-free skin — After — Shalini D., 26 (Virtue Aesthetic Clinic, Laser Hair Removal)",
+          },
           {
             afterNote: "Planned series",
             ariaLabel: "Small decorative tattoo, Q-switched Nd:YAG removal, planned series",
             title: "Decorative tattoo clearance",
             body: "Female, 29. A small decorative tattoo progressively cleared over a planned series of Q-switched Nd:YAG sessions, with settings adjusted for ink colour and skin tone at each visit.",
             tags: ["Tattoo Removal", "Q-Switched Nd:YAG", "Ink Clearance"],
+            beforeSrc: `${BASE}/assets/images/laser-treatments/results/decorative-tattoo-clearance-before.jpg`,
+            afterSrc: `${BASE}/assets/images/laser-treatments/results/decorative-tattoo-clearance-after.jpg`,
+            beforeAlt: "Decorative tattoo clearance — Before — Priya M., 32 (Virtue Aesthetic Clinic, Laser Tattoo Removal)",
+            afterAlt: "Decorative tattoo clearance — After — Priya M., 32 (Virtue Aesthetic Clinic, Laser Tattoo Removal)",
           },
         ],
       },
+      // DRAFT (hidden) — Laser Toning for Pigmentation (no offline image, skipped as per tabs-removed + 3-updated-cards-only rule)
+      // {
+      //   id: "laser-toning",
+      //   label: "Laser Toning for Pigmentation",
+      //   cards: [
+      //     {
+      //       afterNote: "Session 6",
+      //       ariaLabel: "Sun-induced pigmentation and uneven tone, laser toning, 6 sessions",
+      //       title: "Sun-induced pigmentation",
+      //       body: "Female, 33. Sun-induced pigmentation and uneven tone addressed with low-fluence Q-switched toning, calibrated to skin type. Visible brightening and tone correction by session six.",
+      //       tags: ["Laser Toning", "Pigmentation", "Tone"],
+      //     },
+      //   ],
+      // },
     ],
     disclaimer:
       "Results vary by individual and depend on skin type, treatment area, ink or pigment depth and treatment compliance. All photographs are of real Skin Trust patients, published with written consent. These are not a guarantee of outcome.",

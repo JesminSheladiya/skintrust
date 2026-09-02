@@ -1,6 +1,8 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { getHeader, getFooter } from "../data/layout.js";
+import { BASE } from "../data/site.js";
 
 interface Props {
   title: string;
@@ -10,8 +12,8 @@ interface Props {
   ogTitle?: string;
   ogDescription?: string;
   ogUrl?: string;
-  header: Parameters<typeof Header>[0];
-  footer: Parameters<typeof Footer>[0];
+  header?: Parameters<typeof Header>[0];
+  footer?: Parameters<typeof Footer>[0];
   waFloatHref: string;
   waFloatLabel: string;
   mobileCallHref: string;
@@ -39,12 +41,24 @@ const {
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL;
+// Unified header/footer — always use home page's header/footer so every page is identical.
+// If a page passes custom header/footer (legacy), it is ignored to keep things unified.
+// Highlight active page based on current URL
+const currentPath = Astro.url.pathname;
+const unifiedHeader = getHeader(BASE, currentPath);
+const unifiedFooter = getFooter(BASE);
+const resolvedHeader = unifiedHeader;
+const resolvedFooter = unifiedFooter;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <link rel="icon" type="image/png" href={`${base}assets/images/logo-color.png`} />
+    <link
+      rel="icon"
+      type="image/png"
+      href={`${base}assets/images/logo-color.png`}
+    />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
@@ -57,7 +71,10 @@ const base = import.meta.env.BASE_URL;
     <meta name="geo.position" content="10.961598;78.0767411" />
     <meta name="ICBM" content="10.961598, 78.0767411" />
     <meta property="og:title" content={ogTitle || title} />
-    <meta property="og:description" content={ogDescription || description || ""} />
+    <meta
+      property="og:description"
+      content={ogDescription || description || ""}
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={ogUrl || canonical || base} />
     <meta property="og:locale" content="en_IN" />
@@ -69,17 +86,17 @@ const base = import.meta.env.BASE_URL;
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href={`${base}assets/css/style.css?v=20260820`} />
+    <link rel="stylesheet" href={`${base}assets/css/style.css?012`} />
     <slot name="head" />
   </head>
   <body>
-    <Header {...header} />
+    <Header {...resolvedHeader} />
 
     <main>
       <slot />
     </main>
 
-    <Footer {...footer} />
+    <Footer {...resolvedFooter} />
 
     <a
       class="wa-float"

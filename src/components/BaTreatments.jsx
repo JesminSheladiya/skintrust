@@ -18,6 +18,10 @@ export default function BaTreatments({ tabs = [] }) {
                 title={card.title}
                 body={card.body}
                 tags={card.tags}
+                beforeSrc={card.beforeSrc}
+                afterSrc={card.afterSrc}
+                beforeAlt={card.beforeAlt}
+                afterAlt={card.afterAlt}
               />
             ))}
           </div>

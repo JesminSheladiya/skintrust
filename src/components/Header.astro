@@ -1,8 +1,15 @@
 ---
+interface DropdownLink {
+  label: string;
+  href: string;
+  active?: boolean;
+}
+
 interface NavLink {
   label: string;
   href: string;
   active?: boolean;
+  dropdown?: DropdownLink[];
 }
 
 interface Props {
@@ -47,17 +54,366 @@ const base = import.meta.env.BASE_URL;
         style="max-height: 44px; width: auto; height: auto; object-fit: contain;"
       />
     </a>
-    <nav class="nav-links" aria-label="Primary">
+
+    <nav class="nav-links" id="primary-nav" aria-label="Primary">
       <ul>
-        {navLinks.map((link) => (
-          <li>
-            <a href={link.href} class:list={[link.active && "active"]}>
-              {link.label}
-            </a>
-          </li>
-        ))}
+        {
+          navLinks.map((link) => (
+            link.dropdown && link.dropdown.length > 0 ? (
+              <li class="has-dropdown" data-dropdown>
+                {link.href ? (
+                  <a
+                    href={link.href}
+                    class:list={[link.active && "active", "dropdown-toggle"]}
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-current={link.active ? "page" : undefined}
+                  >
+                    {link.label}
+                    <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    class:list={[link.active && "active", "dropdown-toggle"]}
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-current={link.active ? "page" : undefined}
+                  >
+                    {link.label}
+                    <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                  </button>
+                )}
+                <div class="drop" role="menu">
+                  {link.dropdown.map((item) => (
+                    <a
+                      href={item.href}
+                      role="menuitem"
+                      class:list={[item.active && "active"]}
+                      aria-current={item.active ? "page" : undefined}
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </li>
+            ) : (
+              <li>
+                <a
+                  href={link.href}
+                  class:list={[link.active && "active"]}
+                  aria-current={link.active ? "page" : undefined}
+                >
+                  {link.label}
+                </a>
+              </li>
+            )
+          ))
+        }
       </ul>
     </nav>
-    <a class="btn btn-solid" href={ctaHref}>{ctaLabel}</a>
+
+    <a class="btn btn-solid nav-cta" href={ctaHref}>{ctaLabel}</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </header>
+
+<script>
+  const nav = document.getElementById('primary-nav');
+  const hamburger = document.getElementById('hamburger');
+  const dropdownItems = document.querySelectorAll('[data-dropdown]');
+
+  const isMobile = () => window.matchMedia('(max-width: 1040px)').matches;
+  const isDesktopHover = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches && !isMobile();
+
+  // Hamburger toggle (tablet/mobile)
+  if (hamburger && nav) {
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open', !expanded);
+      document.body.classList.toggle('nav-open', !expanded);
+    });
+
+    // Close nav when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!isMobile()) return;
+      const target = e.target;
+      if (!(target instanceof Element)) return;
+      if (!nav.contains(target) && !hamburger.contains(target) && nav.classList.contains('open')) {
+        hamburger.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('open');
+        document.body.classList.remove('nav-open');
+        // also close dropdowns
+        dropdownItems.forEach((li) => {
+          li.classList.remove('is-open');
+          const toggle = li.querySelector('.dropdown-toggle');
+          if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+
+    // Close on resize to desktop
+    window.addEventListener('resize', () => {
+      if (!isMobile() && nav.classList.contains('open')) {
+        hamburger.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('open');
+        document.body.classList.remove('nav-open');
+      }
+    });
+  }
+
+  // Dropdown: hover on desktop, click on tablet/mobile
+  dropdownItems.forEach((li) => {
+    const toggle = li.querySelector('.dropdown-toggle');
+    const drop = li.querySelector('.drop');
+    if (!toggle || !drop) return;
+
+    // Click handler – only active on tablet/mobile
+    toggle.addEventListener('click', (e) => {
+      if (!isMobile()) {
+        // desktop: allow normal navigation to parent href
+        return;
+      }
+      e.preventDefault();
+      const isOpen = li.classList.contains('is-open');
+
+      // close other dropdowns
+      dropdownItems.forEach((other) => {
+        if (other !== li) {
+          other.classList.remove('is-open');
+          const ot = other.querySelector('.dropdown-toggle');
+          if (ot) ot.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      li.classList.toggle('is-open', !isOpen);
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Desktop hover handled via CSS; also add keyboard support
+    toggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        li.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        if (toggle instanceof HTMLElement) toggle.focus();
+      }
+    });
+  });
+
+  // Close dropdowns when clicking outside (mobile + desktop focus loss)
+  document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (!(target instanceof Element)) return;
+    dropdownItems.forEach((li) => {
+      if (!li.contains(target)) {
+        // On desktop we keep hover behavior, so only close is-open (mobile) state
+        if (li.classList.contains('is-open')) {
+          li.classList.remove('is-open');
+          const toggle = li.querySelector('.dropdown-toggle');
+          if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+  });
+
+  // Close dropdowns on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      dropdownItems.forEach((li) => {
+        li.classList.remove('is-open');
+        const toggle = li.querySelector('.dropdown-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      });
+      if (isMobile() && nav && hamburger && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
+        hamburger.focus();
+      }
+    }
+  });
+</script>
+
+<style>
+  /* Dropdown arrow icon */
+  .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  /* Dropdown-only toggle (no href) styled like the nav links */
+  .nav-links button.dropdown-toggle {
+    padding: 0 0 3px;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    cursor: pointer;
+  }
+  .nav-links button.dropdown-toggle:hover,
+  .nav-links button.dropdown-toggle.active {
+    border-color: var(--champagne);
+  }
+  .dropdown-icon {
+    flex: none;
+    transition: transform 0.25s;
+    opacity: 0.9;
+  }
+  .has-dropdown.is-open .dropdown-icon {
+    transform: rotate(180deg);
+  }
+
+  /* Hamburger – hidden on desktop */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    padding: 6px 2px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--forest);
+    transition: transform 0.25s, opacity 0.25s;
+  }
+  .hamburger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Ensure dropdown is positioned correctly */
+  .has-dropdown {
+    position: relative;
+  }
+
+  /* Desktop hover – only on hover-capable devices and wide screens */
+  @media (min-width: 1041px) and (hover: hover) and (pointer: fine) {
+    /* Keep header content vertically centered, but make dropdown flush under header */
+    .has-dropdown:hover .drop,
+    .has-dropdown:focus-within .drop {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .has-dropdown:hover .dropdown-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  /* Mobile/tablet click – show when is-open */
+  .has-dropdown.is-open .drop {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Hamburger visibility + mobile drawer – compact spacing for tablet/mobile */
+  @media (max-width: 1040px) {
+    .hamburger {
+      display: flex;
+    }
+    .nav .shell {
+      position: relative;
+    }
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(247, 243, 236, 0.98);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 8px var(--gutter) 10px;
+      display: none !important;
+      flex-direction: column;
+      gap: 0;
+      box-shadow: 0 18px 40px rgba(23, 45, 43, 0.12);
+      z-index: 59;
+    }
+    .nav-links.open {
+      display: flex !important;
+    }
+    .nav-links ul {
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
+    .nav-links li {
+      width: 100%;
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-links li:last-child {
+      border-bottom: 0;
+    }
+    .nav-links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border: 0;
+      width: 100%;
+      line-height: 1.35;
+    }
+    .nav-links button.dropdown-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border: 0;
+      width: 100%;
+      line-height: 1.35;
+    }
+    .has-dropdown .drop {
+      position: static;
+      min-width: unset;
+      background: var(--ivory-warm);
+      border: 0;
+      border-top: 1px solid var(--line);
+      padding: 0;
+      box-shadow: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.2s, max-height 0.28s, padding 0.2s, visibility 0.2s;
+    }
+    .has-dropdown.is-open .drop {
+      opacity: 1;
+      visibility: visible;
+      max-height: 500px;
+      padding: 6px 0;
+      transform: none;
+    }
+    .drop a {
+      padding: 7px 12px;
+      font-size: 0.84rem;
+      line-height: 1.4;
+    }
+    .nav-cta {
+      display: none;
+    }
+  }
+
+  /* Keep topbar behavior on mobile – already hides t-right, keep as is */
+</style>
