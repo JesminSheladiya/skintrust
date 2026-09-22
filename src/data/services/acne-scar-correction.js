@@ -1,5 +1,5 @@
 const waLink =
-  "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20an%20acne%20or%20scar%20correction%20consultation%20at%20Skin%20Trust.";
+  "https://wa.me/919092232991?text=Hi%2C%20I%27d%20like%20to%20book%20an%20acne%20or%20scar%20correction%20consultation%20at%20Skin%20Trust.";
 
 import { SITE_BASE, BASE } from "../site.js";
 import { getHeader, getFooter } from "../layout.js";
@@ -8,17 +8,17 @@ export default {
   slug: "acne-scar-treatment-karur",
   displayName: "Acne & Scar Correction",
   summary:
-    "Comprehensive acne and acne scar treatment in Karur by Dr. Kavitha, MD Dermatology. MNRF, Fractional CO2, Chemical Peels, Pico Toning, Dermapen, Subcision, PDRN and more. 3,500+ reviews.",
+    "Comprehensive acne and acne scar treatment in Karur by Dr. K.B. Kavitha, DDVL. MNRF, Fractional CO2, Chemical Peels, Pico Toning, Dermapen, Subcision, PDRN and more. 3,500+ reviews.",
   meta: {
-    title: "Acne & Scar Correction in Karur | Skin Trust - Dr. Kavitha",
+    title: "Acne & Scar Correction in Karur | Skin Trust - Dr. K.B. Kavitha",
     description:
-      "Acne and acne scar treatment in Karur by Dr. Kavitha, MD Dermatology. MNRF, Fractional CO2, Chemical Peels, Pico Toning, Dermapen, Subcision, PDRN and more. 3,500+ reviews. Book today.",
+      "Acne and acne scar treatment in Karur by Dr. K.B. Kavitha, DDVL. MNRF, Fractional CO2, Chemical Peels, Pico Toning, Dermapen, Subcision, PDRN and more. 3,500+ reviews. Book today.",
     keywords:
       "acne treatment karur, acne scar treatment karur, MNRF karur, fractional co2 karur, chemical peel karur, pico toning karur, acne specialist karur, scar correction karur",
     canonical: `${SITE_BASE}/services/acne-scar-treatment-karur`,
-    ogTitle: "Acne & Scar Correction in Karur | Skin Trust - Dr. Kavitha",
+    ogTitle: "Acne & Scar Correction in Karur | Skin Trust - Dr. K.B. Kavitha",
     ogDescription:
-      "Acne and acne scar treatment in Karur by Dr. Kavitha, MD Dermatology. MNRF, Fractional CO2, Chemical Peels, Pico Toning, Dermapen, Subcision, PDRN and more. Book today.",
+      "Acne and acne scar treatment in Karur by Dr. K.B. Kavitha, DDVL. MNRF, Fractional CO2, Chemical Peels, Pico Toning, Dermapen, Subcision, PDRN and more. Book today.",
     ogUrl: `${SITE_BASE}/services/acne-scar-treatment-karur`,
   },
   headCss: `${BASE}/assets/css/acne-scar-correction.css`,
@@ -30,7 +30,7 @@ export default {
         "@id": `${SITE_BASE}/#clinic`,
         name: "Skin Trust Hospital",
         url: `${SITE_BASE}/`,
-        telephone: "+91-00000-00000",
+        telephone: "+91-96269-23299",
         address: {
           "@type": "PostalAddress",
           streetAddress: "No. 30, Chairman Ramanujam Street",
@@ -50,9 +50,9 @@ export default {
         medicalSpecialty: ["Dermatology"],
         founder: {
           "@type": "Physician",
-          name: "Dr. Kavitha",
+          name: "Dr. K.B. Kavitha",
           medicalSpecialty: ["Dermatology", "Dermatosurgery"],
-          hasCredential: ["MBBS", "MD Dermatology"],
+          hasCredential: ["MBBS", "DDVL"],
         },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
@@ -87,7 +87,7 @@ export default {
             name: "What is the best treatment for acne scars in Karur?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "The best treatment depends on your scar type. MNRF is the gold standard for moderate to severe atrophic scarring. Fractional CO2 suits deeper resurfacing cases. Dermapen works well for superficial texture. Subcision is used for tethered scars. Dr. Kavitha at Skin Trust, Karur assesses scar morphology before recommending any treatment.",
+              text: "The best treatment depends on your scar type. MNRF is the gold standard for moderate to severe atrophic scarring. Fractional CO2 suits deeper resurfacing cases. Dermapen works well for superficial texture. Subcision is used for tethered scars. Dr. K.B. Kavitha at Skin Trust, Karur assesses scar morphology before recommending any treatment.",
             },
           },
           {
@@ -95,7 +95,7 @@ export default {
             name: "How many MNRF sessions are needed for acne scars?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Most patients with moderate mixed scarring need three to five MNRF sessions spaced four to six weeks apart. The exact number depends on scar severity and your skin's healing response, which Dr. Kavitha assesses at each follow-up.",
+              text: "Most patients with moderate mixed scarring need three to five MNRF sessions spaced four to six weeks apart. The exact number depends on scar severity and your skin's healing response, which Dr. K.B. Kavitha assesses at each follow-up.",
             },
           },
           {
@@ -103,7 +103,7 @@ export default {
             name: "Is chemical peel safe for dark Indian skin?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Yes, when the correct acid type and concentration are chosen. At Skin Trust, Dr. Kavitha selects the peel based on your Fitzpatrick skin type and acne grade rather than using a standard protocol, making the treatment safe and appropriate for South Indian skin.",
+              text: "Yes, when the correct acid type and concentration are chosen. At Skin Trust, Dr. K.B. Kavitha selects the peel based on your Fitzpatrick skin type and acne grade rather than using a standard protocol, making the treatment safe and appropriate for South Indian skin.",
             },
           },
         ],
@@ -117,7 +117,7 @@ export default {
     eyebrow: "Acne & Scar Correction · Karur",
     h1: "Clear skin starts <em>with the<br>right diagnosis.</em>",
     lede:
-      "Skin Trust provides comprehensive care for acne and its aftermath, including advanced scar remodelling. Dr. Kavitha assesses each patient individually to develop a treatment approach suited to their skin and concerns.",
+      "Skin Trust provides comprehensive care for acne and its aftermath, including advanced scar remodelling. Dr. K.B. Kavitha assesses each patient individually to develop a treatment approach suited to their skin and concerns.",
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
     figureText: "Acne skin consultation<br>at Skin Trust<br>(3:4 portrait)",
@@ -130,7 +130,7 @@ export default {
     },
   },
   strip: [
-    { b: "MD", label: "Dermatology specialist" },
+    { b: "DDVL", label: "Dermatology specialist" },
     { b: "Grade-based", label: "Acne management" },
     { b: "9+", label: "Treatments available" },
     { b: "Karur", label: "Established clinic" },
@@ -234,7 +234,7 @@ export default {
       {
         placeholder: "Medical Acne Management<br>image 16:10",
         title: "Medical Acne Management",
-        body: "Grade-based prescription treatment addressing acne at its root: bacterial load, sebum production, follicular plugging and inflammation. Dr. Kavitha classifies the grade before prescribing anything.",
+        body: "Grade-based prescription treatment addressing acne at its root: bacterial load, sebum production, follicular plugging and inflammation. Dr. K.B. Kavitha classifies the grade before prescribing anything.",
         ctaHref: `${BASE}/services/acne-treatment-karur`,
         ctaLabel: "View acne management",
       },
@@ -297,26 +297,26 @@ export default {
     ],
   },
   why: {
-    eyebrow: "Why Karur Trusts Dr. Kavitha",
+    eyebrow: "Why Karur Trusts Dr. K.B. Kavitha",
     h2: "Acne is medical.<br>It deserves a medical approach.",
     lede:
-      "At Skin Trust, acne care begins with a clinical assessment of your skin and the factors contributing to your acne. Dr. Kavitha develops a treatment plan based on the type and severity of acne, skin characteristics and individual needs.",
+      "At Skin Trust, acne care begins with a clinical assessment of your skin and the factors contributing to your acne. Dr. K.B. Kavitha develops a treatment plan based on the type and severity of acne, skin characteristics and individual needs.",
     items: [
       {
         title: "Grade-based diagnosis first",
-        text: "Dr. Kavitha classifies your acne by grade before recommending any treatment. A Grade 2 comedonal case and a Grade 4 nodulocystic case need completely different approaches. Selling the same peel to both is incorrect medicine.",
+        text: "Dr. K.B. Kavitha classifies your acne by grade before recommending any treatment. A Grade 2 comedonal case and a Grade 4 nodulocystic case need completely different approaches. Selling the same peel to both is incorrect medicine.",
       },
       {
         title: "Scar morphology assessed before treatment",
-        text: "Ice-pick, boxcar, rolling and tethered scars can require different treatment approaches. Dr. Kavitha assesses the dominant scar type, depth and skin characteristics to determine the most appropriate treatment modality for your individual needs.",
+        text: "Ice-pick, boxcar, rolling and tethered scars can require different treatment approaches. Dr. K.B. Kavitha assesses the dominant scar type, depth and skin characteristics to determine the most appropriate treatment modality for your individual needs.",
       },
       {
         title: "Active acne cleared before scar treatment",
-        text: "Treating scars on skin that is still actively breaking out is a clinical error. Dr. Kavitha stabilises active acne first, then begins the scar correction phase once the skin is ready. This sequencing protects your results.",
+        text: "Treating scars on skin that is still actively breaking out is a clinical error. Dr. K.B. Kavitha stabilises active acne first, then begins the scar correction phase once the skin is ready. This sequencing protects your results.",
       },
       {
         title: "Doctor performs every procedure",
-        text: "All laser treatments, MNRF, subcision, skin booster injections and chemical peels at Skin Trust are performed personally by Dr. Kavitha, ensuring that your treatment remains under direct medical supervision.",
+        text: "All laser treatments, MNRF, subcision, skin booster injections and chemical peels at Skin Trust are performed personally by Dr. K.B. Kavitha, ensuring that your treatment remains under direct medical supervision.",
       },
       {
         title: "Standardised photography at every visit",
@@ -328,7 +328,7 @@ export default {
       },
       {
         title: "No packages, honest recommendations",
-        text: "Dr. Kavitha assesses the type and severity of your scars before recommending a treatment approach, from peels and Dermapen to MNRF and fractional CO₂, based on what is appropriate for your skin.",
+        text: "Dr. K.B. Kavitha assesses the type and severity of your scars before recommending a treatment approach, from peels and Dermapen to MNRF and fractional CO₂, based on what is appropriate for your skin.",
       },
       {
         title: "3,500+ verified Google reviews",
@@ -336,11 +336,11 @@ export default {
       },
       {
         title: "Darker skin type experience",
-        text: "Fitzpatrick IV to VI skin types require careful laser and peel selection to avoid post-inflammatory hyperpigmentation. Dr. Kavitha has extensive experience treating South Indian skin types safely and effectively.",
+        text: "Fitzpatrick IV to VI skin types require careful laser and peel selection to avoid post-inflammatory hyperpigmentation. Dr. K.B. Kavitha has extensive experience treating South Indian skin types safely and effectively.",
       },
     ],
     stats: [
-      { value: "10+", label: "Years clinical experience" },
+      { value: "22+", label: "Years clinical experience" },
       { value: "9", label: "Treatments available" },
       { value: "4.9", label: "Google rating" },
       { value: "100%", label: "Doctor-performed sessions" },
@@ -350,18 +350,18 @@ export default {
   },
   doctor: {
     eyebrow: "Your skin specialist",
-    name: "Dr. Kavitha",
+    name: "Dr. K.B. Kavitha",
     image: `${BASE}/assets/images/dr-kavitha.jpg`,
-    alt: "Dr. Kavitha MD Dermatology acne scar specialist Skin Trust Karur",
-    creds: ["MBBS", "MD Dermatology", "Trichology", "Dermatosurgery"],
+    alt: "Dr. K.B. Kavitha DDVL acne scar specialist Skin Trust Karur",
+    creds: ["MBBS", "DDVL", "Trichology", "Dermatosurgery"],
     paragraphs: [
-      "Acne is the most common skin condition Dr. Kavitha sees at this clinic, and it is also one of the most mismanaged. Patients often arrive after years of trying pharmacy products or undergoing multiple peel sessions elsewhere with no real protocol behind them.",
+      "Acne is the most common skin condition Dr. K.B. Kavitha sees at this clinic, and it is also one of the most mismanaged. Patients often arrive after years of trying pharmacy products or undergoing multiple peel sessions elsewhere with no real protocol behind them.",
       "Her approach starts at the grade. She classifies the acne, identifies contributing factors such as hormones, diet or stress, and builds a prescription plan before recommending any procedure. For scar patients, she assesses the dominant scar morphology and sequences the treatments correctly: active acne must be stable before scar correction begins.",
-      "All in-clinic procedures are performed by Dr. Kavitha personally. This applies to every MNRF session, every fractional laser pass, every subcision procedure and every skin booster injection.",
+      "All in-clinic procedures are performed by Dr. K.B. Kavitha personally. This applies to every MNRF session, every fractional laser pass, every subcision procedure and every skin booster injection.",
     ],
-    sig: "Dr. Kavitha",
+    sig: "Dr. K.B. Kavitha",
     moreHref: `${BASE}/about`,
-    moreLabel: "More about Dr. Kavitha",
+    moreLabel: "More about Dr. K.B. Kavitha",
   },
   testimonials: {
     eyebrow: "In patients' words",
@@ -405,12 +405,12 @@ export default {
       {
         question: "Should I treat the acne first before treating the scars?",
         answer:
-          "Yes, always. Performing laser resurfacing or MNRF on skin that is still actively breaking out risks worsening inflammation and triggering new post-inflammatory marks. Dr. Kavitha always stabilises active acne before beginning any scar correction treatment. The sequencing is not optional, it is clinical practice.",
+          "Yes, always. Performing laser resurfacing or MNRF on skin that is still actively breaking out risks worsening inflammation and triggering new post-inflammatory marks. Dr. K.B. Kavitha always stabilises active acne before beginning any scar correction treatment. The sequencing is not optional, it is clinical practice.",
       },
       {
         question: "How many sessions will I need for acne scar treatment?",
         answer:
-          "The number of sessions depends on your dominant scar type, severity and treatment approach. Mild, superficial scarring may show improvement with around three to four Dermapen sessions. Moderate, mixed scarring may require three to five MNRF sessions, typically spaced four to six weeks apart. Deeper or more complex scarring may require a longer treatment plan involving procedures such as subcision and fractional CO₂. Dr. Kavitha will assess your scars and discuss a realistic treatment plan, including the expected number and spacing of sessions, during your initial consultation.",
+          "The number of sessions depends on your dominant scar type, severity and treatment approach. Mild, superficial scarring may show improvement with around three to four Dermapen sessions. Moderate, mixed scarring may require three to five MNRF sessions, typically spaced four to six weeks apart. Deeper or more complex scarring may require a longer treatment plan involving procedures such as subcision and fractional CO₂. Dr. K.B. Kavitha will assess your scars and discuss a realistic treatment plan, including the expected number and spacing of sessions, during your initial consultation.",
       },
       {
         question: "Is MNRF painful? What is the downtime?",
@@ -420,12 +420,12 @@ export default {
       {
         question: "What is the difference between MNRF and Dermapen?",
         answer:
-          "Both use microneedling but they work differently. Dermapen is a mechanical microneedling device that creates controlled micro-injuries to stimulate collagen. It is suitable for mild to moderate, superficial scarring and skin texture concerns. MNRF adds radiofrequency energy delivered through insulated microneedles into the deeper dermis, making it significantly more powerful for moderate to severe atrophic scarring. Dr. Kavitha recommends one or the other, or a combination, based on your scar assessment.",
+          "Both use microneedling but they work differently. Dermapen is a mechanical microneedling device that creates controlled micro-injuries to stimulate collagen. It is suitable for mild to moderate, superficial scarring and skin texture concerns. MNRF adds radiofrequency energy delivered through insulated microneedles into the deeper dermis, making it significantly more powerful for moderate to severe atrophic scarring. Dr. K.B. Kavitha recommends one or the other, or a combination, based on your scar assessment.",
       },
       {
         question: "Are chemical peels safe for Indian skin?",
         answer:
-          "When selected and applied correctly, yes. The key is matching the acid type, concentration and pH to your skin type and grade of acne. Stronger peels used on darker Fitzpatrick skin types without adequate preparation can cause post-inflammatory hyperpigmentation. Dr. Kavitha selects the appropriate peel for your skin rather than using a standard protocol across all patients.",
+          "When selected and applied correctly, yes. The key is matching the acid type, concentration and pH to your skin type and grade of acne. Stronger peels used on darker Fitzpatrick skin types without adequate preparation can cause post-inflammatory hyperpigmentation. Dr. K.B. Kavitha selects the appropriate peel for your skin rather than using a standard protocol across all patients.",
       },
       {
         question: "What is subcision and who needs it?",
@@ -452,7 +452,7 @@ export default {
       { dt: "Hours", dd: "Mon–Fri 09:30–17:30<br>Sat 09:30–19:30<br>Sunday Holiday" },
       {
         dt: "Phone",
-        dd: '<a href="tel:+910000000000" style="border-bottom:1px solid var(--champagne)">+91 00000 00000</a>',
+        dd: '<a href="tel:+919626923299" style="border-bottom:1px solid var(--champagne)">+91 96269 23299</a>',
       },
       {
         dt: "WhatsApp",
@@ -481,7 +481,7 @@ export default {
     lede:
       "A first consultation covers your acne grade, scar morphology, contributing factors and a sequenced treatment plan. No packages are sold at this visit.",
     buttons: [
-      { label: "Call +91 00000 00000", href: "tel:+910000000000", class: "btn btn-gold" },
+      { label: "Call +91 96269 23299", href: "tel:+919626923299", class: "btn btn-gold" },
       { label: "WhatsApp to book", href: waLink, target: "_blank", class: "btn btn-ghost-light" },
     ],
   },

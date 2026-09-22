@@ -1763,17 +1763,25 @@ p {
 }
 
 .visit-info dt {
-  font-size: .66rem;
-  font-weight: 500;
-  letter-spacing: .2em;
+  font-size: .70rem;
+  font-weight: 800;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--champagne);
+  color: var(--forest);
   padding-top: 4px
 }
 
 .visit-info dd {
   margin: 0;
-  color: var(--muted)
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.visit-info dd a {
+  font-weight: 800;
+  color: var(--forest);
+  border-bottom-width: 2px !important;
 }
 
 .map-frame {
@@ -1822,9 +1830,15 @@ p {
 /* ---------- footer ---------- */
 .foot {
   background: var(--ivory);
-  color: var(--muted);
-  font-size: .85rem;
-  padding-top: 70px
+  color: var(--ink);
+  font-size: .90rem;
+  padding-top: 70px;
+  font-weight: 500;
+}
+
+.foot a {
+  font-weight: 700;
+  color: var(--forest);
 }
 
 .foot-grid {
@@ -2073,4 +2087,38 @@ p {
   .vg-nav {
     display: none;
   }
+}
+
+/* ---------- HIGH VISIBILITY — Appointment, Address, Timings (all pages) ---------- */
+.topbar {
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.topbar span,
+.topbar a {
+  font-weight: 800 !important;
+  color: var(--ivory) !important;
+  opacity: 1;
+}
+
+.topbar a {
+  color: var(--champagne-light) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, .9);
+}
+
+.visit-info dd {
+  font-weight: 700 !important;
+  color: var(--ink) !important;
+}
+
+.foot {
+  font-weight: 600;
+}
+
+.foot-grid address,
+.foot address {
+  font-weight: 700;
+  color: var(--ink);
+  font-style: normal;
 }

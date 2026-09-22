@@ -1,5 +1,5 @@
 const waLink =
-  "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20laser%20treatment%20consultation%20at%20Skin%20Trust.";
+  "https://wa.me/919092232991?text=Hi%2C%20I%27d%20like%20to%20book%20a%20laser%20treatment%20consultation%20at%20Skin%20Trust.";
 
 import { SITE_BASE, BASE } from "../site.js";
 import { getHeader, getFooter } from "../layout.js";
@@ -8,17 +8,17 @@ export default {
   slug: "laser-treatments-karur",
   displayName: "Laser Treatments",
   summary:
-    "Medical-grade laser treatments in Karur performed personally by Dr. Kavitha. Laser hair removal, laser toning, carbon laser peel, tattoo removal and fractional CO2 resurfacing — every setting calibrated for Indian skin.",
+    "Medical-grade laser treatments in Karur performed personally by Dr. K.B. Kavitha. Laser hair removal, laser toning, carbon laser peel, tattoo removal and fractional CO2 resurfacing — every setting calibrated for Indian skin.",
   meta: {
-    title: "Laser Treatments in Karur | Skin Trust - Dr. Kavitha",
+    title: "Laser Treatments in Karur | Skin Trust - Dr. K.B. Kavitha",
     description:
-      "Medical-grade laser treatments in Karur performed by Dr. Kavitha, MD Dermatology. Laser Hair Removal, Laser Toning, Carbon Laser Peel, Tattoo Removal, Fractional CO2 Resurfacing — every setting calibrated for Indian skin. 3,500+ reviews. Book today.",
+      "Medical-grade laser treatments in Karur performed by Dr. K.B. Kavitha, DDVL. Laser Hair Removal, Laser Toning, Carbon Laser Peel, Tattoo Removal, Fractional CO2 Resurfacing — every setting calibrated for Indian skin. 3,500+ reviews. Book today.",
     keywords:
       "laser treatment karur, laser hair removal karur, laser toning karur, carbon laser peel karur, tattoo removal karur, fractional co2 karur, dermatologist laser karur",
     canonical: `${SITE_BASE}/services/laser-treatments-karur`,
-    ogTitle: "Laser Treatments in Karur | Skin Trust - Dr. Kavitha",
+    ogTitle: "Laser Treatments in Karur | Skin Trust - Dr. K.B. Kavitha",
     ogDescription:
-      "Medical-grade laser treatments in Karur performed by Dr. Kavitha, MD Dermatology. Laser Hair Removal, Laser Toning, Carbon Laser Peel, Tattoo Removal, Fractional CO2 Resurfacing. Book today.",
+      "Medical-grade laser treatments in Karur performed by Dr. K.B. Kavitha, DDVL. Laser Hair Removal, Laser Toning, Carbon Laser Peel, Tattoo Removal, Fractional CO2 Resurfacing. Book today.",
     ogUrl: `${SITE_BASE}/services/laser-treatments-karur`,
   },
   headCss: `${BASE}/assets/css/laser-treatments.css`,
@@ -30,7 +30,7 @@ export default {
         "@id": `${SITE_BASE}/#clinic`,
         name: "Skin Trust Hospital",
         url: `${SITE_BASE}/`,
-        telephone: "+91-00000-00000",
+        telephone: "+91-96269-23299",
         address: {
           "@type": "PostalAddress",
           streetAddress: "No. 30, Chairman Ramanujam Street",
@@ -50,9 +50,9 @@ export default {
         medicalSpecialty: ["Dermatology", "Aesthetic Medicine"],
         founder: {
           "@type": "Physician",
-          name: "Dr. Kavitha",
+          name: "Dr. K.B. Kavitha",
           medicalSpecialty: ["Dermatology", "Trichology", "Dermatosurgery"],
-          hasCredential: ["MBBS", "MD Dermatology"],
+          hasCredential: ["MBBS", "DDVL"],
         },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
@@ -74,7 +74,7 @@ export default {
             name: "Is laser treatment safe for Indian or darker skin tones?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Yes, when the wavelength and settings are matched to your Fitzpatrick skin type. Using incorrect settings on darker skin raises the risk of post-inflammatory pigmentation. Dr. Kavitha calibrates every laser session to your specific skin tone rather than using one fixed setting for all patients.",
+              text: "Yes, when the wavelength and settings are matched to your Fitzpatrick skin type. Using incorrect settings on darker skin raises the risk of post-inflammatory pigmentation. Dr. K.B. Kavitha calibrates every laser session to your specific skin tone rather than using one fixed setting for all patients.",
             },
           },
           {
@@ -82,7 +82,7 @@ export default {
             name: "Does the doctor perform the laser sessions personally?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Yes. Every laser procedure at this clinic like hair removal, toning, carbon peel, tattoo removal and fractional resurfacing is administered by Dr. Kavitha.",
+              text: "Yes. Every laser procedure at this clinic like hair removal, toning, carbon peel, tattoo removal and fractional resurfacing is administered by Dr. K.B. Kavitha.",
             },
           },
           {
@@ -106,7 +106,7 @@ export default {
             name: "Is tattoo removal possible on all skin tones?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Q-switched Nd:YAG technology can treat a range of skin tones, though settings, ink colour and depth all affect how many sessions are needed and how the skin responds. Dr. Kavitha assesses each tattoo individually before planning a session count.",
+              text: "Q-switched Nd:YAG technology can treat a range of skin tones, though settings, ink colour and depth all affect how many sessions are needed and how the skin responds. Dr. K.B. Kavitha assesses each tattoo individually before planning a session count.",
             },
           },
           {
@@ -114,7 +114,7 @@ export default {
             name: "What is the downtime after Fractional CO2 resurfacing?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Downtime depends on the treatment depth. Superficial settings may cause redness for a few days, while deeper resurfacing can involve a week or more of visible healing. Dr. Kavitha plans the depth around your concern and discusses realistic downtime beforehand.",
+              text: "Downtime depends on the treatment depth. Superficial settings may cause redness for a few days, while deeper resurfacing can involve a week or more of visible healing. Dr. K.B. Kavitha plans the depth around your concern and discusses realistic downtime beforehand.",
             },
           },
           {
@@ -130,7 +130,7 @@ export default {
             name: "What aftercare is needed after a laser session?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Sun protection is essential after any laser treatment, particularly in Tamil Nadu's climate. Dr. Kavitha provides a specific aftercare and sunscreen protocol after every session to protect results and reduce pigmentation risk.",
+              text: "Sun protection is essential after any laser treatment, particularly in Tamil Nadu's climate. Dr. K.B. Kavitha provides a specific aftercare and sunscreen protocol after every session to protect results and reduce pigmentation risk.",
             },
           },
         ],
@@ -144,7 +144,7 @@ export default {
     eyebrow: "Laser Treatments · Karur",
     h1: "Laser treatment, <em>calibrated to your skin.</em>",
     lede:
-      "Medical-grade lasers, operated by Dr. Kavitha personally, with every setting calibrated to Indian skin types to minimise pigmentation risk. From hair removal to pigmentation, tattoo ink and resurfacing, each session is planned around the concern and the skin in front of her.",
+      "Medical-grade lasers, operated by Dr. K.B. Kavitha personally, with every setting calibrated to Indian skin types to minimise pigmentation risk. From hair removal to pigmentation, tattoo ink and resurfacing, each session is planned around the concern and the skin in front of her.",
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
     figureText: "Laser session<br>at Skin Trust<br>(3:4 portrait)",
@@ -270,18 +270,18 @@ export default {
     ],
   },
   why: {
-    eyebrow: "Why Karur Trusts Dr. Kavitha",
+    eyebrow: "Why Karur Trusts Dr. K.B. Kavitha",
     h2: "Laser treatment is first about safety, then about achieving the right results.",
     lede:
       "Laser energy interacts differently with every skin tone. Here is how that is assessed and managed at Skin Trust.",
     items: [
       {
         title: "Doctor performs every laser session",
-        text: "Every laser procedure at this clinic, hair removal, toning, carbon peel, tattoo removal and fractional resurfacing is administered by Dr. Kavitha personally.",
+        text: "Every laser procedure at this clinic, hair removal, toning, carbon peel, tattoo removal and fractional resurfacing is administered by Dr. K.B. Kavitha personally.",
       },
       {
         title: "Settings calibrated for Indian skin types",
-        text: "Darker Fitzpatrick skin types carry a higher risk of post-inflammatory pigmentation when laser settings are not adjusted correctly. Dr. Kavitha calibrates fluence, wavelength and cooling to each patient's skin tone before any session begins.",
+        text: "Darker Fitzpatrick skin types carry a higher risk of post-inflammatory pigmentation when laser settings are not adjusted correctly. Dr. K.B. Kavitha calibrates fluence, wavelength and cooling to each patient's skin tone before any session begins.",
       },
       {
         title: "Medical-grade equipment",
@@ -289,7 +289,7 @@ export default {
       },
       {
         title: "Concern-specific wavelength selection",
-        text: "Pigmentation, hair, tattoo ink and scarring each respond to different laser wavelengths. Dr. Kavitha selects the appropriate laser and parameters for the specific concern being treated.",
+        text: "Pigmentation, hair, tattoo ink and scarring each respond to different laser wavelengths. Dr. K.B. Kavitha selects the appropriate laser and parameters for the specific concern being treated.",
       },
       {
         title: "Patch testing where needed",
@@ -323,18 +323,18 @@ export default {
   },
   doctor: {
     eyebrow: "Your skin specialist",
-    name: "Dr. Kavitha",
+    name: "Dr. K.B. Kavitha",
     image: `${BASE}/assets/images/dr-kavitha.jpg`,
-    alt: "Dr. Kavitha",
-    creds: ["MBBS", "MD Dermatology", "Trichology", "Dermatosurgery"],
+    alt: "Dr. K.B. Kavitha",
+    creds: ["MBBS", "DDVL", "Trichology", "Dermatosurgery"],
     paragraphs: [
-      "Laser treatments carry real risk when settings are not matched to skin type, and Dr. Kavitha treats this as a safety question first, a results question second.",
+      "Laser treatments carry real risk when settings are not matched to skin type, and Dr. K.B. Kavitha treats this as a safety question first, a results question second.",
       "Before any laser session, she assesses Fitzpatrick skin type and the specific concern being treated — hair, pigmentation, tattoo ink or scarring — and calibrates wavelength, fluence and cooling accordingly. A patch test is used for new patients and higher-risk skin before a full session proceeds.",
-      "Every laser procedure at this clinic, from hair removal through to fractional CO2 resurfacing, is performed by Dr. Kavitha personally.",
+      "Every laser procedure at this clinic, from hair removal through to fractional CO2 resurfacing, is performed by Dr. K.B. Kavitha personally.",
     ],
-    sig: "— Dr. Kavitha",
+    sig: "— Dr. K.B. Kavitha",
     moreHref: `${BASE}/about`,
-    moreLabel: "More about Dr. Kavitha",
+    moreLabel: "More about Dr. K.B. Kavitha",
   },
   testimonials: {
     eyebrow: "In patients' words",
@@ -373,12 +373,12 @@ export default {
       {
         question: "Is laser treatment safe for Indian or darker skin tones?",
         answer:
-          "Yes, when the wavelength and settings are matched to your Fitzpatrick skin type. Using incorrect settings on darker skin raises the risk of post-inflammatory pigmentation. Dr. Kavitha calibrates every laser session to your specific skin tone rather than using one fixed setting for all patients.",
+          "Yes, when the wavelength and settings are matched to your Fitzpatrick skin type. Using incorrect settings on darker skin raises the risk of post-inflammatory pigmentation. Dr. K.B. Kavitha calibrates every laser session to your specific skin tone rather than using one fixed setting for all patients.",
       },
       {
         question: "Does the doctor perform the laser sessions personally?",
         answer:
-          "Yes. Every laser procedure at this clinic like hair removal, toning, carbon peel, tattoo removal and fractional resurfacing is administered by Dr. Kavitha.",
+          "Yes. Every laser procedure at this clinic like hair removal, toning, carbon peel, tattoo removal and fractional resurfacing is administered by Dr. K.B. Kavitha.",
       },
       {
         question: "How many sessions of laser hair removal are needed?",
@@ -393,12 +393,12 @@ export default {
       {
         question: "Is tattoo removal possible on all skin tones?",
         answer:
-          "Q-switched Nd:YAG technology can treat a range of skin tones, though settings, ink colour and depth all affect how many sessions are needed and how the skin responds. Dr. Kavitha assesses each tattoo individually before planning a session count.",
+          "Q-switched Nd:YAG technology can treat a range of skin tones, though settings, ink colour and depth all affect how many sessions are needed and how the skin responds. Dr. K.B. Kavitha assesses each tattoo individually before planning a session count.",
       },
       {
         question: "What is the downtime after Fractional CO2 resurfacing?",
         answer:
-          "Downtime depends on the treatment depth. Superficial settings may cause redness for a few days, while deeper resurfacing can involve a week or more of visible healing. Dr. Kavitha plans the depth around your concern and discusses realistic downtime beforehand.",
+          "Downtime depends on the treatment depth. Superficial settings may cause redness for a few days, while deeper resurfacing can involve a week or more of visible healing. Dr. K.B. Kavitha plans the depth around your concern and discusses realistic downtime beforehand.",
       },
       {
         question: "What is a carbon laser peel used for?",
@@ -408,7 +408,7 @@ export default {
       {
         question: "What aftercare is needed after a laser session?",
         answer:
-          "Sun protection is essential after any laser treatment, particularly in Tamil Nadu's climate. Dr. Kavitha provides a specific aftercare and sunscreen protocol after every session to protect results and reduce pigmentation risk.",
+          "Sun protection is essential after any laser treatment, particularly in Tamil Nadu's climate. Dr. K.B. Kavitha provides a specific aftercare and sunscreen protocol after every session to protect results and reduce pigmentation risk.",
       },
     ],
   },
@@ -425,7 +425,7 @@ export default {
       { dt: "Hours", dd: "Mon–Fri 09:30–17:30<br>Sat 09:30–19:30<br>Sunday Holiday" },
       {
         dt: "Phone",
-        dd: '<a href="tel:+910000000000" style="border-bottom:1px solid var(--champagne)">+91 00000 00000</a>',
+        dd: '<a href="tel:+919626923299" style="border-bottom:1px solid var(--champagne)">+91 96269 23299</a>',
       },
       {
         dt: "WhatsApp",
@@ -454,7 +454,7 @@ export default {
     lede:
       "A first consultation covers your skin type, the concern being treated and a realistic session plan. No packages are sold at this visit.",
     buttons: [
-      { label: "Call +91 00000 00000", href: "tel:+910000000000", class: "btn btn-gold" },
+      { label: "Call +91 96269 23299", href: "tel:+919626923299", class: "btn btn-gold" },
       { label: "WhatsApp to book", href: waLink, target: "_blank", class: "btn btn-ghost-light" },
     ],
   },

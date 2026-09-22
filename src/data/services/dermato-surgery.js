@@ -1,5 +1,5 @@
 const waLink =
-  "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20dermatology%20%26%20skin%20surgery%20consultation%20at%20Skin%20Trust.";
+  "https://wa.me/919092232991?text=Hi%2C%20I%27d%20like%20to%20book%20a%20dermatology%20%26%20skin%20surgery%20consultation%20at%20Skin%20Trust.";
 
 import { SITE_BASE, BASE } from "../site.js";
 import { getHeader, getFooter } from "../layout.js";
@@ -8,17 +8,17 @@ export default {
   slug: "dermato-surgery-karur",
   displayName: "Dermatology & Skin Surgery",
   summary:
-    "Clinical dermatology and minor skin surgery in Karur by Dr. Kavitha, MD Dermatology. Mole, skin tag & cyst removal, ear lobe repair, vitiligo surgery & skin grafting, phototherapy, cryotherapy, microblading, dermoscopy.",
+    "Clinical dermatology and minor skin surgery in Karur by Dr. K.B. Kavitha, DDVL. Mole, skin tag & cyst removal, ear lobe repair, vitiligo surgery & skin grafting, phototherapy, cryotherapy, microblading, dermoscopy.",
   meta: {
-    title: "Dermatology & Skin Surgery in Karur | Skin Trust - Dr. Kavitha",
+    title: "Dermatology & Skin Surgery in Karur | Skin Trust - Dr. K.B. Kavitha",
     description:
-      "Clinical dermatology and minor skin surgery in Karur by Dr. Kavitha, MD Dermatology. Mole, skin tag & cyst removal, ear lobe repair, vitiligo surgery & skin grafting, phototherapy, cryotherapy, microblading, dermoscopy. 3,500+ reviews. Book today.",
+      "Clinical dermatology and minor skin surgery in Karur by Dr. K.B. Kavitha, DDVL. Mole, skin tag & cyst removal, ear lobe repair, vitiligo surgery & skin grafting, phototherapy, cryotherapy, microblading, dermoscopy. 3,500+ reviews. Book today.",
     keywords:
       "dermatology karur, skin surgery karur, mole removal karur, cyst removal karur, ear lobe repair karur, vitiligo surgery karur, skin grafting karur, phototherapy karur, cryotherapy karur, dermoscopy karur",
     canonical: `${SITE_BASE}/services/dermato-surgery-karur`,
-    ogTitle: "Dermatology & Skin Surgery in Karur | Skin Trust - Dr. Kavitha",
+    ogTitle: "Dermatology & Skin Surgery in Karur | Skin Trust - Dr. K.B. Kavitha",
     ogDescription:
-      "Clinical dermatology and minor skin surgery in Karur by Dr. Kavitha, MD Dermatology. Mole, skin tag & cyst removal, ear lobe repair, vitiligo surgery & skin grafting, phototherapy, cryotherapy, microblading, dermoscopy. Book today.",
+      "Clinical dermatology and minor skin surgery in Karur by Dr. K.B. Kavitha, DDVL. Mole, skin tag & cyst removal, ear lobe repair, vitiligo surgery & skin grafting, phototherapy, cryotherapy, microblading, dermoscopy. Book today.",
     ogUrl: `${SITE_BASE}/services/dermato-surgery-karur`,
   },
   headCss: `${BASE}/assets/css/dermato-surgery.css`,
@@ -30,7 +30,7 @@ export default {
         "@id": `${SITE_BASE}/#clinic`,
         name: "Skin Trust Hospital",
         url: `${SITE_BASE}/`,
-        telephone: "+91-00000-00000",
+        telephone: "+91-96269-23299",
         address: {
           "@type": "PostalAddress",
           streetAddress: "No. 30, Chairman Ramanujam Street",
@@ -50,9 +50,9 @@ export default {
         medicalSpecialty: ["Dermatology", "Aesthetic Medicine"],
         founder: {
           "@type": "Physician",
-          name: "Dr. Kavitha",
+          name: "Dr. K.B. Kavitha",
           medicalSpecialty: ["Dermatology", "Trichology", "Dermatosurgery"],
-          hasCredential: ["MBBS", "MD Dermatology"],
+          hasCredential: ["MBBS", "DDVL"],
         },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
@@ -83,7 +83,7 @@ export default {
             name: "How do I know if a mole needs to be checked or removed?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Any mole that has changed in size, shape, colour or border, or that bleeds, itches or feels different from your other moles, should be examined. Dr. Kavitha uses dermoscopy to assess concerning features before deciding whether removal is medically necessary or a personal preference.",
+              text: "Any mole that has changed in size, shape, colour or border, or that bleeds, itches or feels different from your other moles, should be examined. Dr. K.B. Kavitha uses dermoscopy to assess concerning features before deciding whether removal is medically necessary or a personal preference.",
             },
           },
           {
@@ -99,7 +99,7 @@ export default {
             name: "What is the difference between NB-UVB, PUVA and excimer phototherapy?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "NB-UVB is a broader narrowband light therapy suited to larger areas and conditions like vitiligo and psoriasis. PUVA combines a light-sensitising medication with UVA light for more resistant cases. Excimer delivers targeted light to smaller, localised patches. Dr. Kavitha selects the modality based on your specific condition, area affected and skin type.",
+              text: "NB-UVB is a broader narrowband light therapy suited to larger areas and conditions like vitiligo and psoriasis. PUVA combines a light-sensitising medication with UVA light for more resistant cases. Excimer delivers targeted light to smaller, localised patches. Dr. K.B. Kavitha selects the modality based on your specific condition, area affected and skin type.",
             },
           },
           {
@@ -131,7 +131,7 @@ export default {
             name: "Is dermoscopy part of every skin check?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Dermoscopy is used whenever a mole or pigmented lesion needs closer clinical examination, allowing Dr. Kavitha to assess features not visible to the naked eye before deciding on removal or ongoing monitoring.",
+              text: "Dermoscopy is used whenever a mole or pigmented lesion needs closer clinical examination, allowing Dr. K.B. Kavitha to assess features not visible to the naked eye before deciding on removal or ongoing monitoring.",
             },
           },
         ],
@@ -278,14 +278,14 @@ export default {
     ],
   },
   why: {
-    eyebrow: "Why Karur Trusts Dr. Kavitha",
+    eyebrow: "Why Karur Trusts Dr. K.B. Kavitha",
     h2: "Minor surgery, treated with major-procedure discipline.",
     lede:
       "Clinical dermatology and minor surgery call for the same rigour as any hospital procedure. Here is how that is upheld at Skin Trust.",
     items: [
       {
         title: "Doctor performs every procedure",
-        text: "Every excision, repair, graft and phototherapy session at this clinic is carried out by Dr. Kavitha personally, from initial assessment through to the procedure itself.",
+        text: "Every excision, repair, graft and phototherapy session at this clinic is carried out by Dr. K.B. Kavitha personally, from initial assessment through to the procedure itself.",
       },
       {
         title: "Sterile hospital-grade setup",
@@ -301,7 +301,7 @@ export default {
       },
       {
         title: "Phototherapy calibrated by condition and skin type",
-        text: "NB-UVB, PUVA and excimer light therapy each suit different conditions. Dr. Kavitha selects the modality and dosing based on your specific diagnosis and skin type.",
+        text: "NB-UVB, PUVA and excimer light therapy each suit different conditions. Dr. K.B. Kavitha selects the modality and dosing based on your specific diagnosis and skin type.",
       },
       {
         title: "Standardised documentation and follow-up",
@@ -331,18 +331,18 @@ export default {
   },
   doctor: {
     eyebrow: "Your skin specialist",
-    name: "Dr. Kavitha",
+    name: "Dr. K.B. Kavitha",
     image: `${BASE}/assets/images/dr-kavitha.jpg`,
-    alt: "Dr. Kavitha",
-    creds: ["MBBS", "MD Dermatology", "Trichology", "Dermatosurgery"],
+    alt: "Dr. K.B. Kavitha",
+    creds: ["MBBS", "DDVL", "Trichology", "Dermatosurgery"],
     paragraphs: [
-      "Dermatology extends well beyond skin care into clinical diagnosis and minor surgery, and Dr. Kavitha treats this side of the practice with the same structured approach as any other treatment.",
+      "Dermatology extends well beyond skin care into clinical diagnosis and minor surgery, and Dr. K.B. Kavitha treats this side of the practice with the same structured approach as any other treatment.",
       "Every lesion, growth or vitiligo patch is assessed clinically before a plan is made, whether that means simple excision, a course of phototherapy, or surgical repigmentation for stable vitiligo that has not responded to other treatment. Procedures are performed in a sterile, hospital-standard setting, with attention to minimising visible scarring afterward.",
-      "All procedures at this clinic, from mole and cyst removal through to vitiligo grafting, are performed by Dr. Kavitha personally.",
+      "All procedures at this clinic, from mole and cyst removal through to vitiligo grafting, are performed by Dr. K.B. Kavitha personally.",
     ],
-    sig: "— Dr. Kavitha",
+    sig: "— Dr. K.B. Kavitha",
     moreHref: `${BASE}/about`,
-    moreLabel: "More about Dr. Kavitha",
+    moreLabel: "More about Dr. K.B. Kavitha",
   },
   testimonials: {
     eyebrow: "In patients' words",
@@ -386,7 +386,7 @@ export default {
       {
         question: "How do I know if a mole needs to be checked or removed?",
         answer:
-          "Any mole that has changed in size, shape, colour or border, or that bleeds, itches or feels different from your other moles, should be examined. Dr. Kavitha uses dermoscopy to assess concerning features before deciding whether removal is medically necessary or a personal preference.",
+          "Any mole that has changed in size, shape, colour or border, or that bleeds, itches or feels different from your other moles, should be examined. Dr. K.B. Kavitha uses dermoscopy to assess concerning features before deciding whether removal is medically necessary or a personal preference.",
       },
       {
         question: "Can vitiligo surgery be done on any patient?",
@@ -396,7 +396,7 @@ export default {
       {
         question: "What is the difference between NB-UVB, PUVA and excimer phototherapy?",
         answer:
-          "NB-UVB is a broader narrowband light therapy suited to larger areas and conditions like vitiligo and psoriasis. PUVA combines a light-sensitising medication with UVA light for more resistant cases. Excimer delivers targeted light to smaller, localised patches. Dr. Kavitha selects the modality based on your specific condition, area affected and skin type.",
+          "NB-UVB is a broader narrowband light therapy suited to larger areas and conditions like vitiligo and psoriasis. PUVA combines a light-sensitising medication with UVA light for more resistant cases. Excimer delivers targeted light to smaller, localised patches. Dr. K.B. Kavitha selects the modality based on your specific condition, area affected and skin type.",
       },
       {
         question: "Will removal leave a visible scar?",
@@ -416,7 +416,7 @@ export default {
       {
         question: "Is dermoscopy part of every skin check?",
         answer:
-          "Dermoscopy is used whenever a mole or pigmented lesion needs closer clinical examination, allowing Dr. Kavitha to assess features not visible to the naked eye before deciding on removal or ongoing monitoring.",
+          "Dermoscopy is used whenever a mole or pigmented lesion needs closer clinical examination, allowing Dr. K.B. Kavitha to assess features not visible to the naked eye before deciding on removal or ongoing monitoring.",
       },
     ],
   },
@@ -433,7 +433,7 @@ export default {
       { dt: "Hours", dd: "Mon–Fri 09:30–17:30<br>Sat 09:30–19:30<br>Sunday Holiday" },
       {
         dt: "Phone",
-        dd: '<a href="tel:+910000000000" style="border-bottom:1px solid var(--champagne)">+91 00000 00000</a>',
+        dd: '<a href="tel:+919626923299" style="border-bottom:1px solid var(--champagne)">+91 96269 23299</a>',
       },
       {
         dt: "WhatsApp",
@@ -462,7 +462,7 @@ export default {
     lede:
       "A first consultation covers your specific concern, a proper diagnosis and a clear procedure plan. No packages are sold at this visit.",
     buttons: [
-      { label: "Call +91 00000 00000", href: "tel:+910000000000", class: "btn btn-gold" },
+      { label: "Call +91 96269 23299", href: "tel:+919626923299", class: "btn btn-gold" },
       { label: "WhatsApp to book", href: waLink, target: "_blank", class: "btn btn-ghost-light" },
     ],
   },

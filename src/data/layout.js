@@ -113,7 +113,7 @@ export function getFooter(base = BASE) {
       {
         heading: "Clinic",
         links: [
-          { label: "About Dr. Kavitha", href: `${b}/about` },
+          { label: "About Dr. K.B. Kavitha", href: `${b}/about` },
           { label: "All Services", href: `${b}/#treatments` },
           { label: "Book Appointment", href: `${b}/#book` },
         ],

@@ -15,7 +15,7 @@ export default {
   "priceRange":"₹₹",
   "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"3600","bestRating":"5"},
   "medicalSpecialty":"Dermatology",
-  "founder":{"@type":"Physician","name":"Dr. Kavitha","medicalSpecialty":"Dermatology","qualification":"MBBS, MD (Dermatology)"},
+  "founder":{"@type":"Physician","name":"Dr. K.B. Kavitha","medicalSpecialty":"Dermatology","qualification":"MBBS, DDVL"},
   "availableService":[
     {"@type":"MedicalProcedure","name":"PRP Hair Treatment"},
     {"@type":"MedicalProcedure","name":"GFC Hair Treatment"},

@@ -1,5 +1,5 @@
 const waLink =
-  "https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20book%20an%20anti-ageing%20consultation%20at%20Skin%20Trust.";
+  "https://wa.me/919092232991?text=Hi%2C%20I%27d%20like%20to%20book%20an%20anti-ageing%20consultation%20at%20Skin%20Trust.";
 
 import { SITE_BASE, BASE } from "../site.js";
 import { getHeader, getFooter } from "../layout.js";
@@ -8,17 +8,17 @@ export default {
   slug: "anti-ageing-treatment-karur",
   displayName: "Anti-Ageing & Lifting",
   summary:
-    "From conservative-dose Botox and dermal fillers to thread lifts, HIFU, Apollo Quattro, MNRF tightening and PDRN therapy, Dr. Kavitha offers natural anti-ageing and lifting treatments at Skin Trust, Karur.",
+    "From conservative-dose Botox and dermal fillers to thread lifts, HIFU, Apollo Quattro, MNRF tightening and PDRN therapy, Dr. K.B. Kavitha offers natural anti-ageing and lifting treatments at Skin Trust, Karur.",
   meta: {
-    title: "Anti-Ageing & Lifting in Karur | Skin Trust - Dr. Kavitha",
+    title: "Anti-Ageing & Lifting in Karur | Skin Trust - Dr. K.B. Kavitha",
     description:
-      "Anti-ageing and lifting treatments in Karur by Dr. Kavitha, MD Dermatology. Botox, Dermal Fillers, Thread Lifts, HIFU, Apollo Quattro, MNRF Tightening, PDRN Therapy, Skin Boosters, Under-Eye Rejuvenation. 3,500+ reviews. Book today.",
+      "Anti-ageing and lifting treatments in Karur by Dr. K.B. Kavitha, DDVL. Botox, Dermal Fillers, Thread Lifts, HIFU, Apollo Quattro, MNRF Tightening, PDRN Therapy, Skin Boosters, Under-Eye Rejuvenation. 3,500+ reviews. Book today.",
     keywords:
       "anti ageing treatment karur, botox karur, dermal fillers karur, thread lift karur, hifu karur, apollo quattro karur, mnrf tightening karur, pdrn therapy karur, under eye treatment karur",
     canonical: `${SITE_BASE}/services/anti-ageing-treatment-karur`,
-    ogTitle: "Anti-Ageing & Lifting in Karur | Skin Trust - Dr. Kavitha",
+    ogTitle: "Anti-Ageing & Lifting in Karur | Skin Trust - Dr. K.B. Kavitha",
     ogDescription:
-      "Anti-ageing and lifting treatments in Karur by Dr. Kavitha, MD Dermatology. Botox, Dermal Fillers, Thread Lifts, HIFU, Apollo Quattro, MNRF Tightening, PDRN Therapy, Skin Boosters, Under-Eye Rejuvenation. Book today.",
+      "Anti-ageing and lifting treatments in Karur by Dr. K.B. Kavitha, DDVL. Botox, Dermal Fillers, Thread Lifts, HIFU, Apollo Quattro, MNRF Tightening, PDRN Therapy, Skin Boosters, Under-Eye Rejuvenation. Book today.",
     ogUrl: `${SITE_BASE}/services/anti-ageing-treatment-karur`,
   },
   headCss: `${BASE}/assets/css/anti-ageing-lifting.css`,
@@ -30,7 +30,7 @@ export default {
         "@id": `${SITE_BASE}/#clinic`,
         name: "Skin Trust Hospital",
         url: `${SITE_BASE}/`,
-        telephone: "+91-00000-00000",
+        telephone: "+91-96269-23299",
         address: {
           "@type": "PostalAddress",
           streetAddress: "No. 30, Chairman Ramanujam Street",
@@ -50,9 +50,9 @@ export default {
         medicalSpecialty: ["Dermatology", "Aesthetic Medicine"],
         founder: {
           "@type": "Physician",
-          name: "Dr. Kavitha",
+          name: "Dr. K.B. Kavitha",
           medicalSpecialty: ["Dermatology", "Trichology", "Dermatosurgery"],
-          hasCredential: ["MBBS", "MD Dermatology"],
+          hasCredential: ["MBBS", "DDVL"],
         },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
@@ -78,7 +78,7 @@ export default {
             name: "Will Botox make my face look frozen or unnatural?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Not when dosed conservatively. Dr. Kavitha plans Botox around how your face naturally moves, softening dynamic lines like forehead creases and crow's feet while preserving expression. The goal is for people to notice you look rested, not that you have had a procedure.",
+              text: "Not when dosed conservatively. Dr. K.B. Kavitha plans Botox around how your face naturally moves, softening dynamic lines like forehead creases and crow's feet while preserving expression. The goal is for people to notice you look rested, not that you have had a procedure.",
             },
           },
           {
@@ -94,7 +94,7 @@ export default {
             name: "How long do thread lift and HIFU results last?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Thread lift results typically last twelve to eighteen months as the threads stimulate collagen before dissolving. HIFU results build over two to three months and can last up to a year, depending on skin quality and ageing rate. Dr. Kavitha discusses a realistic timeline for your skin at consultation.",
+              text: "Thread lift results typically last twelve to eighteen months as the threads stimulate collagen before dissolving. HIFU results build over two to three months and can last up to a year, depending on skin quality and ageing rate. Dr. K.B. Kavitha discusses a realistic timeline for your skin at consultation.",
             },
           },
           {
@@ -110,7 +110,7 @@ export default {
             name: "At what age should I start anti-ageing treatment?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "There is no fixed age. Some patients begin conservative, preventive treatment in their late twenties or early thirties to maintain skin quality, while others start later to address established volume loss or laxity. Dr. Kavitha assesses your skin's specific signs of ageing rather than recommending treatment by age alone.",
+              text: "There is no fixed age. Some patients begin conservative, preventive treatment in their late twenties or early thirties to maintain skin quality, while others start later to address established volume loss or laxity. Dr. K.B. Kavitha assesses your skin's specific signs of ageing rather than recommending treatment by age alone.",
             },
           },
           {
@@ -126,7 +126,7 @@ export default {
             name: "Are PDRN therapy and skin boosters the same thing?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "No. PDRN (polynucleotide) injections support tissue repair and collagen activity, while skin boosters are hyaluronic acid-based treatments focused on deep hydration. Both improve skin quality, and Dr. Kavitha may recommend one or a combination depending on your skin's needs.",
+              text: "No. PDRN (polynucleotide) injections support tissue repair and collagen activity, while skin boosters are hyaluronic acid-based treatments focused on deep hydration. Both improve skin quality, and Dr. K.B. Kavitha may recommend one or a combination depending on your skin's needs.",
             },
           },
           {
@@ -134,7 +134,7 @@ export default {
             name: "How do you treat under-eye ageing specifically?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "The under-eye area often shows fine lines, dullness and mild hollowing earlier than the rest of the face. Dr. Kavitha combines PDRN injections, targeted peels and Dermapen microneedling as needed, chosen based on which concern, volume, tone or texture, is most prominent for you.",
+              text: "The under-eye area often shows fine lines, dullness and mild hollowing earlier than the rest of the face. Dr. K.B. Kavitha combines PDRN injections, targeted peels and Dermapen microneedling as needed, chosen based on which concern, volume, tone or texture, is most prominent for you.",
             },
           },
         ],
@@ -148,7 +148,7 @@ export default {
     eyebrow: "Anti-Ageing & Lifting · Karur",
     h1: "Look rested, <em>not visibly treated.</em>",
     lede:
-      "Dr. Kavitha's approach to anti-ageing favours conservative dosing, natural facial movement and energy-based lifting technologies that tighten and refresh without surgery or downtime. Every plan is built around how your face moves and ages individually, not a fixed formula.",
+      "Dr. K.B. Kavitha's approach to anti-ageing favours conservative dosing, natural facial movement and energy-based lifting technologies that tighten and refresh without surgery or downtime. Every plan is built around how your face moves and ages individually, not a fixed formula.",
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
     figureText: "Facial assessment<br>at Skin Trust<br>(3:4 portrait)",
@@ -312,18 +312,18 @@ export default {
     ],
   },
   why: {
-    eyebrow: "Why Karur Trusts Dr. Kavitha",
+    eyebrow: "Why Karur Trusts Dr. K.B. Kavitha",
     h2: "Designed to soften signs of ageing while preserving natural expression.",
     lede:
       "Anti-ageing treatment works best when it is planned around your face specifically. Here is how that assessment and planning happens at Skin Trust.",
     items: [
       {
         title: "Facial movement assessed first",
-        text: "Dr. Kavitha studies how your face moves, where lines form dynamically versus at rest, before planning any injectable or energy-based treatment. Dosing and technique are matched to your natural expression.",
+        text: "Dr. K.B. Kavitha studies how your face moves, where lines form dynamically versus at rest, before planning any injectable or energy-based treatment. Dosing and technique are matched to your natural expression.",
       },
       {
         title: "Conservative dosing philosophy",
-        text: "Anti-ageing treatments are planned to soften visible signs of ageing while preserving natural facial expression and proportions. Dr. Kavitha takes a measured approach, beginning conservatively and reviewing the response before determining whether any further treatment is appropriate.",
+        text: "Anti-ageing treatments are planned to soften visible signs of ageing while preserving natural facial expression and proportions. Dr. K.B. Kavitha takes a measured approach, beginning conservatively and reviewing the response before determining whether any further treatment is appropriate.",
       },
       {
         title: "Non-surgical lifting technologies",
@@ -331,7 +331,7 @@ export default {
       },
       {
         title: "Doctor performs every procedure",
-        text: "Every Botox injection, filler placement, thread lift, energy-based session and PDRN therapy at this clinic is administered by Dr. Kavitha personally.",
+        text: "Every Botox injection, filler placement, thread lift, energy-based session and PDRN therapy at this clinic is administered by Dr. K.B. Kavitha personally.",
       },
       {
         title: "Treatment sequencing that respects your face",
@@ -347,7 +347,7 @@ export default {
       },
       {
         title: "Fitzpatrick-aware energy settings",
-        text: "Energy-based devices such as HIFU, Apollo Quattro and MNRF require careful calibration for darker Fitzpatrick skin types. Dr. Kavitha adjusts energy and depth settings specifically for South Indian skin.",
+        text: "Energy-based devices such as HIFU, Apollo Quattro and MNRF require careful calibration for darker Fitzpatrick skin types. Dr. K.B. Kavitha adjusts energy and depth settings specifically for South Indian skin.",
       },
       {
         title: "3,500+ verified Google reviews",
@@ -365,18 +365,18 @@ export default {
   },
   doctor: {
     eyebrow: "Your skin specialist",
-    name: "Dr. Kavitha",
+    name: "Dr. K.B. Kavitha",
     image: `${BASE}/assets/images/dr-kavitha.jpg`,
-    alt: "Dr. Kavitha",
-    creds: ["MBBS", "MD Dermatology", "Trichology", "Dermatosurgery"],
+    alt: "Dr. K.B. Kavitha",
+    creds: ["MBBS", "DDVL", "Trichology", "Dermatosurgery"],
     paragraphs: [
-      "Anti-ageing treatment is often associated with dramatic change, but Dr. Kavitha's approach favours subtlety, treatments planned to leave patients looking rested and refreshed rather than visibly altered.",
+      "Anti-ageing treatment is often associated with dramatic change, but Dr. K.B. Kavitha's approach favours subtlety, treatments planned to leave patients looking rested and refreshed rather than visibly altered.",
       "Her assessment begins with how a face moves and ages individually: where volume has been lost, where skin has begun to lose firmness, and where fine lines have set in. From there she sequences a plan combining conservative-dose injectables, non-surgical lifting technologies and regenerative therapies suited to that specific pattern of ageing.",
-      "All in-clinic procedures, Botox and filler injections, thread lifts, HIFU, Apollo Quattro and MNRF sessions, and PDRN therapy are performed by Dr. Kavitha personally.",
+      "All in-clinic procedures, Botox and filler injections, thread lifts, HIFU, Apollo Quattro and MNRF sessions, and PDRN therapy are performed by Dr. K.B. Kavitha personally.",
     ],
-    sig: "— Dr. Kavitha",
+    sig: "— Dr. K.B. Kavitha",
     moreHref: `${BASE}/about`,
-    moreLabel: "More about Dr. Kavitha",
+    moreLabel: "More about Dr. K.B. Kavitha",
   },
   testimonials: {
     eyebrow: "In patients' words",
@@ -415,7 +415,7 @@ export default {
       {
         question: "Will Botox make my face look frozen or unnatural?",
         answer:
-          "Not when dosed conservatively. Dr. Kavitha plans Botox around how your face naturally moves, softening dynamic lines like forehead creases and crow's feet while preserving expression. The goal is for people to notice you look rested, not that you have had a procedure.",
+          "Not when dosed conservatively. Dr. K.B. Kavitha plans Botox around how your face naturally moves, softening dynamic lines like forehead creases and crow's feet while preserving expression. The goal is for people to notice you look rested, not that you have had a procedure.",
       },
       {
         question: "What is the difference between Botox and dermal fillers?",
@@ -425,7 +425,7 @@ export default {
       {
         question: "How long do thread lift and HIFU results last?",
         answer:
-          "Thread lift results typically last twelve to eighteen months as the threads stimulate collagen before dissolving. HIFU results build over two to three months and can last up to a year, depending on skin quality and ageing rate. Dr. Kavitha discusses a realistic timeline for your skin at consultation.",
+          "Thread lift results typically last twelve to eighteen months as the threads stimulate collagen before dissolving. HIFU results build over two to three months and can last up to a year, depending on skin quality and ageing rate. Dr. K.B. Kavitha discusses a realistic timeline for your skin at consultation.",
       },
       {
         question: "Is HIFU or Apollo Quattro painful? What is the downtime?",
@@ -435,7 +435,7 @@ export default {
       {
         question: "At what age should I start anti-ageing treatment?",
         answer:
-          "There is no fixed age. Some patients begin conservative, preventive treatment in their late twenties or early thirties to maintain skin quality, while others start later to address established volume loss or laxity. Dr. Kavitha assesses your skin's specific signs of ageing rather than recommending treatment by age alone.",
+          "There is no fixed age. Some patients begin conservative, preventive treatment in their late twenties or early thirties to maintain skin quality, while others start later to address established volume loss or laxity. Dr. K.B. Kavitha assesses your skin's specific signs of ageing rather than recommending treatment by age alone.",
       },
       {
         question: "What is MNRF tightening used for in anti-ageing?",
@@ -445,12 +445,12 @@ export default {
       {
         question: "Are PDRN therapy and skin boosters the same thing?",
         answer:
-          "No. PDRN (polynucleotide) injections support tissue repair and collagen activity, while skin boosters are hyaluronic acid-based treatments focused on deep hydration. Both improve skin quality, and Dr. Kavitha may recommend one or a combination depending on your skin's needs.",
+          "No. PDRN (polynucleotide) injections support tissue repair and collagen activity, while skin boosters are hyaluronic acid-based treatments focused on deep hydration. Both improve skin quality, and Dr. K.B. Kavitha may recommend one or a combination depending on your skin's needs.",
       },
       {
         question: "How do you treat under-eye ageing specifically?",
         answer:
-          "The under-eye area often shows fine lines, dullness and mild hollowing earlier than the rest of the face. Dr. Kavitha combines PDRN injections, targeted peels and Dermapen microneedling as needed, chosen based on which concern, volume, tone or texture, is most prominent for you.",
+          "The under-eye area often shows fine lines, dullness and mild hollowing earlier than the rest of the face. Dr. K.B. Kavitha combines PDRN injections, targeted peels and Dermapen microneedling as needed, chosen based on which concern, volume, tone or texture, is most prominent for you.",
       },
     ],
   },
@@ -467,7 +467,7 @@ export default {
       { dt: "Hours", dd: "Mon–Fri 09:30–17:30<br>Sat 09:30–19:30<br>Sunday Holiday" },
       {
         dt: "Phone",
-        dd: '<a href="tel:+910000000000" style="border-bottom:1px solid var(--champagne)">+91 00000 00000</a>',
+        dd: '<a href="tel:+919626923299" style="border-bottom:1px solid var(--champagne)">+91 96269 23299</a>',
       },
       {
         dt: "WhatsApp",
@@ -496,7 +496,7 @@ export default {
     lede:
       "A first consultation covers your areas of concern, how your face moves and ages, and a sequenced plan matched to that. No packages are sold at this visit.",
     buttons: [
-      { label: "Call +91 00000 00000", href: "tel:+910000000000", class: "btn btn-gold" },
+      { label: "Call +91 96269 23299", href: "tel:+919626923299", class: "btn btn-gold" },
       { label: "WhatsApp to book", href: waLink, target: "_blank", class: "btn btn-ghost-light" },
     ],
   },
