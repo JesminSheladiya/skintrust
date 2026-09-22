@@ -50,7 +50,7 @@ export function getHeader(base = BASE, pathname = "") {
       "No. 28, Chairman Ramanujan Street, Karur — opp. Kamaatchi Amman Temple",
     topbarPhone: "+91 96269 23299",
     topbarPhoneHref: "tel:+919626923299",
-    topbarHours: "Mon–Sat 9:30 AM–7:30 PM",
+    topbarHours: "Mon–Fri 09:30–17:30 · Sat 09:30–19:30 · Sun Holiday",
     navLinks: [
       {
         label: "TREATMENTS",

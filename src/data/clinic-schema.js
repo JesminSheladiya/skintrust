@@ -11,7 +11,7 @@ export default {
   "address":{"@type":"PostalAddress","streetAddress":"No. 28, Chairman Ramanujan Street","addressLocality":"Karur","postalCode":"639001","addressRegion":"Tamil Nadu","addressCountry":"IN"},
   "geo":{"@type":"GeoCoordinates","latitude":10.961598,"longitude":78.0767411},
   "hasMap":"https://g.page/skintrusthospital",
-  "openingHours":"Mo-Sa 09:30-19:30",
+  "openingHours":"Mo-Fr 09:30-17:30, Sa 09:30-19:30",
   "priceRange":"₹₹",
   "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"3600","bestRating":"5"},
   "medicalSpecialty":"Dermatology",

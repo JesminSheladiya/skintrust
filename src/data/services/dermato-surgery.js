@@ -40,7 +40,7 @@ export default {
           addressCountry: "IN",
         },
         geo: { "@type": "GeoCoordinates", latitude: 10.961598, longitude: 78.0767411 },
-        openingHours: "Mo-Sa 10:00-20:00",
+        openingHours: "Mo-Fr 09:30-17:30, Sa 09:30-19:30",
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: "4.9",
@@ -430,7 +430,7 @@ export default {
         dt: "Address",
         dd: "No. 30, Chairman Ramanujam Street,<br>opp. Kamaatchi Amman Temple,<br>Madavilagam, Karur — 639001,<br>Tamil Nadu",
       },
-      { dt: "Hours", dd: "Mon–Sat 10:00–20:00<br>Sunday by appointment" },
+      { dt: "Hours", dd: "Mon–Fri 09:30–17:30<br>Sat 09:30–19:30<br>Sunday Holiday" },
       {
         dt: "Phone",
         dd: '<a href="tel:+910000000000" style="border-bottom:1px solid var(--champagne)">+91 00000 00000</a>',
