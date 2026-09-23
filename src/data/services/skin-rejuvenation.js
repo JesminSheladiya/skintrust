@@ -8,17 +8,17 @@ export default {
   slug: "skin-rejuvenation-karur",
   displayName: "Skin Rejuvenation & Glow",
   summary:
-    "From HydraFacial maintenance and laser toning to regenerative skin boosters, Dr. K.B. Kavitha offers personalised skin rejuvenation and glow treatments at Skin Trust, Karur.",
+    "From HydraFacial maintenance and laser toning to regenerative skin boosters, Dr. K. B. Kavitha offers personalised skin rejuvenation and glow treatments at Skin Trust, Karur.",
   meta: {
-    title: "Skin Rejuvenation & Glow in Karur | Skin Trust - Dr. K.B. Kavitha",
+    title: "Skin Rejuvenation & Glow in Karur | Skin Trust - Dr. K. B. Kavitha",
     description:
-      "Skin rejuvenation and glow treatments in Karur by Dr. K.B. Kavitha, DDVL. HydraFacial, Hydra Touch, Laser Toning, Chemical Peels, Microdermabrasion, Microneedling, IV Glutathione, Skin Boosters, PDRN, Exosomes, Dr. Platon. 3,500+ reviews. Book today.",
+      "Skin rejuvenation and glow treatments in Karur by Dr. K. B. Kavitha, DDVL. HydraFacial, Hydra Touch, Laser Toning, Chemical Peels, Microdermabrasion, Microneedling, IV Glutathione, Skin Boosters, PDRN, Exosomes, Dr. Platon. 3,500+ reviews. Book today.",
     keywords:
       "skin rejuvenation karur, glow treatment karur, hydrafacial karur, laser toning karur, chemical peel karur, iv glutathione karur, skin boosters karur, pdrn karur, exosome therapy karur, cold plasma karur",
     canonical: `${SITE_BASE}/services/skin-rejuvenation-karur`,
-    ogTitle: "Skin Rejuvenation & Glow in Karur | Skin Trust - Dr. K.B. Kavitha",
+    ogTitle: "Skin Rejuvenation & Glow in Karur | Skin Trust - Dr. K. B. Kavitha",
     ogDescription:
-      "Skin rejuvenation and glow treatments in Karur by Dr. K.B. Kavitha, DDVL. HydraFacial, Hydra Touch, Laser Toning, Chemical Peels, Microdermabrasion, Microneedling, IV Glutathione, Skin Boosters, PDRN, Exosomes, Dr. Platon. Book today.",
+      "Skin rejuvenation and glow treatments in Karur by Dr. K. B. Kavitha, DDVL. HydraFacial, Hydra Touch, Laser Toning, Chemical Peels, Microdermabrasion, Microneedling, IV Glutathione, Skin Boosters, PDRN, Exosomes, Dr. Platon. Book today.",
     ogUrl: `${SITE_BASE}/services/skin-rejuvenation-karur`,
   },
   headCss: `${BASE}/assets/css/skin-rejuvenation.css`,
@@ -50,7 +50,7 @@ export default {
         medicalSpecialty: ["Dermatology", "Aesthetic Medicine"],
         founder: {
           "@type": "Physician",
-          name: "Dr. K.B. Kavitha",
+          name: "Dr. K. B. Kavitha",
           medicalSpecialty: ["Dermatology", "Trichology", "Dermatosurgery"],
           hasCredential: ["MBBS", "DDVL"],
         },
@@ -77,7 +77,7 @@ export default {
             name: "What is the difference between skin rejuvenation and anti-ageing treatment?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Skin rejuvenation focuses on restoring tone, texture, hydration and glow, addressing dullness, mild pigmentation and surface texture rather than deep lines or volume loss. Anti-ageing treatments target wrinkles, sagging and loss of facial volume. Many patients need elements of both, and Dr. K.B. Kavitha will tell you honestly which category your concern falls into.",
+              text: "Skin rejuvenation focuses on restoring tone, texture, hydration and glow, addressing dullness, mild pigmentation and surface texture rather than deep lines or volume loss. Anti-ageing treatments target wrinkles, sagging and loss of facial volume. Many patients need elements of both, and Dr. K. B. Kavitha will tell you honestly which category your concern falls into.",
             },
           },
           {
@@ -85,7 +85,7 @@ export default {
             name: "How often should I get a HydraFacial or Hydra Touch session?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Most patients maintain results with a session every four to six weeks, though this depends on your skin type, oil production and how your skin responds to Tamil Nadu's humidity. Dr. K.B. Kavitha sets a realistic maintenance interval at your first visit itself.",
+              text: "Most patients maintain results with a session every four to six weeks, though this depends on your skin type, oil production and how your skin responds to Tamil Nadu's humidity. Dr. K. B. Kavitha sets a realistic maintenance interval at your first visit itself.",
             },
           },
           {
@@ -101,7 +101,7 @@ export default {
             name: "Is IV glutathione therapy safe?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "When administered under medical supervision with the correct dosage and frequency, IV glutathione is generally safe. Dr. K.B. Kavitha reviews your health history before starting any course and monitors you through the treatment. It is not offered as an unsupervised walk-in service at this clinic.",
+              text: "When administered under medical supervision with the correct dosage and frequency, IV glutathione is generally safe. Dr. K. B. Kavitha reviews your health history before starting any course and monitors you through the treatment. It is not offered as an unsupervised walk-in service at this clinic.",
             },
           },
         ],
@@ -115,7 +115,7 @@ export default {
     eyebrow: "Skin Rejuvenation & Glow · Karur",
     h1: "Glow that holds up to <em>Tamil Nadu's sun and humidity.</em>",
     lede:
-      "From HydraFacial maintenance and laser toning to regenerative skin boosters, Dr. K.B. Kavitha addresses concerns such as dullness, uneven skin tone and early textural changes through personalised treatment plans. Each protocol is selected after assessing your skin's condition, concerns and treatment needs.",
+      "From HydraFacial maintenance and laser toning to regenerative skin boosters, Dr. K. B. Kavitha addresses concerns such as dullness, uneven skin tone and early textural changes through personalised treatment plans. Each protocol is selected after assessing your skin's condition, concerns and treatment needs.",
     ctaHref: "#book",
     ctaLabel: "Book a consultation",
     figureText: "Skin assessment<br>at Skin Trust<br>(3:4 portrait)",
@@ -229,7 +229,7 @@ export default {
       {
         placeholder: "Chemical peels<br>image 16:10",
         title: "Chemical Peels Brightening & Maintenance",
-        body: "Superficial chemical peels are used to improve uneven skin tone, mild pigmentation and overall skin texture while supporting regular skin maintenance. Dr. K.B. Kavitha selects the type and strength of the peel based on your skin type, concerns and tolerance to treatment.",
+        body: "Superficial chemical peels are used to improve uneven skin tone, mild pigmentation and overall skin texture while supporting regular skin maintenance. Dr. K. B. Kavitha selects the type and strength of the peel based on your skin type, concerns and tolerance to treatment.",
         ctaHref: `${BASE}/services/skin-rejuvenation-karur`,
         ctaLabel: "View chemical peels →",
       },
@@ -264,7 +264,7 @@ export default {
     ],
   },
   why: {
-    eyebrow: "Why Karur Trusts Dr. K.B. Kavitha",
+    eyebrow: "Why Karur Trusts Dr. K. B. Kavitha",
     h2: "Glow is a result.<br>It deserves an assessed approach.",
     lede:
       "A dermatology-led approach to skin rejuvenation, where every treatment is thoughtfully selected based on your skin's needs and long-term goals.",
@@ -283,11 +283,11 @@ export default {
       },
       {
         title: "Doctor performs every procedure",
-        text: "Every laser toning session, IV glutathione infusion, skin booster injection and Dr. Platon session is personally administered by Dr. K.B. Kavitha. All medical procedures are performed under her direct supervision and clinical care.",
+        text: "Every laser toning session, IV glutathione infusion, skin booster injection and Dr. Platon session is personally administered by Dr. K. B. Kavitha. All medical procedures are performed under her direct supervision and clinical care.",
       },
       {
         title: "Least invasive option that works",
-        text: "Rejuvenation does not require the most intensive treatment available. Dr. K.B. Kavitha starts with the least invasive option that will genuinely deliver results, and escalates only where the skin needs it.",
+        text: "Rejuvenation does not require the most intensive treatment available. Dr. K. B. Kavitha starts with the least invasive option that will genuinely deliver results, and escalates only where the skin needs it.",
       },
       {
         title: "Standardised photography at every visit",
@@ -299,7 +299,7 @@ export default {
       },
       {
         title: "Darker skin type experience",
-        text: "Fitzpatrick IV to VI skin types require careful laser and peel selection to avoid triggering post-inflammatory pigmentation. Dr. K.B. Kavitha has extensive experience treating South Indian skin types safely and effectively.",
+        text: "Fitzpatrick IV to VI skin types require careful laser and peel selection to avoid triggering post-inflammatory pigmentation. Dr. K. B. Kavitha has extensive experience treating South Indian skin types safely and effectively.",
       },
       {
         title: "3,500+ verified Google reviews",
@@ -317,18 +317,18 @@ export default {
   },
   doctor: {
     eyebrow: "Your skin specialist",
-    name: "Dr. K.B. Kavitha",
+    name: "Dr. K. B. Kavitha",
     image: `${BASE}/assets/images/dr-kavitha.jpg`,
-    alt: "Dr. K.B. Kavitha",
+    alt: "Dr. K. B. Kavitha",
     creds: ["MBBS", "DDVL", "Trichology", "Dermatosurgery"],
     paragraphs: [
-      "Skin rejuvenation is often treated as a single facial or a one-time glow session, but Dr. K.B. Kavitha approaches it as an ongoing relationship with your skin. Most patients arrive after cycling through generic facials and over-the-counter brightening products that offered results for a few days at most.",
+      "Skin rejuvenation is often treated as a single facial or a one-time glow session, but Dr. K. B. Kavitha approaches it as an ongoing relationship with your skin. Most patients arrive after cycling through generic facials and over-the-counter brightening products that offered results for a few days at most.",
       "Her approach starts with a proper skin assessment, skin type, sun exposure pattern, hydration level and any underlying pigmentation. From there she builds a maintenance rhythm, combining in-clinic treatments such as HydraFacial, laser toning or skin boosters with a realistic schedule for return visits, so improvement holds rather than fading between sessions.",
-      "All in-clinic procedures — laser toning, IV glutathione infusions, skin booster and PDRN injections, and Dr. Platon sessions, are performed by Dr. K.B. Kavitha personally.",
+      "All in-clinic procedures — laser toning, IV glutathione infusions, skin booster and PDRN injections, and Dr. Platon sessions, are performed by Dr. K. B. Kavitha personally.",
     ],
-    sig: "— Dr. K.B. Kavitha",
+    sig: "— Dr. K. B. Kavitha",
     moreHref: `${BASE}/about`,
-    moreLabel: "More about Dr. K.B. Kavitha",
+    moreLabel: "More about Dr. K. B. Kavitha",
   },
   testimonials: {
     eyebrow: "In patients' words",
@@ -367,12 +367,12 @@ export default {
       {
         question: "What is the difference between skin rejuvenation and anti-ageing treatment?",
         answer:
-          "Skin rejuvenation focuses on restoring tone, texture, hydration and glow, addressing dullness, mild pigmentation and surface texture rather than deep lines or volume loss. Anti-ageing treatments target wrinkles, sagging and loss of facial volume. Many patients need elements of both, and Dr. K.B. Kavitha will tell you honestly which category your concern falls into.",
+          "Skin rejuvenation focuses on restoring tone, texture, hydration and glow, addressing dullness, mild pigmentation and surface texture rather than deep lines or volume loss. Anti-ageing treatments target wrinkles, sagging and loss of facial volume. Many patients need elements of both, and Dr. K. B. Kavitha will tell you honestly which category your concern falls into.",
       },
       {
         question: "How often should I get a HydraFacial or Hydra Touch session?",
         answer:
-          "Most patients maintain results with a session every four to six weeks, though this depends on your skin type, oil production and how your skin responds to Tamil Nadu's humidity. Dr. K.B. Kavitha sets a realistic maintenance interval at your first visit itself.",
+          "Most patients maintain results with a session every four to six weeks, though this depends on your skin type, oil production and how your skin responds to Tamil Nadu's humidity. Dr. K. B. Kavitha sets a realistic maintenance interval at your first visit itself.",
       },
       {
         question: "Is laser toning permanent, and how many sessions are needed?",
@@ -382,12 +382,12 @@ export default {
       {
         question: "Is IV glutathione therapy safe?",
         answer:
-          "When administered under medical supervision with the correct dosage and frequency, IV glutathione is generally safe. Dr. K.B. Kavitha reviews your health history before starting any course and monitors you through the treatment. It is not offered as an unsupervised walk-in service at this clinic.",
+          "When administered under medical supervision with the correct dosage and frequency, IV glutathione is generally safe. Dr. K. B. Kavitha reviews your health history before starting any course and monitors you through the treatment. It is not offered as an unsupervised walk-in service at this clinic.",
       },
       {
         question: "What are skin boosters, PDRN and exosomes, and how are they different?",
         answer:
-          "Skin boosters are injectable hyaluronic acid-based treatments that hydrate the deeper layers of skin. PDRN (polynucleotide) injections support tissue repair and collagen activity. Exosome-based treatments deliver growth-factor signals to accelerate skin recovery and quality. Dr. K.B. Kavitha selects one, or a combination, based on what your skin actually needs.",
+          "Skin boosters are injectable hyaluronic acid-based treatments that hydrate the deeper layers of skin. PDRN (polynucleotide) injections support tissue repair and collagen activity. Exosome-based treatments deliver growth-factor signals to accelerate skin recovery and quality. Dr. K. B. Kavitha selects one, or a combination, based on what your skin actually needs.",
       },
       {
         question: "Is Dr. Platon cold plasma therapy painful? What is the downtime?",
@@ -397,7 +397,7 @@ export default {
       {
         question: "Are chemical peels and microdermabrasion safe for Indian skin?",
         answer:
-          "Yes, when the peel strength and technique are matched to your skin type. Aggressive peels or overly deep microdermabrasion on darker Fitzpatrick skin types can trigger pigmentation rather than reduce it. Dr. K.B. Kavitha selects a brightening and maintenance-focused protocol appropriate for South Indian skin, rather than one fixed strength for every patient.",
+          "Yes, when the peel strength and technique are matched to your skin type. Aggressive peels or overly deep microdermabrasion on darker Fitzpatrick skin types can trigger pigmentation rather than reduce it. Dr. K. B. Kavitha selects a brightening and maintenance-focused protocol appropriate for South Indian skin, rather than one fixed strength for every patient.",
       },
       {
         question: "How soon will I see visible glow or tone improvement?",
